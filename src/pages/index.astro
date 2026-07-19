@@ -92,24 +92,19 @@ const faqJsonLd = {
         </p>
       </div>
 
-      <aside class="op-card" aria-label="Exemple pédagogique d’opération">
-        <div class="op-head">
-          <span class="op-label">Exemple d’opération</span>
-          <span class="op-badge">pédagogique</span>
+      <!-- TODO: remplace la photo et le [Prénom] par le vrai formateur -->
+      <aside class="portrait" aria-label="Le formateur">
+        <div class="portrait-media">
+          <span class="portrait-ph">Photo du formateur</span>
+          <span class="portrait-tag">Marchand de biens en activité</span>
         </div>
-        <ul class="op-lines">
-          <li><span>Achat</span><b>210 000 €</b></li>
-          <li><span>Travaux</span><b>45 000 €</b></li>
-          <li><span>Frais &amp; portage</span><b>18 000 €</b></li>
-          <li class="op-sep"><span>Revente</span><b>320 000 €</b></li>
-        </ul>
-        <div class="op-result">
-          <span>Marge brute étudiée</span>
-          <strong>47 000 €</strong>
+        <blockquote class="portrait-quote">
+          « J’achète, je rénove, je revends. Je ne vous vends pas de rêve, je vous transmets un métier. »
+        </blockquote>
+        <div class="portrait-id">
+          <strong>[Prénom]</strong>
+          <span>Formateur · Imm’oseille</span>
         </div>
-        <p class="op-foot">
-          Chiffres illustratifs. Chaque opération est unique et comporte un risque.
-        </p>
       </aside>
     </div>
   </section>
@@ -351,6 +346,17 @@ const faqJsonLd = {
   .op-result strong { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
   .op-foot { margin-top: 0.9rem; font-size: 0.76rem; color: var(--ink-faint); line-height: 1.4; }
 
+  /* PORTRAIT (hero) */
+  .portrait { background: var(--paper); border: 1.5px solid var(--ink); border-radius: 12px; padding: 1.1rem; box-shadow: 14px 14px 0 -2px var(--paper-3), 14px 14px 0 0 var(--ink); animation: rise 0.8s 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .portrait-media { position: relative; aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; display: grid; place-items: center;
+    background: linear-gradient(160deg, var(--green) 0%, #0a2a1b 100%); }
+  .portrait-ph { color: color-mix(in srgb, var(--paper) 45%, transparent); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  .portrait-tag { position: absolute; bottom: 0.7rem; left: 0.7rem; right: 0.7rem; background: color-mix(in srgb, var(--paper) 94%, transparent); color: var(--ink); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.45rem 0.7rem; border-radius: 6px; text-align: center; }
+  .portrait-quote { font-family: var(--font-display); font-size: 1.18rem; line-height: 1.35; margin: 1.15rem 0.35rem 1rem; }
+  .portrait-id { display: flex; flex-direction: column; gap: 0.1rem; padding: 0 0.35rem 0.35rem; }
+  .portrait-id strong { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; }
+  .portrait-id span { color: var(--gold); font-weight: 600; font-size: 0.85rem; }
+
   /* CHECK ICON */
   .check { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--green-bright); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -431,7 +437,7 @@ const faqJsonLd = {
 
   @media (max-width: 900px) {
     .hero-grid, .pourqui-grid, .method-grid, .mentor-grid, .faq-grid { grid-template-columns: 1fr; }
-    .op-card { max-width: 440px; }
+    .op-card, .portrait { max-width: 420px; }
     .prog-grid, .temoin-grid, .trust-grid { grid-template-columns: repeat(2, 1fr); }
     .reassure-grid { grid-template-columns: repeat(2, 1fr); }
     .faq-head { position: static; }
