@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// TODO: remplace par ton vrai lien Calendly
+const CALENDLY = 'https://calendly.com/immoseille/appel-decouverte';
+
+const format = [
+  { t: 'Des cours en vidéo', d: "Le programme complet en vidéo, hébergé sur Skool, accessible à la demande et à votre rythme." },
+  { t: 'Un accompagnement', d: "Vos opérations sont analysées avec vous. Vous avancez avec un cadre, pas seul face à un écran." },
+  { t: 'Une communauté', d: "Un espace d’entraide entre porteurs de projet et marchands de biens, pour ne rien lâcher." },
+  { t: 'Des cas réels', d: "Chaque notion est illustrée par de vraies opérations décortiquées, chiffres à l’appui." },
+];
+
+const modules = [
+  {
+    n: '01', t: 'Sourcing & off-market',
+    points: ['Construire un réseau d’apporteurs', 'Détecter les biens à potentiel', 'Accéder aux opportunités off-market'],
+  },
+  {
+    n: '02', t: 'Analyse & chiffrage',
+    points: ['Évaluer un bien et son marché', 'Estimer un budget travaux fiable', 'Calculer la marge et la rentabilité'],
+  },
+  {
+    n: '03', t: 'Montage de l’opération',
+    points: ['Choisir le bon statut (SAS, EURL)', 'Éviter les pièges (SCI, micro-entreprise)', 'Structurer juridiquement l’opération'],
+  },
+  {
+    n: '04', t: 'Financement',
+    points: ['Monter un dossier bancaire solide', 'Convaincre et négocier', 'Optimiser son plan de financement'],
+  },
+  {
+    n: '05', t: 'Travaux & revente',
+    points: ['Piloter un chantier sans se faire déborder', 'Valoriser le bien', 'Préparer et réussir la revente'],
+  },
+  {
+    n: '06', t: 'Fiscalité & sécurisation',
+    points: ['Maîtriser la TVA sur marge', 'Sécuriser chaque étape', 'Comprendre le cadre légal du métier'],
+  },
+];
+
+const parcours = [
+  { n: '1', t: 'Appel découverte', d: "On échange 20 minutes sur votre situation et vos objectifs, sans engagement." },
+  { n: '2', t: 'Accès à la formation', d: "Vous démarrez le programme en vidéo sur Skool, à votre rythme." },
+  { n: '3', t: 'Accompagnement', d: "On avance ensemble sur vos premières opérations, avec un cadre concret." },
+  { n: '4', t: 'Passage à l’action', d: "Vous montez votre opération et vous professionnalisez, étape par étape." },
+];
+---
+
+<BaseLayout
+  title="Formation marchand de biens | Imm'oseille"
+  description="La formation Imm'oseille pour devenir marchand de biens : sourcing, montage d'opération, financement, travaux, revente et fiscalité. Une pédagogie de terrain avec accompagnement."
+>
+  <!-- HERO -->
+  <section class="fhero">
+    <div class="wrap">
+      <p class="eyebrow">La formation</p>
+      <h1>Apprenez le métier de marchand de biens, avec méthode</h1>
+      <p class="fhero-sub">
+        Un programme complet, de la recherche d’un bien à la revente, pensé pour
+        vous rendre autonome et opérationnel. De la pédagogie de terrain, un
+        accompagnement, zéro promesse en l’air.
+      </p>
+      <div class="fhero-cta">
+        <a href={CALENDLY} class="btn btn--primary">Réserver un appel &rarr;</a>
+        <a href="#programme" class="btn btn--ghost">Voir le programme</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAT -->
+  <section class="section format">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Le format</p>
+        <h2>Comment se déroule la formation</h2>
+        <p class="lede">Des vidéos à la demande, un accompagnement, une communauté. Le tout ancré dans des cas réels.</p>
+      </div>
+      <div class="format-grid">
+        {format.map((f) => (
+          <article class="format-card">
+            <h3>{f.t}</h3>
+            <p>{f.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMME DETAILLE -->
+  <section class="section prog" id="programme">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Le programme</p>
+        <h2>Six piliers, du sourcing à la revente</h2>
+        <p class="lede">Chaque module va à l’essentiel : ce qu’il faut savoir, et surtout ce qu’il faut faire.</p>
+      </div>
+      <div class="prog-grid">
+        {modules.map((m) => (
+          <article class="prog-card">
+            <span class="prog-num">{m.n}</span>
+            <h3>{m.t}</h3>
+            <ul>
+              {m.points.map((p) => (
+                <li><svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>{p}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section class="section parcours">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Le parcours</p>
+        <h2>Comment ça se passe, concrètement</h2>
+      </div>
+      <div class="parcours-grid">
+        {parcours.map((p) => (
+          <article class="parcours-step">
+            <span class="parcours-num">{p.n}</span>
+            <h3>{p.t}</h3>
+            <p>{p.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2>Prêt à vous lancer sérieusement ?</h2>
+      <p>On échange 20 minutes sur votre projet, sans engagement.</p>
+      <a href={CALENDLY} class="btn btn--primary">Réserver mon appel</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .section { padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(3.5rem, 8vw, 6rem); }
+  .section-head { max-width: 46ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
+  .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); margin: 0.6rem 0 0.8rem; }
+  .lede { color: var(--ink-soft); font-size: 1.06rem; }
+  .check { width: 19px; height: 19px; flex: none; fill: none; stroke: var(--green-bright); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* HERO */
+  .fhero { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(2.5rem, 5vw, 4rem); }
+  .fhero h1 { font-size: clamp(2.4rem, 5.6vw, 4rem); margin: 1rem 0 1.3rem; max-width: 18ch; }
+  .fhero-sub { color: var(--ink-soft); font-size: clamp(1.02rem, 1.5vw, 1.18rem); max-width: 52ch; margin-bottom: 2rem; }
+  .fhero-cta { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+
+  /* FORMAT */
+  .format { background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .format-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+  .format-card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 1.5rem; }
+  .format-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .format-card p { color: var(--ink-soft); font-size: 0.96rem; }
+
+  /* PROGRAMME */
+  .prog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .prog-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem; background: var(--paper); }
+  .prog-num { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); font-weight: 600; }
+  .prog-card h3 { font-size: 1.3rem; margin: 0.4rem 0 1rem; }
+  .prog-card ul { list-style: none; display: grid; gap: 0.6rem; }
+  .prog-card li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.96rem; color: var(--ink-soft); }
+
+  /* PARCOURS */
+  .parcours-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; counter-reset: step; }
+  .parcours-step { position: relative; padding: 1.6rem; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+  .parcours-num { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--green); color: var(--paper); font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; }
+  .parcours-step h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+  .parcours-step p { color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* CTA */
+  .cta-band { padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(1rem, 4vw, 2rem); text-align: center; }
+  .cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3.1rem); max-width: 20ch; margin-inline: auto; }
+  .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.08rem; }
+
+  @media (max-width: 900px) {
+    .format-grid, .parcours-grid { grid-template-columns: repeat(2, 1fr); }
+    .prog-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .format-grid, .parcours-grid, .prog-grid { grid-template-columns: 1fr; }
+  }
+</style>
