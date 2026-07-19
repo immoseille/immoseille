@@ -1,0 +1,132 @@
+---
+const year = new Date().getFullYear();
+const cols = [
+  {
+    title: 'Le métier',
+    links: [
+      { href: '/formation', label: 'La formation' },
+      { href: '/operations', label: 'Résultats' },
+      { href: '/guides', label: 'Guides' },
+      { href: '/a-propos', label: 'À propos' },
+    ],
+  },
+  {
+    title: 'Ressources',
+    links: [
+      { href: '/devenir-marchand-de-biens', label: 'Devenir marchand de biens' },
+      { href: '/faq', label: 'Questions fréquentes' },
+      { href: '/guide-gratuit', label: 'Guide gratuit' },
+    ],
+  },
+  {
+    title: 'Légal',
+    links: [
+      { href: '/mentions-legales', label: 'Mentions légales' },
+      { href: '/politique-confidentialite', label: 'Confidentialité' },
+    ],
+  },
+];
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">Imm<span class="apos">'</span>oseille</span>
+      <p class="footer-tag">
+        La formation de terrain au métier de marchand de biens. Apprendre le
+        montage d'opération, se lancer, se professionnaliser.
+      </p>
+      <a href="/rendez-vous" class="btn btn--ghost">Réserver un appel</a>
+    </div>
+
+    <nav class="footer-cols" aria-label="Pied de page">
+      {cols.map((c) => (
+        <div class="footer-col">
+          <h4>{c.title}</h4>
+          <ul>
+            {c.links.map((l) => (
+              <li><a href={l.href}>{l.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </nav>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>&copy; {year} Imm'oseille. Tous droits réservés.</span>
+    <span class="footer-note">Le métier de marchand de biens comporte des risques et n'offre aucun revenu garanti.</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: clamp(4rem, 9vw, 7rem);
+    border-top: 1px solid var(--line);
+    background: var(--paper-2);
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    padding-top: clamp(3rem, 6vw, 4.5rem);
+    padding-bottom: 3rem;
+  }
+  .brand-mark {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.45rem;
+    letter-spacing: -0.02em;
+  }
+  .brand-mark .apos { color: var(--brick); }
+  .footer-tag {
+    margin: 1rem 0 1.6rem;
+    color: var(--ink-soft);
+    max-width: 34ch;
+    font-size: 0.97rem;
+  }
+  .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .footer-col h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.6rem; }
+  .footer-col a {
+    color: var(--ink-soft);
+    font-size: 0.96rem;
+    transition: color 0.15s ease;
+  }
+  .footer-col a:hover { color: var(--brick); }
+
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.4rem;
+    padding-bottom: 1.8rem;
+    border-top: 1px solid var(--line-soft);
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+  }
+  .footer-note { max-width: 46ch; }
+
+  @media (max-width: 860px) {
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-cols { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .footer-cols { grid-template-columns: 1fr; gap: 1.8rem; }
+  }
+</style>

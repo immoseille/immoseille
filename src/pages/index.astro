@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const proofPoints = [
+  { k: 'Sourcing', v: "Trouver les biens off-market avant tout le monde" },
+  { k: 'Montage', v: "Structurer l'opération, le statut et le financement" },
+  { k: 'Marge', v: "Chiffrer, négocier et sécuriser la rentabilité" },
+];
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Formation au métier de marchand de biens</p>
+        <h1 class="hero-title">
+          Le métier s'apprend<br />
+          <span class="accent">sur le terrain.</span><br />
+          On vous forme pour de vrai.
+        </h1>
+        <p class="hero-sub">
+          Achat-revente, montage d'opération, sourcing off-market, négociation
+          et fiscalité. Une formation concrète pour vous lancer, monter vos
+          premières opérations et vous professionnaliser — sans promesse en l'air.
+        </p>
+        <div class="hero-cta">
+          <a href="/rendez-vous" class="btn btn--primary">Réserver un appel &rarr;</a>
+          <a href="/formation" class="btn btn--ghost">Découvrir la formation</a>
+        </div>
+        <p class="hero-trust">
+          <span class="dot"></span>
+          Animée par un marchand de biens en activité.
+        </p>
+      </div>
+
+      <aside class="op-card" aria-label="Exemple pédagogique d'opération">
+        <div class="op-head">
+          <span class="op-label">Exemple d'opération</span>
+          <span class="op-badge">pédagogique</span>
+        </div>
+        <ul class="op-lines">
+          <li><span>Achat</span><b>210 000 €</b></li>
+          <li><span>Travaux</span><b>45 000 €</b></li>
+          <li><span>Frais &amp; portage</span><b>18 000 €</b></li>
+          <li class="op-sep"><span>Revente</span><b>320 000 €</b></li>
+        </ul>
+        <div class="op-result">
+          <span>Marge brute étudiée</span>
+          <strong>47 000 €</strong>
+        </div>
+        <p class="op-foot">
+          Chiffres illustratifs. Chaque opération est unique et comporte un risque.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="wrap proof-grid">
+      {proofPoints.map((p, i) => (
+        <article class="proof-item">
+          <span class="proof-num">0{i + 1}</span>
+          <h3>{p.k}</h3>
+          <p>{p.v}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2>Prêt à passer du projet à l'opération ?</h2>
+      <p>On échange 20 minutes sur votre situation, sans engagement.</p>
+      <a href="/rendez-vous" class="btn btn--primary">Réserver mon appel</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* HERO */
+  .hero {
+    padding-top: clamp(3rem, 8vw, 6rem);
+    padding-bottom: clamp(3rem, 7vw, 5.5rem);
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2.6rem, 6.4vw, 4.5rem);
+    margin: 1.1rem 0 1.5rem;
+    animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .hero-title .accent {
+    color: var(--green);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .hero-sub {
+    font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin-bottom: 2rem;
+    animation: rise 0.7s 0.08s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    animation: rise 0.7s 0.16s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.75rem;
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+  }
+  .hero-trust .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green-bright);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--green-bright) 20%, transparent);
+  }
+
+  /* OPERATION CARD */
+  .op-card {
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 8px;
+    padding: 1.6rem 1.7rem;
+    box-shadow: 14px 14px 0 -2px var(--paper-3), 14px 14px 0 0 var(--ink);
+    animation: rise 0.8s 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .op-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+  }
+  .op-label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .op-badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brick);
+    border: 1px solid color-mix(in srgb, var(--brick) 45%, transparent);
+    border-radius: 100px;
+    padding: 0.2rem 0.6rem;
+  }
+  .op-lines { list-style: none; }
+  .op-lines li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 0.98rem;
+  }
+  .op-lines li span { color: var(--ink-soft); }
+  .op-lines li b {
+    font-family: var(--font-display);
+    font-weight: 560;
+    font-size: 1.1rem;
+  }
+  .op-lines .op-sep b { color: var(--green); }
+
+  .op-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1.1rem;
+    padding: 0.9rem 1rem;
+    background: var(--green);
+    color: var(--paper);
+    border-radius: 6px;
+  }
+  .op-result span {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+  .op-result strong {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .op-foot {
+    margin-top: 0.9rem;
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    line-height: 1.4;
+  }
+
+  /* PROOF */
+  .proof {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--paper-2);
+  }
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding-top: clamp(2.4rem, 5vw, 3.5rem);
+    padding-bottom: clamp(2.4rem, 5vw, 3.5rem);
+  }
+  .proof-num {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--brick);
+    font-weight: 600;
+  }
+  .proof-item h3 {
+    font-size: 1.35rem;
+    margin: 0.5rem 0 0.5rem;
+  }
+  .proof-item p {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    max-width: 30ch;
+  }
+
+  /* CTA BAND */
+  .cta-band {
+    padding-top: clamp(3.5rem, 8vw, 6rem);
+    padding-bottom: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+  }
+  .cta-inner h2 {
+    font-size: clamp(2rem, 4.5vw, 3.1rem);
+    max-width: 18ch;
+    margin-inline: auto;
+  }
+  .cta-inner p {
+    color: var(--ink-soft);
+    margin: 1rem auto 2rem;
+    font-size: 1.08rem;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .op-card { max-width: 420px; }
+  }
+  @media (max-width: 620px) {
+    .proof-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+    .op-card { box-shadow: 8px 8px 0 0 var(--ink); }
+  }
+</style>
