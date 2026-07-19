@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const CALENDLY = 'https://calendly.com/immoseille/appel-decouverte';
+
+// TODO: remplace les [Prénom] et photos par les vrais membres de l'équipe
+const equipe = [
+  { role: 'Marchand de biens', name: '[Prénom]', d: "En activité. Monte ses propres opérations et transmet ce qui marche sur le terrain." },
+  { role: 'Acquisition & relation', name: 'Redouane', d: "Sourcing, relation et suivi des porteurs de projet." },
+  { role: 'Acquisition & développement', name: '[Prénom]', d: "Développement, partenariats et accompagnement." },
+  { role: 'Production & contenu', name: '[Prénom]', d: "Réalisation des contenus vidéo et pédagogiques." },
+];
+
+const valeurs = [
+  { t: 'Le terrain avant tout', d: "On enseigne un métier qu’on pratique, pas une théorie. Chaque notion vient d’une opération réelle." },
+  { t: 'La transparence', d: "On montre les marges, mais aussi les risques et les opérations qui ne passent pas. Pas de fausse promesse." },
+  { t: 'L’accompagnement', d: "Vous n’êtes pas seul face à une vidéo. On avance avec vous, sur vos opérations." },
+];
+---
+
+<BaseLayout
+  title="À propos | Imm'oseille"
+  description="Imm'oseille, la formation au métier de marchand de biens animée par des acteurs du terrain. Notre équipe, notre approche et nos valeurs."
+>
+  <section class="ahero">
+    <div class="wrap">
+      <p class="eyebrow">À propos</p>
+      <h1>L’immobilier par des acteurs du terrain</h1>
+      <p class="ahero-sub">
+        Imm’oseille est née d’un constat simple : le marché de la formation
+        promet monts et merveilles, mais peu de gens vous montrent vraiment
+        comment on monte une opération. Nous prenons le contre-pied.
+      </p>
+    </div>
+  </section>
+
+  <section class="section equipe">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">L’équipe</p>
+        <h2>Qui est derrière Imm’oseille</h2>
+        <p class="lede">Quatre associés, chacun sur son terrain : le métier, l’acquisition, la relation et le contenu.</p>
+      </div>
+      <div class="equipe-grid">
+        {equipe.map((m) => (
+          <article class="equipe-card">
+            <div class="equipe-photo" aria-hidden="true"><span>Photo</span></div>
+            <h3>{m.name}</h3>
+            <p class="equipe-role">{m.role}</p>
+            <p class="equipe-d">{m.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section valeurs">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Notre approche</p>
+        <h2>Ce qui nous différencie</h2>
+      </div>
+      <div class="valeurs-grid">
+        {valeurs.map((v) => (
+          <article class="valeur-card">
+            <h3>{v.t}</h3>
+            <p>{v.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2>Envie d’échanger sur votre projet ?</h2>
+      <p>On prend 20 minutes pour en parler, sans engagement.</p>
+      <a href={CALENDLY} class="btn btn--primary">Réserver un appel</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .section { padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(3.5rem, 8vw, 6rem); }
+  .section-head { max-width: 46ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
+  .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); margin: 0.6rem 0 0.8rem; }
+  .lede { color: var(--ink-soft); font-size: 1.06rem; }
+
+  .ahero { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(2rem, 4vw, 3rem); }
+  .ahero h1 { font-size: clamp(2.3rem, 5.4vw, 3.8rem); margin: 1rem 0 1.3rem; max-width: 16ch; }
+  .ahero-sub { color: var(--ink-soft); font-size: clamp(1.02rem, 1.5vw, 1.18rem); max-width: 54ch; }
+
+  .equipe { background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .equipe-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+  .equipe-card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; }
+  .equipe-photo { aspect-ratio: 1; border-radius: 8px; margin-bottom: 1rem; display: grid; place-items: center; color: var(--ink-faint); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;
+    background: repeating-linear-gradient(45deg, var(--paper-3) 0 10px, var(--paper-2) 10px 20px); }
+  .equipe-card h3 { font-size: 1.2rem; }
+  .equipe-role { color: var(--gold); font-weight: 600; font-size: 0.85rem; margin: 0.2rem 0 0.6rem; }
+  .equipe-d { color: var(--ink-soft); font-size: 0.92rem; }
+
+  .valeurs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .valeur-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem; background: var(--paper); }
+  .valeur-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .valeur-card p { color: var(--ink-soft); font-size: 0.97rem; }
+
+  .cta-band { padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(1rem, 4vw, 2rem); text-align: center; }
+  .cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3.1rem); max-width: 20ch; margin-inline: auto; }
+  .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.08rem; }
+
+  @media (max-width: 900px) { .equipe-grid { grid-template-columns: repeat(2, 1fr); } .valeurs-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 520px) { .equipe-grid { grid-template-columns: 1fr; } }
+</style>

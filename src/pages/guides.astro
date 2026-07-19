@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const CALENDLY = 'https://calendly.com/immoseille/appel-decouverte';
+
+// Roadmap de contenu SEO. Les guides seront publiés progressivement.
+const groupes = [
+  {
+    titre: 'Comprendre le métier',
+    items: [
+      'Marchand de biens : c’est quoi ?',
+      'Quel statut juridique choisir (SAS, EURL) ?',
+      'Combien gagne un marchand de biens ?',
+      'Marchand de biens ou agent immobilier ?',
+    ],
+  },
+  {
+    titre: 'Se lancer',
+    items: [
+      'Comment devenir marchand de biens ?',
+      'Devenir marchand de biens sans diplôme',
+      'Quel apport pour se lancer ?',
+      'Se lancer en achat-revente immobilier',
+    ],
+  },
+  {
+    titre: 'Aspects pratiques',
+    items: [
+      'Comment financer une opération ?',
+      'Exemple d’opération d’achat-revente',
+      'Le montage d’une opération, étape par étape',
+      'La fiscalité du marchand de biens',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Guides marchand de biens | Imm'oseille"
+  description="Le centre de ressources Imm'oseille : comprendre le métier de marchand de biens, se lancer, monter une opération, financement et fiscalité."
+>
+  <section class="ghero">
+    <div class="wrap">
+      <p class="eyebrow">Guides</p>
+      <h1>Comprendre le métier de marchand de biens</h1>
+      <p class="ghero-sub">
+        Un centre de ressources pour apprendre les bases, se poser les bonnes
+        questions et avancer sereinement vers votre première opération. Les guides
+        arrivent progressivement.
+      </p>
+    </div>
+  </section>
+
+  <section class="section groupes">
+    <div class="wrap">
+      {groupes.map((g) => (
+        <div class="groupe">
+          <h2 class="groupe-title">{g.titre}</h2>
+          <div class="guide-grid">
+            {g.items.map((it) => (
+              <article class="guide-card">
+                <h3>{it}</h3>
+                <span class="guide-tag">Bientôt</span>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2>Une question sur le métier ?</h2>
+      <p>Plutôt que de lire, échangeons directement. 20 minutes, sans engagement.</p>
+      <a href={CALENDLY} class="btn btn--primary">Réserver un appel</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .section { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(3.5rem, 8vw, 6rem); }
+  .ghero { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+  .ghero h1 { font-size: clamp(2.3rem, 5.4vw, 3.8rem); margin: 1rem 0 1.3rem; max-width: 16ch; }
+  .ghero-sub { color: var(--ink-soft); font-size: clamp(1.02rem, 1.5vw, 1.18rem); max-width: 56ch; }
+
+  .groupe { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+  .groupe-title { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--line); }
+  .guide-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .guide-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; background: var(--paper); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; min-height: 130px; transition: border-color 0.2s ease; }
+  .guide-card:hover { border-color: var(--gold); }
+  .guide-card h3 { font-size: 1.05rem; line-height: 1.25; }
+  .guide-tag { align-self: flex-start; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); border-radius: 100px; padding: 0.18rem 0.6rem; }
+
+  .cta-band { padding-top: clamp(2rem, 5vw, 3.5rem); padding-bottom: clamp(1rem, 4vw, 2rem); text-align: center; }
+  .cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3.1rem); max-width: 20ch; margin-inline: auto; }
+  .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.08rem; }
+
+  @media (max-width: 900px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .guide-grid { grid-template-columns: 1fr; } }
+</style>

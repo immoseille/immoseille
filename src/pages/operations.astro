@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const CALENDLY = 'https://calendly.com/immoseille/appel-decouverte';
+
+// TODO: remplace par de vraies opérations (anonymisées) une fois validées
+const cases = [
+  {
+    titre: 'T3 à rénover en centre-ville',
+    lignes: [
+      ['Achat', '164 000 €'],
+      ['Travaux', '38 000 €'],
+      ['Frais, notaire & portage', '21 000 €'],
+      ['Revente après travaux', '259 000 €'],
+    ],
+    marge: '36 000 €',
+  },
+  {
+    titre: 'Maison à diviser en deux lots',
+    lignes: [
+      ['Achat', '245 000 €'],
+      ['Travaux & division', '72 000 €'],
+      ['Frais & portage', '33 000 €'],
+      ['Revente des deux lots', '410 000 €'],
+    ],
+    marge: '60 000 €',
+  },
+  {
+    titre: 'Plateau à réhabiliter',
+    lignes: [
+      ['Achat', '128 000 €'],
+      ['Travaux', '54 000 €'],
+      ['Frais & portage', '19 000 €'],
+      ['Revente', '228 000 €'],
+    ],
+    marge: '27 000 €',
+  },
+];
+---
+
+<BaseLayout
+  title="Résultats & opérations | Imm'oseille"
+  description="Des exemples d'opérations d'achat-revente décryptés : achat, travaux, frais, revente et marge. Une pédagogie de terrain, chiffres à l'appui."
+>
+  <section class="ohero">
+    <div class="wrap">
+      <p class="eyebrow">Résultats</p>
+      <h1>Des opérations réelles, décryptées</h1>
+      <p class="ohero-sub">
+        On apprend le métier en regardant de vraies opérations, ligne par ligne :
+        le prix d’achat, le budget travaux, les frais, la revente, la marge.
+        Voici des exemples pour comprendre comment se construit une opération.
+      </p>
+    </div>
+  </section>
+
+  <section class="section cases">
+    <div class="wrap">
+      <div class="cases-grid">
+        {cases.map((c) => (
+          <article class="op-card">
+            <div class="op-head">
+              <span class="op-label">{c.titre}</span>
+              <span class="op-badge">cas anonymisé</span>
+            </div>
+            <ul class="op-lines">
+              {c.lignes.map((l, i) => (
+                <li class={i === c.lignes.length - 1 ? 'op-sep' : ''}><span>{l[0]}</span><b>{l[1]}</b></li>
+              ))}
+            </ul>
+            <div class="op-result">
+              <span>Marge brute</span>
+              <strong>{c.marge}</strong>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="cases-disclaimer">
+        Exemples pédagogiques anonymisés. Chaque opération est unique et comporte
+        un risque : une opération peut aussi dégager une marge nulle ou négative.
+        Les chiffres ne constituent ni une promesse ni un engagement de résultat.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2>Envie d’apprendre à monter ce type d’opération ?</h2>
+      <p>On échange 20 minutes sur votre projet, sans engagement.</p>
+      <a href={CALENDLY} class="btn btn--primary">Réserver un appel</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .section { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(3.5rem, 8vw, 6rem); }
+  .ohero { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+  .ohero h1 { font-size: clamp(2.3rem, 5.4vw, 3.8rem); margin: 1rem 0 1.3rem; max-width: 15ch; }
+  .ohero-sub { color: var(--ink-soft); font-size: clamp(1.02rem, 1.5vw, 1.18rem); max-width: 56ch; }
+
+  .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+
+  .op-card { background: var(--paper); border: 1.5px solid var(--ink); border-radius: 8px; padding: 1.6rem 1.7rem; box-shadow: 10px 10px 0 0 var(--ink); }
+  .op-head { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; margin-bottom: 1.2rem; }
+  .op-label { font-family: var(--font-display); font-weight: 560; font-size: 1.02rem; }
+  .op-badge { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); border-radius: 100px; padding: 0.2rem 0.55rem; white-space: nowrap; }
+  .op-lines { list-style: none; }
+  .op-lines li { display: flex; justify-content: space-between; align-items: baseline; padding: 0.55rem 0; border-bottom: 1px dashed var(--line); font-size: 0.96rem; }
+  .op-lines li span { color: var(--ink-soft); }
+  .op-lines li b { font-family: var(--font-display); font-weight: 560; font-size: 1.05rem; }
+  .op-lines .op-sep b { color: var(--green); }
+  .op-result { display: flex; justify-content: space-between; align-items: baseline; margin-top: 1rem; padding: 0.85rem 1rem; background: var(--green); color: var(--paper); border-radius: 6px; }
+  .op-result span { font-size: 0.82rem; letter-spacing: 0.04em; }
+  .op-result strong { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; }
+
+  .cases-disclaimer { margin-top: 2rem; font-size: 0.85rem; color: var(--ink-faint); max-width: 70ch; line-height: 1.5; }
+
+  .cta-band { padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(1rem, 4vw, 2rem); text-align: center; }
+  .cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3.1rem); max-width: 22ch; margin-inline: auto; }
+  .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.08rem; }
+
+  @media (max-width: 900px) { .cases-grid { grid-template-columns: 1fr; max-width: 460px; } }
+</style>
