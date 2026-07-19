@@ -13,7 +13,7 @@ interface Props {
 const {
   title = "Imm'oseille — Formation au métier de marchand de biens",
   description = "Apprenez le métier de marchand de biens : montage d'opération, sourcing off-market, négociation, marge et fiscalité. Une formation de terrain pour vous lancer et vous professionnaliser.",
-  image = '/og-default.jpg',
+  image = '/logo-mark-512.png',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
@@ -24,7 +24,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -57,9 +58,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
         --ink: #17150f;
         --ink-soft: #4c473b;
         --ink-faint: #8b8474;
-        --green: #1d4a37;
-        --green-bright: #2c6b4f;
-        --brick: #b0552c;
+        --green: #0f3a26;
+        --green-bright: #1c5a3c;
+        --gold: #b8923f;
         --line: rgba(23, 21, 15, 0.14);
         --line-soft: rgba(23, 21, 15, 0.08);
 
@@ -181,7 +182,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
         font-size: 0.78rem;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: var(--brick);
+        color: var(--gold);
       }
 
       @media (prefers-reduced-motion: reduce) {

@@ -31,11 +31,7 @@ const cols = [
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span class="brand-mark">Imm<span class="apos">'</span>oseille</span>
-      <p class="footer-tag">
-        La formation de terrain au métier de marchand de biens. Apprendre le
-        montage d'opération, se lancer, se professionnaliser.
-      </p>
+      <img src="/logo-full.png" alt="Imm'oseille — Formation marchand de biens" class="footer-logo" width="240" />
       <a href="/rendez-vous" class="btn btn--ghost">Réserver un appel</a>
     </div>
 
@@ -72,18 +68,11 @@ const cols = [
     padding-top: clamp(3rem, 6vw, 4.5rem);
     padding-bottom: 3rem;
   }
-  .brand-mark {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.45rem;
-    letter-spacing: -0.02em;
-  }
-  .brand-mark .apos { color: var(--brick); }
-  .footer-tag {
-    margin: 1rem 0 1.6rem;
-    color: var(--ink-soft);
-    max-width: 34ch;
-    font-size: 0.97rem;
+  .footer-logo {
+    height: auto;
+    max-width: 240px;
+    margin-bottom: 1.6rem;
+    display: block;
   }
   .footer-cols {
     display: grid;
@@ -106,7 +95,7 @@ const cols = [
     font-size: 0.96rem;
     transition: color 0.15s ease;
   }
-  .footer-col a:hover { color: var(--brick); }
+  .footer-col a:hover { color: var(--gold); }
 
   .footer-bottom {
     display: flex;
