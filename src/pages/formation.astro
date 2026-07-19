@@ -12,30 +12,32 @@ const format = [
 ];
 
 const modules = [
-  {
-    n: '01', t: 'Sourcing & off-market', href: '/module-1', free: true,
-    points: ['Construire un réseau d’apporteurs', 'Détecter les biens à potentiel', 'Accéder aux opportunités off-market'],
-  },
-  {
-    n: '02', t: 'Analyse & chiffrage',
-    points: ['Évaluer un bien et son marché', 'Estimer un budget travaux fiable', 'Calculer la marge et la rentabilité'],
-  },
-  {
-    n: '03', t: 'Montage de l’opération',
-    points: ['Choisir le bon statut (SAS, EURL)', 'Éviter les pièges (SCI, micro-entreprise)', 'Structurer juridiquement l’opération'],
-  },
-  {
-    n: '04', t: 'Financement',
-    points: ['Monter un dossier bancaire solide', 'Convaincre et négocier', 'Optimiser son plan de financement'],
-  },
-  {
-    n: '05', t: 'Travaux & revente',
-    points: ['Piloter un chantier sans se faire déborder', 'Valoriser le bien', 'Préparer et réussir la revente'],
-  },
-  {
-    n: '06', t: 'Fiscalité & sécurisation',
-    points: ['Maîtriser la TVA sur marge', 'Sécuriser chaque étape', 'Comprendre le cadre légal du métier'],
-  },
+  { n: '01', t: 'Sourcing & off-market', free: true,
+    points: ['Construire un réseau d’apporteurs', 'Détecter les biens à potentiel', 'Accéder aux opportunités off-market'] },
+  { n: '02', t: 'Analyse & chiffrage',
+    points: ['Évaluer un bien et son marché', 'Estimer un budget travaux fiable', 'Calculer la marge et la rentabilité'] },
+  { n: '03', t: 'Montage de l’opération',
+    points: ['Choisir le bon statut (SAS, EURL)', 'Éviter les pièges (SCI, micro-entreprise)', 'Structurer juridiquement l’opération'] },
+  { n: '04', t: 'Financement',
+    points: ['Monter un dossier bancaire solide', 'Convaincre et négocier', 'Optimiser son plan de financement'] },
+  { n: '05', t: 'Travaux & revente',
+    points: ['Piloter un chantier sans se faire déborder', 'Valoriser le bien', 'Préparer et réussir la revente'] },
+  { n: '06', t: 'Fiscalité & sécurisation',
+    points: ['Maîtriser la TVA sur marge', 'Sécuriser chaque étape', 'Comprendre le cadre légal du métier'] },
+];
+
+const chapitres = [
+  'Pourquoi le sourcing est le nerf du métier',
+  'Construire un réseau d’apporteurs d’affaires',
+  'Accéder aux biens off-market',
+  'Détecter un bien à potentiel',
+  'Activer les bons canaux (et éviter les mauvais)',
+];
+
+const notions = [
+  { t: 'La marge se fait à l’achat', d: "Si vous achetez au bon prix, la rentabilité est déjà en grande partie sécurisée." },
+  { t: 'Le off-market, c’est quoi', d: "Les biens qui se vendent sans annonce publique : moins de concurrence, plus de marge." },
+  { t: 'L’erreur du débutant', d: "Attendre les biens sur les portails classiques, où la concurrence a déjà fait monter le prix." },
 ];
 
 const parcours = [
@@ -48,7 +50,7 @@ const parcours = [
 
 <BaseLayout
   title="Formation marchand de biens | Imm'oseille"
-  description="La formation Imm'oseille pour devenir marchand de biens : sourcing, montage d'opération, financement, travaux, revente et fiscalité. Une pédagogie de terrain avec accompagnement."
+  description="La formation Imm'oseille pour devenir marchand de biens : sourcing, montage d'opération, financement, travaux, revente et fiscalité. Premier module offert."
 >
   <!-- HERO -->
   <section class="fhero">
@@ -62,7 +64,7 @@ const parcours = [
       </p>
       <div class="fhero-cta">
         <a href={CALENDLY} class="btn btn--primary">Réserver un appel &rarr;</a>
-        <a href="#programme" class="btn btn--ghost">Voir le programme</a>
+        <a href="#module-offert" class="btn btn--ghost">Le 1er module offert</a>
       </div>
     </div>
   </section>
@@ -86,8 +88,8 @@ const parcours = [
     </div>
   </section>
 
-  <!-- PROGRAMME DETAILLE -->
-  <section class="section prog" id="programme">
+  <!-- PROGRAMME -->
+  <section class="section prog">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Le programme</p>
@@ -99,7 +101,7 @@ const parcours = [
           <article class={`prog-card${m.free ? ' prog-card--free' : ''}`}>
             <div class="prog-top">
               <span class="prog-num">{m.n}</span>
-              {m.free && <span class="prog-badge">Aperçu gratuit</span>}
+              {m.free && <span class="prog-badge">Offert</span>}
             </div>
             <h3>{m.t}</h3>
             <ul>
@@ -107,22 +109,48 @@ const parcours = [
                 <li><svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>{p}</li>
               ))}
             </ul>
-            {m.href && <a href={m.href} class="prog-link">Découvrir le module 1 &rarr;</a>}
           </article>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- APERCU MODULE 1 -->
-  <section class="modulecta">
-    <div class="wrap modulecta-inner">
-      <div class="modulecta-copy">
-        <p class="eyebrow eyebrow--light">Accès libre</p>
-        <h2>Découvrez le module 1 gratuitement</h2>
-        <p>Avant de vous engager, plongez dans le premier module : sourcing et off-market, le nerf du métier. De quoi vous faire une vraie idée du contenu et de la pédagogie.</p>
+  <!-- PREMIER MODULE OFFERT -->
+  <section class="offert" id="module-offert">
+    <div class="wrap offert-inner">
+      <div class="offert-head">
+        <p class="eyebrow eyebrow--light">Le premier module, offert</p>
+        <h2>Commencez par le module 1, gratuitement</h2>
+        <p>
+          Avant de vous engager, on vous offre le premier module : le sourcing et
+          l’off-market, le nerf du métier. De quoi vous faire une vraie idée du
+          contenu et de la pédagogie.
+        </p>
       </div>
-      <a href="/module-1" class="btn btn--gold">Voir le module 1 &rarr;</a>
+
+      <div class="offert-body">
+        <div class="offert-col">
+          <h3 class="offert-subtitle">Au programme du module 1</h3>
+          <ol class="offert-chap">
+            {chapitres.map((c, i) => (
+              <li><span class="offert-n">{`1.${i + 1}`}</span>{c}</li>
+            ))}
+          </ol>
+        </div>
+        <div class="offert-col">
+          <h3 class="offert-subtitle">Ce que vous retenez dès ce module</h3>
+          <div class="offert-notions">
+            {notions.map((n) => (
+              <article class="offert-notion">
+                <h4>{n.t}</h4>
+                <p>{n.d}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <a href={CALENDLY} class="btn btn--gold offert-cta">Réserver un appel pour démarrer &rarr;</a>
     </div>
   </section>
 
@@ -178,29 +206,40 @@ const parcours = [
   /* PROGRAMME */
   .prog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
   .prog-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem; background: var(--paper); }
+  .prog-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+  .prog-card--free { border-color: color-mix(in srgb, var(--gold) 60%, var(--line)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 35%, transparent); }
   .prog-num { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); font-weight: 600; }
+  .prog-badge { font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: var(--gold); border-radius: 100px; padding: 0.22rem 0.65rem; font-weight: 600; }
   .prog-card h3 { font-size: 1.3rem; margin: 0.4rem 0 1rem; }
   .prog-card ul { list-style: none; display: grid; gap: 0.6rem; }
   .prog-card li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.96rem; color: var(--ink-soft); }
-  .prog-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
-  .prog-card--free { border-color: color-mix(in srgb, var(--gold) 60%, var(--line)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 35%, transparent); }
-  .prog-badge { font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: var(--gold); border-radius: 100px; padding: 0.22rem 0.6rem; font-weight: 600; }
-  .prog-link { display: inline-block; margin-top: 1rem; color: var(--green-bright); font-weight: 600; font-size: 0.95rem; }
-  .prog-link:hover { color: var(--gold); }
 
-  /* MODULE 1 CTA */
-  .modulecta { background: var(--green); color: var(--paper); }
-  .modulecta-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-top: clamp(2.5rem, 5vw, 3.5rem); padding-bottom: clamp(2.5rem, 5vw, 3.5rem); }
-  .modulecta-copy { max-width: 54ch; }
-  .modulecta-copy h2 { color: var(--paper); font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin: 0.4rem 0 0.7rem; }
-  .modulecta-copy p { color: color-mix(in srgb, var(--paper) 80%, transparent); font-size: 1.02rem; }
+  /* PREMIER MODULE OFFERT */
+  .offert { background: var(--green); color: var(--paper); }
+  .offert-inner { padding-top: clamp(3rem, 6vw, 5rem); padding-bottom: clamp(3rem, 6vw, 5rem); }
+  .offert-head { max-width: 56ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
+  .offert-head h2 { color: var(--paper); font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 0.5rem 0 0.8rem; }
+  .offert-head p { color: color-mix(in srgb, var(--paper) 82%, transparent); font-size: 1.06rem; }
   .eyebrow--light { color: var(--gold); }
-  .btn--gold { background: var(--gold); border-color: var(--gold); color: var(--ink); white-space: nowrap; }
+
+  .offert-body { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); }
+  .offert-subtitle { color: var(--gold); font-family: var(--font-body); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.2rem; }
+  .offert-chap { list-style: none; display: grid; gap: 0.7rem; }
+  .offert-chap li { display: flex; gap: 0.9rem; align-items: baseline; padding-bottom: 0.7rem; border-bottom: 1px solid rgba(243,239,228,0.16); font-size: 1.02rem; }
+  .offert-n { font-family: var(--font-display); color: var(--gold); font-weight: 600; flex: none; }
+
+  .offert-notions { display: grid; gap: 0.9rem; }
+  .offert-notion { border: 1px solid rgba(243,239,228,0.18); border-radius: 10px; padding: 1.1rem 1.2rem; }
+  .offert-notion h4 { color: var(--paper); font-family: var(--font-display); font-size: 1.1rem; font-weight: 560; margin-bottom: 0.3rem; }
+  .offert-notion p { color: color-mix(in srgb, var(--paper) 74%, transparent); font-size: 0.94rem; }
+
+  .btn--gold { background: var(--gold); border-color: var(--gold); color: var(--ink); }
   .btn--gold:hover { background: var(--paper); border-color: var(--paper); color: var(--ink); transform: translateY(-2px); }
+  .offert-cta { margin-top: clamp(2rem, 4vw, 3rem); }
 
   /* PARCOURS */
-  .parcours-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; counter-reset: step; }
-  .parcours-step { position: relative; padding: 1.6rem; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+  .parcours-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+  .parcours-step { padding: 1.6rem; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
   .parcours-num { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--green); color: var(--paper); font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; }
   .parcours-step h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
   .parcours-step p { color: var(--ink-soft); font-size: 0.95rem; }
@@ -213,7 +252,7 @@ const parcours = [
   @media (max-width: 900px) {
     .format-grid, .parcours-grid { grid-template-columns: repeat(2, 1fr); }
     .prog-grid { grid-template-columns: repeat(2, 1fr); }
-    .modulecta-inner { flex-direction: column; align-items: flex-start; }
+    .offert-body { grid-template-columns: 1fr; gap: 2rem; }
   }
   @media (max-width: 560px) {
     .format-grid, .parcours-grid, .prog-grid { grid-template-columns: 1fr; }
