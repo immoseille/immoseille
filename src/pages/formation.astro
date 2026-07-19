@@ -13,7 +13,7 @@ const format = [
 
 const modules = [
   {
-    n: '01', t: 'Sourcing & off-market',
+    n: '01', t: 'Sourcing & off-market', href: '/module-1', free: true,
     points: ['Construire un réseau d’apporteurs', 'Détecter les biens à potentiel', 'Accéder aux opportunités off-market'],
   },
   {
@@ -96,17 +96,33 @@ const parcours = [
       </div>
       <div class="prog-grid">
         {modules.map((m) => (
-          <article class="prog-card">
-            <span class="prog-num">{m.n}</span>
+          <article class={`prog-card${m.free ? ' prog-card--free' : ''}`}>
+            <div class="prog-top">
+              <span class="prog-num">{m.n}</span>
+              {m.free && <span class="prog-badge">Aperçu gratuit</span>}
+            </div>
             <h3>{m.t}</h3>
             <ul>
               {m.points.map((p) => (
                 <li><svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>{p}</li>
               ))}
             </ul>
+            {m.href && <a href={m.href} class="prog-link">Découvrir le module 1 &rarr;</a>}
           </article>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- APERCU MODULE 1 -->
+  <section class="modulecta">
+    <div class="wrap modulecta-inner">
+      <div class="modulecta-copy">
+        <p class="eyebrow eyebrow--light">Accès libre</p>
+        <h2>Découvrez le module 1 gratuitement</h2>
+        <p>Avant de vous engager, plongez dans le premier module : sourcing et off-market, le nerf du métier. De quoi vous faire une vraie idée du contenu et de la pédagogie.</p>
+      </div>
+      <a href="/module-1" class="btn btn--gold">Voir le module 1 &rarr;</a>
     </div>
   </section>
 
@@ -166,6 +182,21 @@ const parcours = [
   .prog-card h3 { font-size: 1.3rem; margin: 0.4rem 0 1rem; }
   .prog-card ul { list-style: none; display: grid; gap: 0.6rem; }
   .prog-card li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.96rem; color: var(--ink-soft); }
+  .prog-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+  .prog-card--free { border-color: color-mix(in srgb, var(--gold) 60%, var(--line)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 35%, transparent); }
+  .prog-badge { font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: var(--gold); border-radius: 100px; padding: 0.22rem 0.6rem; font-weight: 600; }
+  .prog-link { display: inline-block; margin-top: 1rem; color: var(--green-bright); font-weight: 600; font-size: 0.95rem; }
+  .prog-link:hover { color: var(--gold); }
+
+  /* MODULE 1 CTA */
+  .modulecta { background: var(--green); color: var(--paper); }
+  .modulecta-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-top: clamp(2.5rem, 5vw, 3.5rem); padding-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+  .modulecta-copy { max-width: 54ch; }
+  .modulecta-copy h2 { color: var(--paper); font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin: 0.4rem 0 0.7rem; }
+  .modulecta-copy p { color: color-mix(in srgb, var(--paper) 80%, transparent); font-size: 1.02rem; }
+  .eyebrow--light { color: var(--gold); }
+  .btn--gold { background: var(--gold); border-color: var(--gold); color: var(--ink); white-space: nowrap; }
+  .btn--gold:hover { background: var(--paper); border-color: var(--paper); color: var(--ink); transform: translateY(-2px); }
 
   /* PARCOURS */
   .parcours-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; counter-reset: step; }
@@ -182,6 +213,7 @@ const parcours = [
   @media (max-width: 900px) {
     .format-grid, .parcours-grid { grid-template-columns: repeat(2, 1fr); }
     .prog-grid { grid-template-columns: repeat(2, 1fr); }
+    .modulecta-inner { flex-direction: column; align-items: flex-start; }
   }
   @media (max-width: 560px) {
     .format-grid, .parcours-grid, .prog-grid { grid-template-columns: 1fr; }
