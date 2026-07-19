@@ -1,31 +1,90 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const proofPoints = [
-  { k: 'Sourcing', v: "Trouver les biens off-market avant tout le monde" },
-  { k: 'Montage', v: "Structurer l'opération, le statut et le financement" },
-  { k: 'Marge', v: "Chiffrer, négocier et sécuriser la rentabilité" },
+// TODO: remplace par ton vrai lien Calendly
+const CALENDLY = 'https://calendly.com/immoseille/appel-decouverte';
+
+const reassurance = [
+  'Formateur marchand de biens en activité',
+  'Des opérations réelles décryptées',
+  'Un accompagnement de terrain',
+  'Une communauté d’entraide',
 ];
+
+const pourQui = [
+  "Vous voulez vous lancer dans l’achat-revente mais ne savez pas par où commencer.",
+  "Vous avez un premier capital (ou pas encore) et voulez apprendre à monter une opération.",
+  "Vous en avez assez des formations théoriques, déconnectées du terrain.",
+  "Vous voulez comprendre le statut, le financement et la fiscalité du métier.",
+  "Vous cherchez un cadre et un accompagnement, pas des promesses.",
+];
+
+const modules = [
+  { n: '01', t: 'Sourcing & off-market', d: "Trouver les biens à potentiel avant tout le monde, construire son réseau d’apporteurs." },
+  { n: '02', t: 'Analyse & chiffrage', d: "Évaluer un bien, estimer les travaux, calculer la marge et sécuriser sa rentabilité." },
+  { n: '03', t: "Montage de l’opération", d: "Choisir le bon statut (SAS, EURL), structurer juridiquement, éviter les pièges (SCI, micro)." },
+  { n: '04', t: 'Financement', d: "Monter un dossier bancaire solide, convaincre, négocier les conditions." },
+  { n: '05', t: 'Travaux & revente', d: "Piloter un chantier, valoriser le bien, préparer et réussir la revente." },
+  { n: '06', t: 'Fiscalité & sécurisation', d: "Maîtriser le cadre légal, la TVA sur marge et sécuriser chaque opération." },
+];
+
+const faq = [
+  {
+    q: "Faut-il un diplôme pour devenir marchand de biens ?",
+    a: "Non. Le métier de marchand de biens n’exige aucun diplôme. Ce qui compte, ce sont les compétences (sourcing, chiffrage, montage, négociation) et la méthode — c’est précisément ce que la formation vous transmet.",
+  },
+  {
+    q: "Combien faut-il d’apport pour se lancer ?",
+    a: "Cela dépend des opérations visées. On peut démarrer petit et monter en puissance opération après opération. La formation vous apprend justement à calibrer vos premières opérations selon vos moyens et à construire votre financement.",
+  },
+  {
+    q: "Quel statut juridique choisir ?",
+    a: "Le marchand de biens exerce en société (souvent SAS ou EURL). Attention : la micro-entreprise et la SCI ne conviennent pas à cette activité. Le module dédié détaille le bon montage selon votre situation.",
+  },
+  {
+    q: "Combien de temps avant une première opération ?",
+    a: "Il n’y a pas de délai type — cela dépend de votre disponibilité, de votre marché et des opportunités. L’objectif de la formation est de vous rendre autonome et opérationnel, pas de vous promettre un calendrier.",
+  },
+  {
+    q: "La formation convient-elle aux débutants ?",
+    a: "Oui. Le programme part des fondamentaux et va jusqu’au montage complet d’une opération. Aucun prérequis technique n’est nécessaire, seulement de la motivation et de la rigueur.",
+  },
+  {
+    q: "Est-ce éligible au CPF ?",
+    a: "Non. La formation n’est pas éligible au CPF ni finançable par un organisme public. Nous préférons être transparents plutôt que de vous vendre un financement qui n’existe pas.",
+  },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 
 <BaseLayout>
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Formation au métier de marchand de biens</p>
         <h1 class="hero-title">
-          Le métier s'apprend<br />
+          Le métier s’apprend<br />
           <span class="accent">sur le terrain.</span><br />
           On vous forme pour de vrai.
         </h1>
         <p class="hero-sub">
-          Achat-revente, montage d'opération, sourcing off-market, négociation
+          Achat-revente, montage d’opération, sourcing off-market, négociation
           et fiscalité. Une formation concrète pour vous lancer, monter vos
-          premières opérations et vous professionnaliser — sans promesse en l'air.
+          premières opérations et vous professionnaliser — sans promesse en l’air.
         </p>
         <div class="hero-cta">
-          <a href="/rendez-vous" class="btn btn--primary">Réserver un appel &rarr;</a>
-          <a href="/formation" class="btn btn--ghost">Découvrir la formation</a>
+          <a href={CALENDLY} class="btn btn--primary">Réserver un appel &rarr;</a>
+          <a href="#programme" class="btn btn--ghost">Voir le programme</a>
         </div>
         <p class="hero-trust">
           <span class="dot"></span>
@@ -33,9 +92,9 @@ const proofPoints = [
         </p>
       </div>
 
-      <aside class="op-card" aria-label="Exemple pédagogique d'opération">
+      <aside class="op-card" aria-label="Exemple pédagogique d’opération">
         <div class="op-head">
-          <span class="op-label">Exemple d'opération</span>
+          <span class="op-label">Exemple d’opération</span>
           <span class="op-badge">pédagogique</span>
         </div>
         <ul class="op-lines">
@@ -55,215 +114,330 @@ const proofPoints = [
     </div>
   </section>
 
-  <section class="proof">
-    <div class="wrap proof-grid">
-      {proofPoints.map((p, i) => (
-        <article class="proof-item">
-          <span class="proof-num">0{i + 1}</span>
-          <h3>{p.k}</h3>
-          <p>{p.v}</p>
-        </article>
+  <!-- BARRE DE RÉASSURANCE -->
+  <section class="reassure">
+    <div class="wrap reassure-grid">
+      {reassurance.map((r) => (
+        <div class="reassure-item">
+          <svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+          <span>{r}</span>
+        </div>
       ))}
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="wrap cta-inner">
-      <h2>Prêt à passer du projet à l'opération ?</h2>
-      <p>On échange 20 minutes sur votre situation, sans engagement.</p>
-      <a href="/rendez-vous" class="btn btn--primary">Réserver mon appel</a>
+  <!-- POUR QUI -->
+  <section class="section pourqui">
+    <div class="wrap pourqui-grid">
+      <div class="pourqui-head">
+        <p class="eyebrow">Pour qui</p>
+        <h2>Cette formation est faite pour vous si…</h2>
+        <p class="lede">
+          Le métier de marchand de biens est ouvert à tous — mais il ne
+          s’improvise pas. On s’adresse à celles et ceux qui veulent l’exercer
+          sérieusement.
+        </p>
+        <a href={CALENDLY} class="btn btn--primary">Réserver un appel</a>
+      </div>
+      <ul class="pourqui-list">
+        {pourQui.map((p) => (
+          <li><svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span>{p}</span></li>
+        ))}
+      </ul>
     </div>
   </section>
+
+  <!-- PROGRAMME -->
+  <section class="section prog" id="programme">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Le programme</p>
+        <h2>Ce que vous allez maîtriser</h2>
+        <p class="lede">
+          Six piliers, du sourcing à la revente, pour monter une opération de A à Z.
+        </p>
+      </div>
+      <div class="prog-grid">
+        {modules.map((m) => (
+          <article class="prog-card">
+            <span class="prog-num">{m.n}</span>
+            <h3>{m.t}</h3>
+            <p>{m.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PÉDAGOGIE PAR LES CAS RÉELS -->
+  <section class="section method">
+    <div class="wrap method-grid">
+      <div class="method-copy">
+        <p class="eyebrow">La méthode</p>
+        <h2>Une pédagogie par les opérations réelles</h2>
+        <p>
+          Pas de théorie hors-sol. On décortique de vraies opérations : le prix
+          d’achat, le budget travaux, les frais, la revente — et la marge, ligne
+          par ligne. Vous apprenez à raisonner comme un marchand de biens,
+          chiffres en main.
+        </p>
+        <ul class="method-points">
+          <li><svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Des cas concrets, marges détaillées</li>
+          <li><svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Les erreurs qui coûtent cher, expliquées</li>
+          <li><svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Vos opérations analysées avec vous</li>
+        </ul>
+      </div>
+      <aside class="op-card op-card--alt" aria-label="Exemple pédagogique d’opération">
+        <div class="op-head">
+          <span class="op-label">Décryptage</span>
+          <span class="op-badge">cas réel anonymisé</span>
+        </div>
+        <ul class="op-lines">
+          <li><span>Achat T3 à rénover</span><b>164 000 €</b></li>
+          <li><span>Travaux</span><b>38 000 €</b></li>
+          <li><span>Frais, notaire &amp; portage</span><b>21 000 €</b></li>
+          <li class="op-sep"><span>Revente après travaux</span><b>259 000 €</b></li>
+        </ul>
+        <div class="op-result">
+          <span>Marge brute</span>
+          <strong>36 000 €</strong>
+        </div>
+        <p class="op-foot">Exemple pédagogique. Une opération peut aussi dégager une marge nulle ou négative.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- MENTOR / CRÉDIBILITÉ -->
+  <!-- TODO: remplacer par la vraie bio + photo du marchand de biens formateur -->
+  <section class="section mentor">
+    <div class="wrap mentor-grid">
+      <div class="mentor-photo" aria-hidden="true">
+        <span>Photo<br />formateur</span>
+      </div>
+      <div class="mentor-copy">
+        <p class="eyebrow">Le formateur</p>
+        <h2>Formé par ceux qui le font vraiment</h2>
+        <p>
+          La formation est animée par un <strong>marchand de biens en activité</strong>,
+          qui monte ses propres opérations. Pas un théoricien : quelqu’un qui
+          achète, rénove et revend, et qui vous transmet ce qui marche
+          réellement sur le terrain.
+        </p>
+        <p class="mentor-note">[Bio à compléter : parcours, nombre d’opérations, spécialités, ville.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <!-- TODO: remplacer par de VRAIS témoignages vérifiés (avec accord) avant mise en ligne définitive -->
+  <section class="section temoignages">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Ils se sont lancés</p>
+        <h2>Ce qu’en disent les participants</h2>
+      </div>
+      <div class="temoin-grid">
+        <figure class="temoin">
+          <blockquote>« Enfin une formation qui parle du terrain et pas de rêve. J’ai compris comment structurer ma première opération. »</blockquote>
+          <figcaption>— Prénom, ville</figcaption>
+        </figure>
+        <figure class="temoin">
+          <blockquote>« Le décryptage des opérations réelles change tout. On voit vraiment où se fait — ou se perd — la marge. »</blockquote>
+          <figcaption>— Prénom, ville</figcaption>
+        </figure>
+        <figure class="temoin">
+          <blockquote>« L’accompagnement fait la différence. J’ai été suivi sur mon montage, pas lâché après une vidéo. »</blockquote>
+          <figcaption>— Prénom, ville</figcaption>
+        </figure>
+      </div>
+      <p class="temoin-disclaimer">Témoignages de participants. Les résultats dépendent de chaque situation et ne sont pas garantis.</p>
+    </div>
+  </section>
+
+  <!-- RÉASSURANCE / TRANSPARENCE -->
+  <section class="section trust">
+    <div class="wrap trust-inner">
+      <p class="eyebrow eyebrow--light">Notre engagement</p>
+      <h2>On ne vous vend pas du rêve</h2>
+      <p class="trust-lede">
+        Le marché de la formation traîne une mauvaise réputation. Nous prenons
+        le contre-pied : de la transparence, des cas réels, et zéro promesse
+        d’argent facile.
+      </p>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h3>Des chiffres honnêtes</h3>
+          <p>On montre les marges, mais aussi les opérations qui ne passent pas. Le métier comporte un risque réel.</p>
+        </div>
+        <div class="trust-card">
+          <h3>Un vrai accompagnement</h3>
+          <p>Vous n’êtes pas seul face à une vidéo : vos opérations sont analysées avec vous.</p>
+        </div>
+        <div class="trust-card">
+          <h3>Aucune fausse promesse</h3>
+          <p>Pas de « revenus garantis », pas de CPF imaginaire. Ce qu’on vend, c’est une compétence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq">
+    <div class="wrap faq-grid">
+      <div class="faq-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Vos questions, nos réponses</h2>
+        <p class="lede">Vous hésitez encore ? Réservez un appel, on répond à tout de vive voix.</p>
+        <a href={CALENDLY} class="btn btn--ghost">Réserver un appel</a>
+      </div>
+      <div class="faq-list">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}<span class="faq-plus" aria-hidden="true"></span></summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2>Passez du projet à votre première opération</h2>
+      <p>On échange 20 minutes sur votre situation, sans engagement.</p>
+      <a href={CALENDLY} class="btn btn--primary">Réserver mon appel</a>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 </BaseLayout>
 
 <style>
+  .section {
+    padding-top: clamp(3.5rem, 8vw, 6rem);
+    padding-bottom: clamp(3.5rem, 8vw, 6rem);
+  }
+  .section-head { max-width: 42ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
+  .section-head h2, .pourqui-head h2, .method-copy h2, .mentor-copy h2, .faq-head h2, .trust-inner h2 {
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    margin: 0.6rem 0 0.8rem;
+  }
+  .lede { color: var(--ink-soft); font-size: 1.06rem; }
+
   /* HERO */
-  .hero {
-    padding-top: clamp(3rem, 8vw, 6rem);
-    padding-bottom: clamp(3rem, 7vw, 5.5rem);
-    position: relative;
-  }
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: clamp(2rem, 5vw, 4.5rem);
-    align-items: center;
-  }
-
-  .hero-title {
-    font-size: clamp(2.6rem, 6.4vw, 4.5rem);
-    margin: 1.1rem 0 1.5rem;
-    animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-  .hero-title .accent {
-    color: var(--green);
-    font-style: italic;
-    font-weight: 500;
-  }
-
-  .hero-sub {
-    font-size: clamp(1.02rem, 1.5vw, 1.18rem);
-    color: var(--ink-soft);
-    max-width: 46ch;
-    margin-bottom: 2rem;
-    animation: rise 0.7s 0.08s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-
-  .hero-cta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.85rem;
-    animation: rise 0.7s 0.16s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-
-  .hero-trust {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-top: 1.75rem;
-    font-size: 0.9rem;
-    color: var(--ink-faint);
-  }
-  .hero-trust .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--green-bright);
-    box-shadow: 0 0 0 4px color-mix(in srgb, var(--green-bright) 20%, transparent);
-  }
+  .hero { padding-top: clamp(3rem, 8vw, 6rem); padding-bottom: clamp(3rem, 7vw, 5rem); }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+  .hero-title { font-size: clamp(2.6rem, 6.4vw, 4.5rem); margin: 1.1rem 0 1.5rem; animation: rise 0.7s cubic-bezier(0.2,0.7,0.2,1) both; }
+  .hero-title .accent { color: var(--green); font-style: italic; font-weight: 500; }
+  .hero-sub { font-size: clamp(1.02rem, 1.5vw, 1.18rem); color: var(--ink-soft); max-width: 46ch; margin-bottom: 2rem; animation: rise 0.7s 0.08s cubic-bezier(0.2,0.7,0.2,1) both; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 0.85rem; animation: rise 0.7s 0.16s cubic-bezier(0.2,0.7,0.2,1) both; }
+  .hero-trust { display: flex; align-items: center; gap: 0.6rem; margin-top: 1.75rem; font-size: 0.9rem; color: var(--ink-faint); }
+  .hero-trust .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green-bright); box-shadow: 0 0 0 4px color-mix(in srgb, var(--green-bright) 20%, transparent); }
 
   /* OPERATION CARD */
-  .op-card {
-    background: var(--paper);
-    border: 1.5px solid var(--ink);
-    border-radius: 8px;
-    padding: 1.6rem 1.7rem;
-    box-shadow: 14px 14px 0 -2px var(--paper-3), 14px 14px 0 0 var(--ink);
-    animation: rise 0.8s 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-  .op-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.2rem;
-  }
-  .op-label {
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.75rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-  }
-  .op-badge {
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
-    border-radius: 100px;
-    padding: 0.2rem 0.6rem;
-  }
+  .op-card { background: var(--paper); border: 1.5px solid var(--ink); border-radius: 8px; padding: 1.6rem 1.7rem; box-shadow: 14px 14px 0 -2px var(--paper-3), 14px 14px 0 0 var(--ink); animation: rise 0.8s 0.24s cubic-bezier(0.2,0.7,0.2,1) both; }
+  .op-card--alt { box-shadow: 12px 12px 0 -2px var(--paper-3), 12px 12px 0 0 var(--green); border-color: var(--green); }
+  .op-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
+  .op-label { font-family: var(--font-body); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+  .op-badge { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); border-radius: 100px; padding: 0.2rem 0.6rem; }
   .op-lines { list-style: none; }
-  .op-lines li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.6rem 0;
-    border-bottom: 1px dashed var(--line);
-    font-size: 0.98rem;
-  }
+  .op-lines li { display: flex; justify-content: space-between; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px dashed var(--line); font-size: 0.98rem; }
   .op-lines li span { color: var(--ink-soft); }
-  .op-lines li b {
-    font-family: var(--font-display);
-    font-weight: 560;
-    font-size: 1.1rem;
-  }
+  .op-lines li b { font-family: var(--font-display); font-weight: 560; font-size: 1.1rem; }
   .op-lines .op-sep b { color: var(--green); }
+  .op-result { display: flex; justify-content: space-between; align-items: baseline; margin-top: 1.1rem; padding: 0.9rem 1rem; background: var(--green); color: var(--paper); border-radius: 6px; }
+  .op-result span { font-size: 0.85rem; letter-spacing: 0.04em; }
+  .op-result strong { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
+  .op-foot { margin-top: 0.9rem; font-size: 0.76rem; color: var(--ink-faint); line-height: 1.4; }
 
-  .op-result {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-top: 1.1rem;
-    padding: 0.9rem 1rem;
-    background: var(--green);
-    color: var(--paper);
-    border-radius: 6px;
-  }
-  .op-result span {
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
-  }
-  .op-result strong {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  .op-foot {
-    margin-top: 0.9rem;
-    font-size: 0.76rem;
-    color: var(--ink-faint);
-    line-height: 1.4;
-  }
+  /* CHECK ICON */
+  .check { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--green-bright); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 
-  /* PROOF */
-  .proof {
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    background: var(--paper-2);
-  }
-  .proof-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1.5rem, 4vw, 3rem);
-    padding-top: clamp(2.4rem, 5vw, 3.5rem);
-    padding-bottom: clamp(2.4rem, 5vw, 3.5rem);
-  }
-  .proof-num {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    color: var(--gold);
-    font-weight: 600;
-  }
-  .proof-item h3 {
-    font-size: 1.35rem;
-    margin: 0.5rem 0 0.5rem;
-  }
-  .proof-item p {
-    color: var(--ink-soft);
-    font-size: 0.98rem;
-    max-width: 30ch;
-  }
+  /* REASSURANCE BAR */
+  .reassure { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--green); }
+  .reassure-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  .reassure-item { display: flex; align-items: center; gap: 0.6rem; color: var(--paper); font-size: 0.95rem; font-weight: 500; }
+  .reassure-item .check { stroke: var(--gold); }
+
+  /* POUR QUI */
+  .pourqui { background: var(--paper-2); }
+  .pourqui-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .pourqui-head .btn { margin-top: 1.5rem; }
+  .pourqui-list { list-style: none; display: grid; gap: 1rem; }
+  .pourqui-list li { display: flex; gap: 0.85rem; align-items: flex-start; font-size: 1.05rem; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.2rem; }
+
+  /* PROGRAMME */
+  .prog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .prog-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem; background: var(--paper); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .prog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px -20px rgba(23,21,15,0.4); }
+  .prog-num { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); font-weight: 600; }
+  .prog-card h3 { font-size: 1.3rem; margin: 0.5rem 0 0.6rem; }
+  .prog-card p { color: var(--ink-soft); font-size: 0.97rem; }
+
+  /* METHOD */
+  .method-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .method-copy p { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 1.4rem; }
+  .method-points { list-style: none; display: grid; gap: 0.8rem; }
+  .method-points li { display: flex; gap: 0.7rem; align-items: center; font-weight: 500; }
+
+  /* MENTOR */
+  .mentor { background: var(--paper-2); }
+  .mentor-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .mentor-photo { aspect-ratio: 4/5; border-radius: 12px; border: 1.5px solid var(--ink); background:
+      repeating-linear-gradient(45deg, var(--paper-3) 0 12px, var(--paper-2) 12px 24px);
+      display: grid; place-items: center; color: var(--ink-faint); font-size: 0.9rem; text-align: center; letter-spacing: 0.1em; text-transform: uppercase; }
+  .mentor-copy p { color: var(--ink-soft); font-size: 1.06rem; }
+  .mentor-note { margin-top: 1rem; font-size: 0.85rem; color: var(--ink-faint); font-style: italic; }
+
+  /* TEMOIGNAGES */
+  .temoin-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .temoin { border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem; background: var(--paper); }
+  .temoin blockquote { font-family: var(--font-display); font-size: 1.12rem; line-height: 1.4; }
+  .temoin figcaption { margin-top: 1rem; color: var(--gold); font-weight: 600; font-size: 0.9rem; }
+  .temoin-disclaimer { margin-top: 1.5rem; font-size: 0.8rem; color: var(--ink-faint); }
+
+  /* TRUST */
+  .trust { background: var(--ink); color: var(--paper); }
+  .trust-inner { max-width: 60ch; }
+  .trust-inner h2 { color: var(--paper); }
+  .eyebrow--light { color: var(--gold); }
+  .trust-lede { color: color-mix(in srgb, var(--paper) 78%, transparent); font-size: 1.08rem; margin-bottom: 2.5rem; }
+  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: none; }
+  .trust-card { border: 1px solid rgba(243,239,228,0.16); border-radius: 10px; padding: 1.4rem; }
+  .trust-card h3 { color: var(--paper); font-size: 1.15rem; margin-bottom: 0.5rem; }
+  .trust-card p { color: color-mix(in srgb, var(--paper) 72%, transparent); font-size: 0.95rem; }
+
+  /* FAQ */
+  .faq-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .faq-head { position: sticky; top: 96px; }
+  .faq-list { display: grid; gap: 0.7rem; }
+  .faq-item { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); padding: 0 1.3rem; }
+  .faq-item summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem 0; font-family: var(--font-display); font-size: 1.12rem; font-weight: 560; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-plus { position: relative; width: 16px; height: 16px; flex: none; }
+  .faq-plus::before, .faq-plus::after { content: ''; position: absolute; background: var(--gold); border-radius: 2px; transition: transform 0.25s ease; }
+  .faq-plus::before { top: 7px; left: 0; width: 16px; height: 2px; }
+  .faq-plus::after { left: 7px; top: 0; width: 2px; height: 16px; }
+  .faq-item[open] .faq-plus::after { transform: rotate(90deg); opacity: 0; }
+  .faq-item p { color: var(--ink-soft); padding: 0 0 1.2rem; font-size: 0.98rem; max-width: 60ch; }
 
   /* CTA BAND */
-  .cta-band {
-    padding-top: clamp(3.5rem, 8vw, 6rem);
-    padding-bottom: clamp(1rem, 4vw, 2rem);
-    text-align: center;
-  }
-  .cta-inner h2 {
-    font-size: clamp(2rem, 4.5vw, 3.1rem);
-    max-width: 18ch;
-    margin-inline: auto;
-  }
-  .cta-inner p {
-    color: var(--ink-soft);
-    margin: 1rem auto 2rem;
-    font-size: 1.08rem;
-  }
+  .cta-band { padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(1rem, 4vw, 2rem); text-align: center; }
+  .cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3.1rem); max-width: 18ch; margin-inline: auto; }
+  .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.08rem; }
 
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
   @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .op-card { max-width: 420px; }
+    .hero-grid, .pourqui-grid, .method-grid, .mentor-grid, .faq-grid { grid-template-columns: 1fr; }
+    .op-card { max-width: 440px; }
+    .prog-grid, .temoin-grid, .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .reassure-grid { grid-template-columns: repeat(2, 1fr); }
+    .faq-head { position: static; }
+    .mentor-photo { max-width: 320px; }
   }
-  @media (max-width: 620px) {
-    .proof-grid { grid-template-columns: 1fr; gap: 1.8rem; }
-    .op-card { box-shadow: 8px 8px 0 0 var(--ink); }
+  @media (max-width: 560px) {
+    .prog-grid, .temoin-grid, .trust-grid, .reassure-grid { grid-template-columns: 1fr; }
   }
 </style>
