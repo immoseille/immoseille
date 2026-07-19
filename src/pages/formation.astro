@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 // TODO: remplace par ton vrai lien Calendly
 const CALENDLY = 'https://calendly.com/immoseille/appel-decouverte';
+// Module 1 offert (hébergé sur base44)
+const MODULE1 = 'https://immoseille-module1.base44.app/';
 
 const format = [
   { t: 'Des cours en vidéo', d: "Le programme complet en vidéo, hébergé sur Skool, accessible à la demande et à votre rythme." },
@@ -150,7 +152,10 @@ const parcours = [
         </div>
       </div>
 
-      <a href={CALENDLY} class="btn btn--gold offert-cta">Réserver un appel pour démarrer &rarr;</a>
+      <div class="offert-actions">
+        <a href={MODULE1} class="btn btn--gold" target="_blank" rel="noopener">Accéder au module 1 offert &rarr;</a>
+        <a href={CALENDLY} class="offert-link">ou réserver un appel</a>
+      </div>
     </div>
   </section>
 
@@ -235,7 +240,9 @@ const parcours = [
 
   .btn--gold { background: var(--gold); border-color: var(--gold); color: var(--ink); }
   .btn--gold:hover { background: var(--paper); border-color: var(--paper); color: var(--ink); transform: translateY(-2px); }
-  .offert-cta { margin-top: clamp(2rem, 4vw, 3rem); }
+  .offert-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; margin-top: clamp(2rem, 4vw, 3rem); }
+  .offert-link { color: color-mix(in srgb, var(--paper) 80%, transparent); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; font-size: 0.98rem; }
+  .offert-link:hover { color: var(--gold); }
 
   /* PARCOURS */
   .parcours-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
