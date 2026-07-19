@@ -17,3 +17,6 @@ node_modules/
 npm-debug.log*
 .DS_Store
 Thumbs.db
+
+# lock genere sous Windows = incomplet pour le CI Linux Cloudflare (npm install s'en charge)
+package-lock.json
