@@ -20,12 +20,23 @@ const pourQui = [
 ];
 
 const modules = [
-  { n: '01', t: 'Sourcing & off-market', d: "Trouver les biens à potentiel avant tout le monde, construire son réseau d’apporteurs." },
-  { n: '02', t: 'Analyse & chiffrage', d: "Évaluer un bien, estimer les travaux, calculer la marge et sécuriser sa rentabilité." },
-  { n: '03', t: "Montage de l’opération", d: "Choisir le bon statut (SAS, EURL), structurer juridiquement, éviter les pièges (SCI, micro)." },
-  { n: '04', t: 'Financement', d: "Monter un dossier bancaire solide, convaincre, négocier les conditions." },
-  { n: '05', t: 'Travaux & revente', d: "Piloter un chantier, valoriser le bien, préparer et réussir la revente." },
-  { n: '06', t: 'Fiscalité & sécurisation', d: "Maîtriser le cadre légal, la TVA sur marge et sécuriser chaque opération." },
+  { n: '01', t: 'Introduction', free: true },
+  { n: '02', t: 'Organisation' },
+  { n: '03', t: 'Les opérations du marchand de biens' },
+  { n: '04', t: 'Secteur' },
+  { n: '05', t: 'Approvisionnement' },
+  { n: '06', t: 'Visite' },
+  { n: '07', t: 'Modélisation' },
+  { n: '08', t: 'Négociation' },
+  { n: '09', t: 'Responsabilité du marchand' },
+  { n: '10', t: 'Éviction' },
+  { n: '11', t: 'Création de société' },
+  { n: '12', t: 'Assurance' },
+  { n: '13', t: 'Chronologie et suivi d’opération' },
+  { n: '14', t: 'Financement' },
+  { n: '15', t: 'Urbanisme' },
+  { n: '16', t: 'Travaux' },
+  { n: '17', t: 'Bonus' },
 ];
 
 const faq = [
@@ -163,17 +174,19 @@ const faqJsonLd = {
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Le programme</p>
-        <h2>Ce que vous allez maîtriser</h2>
+        <h2>Le programme, en 17 modules</h2>
         <p class="lede">
-          Six piliers, du sourcing à la revente, pour construire votre stratégie et monter une opération de A à Z.
+          De l’introduction au montage d’opérations complexes : tout le métier, module par module. Le premier module est offert.
         </p>
       </div>
       <div class="prog-grid">
         {modules.map((m) => (
-          <article class="prog-card">
-            <span class="prog-num">{m.n}</span>
+          <article class={`prog-card${m.free ? ' prog-card--free' : ''}`}>
+            <div class="prog-top">
+              <span class="prog-num">{`Module ${Number(m.n)}`}</span>
+              {m.free && <span class="prog-badge">Offert</span>}
+            </div>
             <h3>{m.t}</h3>
-            <p>{m.d}</p>
           </article>
         ))}
       </div>
@@ -405,12 +418,14 @@ const faqJsonLd = {
   .pourqui-list li { display: flex; gap: 0.85rem; align-items: flex-start; font-size: 1.05rem; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.2rem; }
 
   /* PROGRAMME */
-  .prog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-  .prog-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem; background: var(--paper); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .prog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.9rem; }
+  .prog-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.25rem; background: var(--paper); transition: transform 0.2s ease, box-shadow 0.2s ease; }
   .prog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px -20px rgba(23,21,15,0.4); }
-  .prog-num { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); font-weight: 600; }
-  .prog-card h3 { font-size: 1.3rem; margin: 0.5rem 0 0.6rem; }
-  .prog-card p { color: var(--ink-soft); font-size: 0.97rem; }
+  .prog-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+  .prog-card--free { border-color: color-mix(in srgb, var(--gold) 60%, var(--line)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 35%, transparent); }
+  .prog-num { font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .prog-badge { font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: var(--gold); border-radius: 100px; padding: 0.2rem 0.55rem; font-weight: 600; }
+  .prog-card h3 { font-size: 1.08rem; margin: 0.5rem 0 0; line-height: 1.25; }
 
   /* METHOD */
   .method-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
@@ -469,12 +484,12 @@ const faqJsonLd = {
   @media (max-width: 900px) {
     .hero-grid, .pourqui-grid, .method-grid, .mentor-grid, .faq-grid { grid-template-columns: 1fr; }
     .op-card, .portrait { max-width: 420px; }
-    .prog-grid, .temoin-grid, .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .temoin-grid, .trust-grid { grid-template-columns: repeat(2, 1fr); }
     .reassure-grid { grid-template-columns: repeat(2, 1fr); }
     .faq-head { position: static; }
     .mentor-photo { max-width: 320px; }
   }
   @media (max-width: 560px) {
-    .prog-grid, .temoin-grid, .trust-grid, .reassure-grid { grid-template-columns: 1fr; }
+    .temoin-grid, .trust-grid, .reassure-grid { grid-template-columns: 1fr; }
   }
 </style>
