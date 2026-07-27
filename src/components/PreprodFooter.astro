@@ -1,0 +1,136 @@
+---
+const year = new Date().getFullYear();
+const RDV = 'https://app.iclosed.io/e/immoseille/appel-strategique';
+const cols = [
+  {
+    title: 'Le métier',
+    links: [
+      { href: '/devenir-marchand-de-biens', label: 'Devenir marchand de biens' },
+      { href: '/marchand-de-biens-definition', label: 'Marchand de biens : c’est quoi ?' },
+      { href: '/marchand-de-biens-salaire', label: 'Salaire d’un marchand de biens' },
+      { href: '/avantages-inconvenients-marchand-de-biens', label: 'Avantages et inconvénients' },
+    ],
+  },
+  {
+    title: 'Statut & finance',
+    links: [
+      { href: '/statut-juridique-marchand-de-biens', label: 'Statut juridique' },
+      { href: '/tva-marchand-de-biens', label: 'Fiscalité et TVA' },
+      { href: '/frais-de-notaire-marchand-de-biens', label: 'Frais de notaire' },
+      { href: '/financement-marchand-de-biens', label: 'Financement' },
+      { href: '/marchand-de-biens-sans-apport', label: 'Se lancer sans apport' },
+    ],
+  },
+  {
+    title: 'Opérations',
+    links: [
+      { href: '/monter-une-operation-marchand-de-biens', label: 'Monter une opération' },
+      { href: '/achat-revente-immobilier', label: 'Achat-revente immobilier' },
+      { href: '/diviser-un-terrain', label: 'Diviser un terrain' },
+      { href: '/simulateur-rentabilite-marchand-de-biens', label: 'Simulateur de rentabilité' },
+    ],
+  },
+  {
+    title: 'Imm’oseille',
+    links: [
+      { href: '/formation', label: 'La formation' },
+      { href: '/guides', label: 'Guides' },
+      { href: '/a-propos', label: 'À propos' },
+      { href: '/mentions-legales', label: 'Mentions légales' },
+      { href: '/politique-confidentialite', label: 'Confidentialité' },
+    ],
+  },
+];
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="/logo-full.png" alt="Imm'oseille, formation marchand de biens" class="footer-logo" width="240" />
+      <a href={RDV} class="btn btn--ghost">Réserver un appel</a>
+    </div>
+
+    <nav class="footer-cols" aria-label="Pied de page">
+      {cols.map((c) => (
+        <div class="footer-col">
+          <h4>{c.title}</h4>
+          <ul>
+            {c.links.map((l) => (
+              <li><a href={l.href}>{l.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </nav>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>&copy; {year} Imm'oseille. Tous droits réservés.</span>
+    <span class="footer-note">Le métier de marchand de biens comporte des risques et ne procure aucun revenu fixe.</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: clamp(4rem, 9vw, 7rem);
+    border-top: 1px solid var(--line);
+    background: var(--paper-2);
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    padding-top: clamp(3rem, 6vw, 4.5rem);
+    padding-bottom: 3rem;
+  }
+  .footer-logo {
+    height: auto;
+    max-width: 240px;
+    margin-bottom: 1.6rem;
+    display: block;
+  }
+  .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .footer-col h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.6rem; }
+  .footer-col a {
+    color: var(--ink-soft);
+    font-size: 0.96rem;
+    transition: color 0.15s ease;
+  }
+  .footer-col a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.4rem;
+    padding-bottom: 1.8rem;
+    border-top: 1px solid var(--line-soft);
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+  }
+  .footer-note { max-width: 46ch; }
+
+  @media (max-width: 860px) {
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-cols { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .footer-cols { grid-template-columns: 1fr; gap: 1.8rem; }
+  }
+</style>
