@@ -119,17 +119,20 @@ const faqJsonLd = {
         </p>
       </div>
 
-      <!-- TODO: ajouter la vraie photo du formateur (bio + prénom OK) -->
       <aside class="portrait" aria-label="Le formateur">
         <div class="portrait-media">
-          <span class="portrait-ph">Photo du formateur</span>
+          <ul class="portrait-facts">
+            <li><strong>3 ans</strong><span>d’activité</span></li>
+            <li><strong>20+</strong><span>opérations menées</span></li>
+            <li><strong>Division</strong><span>de gros ensembles immobiliers</span></li>
+          </ul>
           <span class="portrait-tag">Marchand de biens en activité</span>
         </div>
         <blockquote class="portrait-quote">
           « Mon métier, ce n’est pas retaper des biens le week-end : c’est sourcer, négocier et monter des opérations. Je ne vous vends pas de rêve, je vous transmets un métier. »
         </blockquote>
         <div class="portrait-id">
-          <strong>Nathanaël</strong>
+          <strong>Nath</strong>
           <span>Formateur · Imm’oseille</span>
         </div>
       </aside>
@@ -211,23 +214,36 @@ const faqJsonLd = {
           <li><svg viewBox="0 0 24 24" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Vos opérations analysées avec vous</li>
         </ul>
       </div>
-      <aside class="op-card op-card--alt" aria-label="Exemple pédagogique d’opération">
-        <div class="op-head">
-          <span class="op-label">Décryptage</span>
-          <span class="op-badge">cas réel anonymisé</span>
-        </div>
-        <ul class="op-lines">
-          <li><span>Achat T3 à rénover</span><b>164 000 €</b></li>
-          <li><span>Travaux</span><b>38 000 €</b></li>
-          <li><span>Frais, notaire &amp; portage</span><b>21 000 €</b></li>
-          <li class="op-sep"><span>Revente après travaux</span><b>259 000 €</b></li>
-        </ul>
-        <div class="op-result">
-          <span>Marge brute</span>
-          <strong>36 000 €</strong>
-        </div>
-        <p class="op-foot">Exemple pédagogique. Une opération peut aussi dégager une marge nulle ou négative.</p>
-      </aside>
+      <div class="method-visual">
+        <figure class="method-shot">
+          <img
+            src="/appartement-renove.webp"
+            width="1264"
+            height="848"
+            alt="Salon d’un appartement ancien entièrement rénové, lumineux, parquet et grandes fenêtres"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Après rénovation</figcaption>
+        </figure>
+        <aside class="op-card op-card--alt" aria-label="Exemple pédagogique d’opération">
+          <div class="op-head">
+            <span class="op-label">Décryptage</span>
+            <span class="op-badge">cas réel anonymisé</span>
+          </div>
+          <ul class="op-lines">
+            <li><span>Achat T3 à rénover</span><b>164 000 €</b></li>
+            <li><span>Travaux</span><b>38 000 €</b></li>
+            <li><span>Frais, notaire &amp; portage</span><b>21 000 €</b></li>
+            <li class="op-sep"><span>Revente après travaux</span><b>259 000 €</b></li>
+          </ul>
+          <div class="op-result">
+            <span>Marge brute</span>
+            <strong>36 000 €</strong>
+          </div>
+          <p class="op-foot">Exemple pédagogique. Une opération peut aussi dégager une marge nulle ou négative.</p>
+        </aside>
+      </div>
     </div>
   </section>
 
@@ -242,7 +258,7 @@ const faqJsonLd = {
         <p class="eyebrow">Le formateur</p>
         <h2>Formé par ceux qui le font vraiment</h2>
         <p>
-          La formation est animée par <strong>Nathanaël</strong>, marchand de biens en
+          La formation est animée par <strong>Nath</strong>, marchand de biens en
           activité qui monte ses propres opérations. Pas un théoricien : quelqu’un qui
           source, négocie et revend au quotidien, et qui vous transmet ce qui marche
           réellement sur le terrain.
@@ -392,9 +408,13 @@ const faqJsonLd = {
 
   /* PORTRAIT (hero) */
   .portrait { background: var(--paper); border: 1.5px solid var(--ink); border-radius: 12px; padding: 1.1rem; box-shadow: 14px 14px 0 -2px var(--paper-3), 14px 14px 0 0 var(--ink); animation: rise 0.8s 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .portrait-media { position: relative; aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; display: grid; place-items: center;
+  .portrait-media { position: relative; aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 1.5rem 1.3rem 3rem;
     background: linear-gradient(160deg, var(--green) 0%, #0a2a1b 100%); }
-  .portrait-ph { color: color-mix(in srgb, var(--paper) 45%, transparent); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  .portrait-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
+  .portrait-facts li { display: flex; flex-direction: column; gap: 0.12rem; padding-bottom: 0.9rem; border-bottom: 1px solid color-mix(in srgb, var(--paper) 18%, transparent); }
+  .portrait-facts li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .portrait-facts strong { font-family: var(--font-display); font-size: 1.6rem; line-height: 1; color: var(--gold); }
+  .portrait-facts span { color: color-mix(in srgb, var(--paper) 80%, transparent); font-size: 0.85rem; font-weight: 600; }
   .portrait-tag { position: absolute; bottom: 0.7rem; left: 0.7rem; right: 0.7rem; background: color-mix(in srgb, var(--paper) 94%, transparent); color: var(--ink); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.45rem 0.7rem; border-radius: 6px; text-align: center; }
   .portrait-quote { font-family: var(--font-display); font-size: 1.18rem; line-height: 1.35; margin: 1.15rem 0.35rem 1rem; }
   .portrait-id { display: flex; flex-direction: column; gap: 0.1rem; padding: 0 0.35rem 0.35rem; }
@@ -429,6 +449,10 @@ const faqJsonLd = {
 
   /* METHOD */
   .method-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .method-visual { display: grid; gap: 1.4rem; }
+  .method-shot { position: relative; border-radius: 10px; overflow: hidden; border: 1.5px solid var(--ink); box-shadow: 0 22px 48px -26px rgba(23, 21, 15, 0.6); animation: rise 0.8s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .method-shot img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+  .method-shot figcaption { position: absolute; bottom: 0.8rem; left: 0.8rem; background: color-mix(in srgb, var(--ink) 82%, transparent); color: var(--paper); font-family: var(--font-body); font-weight: 600; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 0.8rem; border-radius: 100px; backdrop-filter: blur(3px); }
   .method-copy p { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 1.4rem; }
   .method-points { list-style: none; display: grid; gap: 0.8rem; }
   .method-points li { display: flex; gap: 0.7rem; align-items: center; font-weight: 500; }
@@ -483,7 +507,7 @@ const faqJsonLd = {
 
   @media (max-width: 900px) {
     .hero-grid, .pourqui-grid, .method-grid, .mentor-grid, .faq-grid { grid-template-columns: 1fr; }
-    .op-card, .portrait { max-width: 420px; }
+    .op-card, .portrait, .method-visual { max-width: 420px; }
     .temoin-grid, .trust-grid { grid-template-columns: repeat(2, 1fr); }
     .reassure-grid { grid-template-columns: repeat(2, 1fr); }
     .faq-head { position: static; }
