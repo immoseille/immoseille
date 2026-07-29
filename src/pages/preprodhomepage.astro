@@ -119,13 +119,10 @@ const faqJsonLd = {
         </p>
       </div>
 
+      <!-- TODO: photo TEMPORAIRE (stock Pixabay, libre de droit) — remplacer par la vraie photo de Nath -->
       <aside class="portrait" aria-label="Le formateur">
         <div class="portrait-media">
-          <ul class="portrait-facts">
-            <li><strong>3 ans</strong><span>d’activité</span></li>
-            <li><strong>20+</strong><span>opérations menées</span></li>
-            <li><strong>Division</strong><span>de gros ensembles immobiliers</span></li>
-          </ul>
+          <img src="/formateur.jpg" alt="Le formateur d’Imm’oseille" width="880" height="1100" loading="lazy" />
           <span class="portrait-tag">Marchand de biens en activité</span>
         </div>
         <blockquote class="portrait-quote">
@@ -408,8 +405,9 @@ const faqJsonLd = {
 
   /* PORTRAIT (hero) */
   .portrait { background: var(--paper); border: 1.5px solid var(--ink); border-radius: 12px; padding: 1.1rem; box-shadow: 14px 14px 0 -2px var(--paper-3), 14px 14px 0 0 var(--ink); animation: rise 0.8s 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .portrait-media { position: relative; aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 1.5rem 1.3rem 3rem;
+  .portrait-media { position: relative; aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; display: block;
     background: linear-gradient(160deg, var(--green) 0%, #0a2a1b 100%); }
+  .portrait-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
   .portrait-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
   .portrait-facts li { display: flex; flex-direction: column; gap: 0.12rem; padding-bottom: 0.9rem; border-bottom: 1px solid color-mix(in srgb, var(--paper) 18%, transparent); }
   .portrait-facts li:last-child { border-bottom: 0; padding-bottom: 0; }
