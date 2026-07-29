@@ -9,6 +9,8 @@ const {
   eyebrow = 'Le métier',
   h1,
   lead,
+  image,
+  imageAlt = '',
   breadcrumb = [],
   updated = '30 juillet 2026',
   datePublished = '2026-07-30',
@@ -27,7 +29,6 @@ const {
 const site = Astro.site ?? new URL('https://immoseille.fr');
 const canonical = new URL(Astro.url.pathname, site).href;
 
-// --- Schema.org ---
 const breadcrumbLd = breadcrumb.length ? {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -48,6 +49,7 @@ const articleLd = {
   datePublished,
   dateModified,
   mainEntityOfPage: canonical,
+  ...(image ? { image: new URL(image, site).href } : {}),
   author: { '@type': 'Person', name: author.name, jobTitle: author.role },
   publisher: { '@type': 'Organization', name: "Imm'oseille", url: site.href },
 };
@@ -67,7 +69,7 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
 
 <BaseLayout title={title} description={description}>
   <article class="art">
-    <div class="wrap art-wrap">
+    <div class="art-container">
       {breadcrumb.length > 0 && (
         <nav class="art-breadcrumb" aria-label="Fil d'Ariane">
           <ol>
@@ -80,10 +82,8 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
           </ol>
         </nav>
       )}
-    </div>
 
-    <section class="art-hero">
-      <div class="wrap art-wrap">
+      <header class="art-hero">
         <p class="eyebrow">{eyebrow}</p>
         <h1>{h1}</h1>
         <p class="art-lead">{lead}</p>
@@ -94,42 +94,53 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
             <span class="art-byline-meta">Mis à jour le {updated} · Lecture {reading}</span>
           </span>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <section class="art-body">
-      <div class="wrap art-wrap">
-        <nav class="art-toc" id="art-toc" aria-label="Sommaire">
-          <p class="art-toc-h">Sommaire</p>
-          <ol id="art-toc-list"></ol>
-        </nav>
+      {image && (
+        <figure class="art-figure">
+          <img src={image} alt={imageAlt} width="1120" height="560" />
+        </figure>
+      )}
 
-        <slot />
+      <div class="art-layout">
+        <div class="art-body">
+          <slot />
 
-        {faq.length > 0 && (
-          <>
-            <h2 id="faq">Questions fréquentes</h2>
-            <div class="faq">
-              {faq.map((f) => (
-                <details class="faq-item">
-                  <summary>{f.q}</summary>
-                  <p>{f.r}</p>
-                </details>
-              ))}
+          {faq.length > 0 && (
+            <>
+              <h2 id="faq">Questions fréquentes</h2>
+              <div class="faq">
+                {faq.map((f) => (
+                  <details class="faq-item">
+                    <summary>{f.q}</summary>
+                    <p>{f.r}</p>
+                  </details>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        <aside class="art-side">
+          <div class="art-side-inner">
+            <div class="art-author">
+              <span class="art-author-ava" aria-hidden="true">{initial}</span>
+              <div>
+                <p class="art-author-h">L'auteur</p>
+                <p class="art-author-name">{author.name}</p>
+                <p class="art-author-role">{author.role}</p>
+              </div>
             </div>
-          </>
-        )}
-
-        <aside class="art-author">
-          <span class="art-author-ava" aria-hidden="true">{initial}</span>
-          <div>
-            <p class="art-author-h">À propos de l'auteur</p>
-            <p class="art-author-name">{author.name} · <span>{author.role}</span></p>
             <p class="art-author-bio">{author.bio}</p>
+
+            <nav class="art-toc" id="art-toc" aria-label="Sommaire">
+              <p class="art-toc-h">Sommaire</p>
+              <ol id="art-toc-list"></ol>
+            </nav>
           </div>
         </aside>
       </div>
-    </section>
+    </div>
 
     <section class="art-cta">
       <div class="wrap cta-inner">
@@ -157,7 +168,6 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
       return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
         .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
     };
-    var n = 1;
     hs.forEach(function (h, i) {
       var id = h.id || slug(h.textContent) || ('section-' + i);
       h.id = id;
@@ -167,13 +177,12 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
       a.textContent = h.textContent;
       li.appendChild(a);
       list.appendChild(li);
-      n++;
     });
   })();
 </script>
 
 <style is:global>
-  .art .art-wrap { max-width: 780px; }
+  .art .art-container { width: 100%; max-width: 1140px; margin-inline: auto; padding-inline: clamp(1.2rem, 4vw, 2.75rem); }
 
   .art .art-breadcrumb { padding-top: 1.4rem; }
   .art .art-breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--ink-faint); }
@@ -182,7 +191,7 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .art-breadcrumb .bc-sep { color: var(--ink-faint); margin-left: 0.4rem; }
   .art .art-breadcrumb [aria-current="page"] { color: var(--ink-faint); }
 
-  .art .art-hero { padding-top: clamp(1.4rem, 3vw, 2.2rem); padding-bottom: clamp(1rem, 2.5vw, 2rem); }
+  .art .art-hero { padding-top: clamp(1.4rem, 3vw, 2.2rem); padding-bottom: clamp(1rem, 2.5vw, 1.6rem); max-width: 820px; }
   .art .art-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 1rem 0 1.3rem; max-width: 20ch; }
   .art .art-lead { color: var(--ink-soft); font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.55; max-width: 62ch; }
 
@@ -191,8 +200,14 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .art-byline-txt { font-size: 0.95rem; color: var(--ink); line-height: 1.35; }
   .art .art-byline-meta { display: block; color: var(--ink-faint); font-size: 0.82rem; margin-top: 0.15rem; }
 
-  .art .art-body { padding-top: clamp(1.5rem, 4vw, 2.5rem); padding-bottom: clamp(3rem, 7vw, 5rem); }
-  .art .art-body h2 { font-size: clamp(1.55rem, 3.2vw, 2.1rem); margin: 2.6rem 0 1rem; scroll-margin-top: 90px; }
+  .art .art-figure { margin: clamp(1.2rem, 3vw, 2rem) 0 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+  .art .art-figure img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; display: block; }
+
+  .art .art-layout { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; padding-top: clamp(1.8rem, 4vw, 2.8rem); padding-bottom: clamp(3rem, 7vw, 5rem); }
+  .art .art-body { max-width: 760px; min-width: 0; }
+
+  .art .art-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 2.4rem 0 1rem; scroll-margin-top: 90px; }
+  .art .art-body h2:first-child { margin-top: 0; }
   .art .art-body h3 { font-size: clamp(1.2rem, 2.2vw, 1.4rem); margin: 1.6rem 0 0.7rem; }
   .art .art-body p { margin-bottom: 1.1rem; color: var(--ink); }
   .art .art-body ul, .art .art-body ol { margin: 0 0 1.3rem 1.2rem; display: grid; gap: 0.55rem; }
@@ -200,12 +215,6 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .art-body a { color: var(--green-bright); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
   .art .art-body a:hover { color: var(--gold); }
   .art .note { font-size: 0.9rem; color: var(--ink-faint); font-style: italic; }
-
-  .art .art-toc { background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px; padding: 1.2rem 1.5rem; margin: 0 0 2.2rem; }
-  .art .art-toc-h { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.6rem; }
-  .art .art-toc ol { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.4rem; }
-  .art .art-toc a { color: var(--ink-soft); text-decoration: none; }
-  .art .art-toc a:hover { color: var(--gold); text-decoration: underline; }
 
   .art .encadre { background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 8px; padding: 1.4rem 1.6rem; margin: 0 0 2rem; }
   .art .encadre-h { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.7rem; }
@@ -223,14 +232,31 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .faq-item[open] summary::after { content: '–'; }
   .art .faq-item p { padding-bottom: 1rem; margin: 0; color: var(--ink-soft); }
 
-  .art .art-author { display: flex; gap: 1.1rem; align-items: flex-start; margin-top: 2.8rem; padding: 1.5rem 1.6rem; background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px; }
-  .art .art-author-ava { flex: none; width: 52px; height: 52px; border-radius: 50%; background: var(--green); color: var(--paper); font-family: var(--font-display); font-weight: 600; display: grid; place-items: center; font-size: 1.3rem; }
-  .art .art-author-h { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.35rem; }
-  .art .art-author-name { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.4rem; }
-  .art .art-author-name span { color: var(--ink-soft); font-size: 0.95rem; }
-  .art .art-author-bio { color: var(--ink-soft); font-size: 0.95rem; margin: 0; line-height: 1.5; }
+  /* Sidebar */
+  .art .art-side-inner { position: sticky; top: 90px; display: grid; gap: 1.3rem; }
+  .art .art-author { display: flex; gap: 0.85rem; align-items: center; }
+  .art .art-author-ava { flex: none; width: 48px; height: 48px; border-radius: 50%; background: var(--green); color: var(--paper); font-family: var(--font-display); font-weight: 600; display: grid; place-items: center; font-size: 1.2rem; }
+  .art .art-author-h { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .art .art-author-name { font-family: var(--font-display); font-size: 1.1rem; line-height: 1.1; margin-top: 0.15rem; }
+  .art .art-author-role { color: var(--ink-soft); font-size: 0.85rem; }
+  .art .art-author-bio { color: var(--ink-soft); font-size: 0.88rem; line-height: 1.5; margin: 0; padding-bottom: 1.3rem; border-bottom: 1px solid var(--line); }
 
-  .art .art-cta { padding-top: clamp(2rem, 5vw, 3.5rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); text-align: center; background: var(--paper-2); border-top: 1px solid var(--line); margin-top: 2.5rem; }
+  .art .art-toc { }
+  .art .art-toc-h { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 0.7rem; }
+  .art .art-toc ol { margin: 0; padding: 0; list-style: none; counter-reset: toc; display: grid; gap: 0.5rem; }
+  .art .art-toc li { counter-increment: toc; font-size: 0.9rem; line-height: 1.35; padding-left: 1.6rem; position: relative; }
+  .art .art-toc li::before { content: counter(toc); position: absolute; left: 0; top: 0; color: var(--gold); font-weight: 600; font-size: 0.8rem; }
+  .art .art-toc a { color: var(--ink-soft); text-decoration: none; }
+  .art .art-toc a:hover { color: var(--gold); }
+
+  .art .art-cta { padding-top: clamp(2rem, 5vw, 3.5rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); text-align: center; background: var(--paper-2); border-top: 1px solid var(--line); }
   .art .cta-inner h2 { font-size: clamp(1.9rem, 4.2vw, 2.9rem); max-width: 20ch; margin-inline: auto; }
   .art .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.06rem; max-width: 48ch; }
+
+  @media (max-width: 960px) {
+    .art .art-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .art .art-side { order: -1; }
+    .art .art-side-inner { position: static; background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px; padding: 1.3rem 1.4rem; }
+    .art .art-body { max-width: none; }
+  }
 </style>
