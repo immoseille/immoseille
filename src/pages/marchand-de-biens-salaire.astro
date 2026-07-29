@@ -1,0 +1,126 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Combien gagne un marchand de biens débutant ?",
+    r: "En début d'activité, avec 1 à 2 opérations par an et une marge nette de 15 à 20 %, un marchand de biens peut viser un revenu annuel de l'ordre de 30 000 à 60 000 euros. Ce montant dépend fortement de la taille des projets et n'a rien d'automatique.",
+  },
+  {
+    q: "Le marchand de biens a-t-il un salaire fixe ?",
+    r: "Non. Ce n'est pas un salarié : il se rémunère sur la marge de ses opérations. Ses revenus sont donc irréguliers et dépendent du nombre d'opérations menées et de leur réussite.",
+  },
+  {
+    q: "Faut-il confondre chiffre d'affaires et rémunération ?",
+    r: "Non, et c'est une erreur classique. Le chiffre d'affaires correspond au prix total de revente. La rémunération réelle, elle, ne vient qu'après avoir déduit le prix d'achat, les travaux, les frais, la TVA et l'impôt.",
+  },
+  {
+    q: "Le métier est-il rentable ?",
+    r: "Il peut l'être, mais la rentabilité se construit opération par opération. Une marge brute se situe souvent entre 10 et 25 %, et la marge nette entre 5 et 10 % après impôts et charges. Une erreur de budget travaux peut effacer cette marge.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Salaire d'un marchand de biens : combien gagne-t-il ?"
+  description="Salaire d'un marchand de biens : fourchettes de revenus selon l'expérience, marge brute et nette, exemple chiffré et facteurs qui font varier la rémunération."
+  h1="Combien gagne un marchand de biens ?"
+  lead="Parler de salaire pour un marchand de biens est trompeur : il ne touche pas de fiche de paie, il se rémunère sur la marge de ses opérations. Voici des fourchettes réalistes, chiffres à l'appui, et surtout comment se calcule vraiment son revenu."
+  reading="8 min"
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Un marchand de biens ne touche pas de salaire fixe : il gagne sur la <strong>marge de ses opérations</strong>.</li>
+      <li>Débutant : de l'ordre de <strong>30 000 à 60 000 €/an</strong> (1 à 2 opérations).</li>
+      <li>Confirmé : souvent <strong>80 000 à 150 000 €/an</strong> et plus (3 à 5 opérations).</li>
+      <li>La <strong>marge brute</strong> visée tourne autour de 10 à 25 %, la <strong>marge nette</strong> autour de 5 à 10 %.</li>
+      <li>Chiffre d'affaires n'est pas rémunération : tout se joue après déduction des coûts et impôts.</li>
+    </ul>
+  </div>
+
+  <h2>Un salaire ou une marge d'opération ?</h2>
+  <p>
+    Le marchand de biens est un <strong>entrepreneur</strong>, pas un salarié. Il ne gagne rien tant qu'il n'a pas
+    revendu, et sa rémunération correspond à la marge dégagée sur chaque opération. Parler de salaire mensuel n'a donc
+    de sens qu'en moyenne lissée, une fois plusieurs opérations bouclées.
+  </p>
+  <p>
+    Cette logique vient directement du métier lui-même, décrit sur la page
+    <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> : acheter sous le prix du marché, valoriser,
+    revendre. La marge est la récompense du risque pris et du travail fourni sur l'opération.
+  </p>
+
+  <h2>Chiffre d'affaires, marge brute, revenu net : ne pas confondre</h2>
+  <p>
+    C'est le point qui trompe le plus de débutants. Prenons un exemple concret :
+  </p>
+  <ul>
+    <li>Vous achetez un immeuble <strong>300 000 €</strong>.</li>
+    <li>Vous engagez <strong>100 000 €</strong> de travaux.</li>
+    <li>Vous revendez <strong>500 000 €</strong>.</li>
+  </ul>
+  <p>
+    Votre <strong>chiffre d'affaires</strong> est de 500 000 €, mais votre <strong>marge brute</strong> n'est que de
+    100 000 €. Et votre <strong>revenu net</strong> est encore inférieur, une fois déduits les frais d'acquisition, la
+    TVA applicable, les intérêts d'emprunt et l'impôt sur les bénéfices. C'est ce revenu net qui compte vraiment.
+  </p>
+
+  <h2>Combien gagne un marchand de biens selon l'expérience ?</h2>
+  <p>
+    Voici des ordres de grandeur observés sur le marché, à prendre comme des repères et non comme des promesses :
+  </p>
+  <table>
+    <thead>
+      <tr><th>Profil</th><th>Volume</th><th>Revenu annuel indicatif</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Débutant</td><td>1 à 2 opérations/an</td><td>30 000 à 60 000 €</td></tr>
+      <tr><td>Confirmé (3 à 5 ans)</td><td>3 à 5 opérations/an</td><td>80 000 à 150 000 € et plus</td></tr>
+      <tr><td>Société structurée</td><td>plusieurs projets en parallèle</td><td>au-delà de 200 000 €</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Ces montants supposent des opérations réussies. Une opération ratée peut au contraire générer une perte.</p>
+
+  <h2>Marge brute, marge nette : les vrais chiffres</h2>
+  <p>
+    Un marchand de biens vise en général une <strong>marge brute de 10 à 25 %</strong> avant impôts et charges. Après
+    déduction de la TVA, de l'impôt sur les bénéfices, des charges et des frais annexes, la <strong>marge nette tombe
+    souvent entre 5 et 10 %</strong>. Concrètement, sur un bien acheté 200 000 € avec une marge nette de 10 %, on dégage
+    environ 20 000 € nets sur l'opération. La rentabilité réelle se juge toujours en net, jamais sur le chiffre d'affaires.
+  </p>
+
+  <h2>Qu'est-ce qui fait varier les revenus ?</h2>
+  <ul>
+    <li><strong>Le nombre et la taille des opérations.</strong> Plus les projets sont nombreux et importants, plus le potentiel de marge grimpe, mais le risque aussi.</li>
+    <li><strong>La zone géographique et le cycle du marché.</strong> Une revente est plus rapide et plus margée dans une zone tendue et en phase de hausse.</li>
+    <li><strong>La maîtrise des travaux.</strong> Un budget de chantier tenu protège la marge ; un dérapage l'efface.</li>
+    <li><strong>La compétence en négociation et en fiscalité.</strong> La marge se crée à l'achat et se préserve par un bon montage. Voir les <a href="/financement-marchand-de-biens/">solutions de financement</a>.</li>
+  </ul>
+
+  <h2>Salaire ou dividendes selon le statut ?</h2>
+  <p>
+    En société, le dirigeant arbitre entre rémunération et dividendes selon sa structure. En SARL, le gérant majoritaire
+    relève du régime des travailleurs non salariés. En SAS, il est assimilé salarié et les dividendes sont soumis au
+    prélèvement forfaitaire. Cet arbitrage a un impact direct sur le revenu net et se décide avec un comptable : nous le
+    détaillons sur la page <a href="/statut-juridique-marchand-de-biens/">statut juridique du marchand de biens</a>.
+  </p>
+
+  <h2>Peut-on vivre du métier de marchand de biens ?</h2>
+  <p>
+    Oui, beaucoup en vivent bien. Mais c'est un <strong>revenu d'entrepreneur, pas une rente</strong> : il faut un apport
+    de départ, encaisser des périodes sans rentrée d'argent entre deux opérations et accepter le risque. Ceux qui
+    réussissent avancent avec méthode, une opération après l'autre, plutôt qu'en misant sur un coup unique. Pour peser le
+    pour et le contre, voyez les <a href="/avantages-inconvenients-marchand-de-biens/">avantages et inconvénients du métier</a>.
+  </p>
+
+  <h2>Questions fréquentes</h2>
+  <div class="faq">
+    {faq.map((f) => (
+      <details class="faq-item">
+        <summary>{f.q}</summary>
+        <p>{f.r}</p>
+      </details>
+    ))}
+  </div>
+</ArticleLayout>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const RDV = 'https://app.iclosed.io/e/immoseille/appel-strategique';
+
+const {
+  title,
+  description,
+  eyebrow = 'Le métier',
+  h1,
+  lead,
+  updated = 'juillet 2026',
+  reading = '7 min',
+  ctaTitle = 'Vous voulez vous lancer avec méthode ?',
+  ctaText = "Plutôt que de rester seul face aux questions, échangeons sur votre projet. 20 minutes, sans engagement.",
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="art">
+    <section class="art-hero">
+      <div class="wrap art-wrap">
+        <p class="eyebrow">{eyebrow}</p>
+        <h1>{h1}</h1>
+        <p class="art-lead">{lead}</p>
+        <p class="art-meta">Mis à jour en {updated} · Lecture {reading}</p>
+      </div>
+    </section>
+
+    <section class="art-body">
+      <div class="wrap art-wrap">
+        <slot />
+      </div>
+    </section>
+
+    <section class="art-cta">
+      <div class="wrap cta-inner">
+        <h2>{ctaTitle}</h2>
+        <p>{ctaText}</p>
+        <a href={RDV} class="btn btn--primary">Réserver un appel</a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style is:global>
+  .art .art-wrap { max-width: 780px; }
+  .art .art-hero { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(1rem, 2.5vw, 2rem); }
+  .art .art-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 1rem 0 1.3rem; max-width: 20ch; }
+  .art .art-lead { color: var(--ink-soft); font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.55; max-width: 62ch; }
+  .art .art-meta { color: var(--ink-faint); font-size: 0.85rem; margin-top: 1.2rem; letter-spacing: 0.02em; }
+
+  .art .art-body { padding-top: clamp(1.5rem, 4vw, 2.5rem); padding-bottom: clamp(3rem, 7vw, 5rem); }
+  .art .art-body h2 { font-size: clamp(1.55rem, 3.2vw, 2.1rem); margin: 2.6rem 0 1rem; }
+  .art .art-body h3 { font-size: clamp(1.2rem, 2.2vw, 1.4rem); margin: 1.6rem 0 0.7rem; }
+  .art .art-body p { margin-bottom: 1.1rem; color: var(--ink); }
+  .art .art-body ul, .art .art-body ol { margin: 0 0 1.3rem 1.2rem; display: grid; gap: 0.55rem; }
+  .art .art-body li { padding-left: 0.25rem; }
+  .art .art-body a { color: var(--green-bright); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+  .art .art-body a:hover { color: var(--gold); }
+  .art .note { font-size: 0.9rem; color: var(--ink-faint); font-style: italic; }
+
+  .art .encadre { background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 8px; padding: 1.4rem 1.6rem; margin: 0 0 2rem; }
+  .art .encadre-h { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.7rem; }
+  .art .encadre ul { margin-bottom: 0; }
+
+  .art table { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1.4rem; font-size: 0.98rem; }
+  .art th, .art td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); }
+  .art th { font-family: var(--font-body); font-weight: 600; background: var(--paper-2); }
+
+  .art .faq { display: grid; gap: 0.7rem; }
+  .art .faq-item { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); padding: 0.2rem 1.1rem; }
+  .art .faq-item summary { cursor: pointer; font-family: var(--font-display); font-size: 1.1rem; padding: 0.9rem 0; list-style: none; }
+  .art .faq-item summary::-webkit-details-marker { display: none; }
+  .art .faq-item summary::after { content: '+'; float: right; color: var(--gold); font-size: 1.3rem; line-height: 1; }
+  .art .faq-item[open] summary::after { content: '–'; }
+  .art .faq-item p { padding-bottom: 1rem; margin: 0; color: var(--ink-soft); }
+
+  .art .art-cta { padding-top: clamp(2rem, 5vw, 3.5rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); text-align: center; background: var(--paper-2); border-top: 1px solid var(--line); }
+  .art .cta-inner h2 { font-size: clamp(1.9rem, 4.2vw, 2.9rem); max-width: 20ch; margin-inline: auto; }
+  .art .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.06rem; max-width: 48ch; }
+</style>
