@@ -1,26 +1,41 @@
 ---
 const year = new Date().getFullYear();
+const RDV = 'https://app.iclosed.io/e/immoseille/appel-strategique';
 const cols = [
   {
     title: 'Le métier',
     links: [
+      { href: '/devenir-marchand-de-biens', label: 'Devenir marchand de biens' },
+      { href: '/marchand-de-biens-definition', label: 'Marchand de biens : c’est quoi ?' },
+      { href: '/marchand-de-biens-salaire', label: 'Salaire d’un marchand de biens' },
+      { href: '/avantages-inconvenients-marchand-de-biens', label: 'Avantages et inconvénients' },
+    ],
+  },
+  {
+    title: 'Statut & finance',
+    links: [
+      { href: '/statut-juridique-marchand-de-biens', label: 'Statut juridique' },
+      { href: '/tva-marchand-de-biens', label: 'Fiscalité et TVA' },
+      { href: '/frais-de-notaire-marchand-de-biens', label: 'Frais de notaire' },
+      { href: '/financement-marchand-de-biens', label: 'Financement' },
+      { href: '/marchand-de-biens-sans-apport', label: 'Se lancer sans apport' },
+    ],
+  },
+  {
+    title: 'Opérations',
+    links: [
+      { href: '/monter-une-operation-marchand-de-biens', label: 'Monter une opération' },
+      { href: '/achat-revente-immobilier', label: 'Achat-revente immobilier' },
+      { href: '/diviser-un-terrain', label: 'Diviser un terrain' },
+      { href: '/simulateur-rentabilite-marchand-de-biens', label: 'Simulateur de rentabilité' },
+    ],
+  },
+  {
+    title: 'Imm’oseille',
+    links: [
       { href: '/formation', label: 'La formation' },
-      { href: '/operations', label: 'Résultats' },
       { href: '/guides', label: 'Guides' },
       { href: '/a-propos', label: 'À propos' },
-    ],
-  },
-  {
-    title: 'Ressources',
-    links: [
-      { href: '/devenir-marchand-de-biens', label: 'Devenir marchand de biens' },
-      { href: '/faq', label: 'Questions fréquentes' },
-      { href: '/guide-gratuit', label: 'Guide gratuit' },
-    ],
-  },
-  {
-    title: 'Légal',
-    links: [
       { href: '/mentions-legales', label: 'Mentions légales' },
       { href: '/politique-confidentialite', label: 'Confidentialité' },
     ],
@@ -32,7 +47,7 @@ const cols = [
   <div class="wrap footer-inner">
     <div class="footer-brand">
       <img src="/logo-full.png" alt="Imm'oseille, formation marchand de biens" class="footer-logo" width="240" />
-      <a href="/rendez-vous" class="btn btn--ghost">Réserver un appel</a>
+      <a href={RDV} class="btn btn--ghost">Réserver un appel</a>
     </div>
 
     <nav class="footer-cols" aria-label="Pied de page">
@@ -76,7 +91,7 @@ const cols = [
   }
   .footer-cols {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
   .footer-col h4 {
