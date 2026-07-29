@@ -91,13 +91,7 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
         <p class="eyebrow">{eyebrow}</p>
         <h1>{h1}</h1>
         <p class="art-lead">{lead}</p>
-        <div class="art-byline">
-          <span class="art-ava" aria-hidden="true">{initial}</span>
-          <span class="art-byline-txt">
-            Par <strong>{author.name}</strong>, {author.role}
-            <span class="art-byline-meta">Mis à jour le {updated} · Lecture {reading}</span>
-          </span>
-        </div>
+        <p class="art-meta">Mis à jour le {updated} · Lecture {reading}</p>
       </header>
 
       {image && (
@@ -215,10 +209,7 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .art-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 1rem 0 1.3rem; max-width: 20ch; }
   .art .art-lead { color: var(--ink-soft); font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.55; max-width: 62ch; }
 
-  .art .art-byline { display: flex; align-items: center; gap: 0.8rem; margin-top: 1.6rem; padding-top: 1.3rem; border-top: 1px solid var(--line); }
-  .art .art-ava { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--green); color: var(--paper); font-family: var(--font-display); font-weight: 600; display: grid; place-items: center; font-size: 1.15rem; }
-  .art .art-byline-txt { font-size: 0.95rem; color: var(--ink); line-height: 1.35; }
-  .art .art-byline-meta { display: block; color: var(--ink-faint); font-size: 0.82rem; margin-top: 0.15rem; }
+  .art .art-meta { margin-top: 1.4rem; padding-top: 1.1rem; border-top: 1px solid var(--line); color: var(--ink-faint); font-size: 0.85rem; letter-spacing: 0.02em; }
 
   .art .art-figure { margin: clamp(1.2rem, 3vw, 2rem) 0 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
   .art .art-figure img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; display: block; }
