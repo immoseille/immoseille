@@ -27,6 +27,8 @@ const faq = [
   h1="Marchand de biens : c'est quoi ?"
   lead="Le marchand de biens est un professionnel qui achète des biens immobiliers pour les revendre avec une marge. Derrière cette définition simple se cachent un statut de commerçant, des critères juridiques précis et une fiscalité spécifique. Voici tout ce qu'il faut comprendre."
   reading="7 min"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: "Marchand de biens : c'est quoi ?" }]}
+  faq={faq}
 >
   <div class="encadre">
     <p class="encadre-h">En bref</p>
@@ -111,14 +113,4 @@ const faq = [
     projet à l'autre. Nous détaillons les fourchettes réelles et le calcul sur la page
     <a href="/marchand-de-biens-salaire/">salaire d'un marchand de biens</a>.
   </p>
-
-  <h2>Questions fréquentes</h2>
-  <div class="faq">
-    {faq.map((f) => (
-      <details class="faq-item">
-        <summary>{f.q}</summary>
-        <p>{f.r}</p>
-      </details>
-    ))}
-  </div>
 </ArticleLayout>

@@ -27,6 +27,8 @@ const faq = [
   h1="Les avantages et inconvénients du métier de marchand de biens"
   lead="Le métier de marchand de biens attire par sa liberté et son potentiel de marge. Mais il comporte de vraies contraintes qu'il vaut mieux connaître avant de se lancer. Voici un bilan honnête, sans survendre le métier."
   reading="8 min"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Avantages et inconvénients' }]}
+  faq={faq}
 >
   <div class="encadre">
     <p class="encadre-h">En bref</p>
@@ -104,14 +106,4 @@ const faq = [
     apport. Si vous vous reconnaissez, l'étape suivante est de comprendre comment
     <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> concrètement.
   </p>
-
-  <h2>Questions fréquentes</h2>
-  <div class="faq">
-    {faq.map((f) => (
-      <details class="faq-item">
-        <summary>{f.q}</summary>
-        <p>{f.r}</p>
-      </details>
-    ))}
-  </div>
 </ArticleLayout>

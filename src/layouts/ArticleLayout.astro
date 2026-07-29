@@ -9,27 +9,125 @@ const {
   eyebrow = 'Le métier',
   h1,
   lead,
-  updated = 'juillet 2026',
+  breadcrumb = [],
+  updated = '30 juillet 2026',
+  datePublished = '2026-07-30',
+  dateModified = '2026-07-30',
   reading = '7 min',
+  faq = [],
+  author = {
+    name: 'Nath',
+    role: 'Marchand de biens en activité',
+    bio: "Marchand de biens en activité depuis 3 ans, spécialisé dans la division de gros ensembles immobiliers. Il partage ici les méthodes concrètes du métier, du montage d'opération jusqu'à la revente.",
+  },
   ctaTitle = 'Vous voulez vous lancer avec méthode ?',
   ctaText = "Plutôt que de rester seul face aux questions, échangeons sur votre projet. 20 minutes, sans engagement.",
 } = Astro.props;
+
+const site = Astro.site ?? new URL('https://immoseille.fr');
+const canonical = new URL(Astro.url.pathname, site).href;
+
+// --- Schema.org ---
+const breadcrumbLd = breadcrumb.length ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.label,
+    ...(b.href ? { item: new URL(b.href, site).href } : {}),
+  })),
+} : null;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: h1,
+  description,
+  inLanguage: 'fr-FR',
+  datePublished,
+  dateModified,
+  mainEntityOfPage: canonical,
+  author: { '@type': 'Person', name: author.name, jobTitle: author.role },
+  publisher: { '@type': 'Organization', name: "Imm'oseille", url: site.href },
+};
+
+const faqLd = faq.length ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.r },
+  })),
+} : null;
+
+const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
 ---
 
 <BaseLayout title={title} description={description}>
   <article class="art">
+    <div class="wrap art-wrap">
+      {breadcrumb.length > 0 && (
+        <nav class="art-breadcrumb" aria-label="Fil d'Ariane">
+          <ol>
+            {breadcrumb.map((b, i) => (
+              <li>
+                {b.href ? <a href={b.href}>{b.label}</a> : <span aria-current="page">{b.label}</span>}
+                {i < breadcrumb.length - 1 && <span class="bc-sep" aria-hidden="true">›</span>}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+    </div>
+
     <section class="art-hero">
       <div class="wrap art-wrap">
         <p class="eyebrow">{eyebrow}</p>
         <h1>{h1}</h1>
         <p class="art-lead">{lead}</p>
-        <p class="art-meta">Mis à jour en {updated} · Lecture {reading}</p>
+        <div class="art-byline">
+          <span class="art-ava" aria-hidden="true">{initial}</span>
+          <span class="art-byline-txt">
+            Par <strong>{author.name}</strong>, {author.role}
+            <span class="art-byline-meta">Mis à jour le {updated} · Lecture {reading}</span>
+          </span>
+        </div>
       </div>
     </section>
 
     <section class="art-body">
       <div class="wrap art-wrap">
+        <nav class="art-toc" id="art-toc" aria-label="Sommaire">
+          <p class="art-toc-h">Sommaire</p>
+          <ol id="art-toc-list"></ol>
+        </nav>
+
         <slot />
+
+        {faq.length > 0 && (
+          <>
+            <h2 id="faq">Questions fréquentes</h2>
+            <div class="faq">
+              {faq.map((f) => (
+                <details class="faq-item">
+                  <summary>{f.q}</summary>
+                  <p>{f.r}</p>
+                </details>
+              ))}
+            </div>
+          </>
+        )}
+
+        <aside class="art-author">
+          <span class="art-author-ava" aria-hidden="true">{initial}</span>
+          <div>
+            <p class="art-author-h">À propos de l'auteur</p>
+            <p class="art-author-name">{author.name} · <span>{author.role}</span></p>
+            <p class="art-author-bio">{author.bio}</p>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -41,17 +139,60 @@ const {
       </div>
     </section>
   </article>
+
+  {breadcrumbLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
 </BaseLayout>
+
+<script is:inline>
+  (function () {
+    var body = document.querySelector('.art-body');
+    var list = document.getElementById('art-toc-list');
+    var box = document.getElementById('art-toc');
+    if (!body || !list || !box) return;
+    var hs = body.querySelectorAll('h2');
+    if (hs.length < 2) { box.remove(); return; }
+    var slug = function (s) {
+      return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    };
+    var n = 1;
+    hs.forEach(function (h, i) {
+      var id = h.id || slug(h.textContent) || ('section-' + i);
+      h.id = id;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + id;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      list.appendChild(li);
+      n++;
+    });
+  })();
+</script>
 
 <style is:global>
   .art .art-wrap { max-width: 780px; }
-  .art .art-hero { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(1rem, 2.5vw, 2rem); }
+
+  .art .art-breadcrumb { padding-top: 1.4rem; }
+  .art .art-breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--ink-faint); }
+  .art .art-breadcrumb a { color: var(--ink-soft); text-decoration: none; }
+  .art .art-breadcrumb a:hover { color: var(--gold); text-decoration: underline; }
+  .art .art-breadcrumb .bc-sep { color: var(--ink-faint); margin-left: 0.4rem; }
+  .art .art-breadcrumb [aria-current="page"] { color: var(--ink-faint); }
+
+  .art .art-hero { padding-top: clamp(1.4rem, 3vw, 2.2rem); padding-bottom: clamp(1rem, 2.5vw, 2rem); }
   .art .art-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 1rem 0 1.3rem; max-width: 20ch; }
   .art .art-lead { color: var(--ink-soft); font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.55; max-width: 62ch; }
-  .art .art-meta { color: var(--ink-faint); font-size: 0.85rem; margin-top: 1.2rem; letter-spacing: 0.02em; }
+
+  .art .art-byline { display: flex; align-items: center; gap: 0.8rem; margin-top: 1.6rem; padding-top: 1.3rem; border-top: 1px solid var(--line); }
+  .art .art-ava { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--green); color: var(--paper); font-family: var(--font-display); font-weight: 600; display: grid; place-items: center; font-size: 1.15rem; }
+  .art .art-byline-txt { font-size: 0.95rem; color: var(--ink); line-height: 1.35; }
+  .art .art-byline-meta { display: block; color: var(--ink-faint); font-size: 0.82rem; margin-top: 0.15rem; }
 
   .art .art-body { padding-top: clamp(1.5rem, 4vw, 2.5rem); padding-bottom: clamp(3rem, 7vw, 5rem); }
-  .art .art-body h2 { font-size: clamp(1.55rem, 3.2vw, 2.1rem); margin: 2.6rem 0 1rem; }
+  .art .art-body h2 { font-size: clamp(1.55rem, 3.2vw, 2.1rem); margin: 2.6rem 0 1rem; scroll-margin-top: 90px; }
   .art .art-body h3 { font-size: clamp(1.2rem, 2.2vw, 1.4rem); margin: 1.6rem 0 0.7rem; }
   .art .art-body p { margin-bottom: 1.1rem; color: var(--ink); }
   .art .art-body ul, .art .art-body ol { margin: 0 0 1.3rem 1.2rem; display: grid; gap: 0.55rem; }
@@ -59,6 +200,12 @@ const {
   .art .art-body a { color: var(--green-bright); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
   .art .art-body a:hover { color: var(--gold); }
   .art .note { font-size: 0.9rem; color: var(--ink-faint); font-style: italic; }
+
+  .art .art-toc { background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px; padding: 1.2rem 1.5rem; margin: 0 0 2.2rem; }
+  .art .art-toc-h { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.6rem; }
+  .art .art-toc ol { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.4rem; }
+  .art .art-toc a { color: var(--ink-soft); text-decoration: none; }
+  .art .art-toc a:hover { color: var(--gold); text-decoration: underline; }
 
   .art .encadre { background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 8px; padding: 1.4rem 1.6rem; margin: 0 0 2rem; }
   .art .encadre-h { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.7rem; }
@@ -76,7 +223,14 @@ const {
   .art .faq-item[open] summary::after { content: '–'; }
   .art .faq-item p { padding-bottom: 1rem; margin: 0; color: var(--ink-soft); }
 
-  .art .art-cta { padding-top: clamp(2rem, 5vw, 3.5rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); text-align: center; background: var(--paper-2); border-top: 1px solid var(--line); }
+  .art .art-author { display: flex; gap: 1.1rem; align-items: flex-start; margin-top: 2.8rem; padding: 1.5rem 1.6rem; background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px; }
+  .art .art-author-ava { flex: none; width: 52px; height: 52px; border-radius: 50%; background: var(--green); color: var(--paper); font-family: var(--font-display); font-weight: 600; display: grid; place-items: center; font-size: 1.3rem; }
+  .art .art-author-h { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.35rem; }
+  .art .art-author-name { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.4rem; }
+  .art .art-author-name span { color: var(--ink-soft); font-size: 0.95rem; }
+  .art .art-author-bio { color: var(--ink-soft); font-size: 0.95rem; margin: 0; line-height: 1.5; }
+
+  .art .art-cta { padding-top: clamp(2rem, 5vw, 3.5rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); text-align: center; background: var(--paper-2); border-top: 1px solid var(--line); margin-top: 2.5rem; }
   .art .cta-inner h2 { font-size: clamp(1.9rem, 4.2vw, 2.9rem); max-width: 20ch; margin-inline: auto; }
   .art .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.06rem; max-width: 48ch; }
 </style>
