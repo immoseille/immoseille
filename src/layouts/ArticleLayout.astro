@@ -92,6 +92,7 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
         <h1>{h1}</h1>
         <p class="art-lead">{lead}</p>
         <p class="art-meta">Mis à jour le {updated} · Lecture {reading}</p>
+        <a href={RDV} class="btn btn--primary art-hero-cta">Réserver un appel</a>
       </header>
 
       {image && (
@@ -272,7 +273,10 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .cta-inner h2 { font-size: clamp(1.9rem, 4.2vw, 2.9rem); max-width: 20ch; margin-inline: auto; }
   .art .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.06rem; max-width: 48ch; }
 
+  .art .art-hero-cta { display: none; }
+
   @media (max-width: 960px) {
+    .art .art-hero-cta { display: inline-flex; margin-top: 1.5rem; }
     .art .art-layout { grid-template-columns: 1fr; gap: 2rem; }
     .art .art-side { order: -1; }
     .art .art-side-inner { position: static; background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px; padding: 1.3rem 1.4rem; }
