@@ -1,0 +1,132 @@
+---
+// Simulateur de rentabilité d'une opération de marchand de biens.
+// Calcul live côté client. Estimation simplifiée (la TVA n'est pas modélisée en détail).
+---
+
+<div class="sim" role="group" aria-label="Simulateur de rentabilité">
+  <div class="sim-grid">
+    <div class="sim-inputs">
+      <div class="sim-field">
+        <label for="sim-achat">Prix d'achat</label>
+        <div class="sim-euro"><input type="number" id="sim-achat" inputmode="numeric" min="0" step="1000" placeholder="200000" /><span>€</span></div>
+      </div>
+      <div class="sim-field">
+        <label for="sim-notaire">Frais de notaire <span class="sim-hint">≈ 0,715 % en régime marchand de biens</span></label>
+        <div class="sim-euro"><input type="number" id="sim-notaire" inputmode="numeric" min="0" step="100" data-auto="1" placeholder="1430" /><span>€</span></div>
+      </div>
+      <div class="sim-field">
+        <label for="sim-travaux">Montant des travaux</label>
+        <div class="sim-euro"><input type="number" id="sim-travaux" inputmode="numeric" min="0" step="1000" placeholder="40000" /><span>€</span></div>
+      </div>
+      <div class="sim-field">
+        <label for="sim-autres">Autres frais <span class="sim-hint">portage, honoraires, assurances, frais de revente</span></label>
+        <div class="sim-euro"><input type="number" id="sim-autres" inputmode="numeric" min="0" step="500" placeholder="10000" /><span>€</span></div>
+      </div>
+      <div class="sim-field">
+        <label for="sim-revente">Prix de revente</label>
+        <div class="sim-euro"><input type="number" id="sim-revente" inputmode="numeric" min="0" step="1000" placeholder="300000" /><span>€</span></div>
+      </div>
+      <div class="sim-field">
+        <label for="sim-taux">Taux d'imposition du bénéfice <span class="sim-hint">IS : 15 % puis 25 %</span></label>
+        <div class="sim-euro sim-euro--pct"><input type="number" id="sim-taux" inputmode="numeric" min="0" max="60" step="1" value="25" /><span>%</span></div>
+      </div>
+    </div>
+
+    <div class="sim-results" aria-live="polite">
+      <p class="sim-res-label">Marge nette estimée</p>
+      <p class="sim-net" id="sim-marge-nette">—</p>
+      <p class="sim-verdict" id="sim-verdict"></p>
+      <ul class="sim-breakdown">
+        <li><span>Prix de revient total</span><strong id="sim-revient">—</strong></li>
+        <li><span>Marge brute</span><strong id="sim-marge-brute">—</strong></li>
+        <li><span>Taux de marge brute</span><strong id="sim-taux-brut">—</strong></li>
+        <li><span>Impôt estimé sur le bénéfice</span><strong id="sim-impot">—</strong></li>
+      </ul>
+    </div>
+  </div>
+  <p class="sim-note">Estimation simplifiée à titre indicatif. La TVA (sur marge ou sur prix total) et votre situation fiscale précise ne sont pas intégrées : faites toujours valider une opération par un comptable spécialisé.</p>
+</div>
+
+<script is:inline>
+  (function () {
+    var root = document.querySelector('.sim');
+    if (!root) return;
+    var $ = function (id) { return root.querySelector('#' + id); };
+    var eur = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+    var val = function (id) { var v = parseFloat($(id).value); return isNaN(v) ? 0 : v; };
+
+    var achat = $('sim-achat'), notaire = $('sim-notaire');
+    achat.addEventListener('input', function () {
+      if (notaire.getAttribute('data-auto') === '1') {
+        var a = parseFloat(achat.value);
+        notaire.value = isNaN(a) ? '' : Math.round(a * 0.00715);
+      }
+      compute();
+    });
+    notaire.addEventListener('input', function () { notaire.setAttribute('data-auto', '0'); compute(); });
+
+    ['sim-travaux', 'sim-autres', 'sim-revente', 'sim-taux'].forEach(function (id) {
+      $(id).addEventListener('input', compute);
+    });
+
+    function compute() {
+      var revient = val('sim-achat') + val('sim-notaire') + val('sim-travaux') + val('sim-autres');
+      var revente = val('sim-revente');
+      var brute = revente - revient;
+      var taux = val('sim-taux');
+      var impot = brute > 0 ? brute * (taux / 100) : 0;
+      var nette = brute - impot;
+      var tauxBrut = revient > 0 ? (brute / revient) * 100 : 0;
+
+      $('sim-revient').textContent = revient > 0 ? eur.format(revient) : '—';
+      $('sim-marge-brute').textContent = revente > 0 ? eur.format(brute) : '—';
+      $('sim-taux-brut').textContent = revient > 0 && revente > 0 ? tauxBrut.toFixed(1).replace('.', ',') + ' %' : '—';
+      $('sim-impot').textContent = revente > 0 ? eur.format(impot) : '—';
+
+      var net = $('sim-marge-nette'), verdict = $('sim-verdict');
+      if (!revente || !revient) {
+        net.textContent = '—'; net.className = 'sim-net'; verdict.textContent = '';
+        return;
+      }
+      net.textContent = eur.format(nette);
+      if (nette > 0) {
+        net.className = 'sim-net sim-net--pos';
+        verdict.textContent = 'Opération potentiellement rentable, sous réserve de la TVA et des aléas de chantier.';
+      } else {
+        net.className = 'sim-net sim-net--neg';
+        verdict.textContent = 'Opération à perte en l’état : revoyez le prix d’achat, les travaux ou le prix de revente.';
+      }
+    }
+    compute();
+  })();
+</script>
+
+<style>
+  .sim { background: var(--paper-2); border: 1px solid var(--line); border-radius: 14px; padding: clamp(1.2rem, 3vw, 1.8rem); margin: 1.5rem 0 2rem; }
+  .sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.2rem, 3vw, 2rem); align-items: start; }
+  .sim-inputs { display: grid; gap: 0.9rem; }
+  .sim-field label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--ink); }
+  .sim-hint { display: block; font-weight: 400; font-size: 0.78rem; color: var(--ink-faint); }
+  .sim-euro { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); overflow: hidden; }
+  .sim-euro input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 0.6rem 0.7rem; font-family: var(--font-body); font-size: 1rem; color: var(--ink); }
+  .sim-euro input:focus { outline: none; }
+  .sim-euro span { padding: 0 0.8rem; color: var(--ink-faint); font-weight: 600; border-left: 1px solid var(--line); align-self: stretch; display: flex; align-items: center; }
+
+  .sim-results { background: var(--green); color: var(--paper); border-radius: 12px; padding: clamp(1.2rem, 3vw, 1.6rem); position: sticky; top: 90px; }
+  .sim-res-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; }
+  .sim-net { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.1; margin: 0.3rem 0; }
+  .sim-net--pos { color: #7fe0a8; }
+  .sim-net--neg { color: #ff9a8a; }
+  .sim-verdict { font-size: 0.85rem; opacity: 0.9; min-height: 1.2rem; margin-bottom: 1rem; }
+  .sim-breakdown { list-style: none; margin: 0; padding: 1rem 0 0; border-top: 1px solid rgba(255,255,255,0.2); display: grid; gap: 0.55rem; }
+  .sim-breakdown li { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.9rem; }
+  .sim-breakdown span { opacity: 0.85; }
+  .sim-breakdown strong { font-variant-numeric: tabular-nums; }
+
+  .sim-note { font-size: 0.82rem; color: var(--ink-faint); font-style: italic; margin: 0.4rem 0 0; }
+
+  @media (max-width: 640px) {
+    .sim-grid { grid-template-columns: 1fr; }
+    .sim-results { position: static; }
+  }
+</style>

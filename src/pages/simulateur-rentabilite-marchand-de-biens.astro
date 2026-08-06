@@ -1,0 +1,65 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SimulateurRentabilite from '../components/SimulateurRentabilite.astro';
+
+const faq = [
+  {
+    q: "Le simulateur est-il gratuit ?",
+    r: "Oui, le simulateur de rentabilité est libre d'accès et sans inscription. Il calcule instantanément la marge brute et la marge nette estimées de votre opération.",
+  },
+  {
+    q: "Le calcul intègre-t-il la TVA ?",
+    r: "Non, pas dans le détail. La TVA du marchand de biens (sur marge ou sur prix total) dépend de nombreux critères et se traite au cas par cas avec un comptable. Le simulateur donne une estimation de marge avant ce traitement fin.",
+  },
+  {
+    q: "Quelle marge viser pour qu'une opération soit intéressante ?",
+    r: "Les professionnels visent souvent une marge brute de 15 à 25 %. En dessous, l'opération laisse peu de place aux imprévus de chantier ou à un retournement du marché.",
+  },
+  {
+    q: "Pourquoi les frais de notaire sont-ils si bas dans le simulateur ?",
+    r: "Parce que le marchand de biens bénéficie de droits de mutation réduits (environ 0,715 %) en s'engageant à revendre. Le champ est pré-rempli sur cette base, mais vous pouvez le modifier.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Simulateur de rentabilité marchand de biens (gratuit)"
+  description="Simulez gratuitement la rentabilité d'une opération de marchand de biens : prix d'achat, travaux, frais et revente, pour estimer la marge brute et nette."
+  h1="Simulateur de rentabilité pour marchand de biens"
+  lead="Avant de vous lancer sur une opération, estimez sa marge en quelques secondes. Renseignez le prix d'achat, les travaux, les frais et le prix de revente : le simulateur calcule immédiatement votre marge brute et votre marge nette estimées."
+  reading="4 min"
+  image="/img/simulateur-rentabilite-marchand-de-biens.jpg"
+  imageAlt="Analyse de la rentabilité d'une opération avec calculatrice et graphiques"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Simulateur de rentabilité' }]}
+  faq={faq}
+>
+  <p>
+    Renseignez les paramètres de votre projet ci-dessous. Le calcul se met à jour automatiquement à chaque saisie.
+  </p>
+
+  <SimulateurRentabilite />
+
+  <h2>Comment utiliser le simulateur ?</h2>
+  <p>
+    Entrez le <strong>prix d'achat</strong> du bien : les frais de notaire se pré-remplissent automatiquement au taux réduit du
+    marchand de biens (environ 0,715 %), que vous pouvez ajuster. Ajoutez ensuite le <strong>montant des travaux</strong>, les
+    <strong>autres frais</strong> (portage, honoraires, assurances, frais de revente) et le <strong>prix de revente</strong>
+    envisagé. Le simulateur affiche la marge brute, le taux de marge et une marge nette estimée après impôt.
+  </p>
+
+  <h2>Que prend en compte le calcul ?</h2>
+  <p>
+    Le simulateur reconstitue le <strong>prix de revient total</strong> de l'opération (achat, frais de notaire, travaux, autres
+    frais), le compare au prix de revente pour obtenir la <strong>marge brute</strong>, puis applique un taux d'imposition sur le
+    bénéfice pour estimer la <strong>marge nette</strong>. C'est la logique exacte détaillée sur la page
+    <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité d'un marchand de biens</a>.
+  </p>
+
+  <h2>Les limites de l'estimation</h2>
+  <p>
+    Ce simulateur donne un ordre de grandeur, pas un chiffrage définitif. Il ne modélise pas le détail de la
+    <a href="/tva-marchand-de-biens/">TVA</a> (sur marge ou sur prix total), qui peut fortement modifier le résultat, ni les
+    subtilités de votre situation fiscale. Il ne remplace pas l'avis d'un comptable spécialisé, indispensable avant de vous
+    engager sur une <a href="/monter-une-operation-marchand-de-biens/">opération</a>.
+  </p>
+</ArticleLayout>

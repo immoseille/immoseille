@@ -1,0 +1,102 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SimulateurRentabilite from '../components/SimulateurRentabilite.astro';
+
+const faq = [
+  {
+    q: "Comment calcule-t-on la rentabilité d'une opération de marchand de biens ?",
+    r: "On calcule d'abord le prix de revient total (achat + frais de notaire + travaux + frais divers). La marge brute est le prix de revente moins ce prix de revient. La marge nette s'obtient en retranchant l'impôt sur le bénéfice.",
+  },
+  {
+    q: "Quelle différence entre marge brute et marge nette ?",
+    r: "La marge brute est la différence entre le prix de revente et le prix de revient, avant impôt. La marge nette est ce qui reste une fois l'impôt sur le bénéfice (et la TVA le cas échéant) déduit.",
+  },
+  {
+    q: "Quel taux de marge viser ?",
+    r: "Une marge brute de 15 à 25 % est un repère courant. En dessous, l'opération devient fragile face aux imprévus de chantier ou à une baisse du marché.",
+  },
+  {
+    q: "Le prix de revient inclut-il les frais de notaire ?",
+    r: "Oui. Le prix de revient regroupe le prix d'achat, les frais d'acquisition (droits de notaire réduits pour le marchand de biens), le coût des travaux et les frais financiers.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Calcul de rentabilité d'un marchand de biens : méthode"
+  description="Comment calculer la rentabilité d'une opération de marchand de biens : prix de revient, marge brute, marge nette, taux de marge et exemple chiffré."
+  h1="Comment calculer la rentabilité d'une opération ?"
+  lead="La rentabilité d'une opération de marchand de biens se calcule méthodiquement, du prix de revient à la marge nette. Voici la méthode étape par étape, un exemple chiffré et un simulateur pour tester votre projet."
+  reading="6 min"
+  image="/img/calcul-rentabilite-marchand-de-biens.jpg"
+  imageAlt="Maison miniature posée sur une calculatrice, calcul de rentabilité immobilière"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Calcul de rentabilité' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li><strong>Prix de revient</strong> = achat + frais de notaire + travaux + frais divers.</li>
+      <li><strong>Marge brute</strong> = prix de revente − prix de revient.</li>
+      <li><strong>Marge nette</strong> = marge brute − impôt sur le bénéfice.</li>
+      <li>Repère courant : viser une <strong>marge brute de 15 à 25 %</strong>.</li>
+      <li>La marge se juge toujours en net, jamais sur le chiffre d'affaires.</li>
+    </ul>
+  </div>
+
+  <h2>Étape 1 : le prix de revient total</h2>
+  <p>
+    Tout part du <strong>prix de revient</strong>, c'est-à-dire le coût réel et complet de l'opération. Il additionne :
+  </p>
+  <ul>
+    <li>le <strong>prix d'achat</strong> du bien ;</li>
+    <li>les <a href="/frais-de-notaire-marchand-de-biens/">frais de notaire</a> (réduits à ≈ 0,715 % pour le marchand de biens) ;</li>
+    <li>le <strong>montant des travaux</strong> de rénovation ;</li>
+    <li>les <strong>frais divers</strong> : portage (intérêts d'emprunt, taxes), honoraires, assurances, frais de revente.</li>
+  </ul>
+  <p>Oublier un poste, c'est surestimer sa marge : la rigueur sur ce total est la base de tout.</p>
+
+  <h2>Étape 2 : la marge brute</h2>
+  <p>
+    La <strong>marge brute</strong> est simplement la différence entre le prix de revente et le prix de revient. On l'exprime
+    aussi en pourcentage (taux de marge brute) pour comparer des opérations de tailles différentes. Un taux de 15 à 25 % est un
+    repère sain ; en dessous, la moindre mauvaise surprise fait basculer l'opération.
+  </p>
+
+  <h2>Étape 3 : la marge nette</h2>
+  <p>
+    La marge brute n'est pas ce que vous gagnez réellement. Il faut encore retrancher l'<strong>impôt sur le bénéfice</strong>
+    (imposé en <a href="/plus-value-marchand-de-biens/">BIC</a>, à l'IR ou à l'IS selon votre structure) et, le cas échéant, la
+    <a href="/tva-marchand-de-biens/">TVA</a>. Ce qui reste est la <strong>marge nette</strong>, le vrai résultat de l'opération.
+  </p>
+
+  <h2>Un exemple chiffré</h2>
+  <p>Prenons une opération réaliste :</p>
+  <table>
+    <tbody>
+      <tr><td>Prix d'achat</td><td>200 000 €</td></tr>
+      <tr><td>Frais de notaire (≈ 0,715 %)</td><td>1 430 €</td></tr>
+      <tr><td>Travaux</td><td>40 000 €</td></tr>
+      <tr><td>Frais divers (portage, honoraires)</td><td>10 000 €</td></tr>
+      <tr><td><strong>Prix de revient total</strong></td><td><strong>251 430 €</strong></td></tr>
+      <tr><td>Prix de revente</td><td>310 000 €</td></tr>
+      <tr><td><strong>Marge brute</strong></td><td><strong>58 570 € (≈ 23 %)</strong></td></tr>
+      <tr><td>Impôt estimé (IS 25 %)</td><td>14 640 €</td></tr>
+      <tr><td><strong>Marge nette estimée</strong></td><td><strong>≈ 43 930 €</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Simulez votre opération</h2>
+  <p>
+    Reprenez ce raisonnement sur votre propre projet avec le simulateur ci-dessous : modifiez les montants et la marge se
+    recalcule instantanément.
+  </p>
+
+  <SimulateurRentabilite />
+
+  <p>
+    Ce calcul, opération après opération, est au cœur du métier. Il conditionne aussi la
+    <a href="/marchand-de-biens-salaire/">rémunération réelle du marchand de biens</a> et mérite d'être fiabilisé avec un
+    comptable avant chaque engagement.
+  </p>
+</ArticleLayout>

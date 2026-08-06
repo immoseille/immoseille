@@ -55,6 +55,20 @@ export const articles = [
     image: '/img/plus-value-marchand-de-biens.jpg',
     cat: 'statut',
   },
+
+  // --- Bloc "Opérations" ---
+  {
+    slug: 'simulateur-rentabilite-marchand-de-biens',
+    title: 'Simulateur de rentabilité',
+    image: '/img/simulateur-rentabilite-marchand-de-biens.jpg',
+    cat: 'operations',
+  },
+  {
+    slug: 'calcul-rentabilite-marchand-de-biens',
+    title: 'Calcul de rentabilité : la méthode',
+    image: '/img/calcul-rentabilite-marchand-de-biens.jpg',
+    cat: 'operations',
+  },
 ];
 
 // Retourne jusqu'à `limit` articles autres que `currentSlug`, même catégorie en priorité.
