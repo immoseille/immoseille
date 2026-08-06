@@ -1,0 +1,81 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Peut-on vraiment devenir marchand de biens sans apport ?",
+    r: "C'est possible dans certains cas, mais cela reste l'exception et non la règle. Sans apport, il faut compenser par une réelle expertise, un dossier solide et des leviers alternatifs (crowdfunding, portage, association). C'est plus difficile et plus risqué.",
+  },
+  {
+    q: "Pourquoi les banques demandent-elles un apport ?",
+    r: "Parce que l'apport réduit leur risque et prouve votre engagement. Sans lui, la plupart des banques refusent de financer une opération jugée risquée, surtout pour un débutant.",
+  },
+  {
+    q: "Quels leviers pour se lancer avec peu d'apport ?",
+    r: "Le crowdfunding immobilier pour compléter les fonds propres, le portage immobilier qui demande peu d'apport, l'association avec un partenaire qui apporte les fonds, ou un achat nettement sous le prix du marché.",
+  },
+  {
+    q: "Est-ce risqué de se lancer sans apport ?",
+    r: "Oui. Sans coussin de fonds propres, le moindre imprévu (travaux, retard de revente, marché en baisse) peut mettre l'opération en difficulté. L'effet de levier amplifie les gains comme les pertes.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Marchand de biens sans apport : est-ce possible ?"
+  description="Devenir marchand de biens sans apport : ce qui est réellement possible, les leviers (crowdfunding, portage, association) et les risques à mesurer avant de se lancer."
+  h1="Peut-on devenir marchand de biens sans apport ?"
+  lead="C'est une question fréquente, et la réponse mérite d'être honnête : se lancer sans apport est possible dans certains cas, mais cela reste l'exception. C'est plus difficile, plus risqué, et cela exige une vraie maîtrise du métier. Voici ce qu'il faut savoir avant d'y croire."
+  reading="6 min"
+  image="/img/marchand-de-biens-sans-apport.jpg"
+  imageAlt="Se lancer comme marchand de biens avec peu ou pas d'apport"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Se lancer sans apport' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Se lancer sans apport est <strong>possible mais rare</strong> : c'est l'exception, pas la règle.</li>
+      <li>Les banques exigent normalement <strong>20 à 30 % d'apport</strong> pour couvrir leur risque.</li>
+      <li>Des leviers existent : <strong>crowdfunding, portage, association</strong>, achat très décoté.</li>
+      <li>Sans apport, il faut une <strong>expertise réelle</strong> et un dossier irréprochable.</li>
+      <li>Le risque est <strong>amplifié</strong> : moins de coussin, moins de marge d'erreur.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi l'apport est normalement exigé</h2>
+  <p>
+    L'apport n'est pas une formalité : il <strong>réduit le risque</strong> du financeur et prouve votre engagement. Une
+    <a href="/banque-marchand-de-biens/">banque</a> prête d'autant plus volontiers que vous participez vous-même au
+    financement. C'est pourquoi la plupart des établissements demandent <strong>20 à 30 % d'apport</strong>, davantage
+    encore pour un débutant. Partir sans apport revient donc à se priver de la principale source de financement du métier.
+  </p>
+
+  <h2>Les leviers pour limiter ou remplacer l'apport</h2>
+  <p>Quelques solutions permettent de se lancer avec peu, voire pas, de fonds propres personnels :</p>
+  <ul>
+    <li><strong>Le <a href="/crowdfunding-immobilier/">crowdfunding immobilier</a> :</strong> des investisseurs apportent les fonds propres manquants, ce qui débloque l'accès au crédit bancaire.</li>
+    <li><strong>Le <a href="/portage-immobilier/">portage immobilier</a> :</strong> un investisseur porte l'acquisition, avec un apport très réduit de votre part.</li>
+    <li><strong>L'association :</strong> vous vous associez à un partenaire qui apporte les capitaux, en échange d'un partage de la marge.</li>
+    <li><strong>L'achat très sous le marché :</strong> une décote importante à l'achat crée une marge de sécurité qui rassure les financeurs.</li>
+  </ul>
+  <p>Ces leviers ont un coût ou impliquent de partager la marge : ils ne rendent pas l'opération gratuite, ils déplacent le risque.</p>
+
+  <h2>Ce que « sans apport » exige réellement</h2>
+  <p>
+    Compenser l'absence d'apport ne s'improvise pas. Cela suppose une <strong>vraie expertise du métier</strong> : savoir
+    dénicher une opération très rentable, sécuriser le montage, chiffrer les travaux au plus juste et convaincre des
+    financeurs. Autrement dit, ce sont souvent les marchands <strong>expérimentés</strong>, avec un réseau et un track
+    record, qui parviennent à monter des opérations avec peu d'apport, bien plus rarement les débutants.
+  </p>
+
+  <h2>Les risques à mesurer</h2>
+  <p>
+    C'est le point à ne jamais négliger. Sans apport, vous utilisez un <strong>effet de levier maximal</strong> : il
+    amplifie les gains, mais aussi les pertes. Le moindre imprévu, chantier qui dérape, revente qui tarde, marché qui se
+    retourne, peut suffire à faire basculer l'opération dans le rouge, sans coussin pour absorber le choc. Se lancer sans
+    apport n'est donc pas une facilité, c'est un pari plus exigeant qui demande d'autant plus de préparation. Avant de
+    viser cette voie, mieux vaut d'abord bien comprendre comment <a href="/devenir-marchand-de-biens/">devenir marchand de
+    biens</a> et les <a href="/avantages-inconvenients-marchand-de-biens/">risques du métier</a>.
+  </p>
+</ArticleLayout>

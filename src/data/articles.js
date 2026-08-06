@@ -56,6 +56,38 @@ export const articles = [
     cat: 'statut',
   },
 
+  // --- Bloc "Finance" ---
+  {
+    slug: 'financement-marchand-de-biens',
+    title: 'Financer une opération',
+    image: '/img/financement-marchand-de-biens.jpg',
+    cat: 'finance',
+  },
+  {
+    slug: 'banque-marchand-de-biens',
+    title: 'Quelle banque choisir ?',
+    image: '/img/banque-marchand-de-biens.jpg',
+    cat: 'finance',
+  },
+  {
+    slug: 'marchand-de-biens-sans-apport',
+    title: 'Se lancer sans apport ?',
+    image: '/img/marchand-de-biens-sans-apport.jpg',
+    cat: 'finance',
+  },
+  {
+    slug: 'crowdfunding-immobilier',
+    title: 'Le crowdfunding immobilier',
+    image: '/img/crowdfunding-immobilier.jpg',
+    cat: 'finance',
+  },
+  {
+    slug: 'portage-immobilier',
+    title: 'Le portage immobilier',
+    image: '/img/portage-immobilier.jpg',
+    cat: 'finance',
+  },
+
   // --- Bloc "Opérations" ---
   {
     slug: 'simulateur-rentabilite-marchand-de-biens',

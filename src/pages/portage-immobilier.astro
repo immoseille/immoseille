@@ -1,0 +1,83 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Qu'est-ce que le portage immobilier ?",
+    r: "C'est une vente avec faculté de rachat (proche de la vente à réméré, article 1659 du Code civil) : un investisseur achète un bien, et le vendeur conserve la possibilité de le racheter dans un délai fixé. Pour le marchand de biens, une variante permet de financer une acquisition.",
+  },
+  {
+    q: "Comment le portage aide-t-il un marchand de biens ?",
+    r: "Via le portage acquisition : un investisseur achète le bien pour le compte du marchand, qui réalise les travaux puis revend avec une plus-value pendant la durée du contrat (souvent 6 à 12 mois), avec un apport très réduit.",
+  },
+  {
+    q: "Combien coûte une opération de portage ?",
+    r: "Il faut compter une commission à la société de portage (environ 5 %), des frais de notaire (de l'ordre de 1 % pour un portage de 5 ans maximum) et, selon les cas, une indemnité d'occupation ou un loyer. Le coût global est élevé.",
+  },
+  {
+    q: "Quelle est la durée d'un portage ?",
+    r: "La faculté de rachat est limitée à 5 ans par le Code civil. Pour un marchand de biens, le portage acquisition est en général bien plus court, de 6 à 12 mois, le temps de rénover et de revendre.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Portage immobilier : définition et usage marchand de biens"
+  description="Le portage immobilier expliqué : vente avec faculté de rachat, portage acquisition pour le marchand de biens, coûts (commission, frais, loyer), avantages et risques."
+  h1="Le portage immobilier : comment ça marche ?"
+  lead="Le portage immobilier est une alternative au crédit bancaire encore méconnue. Pour le marchand de biens, sa variante « portage acquisition » permet de financer une opération avec très peu d'apport. Voici son fonctionnement, ses coûts et ses limites."
+  reading="6 min"
+  image="/img/portage-immobilier.jpg"
+  imageAlt="Portage immobilier : remise de clés et contrat d'acquisition"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Portage immobilier' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le portage = une <strong>vente avec faculté de rachat</strong> (article 1659 du Code civil).</li>
+      <li>Pour le marchand de biens : le <strong>portage acquisition</strong>, un investisseur achète pour lui.</li>
+      <li>Durée courte pour une opération : souvent <strong>6 à 12 mois</strong>.</li>
+      <li>Apport <strong>très réduit</strong>, sans garantie personnelle, mais <strong>coût élevé</strong>.</li>
+      <li>Coûts : commission (~5 %), frais de notaire, indemnité d'occupation.</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce que le portage immobilier ?</h2>
+  <p>
+    Le portage immobilier est une opération de <strong>vente avec faculté de rachat</strong>, proche de la vente à réméré
+    (article 1659 du Code civil). Dans sa forme classique, un propriétaire vend temporairement son bien à un investisseur
+    tout en conservant la possibilité de le racheter dans un délai défini. Il permet d'obtenir rapidement des liquidités
+    sans passer par un emprunt bancaire. La faculté de rachat est <strong>limitée à 5 ans</strong> par la loi.
+  </p>
+
+  <h2>Le portage acquisition pour le marchand de biens</h2>
+  <p>
+    Il existe une variante pensée pour l'achat-revente : le <strong>portage acquisition</strong>. Ici, un investisseur
+    <strong>achète le bien pour le compte du marchand de biens</strong>. Pendant la durée du contrat, en général
+    <strong>6 à 12 mois</strong>, le marchand réalise les travaux, valorise le bien puis le
+    <a href="/achat-revente-immobilier/">revend avec une plus-value</a>. Son intérêt : mener l'opération avec un
+    <strong>apport très réduit</strong> et sans garantie personnelle, là où la banque exigerait 20 à 30 %.
+  </p>
+
+  <h2>Quels coûts prévoir ?</h2>
+  <p>Le portage est souple, mais coûteux. Les principaux postes :</p>
+  <ul>
+    <li>Une <strong>commission</strong> à la société de portage, de l'ordre de <strong>5 %</strong> du montant de l'opération.</li>
+    <li>Des <strong>frais de notaire</strong>, réduits (environ 1 %) pour un portage de 5 ans au maximum.</li>
+    <li>Une <strong>indemnité d'occupation ou un loyer</strong> selon le montage.</li>
+  </ul>
+  <p>
+    Ce coût global, supérieur à un crédit classique, doit être intégré dès le
+    <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a> de l'opération pour ne pas éroder la marge.
+  </p>
+
+  <h2>Avantages et risques</h2>
+  <p>
+    Les <strong>atouts</strong> sont réels : rapidité, apport minimal, absence de garantie personnelle, ce qui permet de
+    saisir une opération sans mobiliser toute sa trésorerie. Mais les <strong>risques</strong> le sont tout autant : le
+    coût élevé grignote la marge, la durée est courte et la mécanique impose de <strong>revendre dans les temps</strong>.
+    Si la revente tarde, l'équilibre de l'opération est menacé. C'est un levier puissant pour un marchand qui maîtrise son
+    métier, à manier avec prudence et un bon <a href="/financement-marchand-de-biens/">plan de financement</a> d'ensemble.
+  </p>
+</ArticleLayout>

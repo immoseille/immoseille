@@ -1,0 +1,89 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quelle banque finance les marchands de biens ?",
+    r: "Autant les banques généralistes (souvent réticentes) que des établissements spécialisés dans l'immobilier professionnel. En pratique, on compare plusieurs interlocuteurs, et un courtier spécialisé peut faciliter l'accès aux banques habituées à ce type d'opération.",
+  },
+  {
+    q: "Pourquoi les banques hésitent à financer un marchand de biens ?",
+    r: "Parce que l'activité cumule plusieurs risques : travaux, délais de revente, marché fluctuant. La banque cherche donc à se prémunir via l'apport, les garanties et l'analyse fine du projet.",
+  },
+  {
+    q: "Quels critères la banque analyse-t-elle ?",
+    r: "Principalement l'expérience du marchand, la localisation du bien et son prix d'achat au mètre carré, en plus de l'apport et des garanties proposées.",
+  },
+  {
+    q: "Un débutant peut-il obtenir un financement bancaire ?",
+    r: "C'est plus difficile, mais possible avec un apport renforcé, un dossier exemplaire et de bonnes garanties. À défaut, les financements alternatifs prennent le relais.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Quelle banque pour un marchand de biens ?"
+  description="Quelle banque finance un marchand de biens ? Pourquoi les banques sont réticentes, les critères analysés, comment convaincre et que faire en cas de refus."
+  h1="Quelle banque finance un marchand de biens ?"
+  lead="Obtenir un crédit bancaire est l'une des difficultés récurrentes du métier. L'activité est jugée risquée, et les banques posent des conditions strictes. Voici comment elles raisonnent, ce qu'elles analysent et comment mettre toutes les chances de votre côté."
+  reading="6 min"
+  image="/img/banque-marchand-de-biens.jpg"
+  imageAlt="Façade d'une banque finançant les opérations de marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Banques spécialisées' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Les banques jugent l'activité <strong>risquée</strong> et se montrent exigeantes.</li>
+      <li>Trois critères clés : <strong>expérience</strong>, <strong>localisation</strong> et <strong>prix au mètre carré</strong>.</li>
+      <li>Apport attendu : <strong>20 à 30 %</strong>, jusqu'à 50 % pour un débutant.</li>
+      <li>Des établissements <strong>spécialisés</strong> et un courtier facilitent l'accès au crédit.</li>
+      <li>En cas de refus, les <a href="/financement-marchand-de-biens/">financements alternatifs</a> prennent le relais.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi les banques sont réticentes</h2>
+  <p>
+    Le marchand de biens est un profil <strong>hybride</strong> aux yeux des banques : ni particulier, ni entreprise
+    classique. Son activité cumule plusieurs aléas, travaux qui dérapent, délais de revente, retournement du marché.
+    Certaines banques refusent tout simplement ce type de dossier, d'autres imposent un montant minimum de financement,
+    ce qui pénalise les petites opérations. La banque cherche avant tout à se protéger contre ces risques.
+  </p>
+
+  <h2>Les critères analysés par le banquier</h2>
+  <p>Au-delà de l'apport, trois critères pèsent particulièrement :</p>
+  <ul>
+    <li><strong>L'expérience.</strong> Un track record d'opérations réussies fait la différence. Un débutant devra compenser par un dossier solide et des garanties.</li>
+    <li><strong>La localisation.</strong> Un emplacement recherché et liquide rassure ; une zone jugée difficile pénalise la demande.</li>
+    <li><strong>Le prix au mètre carré.</strong> Acheter sous le prix du marché est un signal fort de marge potentielle et de sécurité.</li>
+  </ul>
+  <p>
+    Ces éléments déterminent la part de fonds propres exigée. De bonnes garanties (hypothèque de premier rang, caution)
+    permettent souvent de la réduire.
+  </p>
+
+  <h2>Banques généralistes ou établissements spécialisés ?</h2>
+  <p>
+    Les banques de réseau restent la première porte, mais elles sont inégalement à l'aise avec le métier. Des
+    <strong>établissements spécialisés</strong> dans l'immobilier professionnel proposent des offres dédiées aux marchands
+    de biens, mieux calibrées pour ces opérations. Passer par un <strong>courtier</strong> habitué à ce profil fait souvent
+    gagner du temps et ouvre les bonnes portes.
+  </p>
+
+  <h2>Comment convaincre votre banque</h2>
+  <p>
+    La règle est simple : présentez un dossier que le banquier n'a pas envie de refuser. Business plan chiffré, budget de
+    travaux appuyé sur des devis, calendrier réaliste, marge prévisionnelle prudente et garanties claires. Plus votre
+    projet est documenté et votre <a href="/statut-juridique-marchand-de-biens/">structure adaptée</a>, plus la confiance
+    s'installe.
+  </p>
+
+  <h2>Que faire en cas de refus ?</h2>
+  <p>
+    Un refus bancaire n'arrête pas une opération. Les solutions alternatives existent : le
+    <a href="/crowdfunding-immobilier/">crowdfunding immobilier</a> pour compléter l'apport, le
+    <a href="/portage-immobilier/">portage immobilier</a> pour une opération courte, ou l'association avec un partenaire.
+    Elles coûtent plus cher mais débloquent des projets qui, sinon, ne se feraient pas.
+  </p>
+</ArticleLayout>

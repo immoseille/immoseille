@@ -1,0 +1,102 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Comment se faire financer en tant que marchand de biens ?",
+    r: "Par un prêt bancaire professionnel (souvent amortissable ou in fine), complété si besoin par des solutions alternatives comme le crowdfunding immobilier ou le portage. Le financement combine généralement plusieurs sources autour d'un apport personnel.",
+  },
+  {
+    q: "Quel apport les banques demandent-elles ?",
+    r: "En général 20 à 30 % du coût total de l'opération, et parfois jusqu'à 50 % pour un débutant sans historique. L'apport rassure la banque et réduit son risque.",
+  },
+  {
+    q: "Qu'est-ce qu'un crédit in fine ?",
+    r: "Un prêt où vous ne remboursez que les intérêts pendant la durée, le capital étant remboursé en une fois à l'échéance, lors de la revente. Il préserve la trésorerie pendant les travaux mais coûte plus cher au total.",
+  },
+  {
+    q: "Que faire en cas de refus bancaire ?",
+    r: "Se tourner vers les financements alternatifs : crowdfunding immobilier pour compléter l'apport, portage immobilier pour une opération courte, ou l'association avec un partenaire. Chacun a ses conditions et son coût.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Financement d'un marchand de biens : toutes les solutions"
+  description="Comment financer une opération de marchand de biens : prêt professionnel, crédit in fine, prêt hypothécaire, crowdfunding et portage. Conditions et dossier."
+  h1="Comment financer une opération de marchand de biens ?"
+  lead="Sans financement, pas d'opération. Entre le prêt bancaire, le crédit in fine et les solutions alternatives comme le crowdfunding ou le portage, le marchand de biens dispose de plusieurs leviers. Voici comment les combiner et monter un dossier solide."
+  reading="8 min"
+  image="/img/financement-marchand-de-biens.jpg"
+  imageAlt="Financement d'une opération immobilière de marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Financer une opération' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le financement combine le plus souvent <strong>apport + prêt bancaire</strong>, parfois complété par des alternatives.</li>
+      <li>Les banques demandent un <strong>apport de 20 à 30 %</strong>, jusqu'à 50 % pour un débutant.</li>
+      <li>Le <strong>crédit in fine</strong> préserve la trésorerie pendant les travaux.</li>
+      <li>Le <strong>crowdfunding</strong> et le <strong>portage</strong> aident quand la banque ne suit pas.</li>
+      <li>Tout repose sur un <strong>dossier solide</strong> : business plan, devis, marge prévisionnelle.</li>
+    </ul>
+  </div>
+
+  <h2>Quels sont les besoins de financement ?</h2>
+  <p>
+    Une opération de marchand de biens finance plusieurs postes : l'<strong>achat</strong> du bien, les
+    <strong>travaux</strong>, les <a href="/frais-de-notaire-marchand-de-biens/">frais d'acquisition</a> et une
+    <strong>trésorerie de sécurité</strong> pour tenir jusqu'à la revente. Le budget global se chiffre précisément dès
+    le <a href="/monter-une-operation-marchand-de-biens/">montage de l'opération</a> : c'est lui qui détermine le
+    financement à réunir.
+  </p>
+
+  <h2>Le financement bancaire</h2>
+  <p>Trois formes de crédit reviennent le plus souvent :</p>
+  <table>
+    <thead>
+      <tr><th>Solution</th><th>Principe</th><th>Apport indicatif</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Prêt professionnel amortissable</td><td>Remboursement capital + intérêts sur la durée</td><td>20 à 30 %</td></tr>
+      <tr><td>Crédit in fine</td><td>Intérêts pendant la durée, capital soldé à la revente</td><td>20 à 40 %</td></tr>
+      <tr><td>Prêt de trésorerie hypothécaire</td><td>Liquidités contre hypothèque sur un bien que vous détenez déjà</td><td>selon la valeur du bien</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Le crédit in fine est souvent privilégié pour l'achat-revente : il allège les mensualités le temps des travaux. En
+    contrepartie, son coût total est plus élevé et un retard de revente expose à un défaut de remboursement.
+  </p>
+
+  <h2>Ce que la banque exige</h2>
+  <p>
+    L'activité est jugée risquée : les banques se montrent exigeantes. Trois critères pèsent lourd, détaillés sur la page
+    <a href="/banque-marchand-de-biens/">banques pour marchand de biens</a> :
+  </p>
+  <ul>
+    <li><strong>L'apport :</strong> 20 à 30 % du coût total, jusqu'à 50 % sans expérience.</li>
+    <li><strong>L'expérience :</strong> un historique d'opérations réussies rassure ; un débutant doit compenser par un dossier irréprochable.</li>
+    <li><strong>Le projet :</strong> localisation, prix d'achat au mètre carré et marge prévisionnelle, idéalement supérieure à 20 %.</li>
+  </ul>
+  <p>Des garanties (hypothèque de premier rang, caution) réduisent le risque et donc l'apport demandé.</p>
+
+  <h2>Les solutions alternatives</h2>
+  <p>Quand la banque ne suit pas, ou pour compléter l'apport, plusieurs leviers existent :</p>
+  <ul>
+    <li>Le <a href="/crowdfunding-immobilier/">crowdfunding immobilier</a> : des investisseurs prêtent rapidement les fonds manquants.</li>
+    <li>Le <a href="/portage-immobilier/">portage immobilier</a> : un investisseur porte l'acquisition le temps de l'opération.</li>
+    <li>L'association avec un partenaire ou l'apport de proches, pour renforcer les fonds propres.</li>
+  </ul>
+  <p>
+    Ces solutions sont plus souples mais plus coûteuses que le crédit bancaire. Elles peuvent aussi permettre de
+    <a href="/marchand-de-biens-sans-apport/">se lancer avec peu d'apport</a>, sous conditions.
+  </p>
+
+  <h2>Monter un dossier qui convainc</h2>
+  <p>
+    Quel que soit le financeur, tout se joue sur le dossier. Il doit contenir un <strong>business plan chiffré</strong> :
+    prix d'achat, frais, budget de travaux appuyé sur des devis, calendrier réaliste et marge prévisionnelle. Un projet
+    clair, prudent et documenté inspire confiance. C'est le socle sur lequel repose toute demande de financement.
+  </p>
+</ArticleLayout>

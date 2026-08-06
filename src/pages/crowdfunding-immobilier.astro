@@ -1,0 +1,86 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Qu'est-ce que le crowdfunding immobilier ?",
+    r: "C'est un financement participatif : des particuliers prêtent collectivement des fonds à un porteur de projet immobilier, via une plateforme en ligne, en échange d'intérêts. Pour le marchand de biens, c'est un moyen de compléter son financement.",
+  },
+  {
+    q: "Comment le marchand de biens utilise-t-il le crowdfunding ?",
+    r: "Il l'emploie surtout pour compléter ses fonds propres et débloquer l'accès au crédit bancaire, ou pour financer une opération que la banque refuse. Les fonds sont souvent débloqués rapidement, ce qui permet de saisir une opportunité.",
+  },
+  {
+    q: "Quel est le coût du crowdfunding immobilier ?",
+    r: "Le taux d'intérêt est plus élevé qu'un crédit bancaire, car le risque pour les prêteurs est plus grand. S'y ajoutent des frais (expertise, hypothèque). C'est le prix de la rapidité et de la souplesse.",
+  },
+  {
+    q: "Le crowdfunding remplace-t-il la banque ?",
+    r: "Rarement en totalité. Il est le plus souvent complémentaire : il apporte les fonds propres manquants pour boucler un financement, permettant de mener plusieurs opérations en parallèle.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Crowdfunding immobilier : financer une opération"
+  description="Le crowdfunding immobilier pour le marchand de biens : comment ça marche, pour compléter l'apport et accélérer les opérations, avantages, coûts et limites."
+  h1="Le crowdfunding immobilier pour le marchand de biens"
+  lead="Le crowdfunding immobilier est devenu un levier de financement clé pour les marchands de biens. Rapide et souple, il permet de compléter ses fonds propres et de saisir des opportunités que la banque seule ne financerait pas. Voici comment il fonctionne et ce qu'il coûte."
+  reading="6 min"
+  image="/img/crowdfunding-immobilier.jpg"
+  imageAlt="Financement participatif immobilier pour marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Crowdfunding immobilier' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le crowdfunding immobilier = des investisseurs prêtent collectivement via une plateforme.</li>
+      <li>Pour le marchand de biens, il sert surtout à <strong>compléter l'apport</strong> et à aller vite.</li>
+      <li>Il permet de <strong>multiplier les opérations</strong> en préservant ses fonds propres.</li>
+      <li>Le <strong>coût est plus élevé</strong> qu'un crédit bancaire (taux + frais).</li>
+      <li>Il est le plus souvent <strong>complémentaire</strong> à la banque, pas un substitut total.</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce que le crowdfunding immobilier ?</h2>
+  <p>
+    Le crowdfunding immobilier, ou financement participatif, permet à un grand nombre de particuliers de
+    <strong>prêter collectivement de l'argent</strong> à un porteur de projet immobilier, via une plateforme en ligne, en
+    échange d'intérêts. Côté investisseurs, c'est un placement rémunéré et risqué. Côté marchand de biens, c'est un
+    <strong>moyen de financer une opération</strong> sans passer uniquement par la banque.
+  </p>
+
+  <h2>Comment ça marche pour le marchand de biens</h2>
+  <p>
+    Dans ce cadre, on parle souvent de <strong>crowdlending</strong> : le marchand emprunte auprès de la foule
+    d'investisseurs. Le prêt est généralement structuré <strong>in fine</strong> (le capital est remboursé à la revente)
+    et garanti par une hypothèque. L'intérêt majeur est la <strong>rapidité</strong> : les fonds peuvent être débloqués en
+    quelques jours, là où une banque met des semaines. Cela permet de <a href="/monter-une-operation-marchand-de-biens/">saisir
+    une opportunité</a> ou de compléter l'apport exigé par la banque.
+  </p>
+
+  <h2>Les avantages</h2>
+  <ul>
+    <li><strong>La vitesse :</strong> décision et déblocage rapides, précieux pour saisir une bonne affaire.</li>
+    <li><strong>L'effet de levier :</strong> en apportant les fonds propres manquants, il débloque le crédit bancaire.</li>
+    <li><strong>La multiplication des opérations :</strong> en préservant sa trésorerie, le marchand peut mener plusieurs projets en parallèle.</li>
+    <li><strong>L'accès aux petites opérations</strong> souvent délaissées par les banques.</li>
+  </ul>
+
+  <h2>Les inconvénients et les coûts</h2>
+  <p>
+    La souplesse a un prix. Le <strong>taux d'intérêt est plus élevé</strong> qu'un crédit bancaire classique, car le
+    risque pour les prêteurs est important. S'ajoutent des <strong>frais</strong> (expertise indépendante du bien,
+    hypothèque). Comme le prêt est souvent court et in fine, un <strong>retard de revente</strong> pèse lourd. Ce coût doit
+    être intégré dès le <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a> de l'opération.
+  </p>
+
+  <h2>Crowdfunding ou banque ?</h2>
+  <p>
+    Les deux ne s'opposent pas, ils se combinent. Le <a href="/financement-marchand-de-biens/">financement bancaire</a>
+    reste le socle le moins cher ; le crowdfunding vient compléter l'apport ou financer ce que la banque refuse. Bien
+    utilisé, il aide même à <a href="/marchand-de-biens-sans-apport/">se lancer avec peu d'apport</a>, à condition d'en
+    mesurer le coût et le risque.
+  </p>
+</ArticleLayout>
