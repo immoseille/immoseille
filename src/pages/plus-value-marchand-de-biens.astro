@@ -1,0 +1,110 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Le marchand de biens paie-t-il l'impôt sur la plus-value immobilière ?",
+    r: "Non. Ses profits ne relèvent pas du régime des plus-values immobilières des particuliers, mais des bénéfices industriels et commerciaux (article 35 du CGI). Il ne bénéficie donc d'aucun abattement pour durée de détention.",
+  },
+  {
+    q: "Comment se calcule le bénéfice imposable ?",
+    r: "C'est la différence entre le prix de vente et le prix de revient total (prix d'achat, frais d'acquisition, travaux, frais financiers), moins les charges d'exploitation (gestion, intérêts d'emprunt, assurances, impôts locaux).",
+  },
+  {
+    q: "IR ou IS, quelle imposition ?",
+    r: "En entreprise individuelle, le bénéfice est soumis à l'impôt sur le revenu au barème progressif. En société à l'impôt sur les sociétés, il est taxé à 15 % jusqu'à 42 500 € puis à 25 %, les dividendes éventuels supportant ensuite la flat tax de 30 %.",
+  },
+  {
+    q: "Peut-on éviter l'imposition avec la résidence principale ?",
+    r: "C'est une exception très encadrée et risquée. Un juge a pu l'admettre, mais l'administration surveille de près ces montages : sans occupation habituelle et effective réelle, la requalification entraîne l'impôt, la TVA et des pénalités de 40 à 80 %.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Plus-value du marchand de biens : imposition en BIC"
+  description="La plus-value du marchand de biens n'est pas une plus-value immobilière classique : elle est imposée en BIC (IR ou IS), sans abattement pour durée de détention."
+  h1="Comment est imposée la plus-value d'un marchand de biens ?"
+  lead="Beaucoup pensent que le marchand de biens relève de l'impôt sur la plus-value immobilière. C'est faux, et la différence change tout : ses profits sont des bénéfices commerciaux, sans les abattements réservés aux particuliers. Voici comment ils sont réellement imposés."
+  reading="7 min"
+  image="/img/plus-value-marchand-de-biens.jpg"
+  imageAlt="Graphique de croissance illustrant la plus-value d'une opération immobilière"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Plus-value' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Les profits du marchand de biens sont des <strong>BIC</strong> (article 35 du CGI), pas des plus-values de particulier.</li>
+      <li>Conséquence : <strong>aucun abattement pour durée de détention</strong>.</li>
+      <li>Bénéfice imposable = prix de vente − prix de revient total − charges.</li>
+      <li>Imposition à l'<strong>IR</strong> (entreprise individuelle) ou à l'<strong>IS</strong> (société) : 15 % puis 25 %.</li>
+      <li>L'exception « résidence principale » existe mais reste risquée et surveillée.</li>
+    </ul>
+  </div>
+
+  <h2>Marchand de biens : pas de plus-value immobilière classique</h2>
+  <p>
+    C'est le point le plus mal compris du métier. Un particulier qui revend un bien relève du régime des plus-values
+    immobilières, avec des abattements qui réduisent l'impôt selon la durée de détention, jusqu'à l'exonération. Le marchand
+    de biens, lui, exerce une activité commerciale : ses gains sont des <strong>bénéfices industriels et commerciaux</strong>
+    au sens de l'<strong>article 35 du CGI</strong>. Il ne bénéficie donc <strong>d'aucun abattement pour durée de
+    détention</strong>. Sa fiscalité est celle d'une entreprise, pas celle d'un épargnant. Ce statut découle directement de la
+    <a href="/marchand-de-biens-definition/">définition même du marchand de biens</a>.
+  </p>
+
+  <h2>Comment se calcule le bénéfice imposable ?</h2>
+  <p>
+    Le bénéfice taxable correspond à la marge réelle de l'opération. Concrètement, on part du prix de vente et on déduit le
+    <strong>prix de revient total</strong> puis les <strong>charges d'exploitation</strong> :
+  </p>
+  <ul>
+    <li>le <strong>prix d'achat</strong> du bien ;</li>
+    <li>les <strong>frais d'acquisition</strong> (voir les <a href="/frais-de-notaire-marchand-de-biens/">frais de notaire réduits</a>) ;</li>
+    <li>le <strong>coût des travaux</strong> ;</li>
+    <li>les <strong>frais financiers</strong> (intérêts d'emprunt) et charges (gestion, assurances, impôts locaux).</li>
+  </ul>
+  <p>
+    C'est cette marge nette, et non le prix de vente, qui est imposée. Tenir une comptabilité rigoureuse est donc
+    indispensable pour justifier chaque dépense déductible.
+  </p>
+
+  <h2>Impôt sur le revenu ou impôt sur les sociétés ?</h2>
+  <p>
+    Tout dépend de votre <a href="/statut-juridique-marchand-de-biens/">statut juridique</a> :
+  </p>
+  <ul>
+    <li><strong>Entreprise individuelle :</strong> le bénéfice est soumis à l'<strong>impôt sur le revenu</strong>, au barème progressif, comme les revenus d'un commerçant.</li>
+    <li><strong>Société à l'IS :</strong> le bénéfice est taxé à <strong>15 % jusqu'à 42 500 €</strong> puis à <strong>25 %</strong> au-delà. Les dividendes que vous vous versez supportent ensuite le <strong>prélèvement forfaitaire unique de 30 %</strong> (12,8 % d'impôt et 17,2 % de prélèvements sociaux).</li>
+  </ul>
+  <p>
+    Le choix entre IR et IS dépend de votre situation, du volume d'activité et de votre stratégie de rémunération. Il se
+    tranche avec un comptable, jamais à la légère.
+  </p>
+
+  <h2>Les autres conséquences fiscales</h2>
+  <p>
+    L'imposition du bénéfice n'est qu'une partie du tableau. Une opération met aussi en jeu la
+    <a href="/tva-marchand-de-biens/">TVA du marchand de biens</a> (prix total, marge ou exonération selon les cas) et les
+    droits de mutation, fortement réduits grâce à l'engagement de revendre. Ces trois dimensions doivent être pensées
+    <strong>ensemble</strong> dès le montage de l'opération, car elles interagissent sur la marge finale.
+  </p>
+
+  <h2>Le cas particulier de la résidence principale</h2>
+  <p>
+    Certains tentent d'échapper à l'imposition en BIC en revendiquant que le bien vendu était leur résidence principale. Un
+    arrêt du Conseil d'État a admis cette possibilité, mais c'est un terrain <strong>miné</strong>. L'administration exige une
+    occupation <strong>habituelle et effective</strong>, prouvée par un faisceau d'indices (lieu d'imposition, consommations,
+    adresse). Une occupation de pure convenance juste avant la vente est rejetée, avec des pénalités pouvant aller de
+    <strong>40 % à 80 %</strong> des sommes éludées. À manier avec la plus grande prudence et un vrai conseil.
+  </p>
+
+  <h2>Un exemple chiffré</h2>
+  <p>
+    Un marchand achète un bien <strong>200 000 €</strong>, engage <strong>40 000 €</strong> de travaux et <strong>15 000 €</strong>
+    de frais divers (acquisition, portage), puis revend <strong>300 000 €</strong>. Son bénéfice imposable est d'environ
+    <strong>45 000 €</strong> (300 000 − 255 000). En société à l'IS, il sera taxé à 15 % sur la première tranche, soit une
+    charge nettement inférieure à ce que paierait un particulier sans abattement. C'est ce calcul, opération par opération,
+    qui détermine la <a href="/marchand-de-biens-salaire/">rémunération réelle du marchand de biens</a>.
+  </p>
+</ArticleLayout>

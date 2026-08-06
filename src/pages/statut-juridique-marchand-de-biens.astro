@@ -1,0 +1,109 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Peut-on être marchand de biens en micro-entreprise ?",
+    r: "Non. L'article 50-0 du Code général des impôts exclut l'achat-revente immobilier du régime micro. Les plafonds, l'impossibilité de récupérer la TVA et la responsabilité illimitée rendent ce statut inadapté.",
+  },
+  {
+    q: "Peut-on exercer via une SCI ?",
+    r: "Non pour l'achat-revente. La SCI a un objet civil, pas commercial : l'utiliser pour une activité de marchand expose à une requalification fiscale. Pour construire puis vendre, une SCCV (société civile de construction-vente) est en revanche envisageable, mais elle se crée par opération.",
+  },
+  {
+    q: "SAS ou SARL pour un marchand de biens ?",
+    r: "La SAS (ou SASU en solo) est souvent préférée pour sa souplesse de gestion et le régime assimilé salarié du dirigeant. La SARL (ou EURL) place le gérant majoritaire au régime des travailleurs non salariés, avec moins de cotisations mais moins de couverture. Le choix se fait avec un comptable.",
+  },
+  {
+    q: "Faut-il un capital minimum ?",
+    r: "Non, il n'y a pas de capital social minimum imposé pour une SAS ou une SARL. En pratique, c'est surtout l'apport disponible pour financer les opérations qui compte, pas le capital statutaire.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Statut juridique du marchand de biens : SAS, SARL, SASU"
+  description="Quel statut juridique choisir pour un marchand de biens ? Pourquoi la micro et la SCI sont à éviter, et comment arbitrer entre SAS, SASU, SARL et EURL."
+  h1="Quel statut juridique pour un marchand de biens ?"
+  lead="Le marchand de biens exerce une activité commerciale : le choix de sa structure conditionne sa fiscalité, sa protection et sa crédibilité bancaire. Voici pourquoi la micro-entreprise et la SCI sont à écarter, et comment choisir entre SAS, SASU, SARL et EURL."
+  reading="7 min"
+  image="/img/statut-juridique-marchand-de-biens.jpg"
+  imageAlt="Signature d'un contrat, choix du statut juridique du marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Statut juridique' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le marchand de biens est un <strong>commerçant</strong> : ses bénéfices relèvent des BIC (article 35 du CGI).</li>
+      <li>La <strong>micro-entreprise est interdite</strong> pour cette activité (article 50-0 du CGI).</li>
+      <li>La <strong>SCI est un piège</strong> : objet civil, risque de requalification.</li>
+      <li>Les statuts adaptés : <strong>SAS, SASU, SARL, EURL</strong>, tous à responsabilité limitée.</li>
+      <li>En société à l'impôt sur les sociétés : 15 % jusqu'à 42 500 € de bénéfice, 25 % au-delà.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi le choix du statut est décisif</h2>
+  <p>
+    Le marchand de biens n'exerce jamais en nom propre comme un particulier : son activité d'<a href="/achat-revente-immobilier/">achat-revente</a>
+    est commerciale et répétée. Le statut détermine trois choses à la fois : votre <strong>fiscalité</strong> (imposition des
+    bénéfices et TVA), la <strong>protection de votre patrimoine personnel</strong> et votre <strong>crédibilité</strong> face
+    aux banques. Un mauvais choix de départ coûte cher à corriger. Ce sujet fait partie des fondamentaux à maîtriser avant de
+    <a href="/devenir-marchand-de-biens/">se lancer comme marchand de biens</a>.
+  </p>
+
+  <h2>La micro-entreprise est-elle possible ?</h2>
+  <p>
+    Non. L'<strong>article 50-0 du Code général des impôts exclut expressément l'achat-revente immobilier du régime de la
+    micro-entreprise</strong>. Même si c'était possible, ce statut serait inadapté : le plafond de chiffre d'affaires
+    (188 700 €) serait franchi dès la première opération, vous ne pourriez pas récupérer la TVA sur les travaux et votre
+    responsabilité resterait illimitée sur votre patrimoine personnel. La micro freine et expose, elle ne protège pas.
+  </p>
+
+  <h2>La SCI, un piège pour le marchand de biens</h2>
+  <p>
+    La société civile immobilière a un <strong>objet civil</strong> : elle sert à détenir et gérer un patrimoine, pas à faire
+    du commerce. Utiliser une SCI pour de l'achat-revente expose à une <strong>requalification fiscale</strong> en activité
+    commerciale, avec rappel d'impôts, pénalités et intérêts de retard. Seule exception : pour acheter un terrain, construire
+    puis vendre, une <strong>SCCV</strong> (société civile de construction-vente) est envisageable, mais elle se constitue en
+    général une par opération, ce qui alourdit la gestion.
+  </p>
+
+  <h2>Les statuts recommandés : SAS, SASU, SARL, EURL</h2>
+  <p>
+    Toutes ces formes offrent une <strong>responsabilité limitée aux apports</strong>, ce qui protège votre patrimoine
+    personnel. Le vrai arbitrage porte sur le régime social du dirigeant et la souplesse de gestion.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Statut</th><th>Régime social du dirigeant</th><th>Points forts</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>SAS / SASU</td><td>Assimilé salarié</td><td>Grande souplesse, bonne protection sociale, crédibilité</td></tr>
+      <tr><td>SARL / EURL</td><td>Travailleur non salarié (gérant majoritaire)</td><td>Cotisations plus faibles, cadre encadré par la loi</td></tr>
+    </tbody>
+  </table>
+  <p>
+    La SAS et sa version unipersonnelle SASU sont souvent privilégiées pour leur liberté statutaire. La SARL et l'EURL
+    conviennent bien à un projet familial ou à qui cherche à limiter ses cotisations. Il n'y a pas de réponse universelle :
+    tout dépend de votre situation, de votre rémunération cible et de vos associés éventuels.
+  </p>
+
+  <h2>Quelle fiscalité selon le statut ?</h2>
+  <p>
+    Les bénéfices du marchand de biens sont des <strong>bénéfices industriels et commerciaux</strong> (article 35 du CGI). En
+    société à l'impôt sur les sociétés, le taux est de <strong>15 % jusqu'à 42 500 € de bénéfice</strong> puis de
+    <strong>25 %</strong> au-delà. Si vous vous versez des dividendes, ils supportent le prélèvement forfaitaire unique de
+    30 %. À cela s'ajoutent deux spécificités majeures du métier : la <a href="/tva-marchand-de-biens/">TVA du marchand de
+    biens</a> et l'imposition des <a href="/plus-value-marchand-de-biens/">plus-values en BIC</a>, sans abattement pour durée
+    de détention.
+  </p>
+
+  <h2>Comment créer sa structure ?</h2>
+  <p>
+    La création se fait via le <strong>guichet unique</strong> de l'INPI, avec immatriculation au registre du commerce et des
+    sociétés. Si vous faites réaliser des travaux lourds, vous devrez souscrire une <strong>assurance dommages-ouvrage</strong>
+    et une <strong>responsabilité décennale</strong> avant l'ouverture du chantier. Là encore, faites valider votre montage
+    par un comptable spécialisé en immobilier avant de signer quoi que ce soit.
+  </p>
+</ArticleLayout>

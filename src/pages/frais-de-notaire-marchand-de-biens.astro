@@ -1,0 +1,92 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Un marchand de biens paie-t-il moins de frais de notaire ?",
+    r: "Oui. En s'engageant à revendre dans un délai fixé par la loi, le marchand de biens bénéficie de droits de mutation réduits à l'achat, de l'ordre de 0,715 %, contre environ 5,80 à 6,30 % pour un acheteur classique.",
+  },
+  {
+    q: "Quelle est la contrepartie de ces frais réduits ?",
+    r: "L'engagement de revendre le bien dans le délai légal (5 ans en principe). Si le marchand ne revend pas dans ce délai, l'administration réclame les droits normalement dus, majorés d'intérêts de retard.",
+  },
+  {
+    q: "Les frais de notaire, c'est vraiment la rémunération du notaire ?",
+    r: "Non, très majoritairement ce sont des impôts et taxes reversés au Trésor public (droits d'enregistrement, taxe de publicité foncière). La rémunération du notaire, appelée émoluments, n'en représente qu'une petite part.",
+  },
+  {
+    q: "Sur quoi se calculent ces frais ?",
+    r: "Sur le prix d'achat du bien. Les droits d'enregistrement sont un pourcentage de ce prix, et les émoluments du notaire suivent un barème dégressif par tranches fixé par la loi.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Frais de notaire du marchand de biens : le régime réduit"
+  description="Les frais de notaire du marchand de biens : le régime de faveur avec droits de mutation réduits à 0,715 %, ses conditions, ses délais et ce qu'il faut anticiper."
+  h1="Les frais de notaire du marchand de biens"
+  lead="Les frais d'acquisition, souvent appelés frais de notaire, sont un poste majeur d'une opération. Bonne nouvelle pour le marchand de biens : en s'engageant à revendre, il bénéficie d'un régime de faveur qui allège fortement ces frais à l'achat."
+  reading="6 min"
+  image="/img/frais-de-notaire-marchand-de-biens.jpg"
+  imageAlt="Remise de clés et signature d'un acte immobilier chez le notaire"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Frais de notaire' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Les « frais de notaire » sont surtout des <strong>impôts et taxes</strong>, pas la rémunération du notaire.</li>
+      <li>Pour un acheteur classique, ils représentent environ <strong>5,80 à 6,30 %</strong> du prix dans l'ancien.</li>
+      <li>Le marchand de biens bénéficie de <strong>droits réduits à environ 0,715 %</strong> en s'engageant à revendre.</li>
+      <li>La contrepartie : <strong>revendre dans le délai légal</strong> (5 ans en principe).</li>
+      <li>À défaut de revente, les droits normaux sont réclamés, majorés d'intérêts.</li>
+    </ul>
+  </div>
+
+  <h2>De quoi se composent les frais d'acquisition ?</h2>
+  <p>
+    Le terme « frais de notaire » est trompeur. Ces frais, réglés par l'acquéreur, sont composés en très grande partie
+    d'<strong>impôts et taxes</strong> reversés au Trésor public : les droits d'enregistrement et la taxe de publicité
+    foncière. S'y ajoutent la <strong>rémunération du notaire</strong> (les émoluments, fixés par un barème légal dégressif),
+    les <strong>débours</strong> (frais avancés par le notaire) et la contribution de sécurité immobilière. Pour un achat
+    classique dans l'ancien, l'ensemble tourne autour de <strong>5,80 à 6,30 %</strong> du prix.
+  </p>
+
+  <h2>Le régime de faveur du marchand de biens</h2>
+  <p>
+    C'est l'un des grands avantages du métier. En prenant l'<strong>engagement de revendre</strong> le bien, le marchand de
+    biens bénéficie de <strong>droits de mutation réduits, de l'ordre de 0,715 %</strong> du prix d'achat, au lieu du taux
+    courant. Sur une acquisition à 300 000 €, l'écart se chiffre en <strong>plusieurs milliers d'euros</strong> économisés dès
+    l'entrée dans l'opération, ce qui améliore directement la marge finale. C'est un levier à intégrer dès le
+    <a href="/monter-une-operation-marchand-de-biens/">montage de l'opération</a>.
+  </p>
+
+  <h2>L'engagement de revendre : conditions et délais</h2>
+  <p>
+    Ce régime réduit n'est pas automatique : il repose sur un <strong>engagement de revendre dans un délai fixé par la loi,
+    5 ans en principe</strong>. Cet engagement est pris dans l'acte d'achat. Il suppose que vous exerciez bien en tant que
+    professionnel, avec une <a href="/statut-juridique-marchand-de-biens/">structure adaptée</a> et une inscription au registre
+    du commerce. Le respect du délai est la condition pour conserver l'avantage.
+  </p>
+
+  <h2>Combien ça représente concrètement ?</h2>
+  <table>
+    <thead>
+      <tr><th>Acheteur</th><th>Droits sur le prix d'achat</th><th>Sur 300 000 €</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Particulier (ancien)</td><td>≈ 5,80 %</td><td>≈ 17 400 €</td></tr>
+      <tr><td>Marchand de biens (engagement de revendre)</td><td>≈ 0,715 %</td><td>≈ 2 145 €</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Chiffres indicatifs. Les droits varient selon le département et la nature exacte de l'opération.</p>
+
+  <h2>Attention en cas de non-revente</h2>
+  <p>
+    L'avantage a une contrepartie stricte. Si le marchand de biens ne revend pas dans le délai prévu, l'administration
+    fiscale <strong>réclame les droits d'enregistrement normalement dus</strong>, majorés d'intérêts de retard. Il faut donc
+    intégrer ce délai dans la stratégie de l'opération et ne pas surestimer sa capacité à revendre vite, surtout dans un
+    marché qui peut ralentir. Cette prudence rejoint les <a href="/avantages-inconvenients-marchand-de-biens/">risques du
+    métier</a> à connaître avant de se lancer.
+  </p>
+</ArticleLayout>

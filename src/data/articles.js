@@ -29,6 +29,32 @@ export const articles = [
     image: '/img/avantages-inconvenients-marchand-de-biens.jpg',
     cat: 'metier',
   },
+
+  // --- Bloc "Statut & finance" ---
+  {
+    slug: 'statut-juridique-marchand-de-biens',
+    title: 'Quel statut juridique choisir ?',
+    image: '/img/statut-juridique-marchand-de-biens.jpg',
+    cat: 'statut',
+  },
+  {
+    slug: 'tva-marchand-de-biens',
+    title: 'La TVA du marchand de biens',
+    image: '/img/tva-marchand-de-biens.jpg',
+    cat: 'statut',
+  },
+  {
+    slug: 'frais-de-notaire-marchand-de-biens',
+    title: 'Les frais de notaire réduits',
+    image: '/img/frais-de-notaire-marchand-de-biens.jpg',
+    cat: 'statut',
+  },
+  {
+    slug: 'plus-value-marchand-de-biens',
+    title: 'Imposition de la plus-value',
+    image: '/img/plus-value-marchand-de-biens.jpg',
+    cat: 'statut',
+  },
 ];
 
 // Retourne jusqu'à `limit` articles autres que `currentSlug`, même catégorie en priorité.

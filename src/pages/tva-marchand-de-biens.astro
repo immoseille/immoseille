@@ -1,0 +1,118 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quels sont les régimes de TVA du marchand de biens ?",
+    r: "Trois régimes coexistent : la TVA sur le prix total, la TVA sur la marge et l'exonération. Le régime applicable se détermine dès l'achat, selon la nature du bien, son ancienneté, le droit à déduction et l'ampleur des travaux.",
+  },
+  {
+    q: "Quand la revente est-elle exonérée de TVA ?",
+    r: "En principe, la revente d'un immeuble achevé depuis plus de 5 ans, sans travaux de rénovation lourde, n'est pas soumise à la TVA. C'est le régime par défaut des immeubles anciens.",
+  },
+  {
+    q: "Comment fonctionne la TVA sur la marge ?",
+    r: "Elle s'applique sur option pour un immeuble de plus de 5 ans, à condition que le bien ait été acheté sans TVA déductible et qu'il soit juridiquement identique à celui revendu. La TVA se calcule alors sur la marge (prix de vente moins prix d'achat), pas sur le prix total.",
+  },
+  {
+    q: "Pourquoi attendre 5 ans avant de revendre ?",
+    r: "Parce qu'un immeuble achevé depuis moins de 5 ans est soumis de plein droit à la TVA sur le prix total (20 %), sans option possible. Au-delà de 5 ans, des régimes plus légers deviennent accessibles.",
+  },
+];
+---
+
+<ArticleLayout
+  title="TVA du marchand de biens : les 3 régimes expliqués"
+  description="TVA du marchand de biens : prix total, marge ou exonération. Les critères, les taux, la frontière rénovation légère/lourde et un exemple chiffré."
+  h1="TVA du marchand de biens : comment ça marche ?"
+  lead="La TVA est l'un des sujets les plus techniques du métier, et une erreur peut transformer une opération rentable en perte. Trois régimes coexistent : prix total, marge ou exonération. Voici comment se détermine celui qui s'applique à votre opération."
+  reading="8 min"
+  image="/img/tva-marchand-de-biens.jpg"
+  imageAlt="Calcul de la TVA et de la fiscalité d'une opération de marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Fiscalité et TVA' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Trois régimes : <strong>TVA sur le prix total</strong>, <strong>TVA sur la marge</strong>, <strong>exonération</strong>.</li>
+      <li>Le régime se construit <strong>dès l'achat</strong>, pas au moment de la vente.</li>
+      <li>Immeuble de moins de 5 ans ou rénovation lourde : TVA sur le prix total (20 %) obligatoire.</li>
+      <li>Immeuble de plus de 5 ans sans travaux lourds : exonération par défaut, ou option TVA sur marge.</li>
+      <li>En TVA sur le prix total, les droits de mutation à l'achat tombent à <strong>0,715 %</strong>.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi la TVA est un enjeu central</h2>
+  <p>
+    Le marchand de biens est assujetti à la TVA. Selon le régime applicable, une même opération peut être bien plus ou bien
+    moins rentable. Le point clé à retenir : <strong>le régime de TVA ne se choisit pas à la vente, il se construit dès
+    l'acquisition</strong>. Une erreur d'anticipation est souvent impossible à rattraper. Ce sujet est indissociable du
+    <a href="/statut-juridique-marchand-de-biens/">statut juridique</a> et de la rentabilité globale de votre
+    <a href="/achat-revente-immobilier/">opération d'achat-revente</a>.
+  </p>
+
+  <h2>Les trois régimes de TVA possibles</h2>
+  <p>
+    Le régime dépend d'une analyse en cascade : nature du bien (terrain à bâtir ou immeuble bâti), ancienneté (moins ou plus
+    de 5 ans), droit à déduction lors de l'achat, ampleur des travaux et qualité de l'acheteur. Voici les grandes situations.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Situation</th><th>Régime applicable</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Immeuble achevé depuis moins de 5 ans</td><td>TVA sur le prix total (obligatoire)</td></tr>
+      <tr><td>Terrain à bâtir</td><td>TVA sur le prix total (de plein droit)</td></tr>
+      <tr><td>Immeuble de plus de 5 ans, sans travaux lourds</td><td>Exonération, ou option TVA sur marge</td></tr>
+      <tr><td>Immeuble de plus de 5 ans avec rénovation lourde</td><td>TVA sur le prix total</td></tr>
+    </tbody>
+  </table>
+
+  <h2>La TVA sur le prix total</h2>
+  <p>
+    C'est le régime de plein droit pour un <strong>immeuble de moins de 5 ans</strong>, un <strong>terrain à bâtir</strong> ou
+    une opération de <strong>rénovation lourde</strong>. La TVA à <strong>20 %</strong> est collectée sur l'intégralité du prix
+    de vente, mais le marchand récupère en contrepartie la TVA sur l'achat (si applicable), les travaux et les frais. Autre
+    avantage : les <strong>droits de mutation à l'achat sont réduits à 0,715 %</strong>, au lieu du taux courant proche de
+    5,80 %. Voir le détail sur la page <a href="/frais-de-notaire-marchand-de-biens/">frais de notaire du marchand de biens</a>.
+  </p>
+
+  <h2>La TVA sur la marge</h2>
+  <p>
+    Elle s'applique <strong>sur option</strong> pour un immeuble de plus de 5 ans, à trois conditions cumulatives : le bien a
+    été <strong>acheté sans TVA déductible</strong>, il est <strong>juridiquement identique</strong> à celui revendu et
+    l'option figure dans l'acte de vente. La TVA se calcule alors sur la marge (prix de vente moins prix d'achat) et non sur
+    le prix total, ce qui allège fortement la note quand le bien a peu pris de valeur ou quand l'acheteur ne récupère pas la TVA.
+  </p>
+
+  <h2>L'exonération de TVA</h2>
+  <p>
+    C'est le <strong>régime par défaut des immeubles anciens</strong> (plus de 5 ans) revendus sans rénovation lourde. Aucune
+    TVA n'est due sur la revente, mais le marchand ne peut pas récupérer la TVA sur les travaux : il faut donc les budgéter en
+    TTC. Pour l'acheteur d'un logement, cette situation est souvent idéale car il ne peut de toute façon pas récupérer la TVA.
+    Les droits d'enregistrement pour l'acheteur s'élèvent alors à environ 5,80 %.
+  </p>
+
+  <h2>Rénovation légère ou lourde : la frontière clé</h2>
+  <p>
+    C'est le point qui fait basculer une opération d'un régime à l'autre. On parle de <strong>rénovation lourde</strong>
+    (remise à l'état neuf) lorsque les travaux touchent :
+  </p>
+  <ul>
+    <li>la majorité des <strong>fondations</strong> ;</li>
+    <li>ou la majorité des <strong>éléments porteurs</strong> ;</li>
+    <li>ou la majorité des <strong>façades</strong> (hors simple ravalement) ;</li>
+    <li>ou au moins deux tiers de chacun des <strong>six éléments de second œuvre</strong> (électricité, plomberie, planchers non porteurs, huisseries extérieures, cloisons, chauffage).</li>
+  </ul>
+  <p class="note">Constituez toujours un dossier qui documente le régime de TVA retenu : la frontière est subtile et un redressement peut coûter très cher.</p>
+
+  <h2>Un exemple chiffré</h2>
+  <p>
+    Un marchand achète un appartement <strong>50 000 €</strong> à un particulier (achat sans TVA), engage <strong>50 000 €</strong>
+    de travaux légers et revend <strong>200 000 €</strong>. S'il n'a pas réalisé de rénovation lourde, il peut rester en
+    exonération et n'aura aucune TVA à reverser sur les 200 000 € : c'est l'option qui préserve le mieux sa marge. En revanche,
+    si ses travaux qualifient l'opération de rénovation lourde, la TVA sur le prix total s'impose et rogne cette marge.
+  </p>
+  <p class="note">Attention : la fiscalité immobilière évolue. Les articles du CGI cités sont recodifiés dans le Code des impositions sur les biens et services à compter du 1er septembre 2026, avec des ajustements sur la TVA sur marge. Faites toujours valider votre montage par un comptable ou un avocat fiscaliste à jour.</p>
+</ArticleLayout>
