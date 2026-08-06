@@ -1,0 +1,91 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Qu'est-ce que la division parcellaire ?",
+    r: "C'est le découpage d'une unité foncière en plusieurs lots, notamment pour créer des terrains à bâtir. Depuis la loi Alur de 2014, aucune surface minimale n'est exigée pour les lots détachés.",
+  },
+  {
+    q: "Faut-il un permis d'aménager ou une déclaration préalable ?",
+    r: "Un permis d'aménager est requis quand la division crée des espaces ou équipements communs à plusieurs lots. Dans les autres cas (détachement de lots sans équipement commun), une déclaration préalable suffit.",
+  },
+  {
+    q: "Comment savoir si un terrain est divisible ?",
+    r: "En consultant le PLU de la commune et en demandant un certificat d'urbanisme opérationnel en mairie. Il indique les possibilités de construction et de division sur la parcelle. Un géomètre-expert confirme la faisabilité.",
+  },
+  {
+    q: "Pourquoi faire appel à un géomètre-expert ?",
+    r: "Pour réaliser le bornage, c'est-à-dire fixer officiellement les limites des lots. C'est une étape indispensable pour sécuriser juridiquement la division et la vente des terrains.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Diviser un terrain : division parcellaire et démarches"
+  description="Comment diviser un terrain : la division parcellaire, vérifier la faisabilité (PLU, certificat d'urbanisme), permis d'aménager ou déclaration préalable, géomètre."
+  h1="Comment diviser un terrain ?"
+  lead="Diviser un terrain pour en revendre une partie ou créer des lots à bâtir est un levier classique de création de valeur. Mais l'opération est encadrée par l'urbanisme. Voici comment vérifier la faisabilité et quelles démarches accomplir."
+  reading="6 min"
+  image="/img/diviser-un-terrain.jpg"
+  imageAlt="Division parcellaire d'un terrain constructible"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Diviser un terrain' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>La <strong>division parcellaire</strong> découpe un terrain en plusieurs lots.</li>
+      <li>Depuis la <strong>loi Alur (2014)</strong>, aucune surface minimale n'est imposée aux lots.</li>
+      <li>Vérifiez d'abord la faisabilité : <strong>PLU</strong> + <strong>certificat d'urbanisme</strong>.</li>
+      <li>Selon le cas : <strong>permis d'aménager</strong> ou <strong>déclaration préalable</strong>.</li>
+      <li>Le <strong>géomètre-expert</strong> réalise le bornage, étape incontournable.</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce que la division parcellaire ?</h2>
+  <p>
+    La division parcellaire consiste à découper une unité foncière pour créer un ou plusieurs <strong>terrains à
+    bâtir</strong> ou lots distincts. Depuis la <strong>loi Alur de 2014</strong>, aucune superficie minimale n'est exigée
+    pour les lots détachés, ce qui a facilité la densification. Pour le marchand de biens, c'est un puissant levier :
+    acheter un grand terrain ou un bien avec du foncier, le diviser et revendre les lots peut créer une marge importante
+    sans construire. C'est une variante de l'<a href="/achat-revente-immobilier/">achat-revente</a>.
+  </p>
+
+  <h2>Vérifier si le terrain est divisible</h2>
+  <p>
+    Avant tout, il faut s'assurer que la division est possible. Deux réflexes :
+  </p>
+  <ul>
+    <li>Consulter le <strong>Plan Local d'Urbanisme (PLU)</strong> de la commune, et tenir compte d'éventuelles contraintes (zone protégée, avis de l'Architecte des Bâtiments de France, plan de prévention des risques).</li>
+    <li>Demander un <strong>certificat d'urbanisme opérationnel</strong> en mairie (formulaire cerfa 13410*06). Il indique les possibilités de construction et de division, et fige le droit applicable pendant 18 mois.</li>
+  </ul>
+  <p>
+    La configuration compte aussi : un terrain en pente, en angle, ou un lot arrière qui doit conserver un accès à la rue
+    (directement ou par servitude de passage) peut compliquer le découpage.
+  </p>
+
+  <h2>Permis d'aménager ou déclaration préalable ?</h2>
+  <p>Le régime d'autorisation dépend de la nature du projet :</p>
+  <ul>
+    <li><strong>Permis d'aménager :</strong> requis lorsque la division crée des <strong>espaces ou voies communs</strong> à plusieurs lots. Au-delà de 2 500 m² à aménager, le recours à un architecte est obligatoire.</li>
+    <li><strong>Déclaration préalable :</strong> suffit pour le détachement d'un ou plusieurs lots <strong>sans équipement commun</strong>.</li>
+  </ul>
+  <p>Certaines divisions ne sont pas soumises à déclaration, notamment pour des terrains non constructibles.</p>
+
+  <h2>Le rôle du géomètre-expert</h2>
+  <p>
+    Le <strong>géomètre-expert</strong> est incontournable : il réalise le <strong>bornage</strong>, c'est-à-dire la
+    fixation officielle et contradictoire des limites des lots. Ce document sécurise juridiquement la division et la vente
+    des terrains. C'est un coût à intégrer dans le <a href="/calcul-rentabilite-marchand-de-biens/">calcul de
+    rentabilité</a> de l'opération.
+  </p>
+
+  <h2>Un levier pour le marchand de biens</h2>
+  <p>
+    Bien menée, la division est l'une des opérations les plus rentables du métier, car la valeur créée dépasse souvent le
+    coût des démarches. Mais elle exige de <strong>maîtriser l'urbanisme</strong> et d'anticiper les délais (le certificat
+    d'urbanisme comme les autorisations prennent plusieurs mois). C'est typiquement le genre d'opération qui se prépare dès
+    le <a href="/monter-une-operation-marchand-de-biens/">montage</a>, avec les bons partenaires.
+  </p>
+</ArticleLayout>

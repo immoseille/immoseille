@@ -90,6 +90,24 @@ export const articles = [
 
   // --- Bloc "Opérations" ---
   {
+    slug: 'monter-une-operation-marchand-de-biens',
+    title: 'Monter une opération',
+    image: '/img/monter-une-operation-marchand-de-biens.jpg',
+    cat: 'operations',
+  },
+  {
+    slug: 'achat-revente-immobilier',
+    title: "L'achat-revente immobilier",
+    image: '/img/achat-revente-immobilier.jpg',
+    cat: 'operations',
+  },
+  {
+    slug: 'diviser-un-terrain',
+    title: 'Diviser un terrain',
+    image: '/img/diviser-un-terrain.jpg',
+    cat: 'operations',
+  },
+  {
     slug: 'simulateur-rentabilite-marchand-de-biens',
     title: 'Simulateur de rentabilité',
     image: '/img/simulateur-rentabilite-marchand-de-biens.jpg',
