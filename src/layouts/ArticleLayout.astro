@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { relatedArticles } from '../data/articles.js';
+import { MAILLAGE } from '../data/maillage.js';
 
 const RDV = 'https://app.iclosed.io/e/emiredschool/immoseille';
 
@@ -193,6 +194,59 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
       li.appendChild(a);
       list.appendChild(li);
     });
+  })();
+</script>
+
+<script is:inline define:vars={{ MAILLAGE, curSlug }}>
+  /* Maillage interne automatique V1 : wrap la 1re occurrence d'un needle dans un
+     paragraphe du corps (après l'intro, hors titres/liens), vers une cible non déjà liée. */
+  (function () {
+    var body = document.querySelector('.art-body');
+    if (!body) return;
+    var esc = function (s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); };
+
+    // Cibles déjà liées dans le corps (dedup vs liens manuels)
+    var linked = {};
+    body.querySelectorAll('a[href^="/"]').forEach(function (a) {
+      var slug = a.getAttribute('href').replace(/^\/|\/$/g, '');
+      if (slug) linked[slug] = true;
+    });
+
+    // Paragraphes directs du corps, en sautant le 1er (intro)
+    var paras = Array.prototype.slice.call(body.querySelectorAll(':scope > p')).slice(1);
+
+    function wrapInParagraph(p, needle, href) {
+      var re = new RegExp(esc(needle), 'i');
+      var walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT, null);
+      var nodes = [], n;
+      while ((n = walker.nextNode())) { if (!n.parentElement.closest('a')) nodes.push(n); }
+      for (var k = 0; k < nodes.length; k++) {
+        var node = nodes[k], m = node.nodeValue.match(re);
+        if (!m) continue;
+        var i = m.index, before = node.nodeValue.slice(0, i);
+        var match = node.nodeValue.slice(i, i + m[0].length);
+        var after = node.nodeValue.slice(i + m[0].length);
+        var a = document.createElement('a');
+        a.href = href; a.textContent = match; a.setAttribute('data-mesh', '1');
+        var frag = document.createDocumentFragment();
+        if (before) frag.appendChild(document.createTextNode(before));
+        frag.appendChild(a);
+        if (after) frag.appendChild(document.createTextNode(after));
+        node.parentNode.replaceChild(frag, node);
+        return true;
+      }
+      return false;
+    }
+
+    var added = 0, MAX = 3;
+    for (var x = 0; x < MAILLAGE.length && added < MAX; x++) {
+      var item = MAILLAGE[x];
+      if (item.slug === curSlug || linked[item.slug]) continue;
+      var href = '/' + item.slug + '/';
+      for (var j = 0; j < paras.length; j++) {
+        if (wrapInParagraph(paras[j], item.needle, href)) { linked[item.slug] = true; added++; break; }
+      }
+    }
   })();
 </script>
 
