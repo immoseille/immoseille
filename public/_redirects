@@ -1,3 +1,5 @@
 # Redirections Cloudflare (301 par défaut)
 /operations      /   301
 /operations/*    /   301
+/preprodhomepage      /   301
+/preprodhomepage/*    /   301
