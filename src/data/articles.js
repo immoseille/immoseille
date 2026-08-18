@@ -55,6 +55,12 @@ export const articles = [
     image: '/img/plus-value-marchand-de-biens.jpg',
     cat: 'statut',
   },
+  {
+    slug: 'expert-comptable-marchand-de-biens',
+    title: "L'expert-comptable spécialisé",
+    image: '/img/expert-comptable-marchand-de-biens.jpg',
+    cat: 'statut',
+  },
 
   // --- Bloc "Finance" ---
   {

@@ -1,0 +1,118 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Un marchand de biens doit-il avoir un expert-comptable ?",
+    r: "Ce n'est pas une obligation légale, mais c'est vivement recommandé. La comptabilité d'un marchand de biens (comptabilité analytique par opération, TVA immobilière, liasse fiscale) est trop technique pour être tenue seul sans s'exposer à des erreurs coûteuses.",
+  },
+  {
+    q: "Faut-il un comptable spécialisé en immobilier ?",
+    r: "Oui, de préférence. Un cabinet généraliste maîtrise rarement les subtilités de la TVA sur marge, de l'engagement de revente ou de la comptabilité de stock immobilier. Un spécialiste sécurise ces points et évite les redressements.",
+  },
+  {
+    q: "Combien coûte un expert-comptable pour un marchand de biens ?",
+    r: "Cela dépend du volume d'opérations et de la structure. Comptez souvent de l'ordre de 150 à plusieurs centaines d'euros HT par mois pour le suivi courant, plus des honoraires ponctuels sur les missions de conseil et de structuration. Demandez toujours un devis détaillé.",
+  },
+  {
+    q: "Quand faut-il le consulter ?",
+    r: "Le plus tôt possible, idéalement avant la première acquisition et surtout avant chaque promesse d'achat, pour valider le régime de TVA et le montage. Le conseil en amont vaut bien plus que la simple saisie comptable en aval.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Expert-comptable marchand de biens : rôle et choix"
+  description="Pourquoi un marchand de biens a besoin d'un expert-comptable spécialisé : TVA sur marge, engagement de revente, comptabilité par opération, structuration et coût."
+  h1="L'expert-comptable du marchand de biens : rôle et choix"
+  lead="La comptabilité et la fiscalité du marchand de biens comptent parmi les plus techniques du droit français. Un expert-comptable spécialisé n'est pas un luxe : c'est ce qui sécurise vos marges et vous évite les redressements. Voici son rôle, ce qu'il sécurise et comment le choisir."
+  reading="7 min"
+  image="/img/expert-comptable-marchand-de-biens.jpg"
+  imageAlt="Expert-comptable travaillant sur la comptabilité d'un marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Expert-comptable' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>La fiscalité du marchand de biens est très spécifique : un cabinet <strong>généraliste ne suffit pas</strong>.</li>
+      <li>L'expert-comptable sécurise la <strong>TVA sur marge</strong>, l'<strong>engagement de revente</strong> et la structure.</li>
+      <li>Sa vraie valeur est dans le <strong>conseil</strong>, pas seulement la saisie comptable.</li>
+      <li>La comptabilité doit être <strong>analytique par opération</strong>, jamais globale.</li>
+      <li>À consulter <strong>avant chaque achat</strong>, pas après la signature.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi un expert-comptable spécialisé est indispensable</h2>
+  <p>
+    Le marchand de biens cumule des règles fiscales parmi les plus pointues : imposition en bénéfices industriels et
+    commerciaux (article 35 du CGI), <a href="/tva-marchand-de-biens/">TVA sur marge</a> (article 268), engagement de
+    revente (article 1115), risque de requalification, et bascule automatique d'une SCI civile à l'impôt sur les sociétés
+    en cas d'opérations habituelles (article 206-2). Une seule erreur d'analyse peut absorber toute la marge d'une
+    opération. C'est pourquoi un <strong>expert-comptable spécialisé en immobilier</strong> est un partenaire clé dès qu'on
+    envisage de <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a>.
+  </p>
+
+  <h2>Que fait l'expert-comptable pour un marchand de biens ?</h2>
+  <p>Sa mission va bien au-delà de la tenue des comptes. Elle couvre notamment :</p>
+  <ul>
+    <li><strong>La comptabilité analytique par opération :</strong> chaque bien est suivi séparément (prix d'achat, frais d'acte, travaux, intérêts, frais de portage, prix de vente, marge brute), avec un compte de stock dédié.</li>
+    <li><strong>La qualification de la TVA</strong> avant chaque acquisition : marge ou prix total selon les conditions.</li>
+    <li><strong>Le suivi de l'engagement de revente</strong> et de son calendrier pour conserver les droits réduits.</li>
+    <li><strong>La structuration juridique et fiscale</strong> adaptée au volume d'opérations.</li>
+    <li><strong>Les obligations déclaratives :</strong> déclarations de TVA, liasse fiscale, comptes annuels.</li>
+    <li><strong>L'accompagnement en cas de contrôle fiscal</strong> et la constitution des justificatifs.</li>
+  </ul>
+  <p>Comme le résument les cabinets spécialisés, la saisie ne représente qu'une petite part de la valeur : l'essentiel est dans le conseil et l'anticipation.</p>
+
+  <h2>Les points de vigilance qu'il sécurise</h2>
+  <p>Quatre références du Code général des impôts structurent l'activité, et c'est là que le spécialiste fait la différence :</p>
+  <table>
+    <thead>
+      <tr><th>Point</th><th>Enjeu</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>TVA sur marge (art. 268)</td><td>Une mauvaise qualification déclenche la TVA sur le prix total : le risque n°1.</td></tr>
+      <tr><td>Engagement de revente (art. 1115)</td><td>Droits réduits à ~0,71 % au lieu de ~5,80 % si revente dans le délai légal.</td></tr>
+      <tr><td>Imposition en BIC (art. 35)</td><td>Pas de plus-value de particulier, pas d'abattement pour durée de détention.</td></tr>
+      <tr><td>SCI civile → IS (art. 206-2)</td><td>Une SCI qui fait de l'achat-revente bascule à l'IS : à anticiper.</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Ces points renvoient directement à votre <a href="/statut-juridique-marchand-de-biens/">statut juridique</a>, à vos
+    <a href="/frais-de-notaire-marchand-de-biens/">frais de notaire</a> et à l'imposition de votre
+    <a href="/plus-value-marchand-de-biens/">plus-value</a>.
+  </p>
+
+  <h2>Généraliste ou spécialisé en immobilier ?</h2>
+  <p>
+    Un expert-comptable généraliste peut tenir vos comptes, mais il maîtrise rarement la comptabilité de stock immobilier,
+    la TVA sur marge et les engagements de revente. Or ce sont précisément ces sujets qui font ou défont la rentabilité
+    d'une opération. Un <strong>cabinet spécialisé dans l'immobilier et le marchand de biens</strong> connaît les pièges,
+    documente les régimes fiscaux retenus et sait défendre votre dossier en cas de contrôle. Sur ce métier, la
+    spécialisation n'est pas une option de confort.
+  </p>
+
+  <h2>Combien coûte un expert-comptable ?</h2>
+  <p>
+    Le coût dépend du volume d'opérations, de la structure et de l'étendue de la mission. Pour le suivi courant, les
+    honoraires se situent souvent de l'ordre de <strong>150 à plusieurs centaines d'euros HT par mois</strong>, auxquels
+    s'ajoutent des honoraires ponctuels pour les missions de conseil et de structuration. Ce coût est à intégrer dans le
+    <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a> de vos opérations : bien employé, il se
+    rentabilise largement en évitant une seule erreur fiscale. Demandez toujours un <strong>devis détaillé</strong> et
+    comparez plusieurs cabinets.
+  </p>
+
+  <h2>Comment le choisir ?</h2>
+  <ul>
+    <li>Vérifiez sa <strong>spécialisation réelle</strong> en immobilier et marchand de biens (références, exemples d'opérations suivies).</li>
+    <li>Assurez-vous qu'il pratique la <strong>comptabilité analytique par opération</strong>, pas une compta globale.</li>
+    <li>Évaluez sa <strong>réactivité</strong> : dans ce métier, les décisions se prennent vite, avant chaque signature.</li>
+    <li>Clarifiez le <strong>périmètre et les honoraires</strong> par écrit avant de vous engager.</li>
+  </ul>
+  <p>
+    L'expert-comptable fait partie de l'équipe qui vous accompagne pour
+    <a href="/monter-une-operation-marchand-de-biens/">monter une opération</a> sereine, aux côtés du notaire et des
+    autres partenaires de terrain.
+  </p>
+</ArticleLayout>
