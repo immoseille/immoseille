@@ -57,9 +57,12 @@ export const articles = [
   },
   {
     slug: 'expert-comptable-marchand-de-biens',
-    title: "L'expert-comptable spécialisé",
+    title: "L'expert-comptable du marchand de biens",
     image: '/img/expert-comptable-marchand-de-biens.jpg',
     cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans la page /guides/
+    date: '9 août 2026',
+    excerpt: "Pourquoi un marchand de biens a besoin d'un comptable spécialisé : TVA sur marge, engagement de revente, comptabilité par opération et coût.",
   },
 
   // --- Bloc "Finance" ---

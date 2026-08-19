@@ -1,116 +1,89 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { articles } from '../data/articles.js';
 
-const CALENDLY = 'https://app.iclosed.io/e/emiredschool/immoseille';
-
-const groupes = [
-  {
-    titre: 'Comprendre le métier',
-    items: [
-      { t: 'Marchand de biens : c’est quoi ?', s: 'marchand-de-biens-definition' },
-      { t: 'Quel statut juridique choisir ?', s: 'statut-juridique-marchand-de-biens' },
-      { t: 'Combien gagne un marchand de biens ?', s: 'marchand-de-biens-salaire' },
-      { t: 'Avantages et inconvénients du métier', s: 'avantages-inconvenients-marchand-de-biens' },
-    ],
-  },
-  {
-    titre: 'Se lancer',
-    items: [
-      { t: 'Comment devenir marchand de biens ?', s: 'devenir-marchand-de-biens' },
-      { t: 'Se lancer sans apport', s: 'marchand-de-biens-sans-apport' },
-      { t: 'Se lancer en achat-revente immobilier', s: 'achat-revente-immobilier' },
-      { t: 'L’expert-comptable spécialisé', s: 'expert-comptable-marchand-de-biens' },
-    ],
-  },
-  {
-    titre: 'Statut, fiscalité & frais',
-    items: [
-      { t: 'La TVA du marchand de biens', s: 'tva-marchand-de-biens' },
-      { t: 'Les frais de notaire réduits', s: 'frais-de-notaire-marchand-de-biens' },
-      { t: 'L’imposition de la plus-value', s: 'plus-value-marchand-de-biens' },
-    ],
-  },
-  {
-    titre: 'Financer une opération',
-    items: [
-      { t: 'Comment financer une opération ?', s: 'financement-marchand-de-biens' },
-      { t: 'Quelle banque choisir ?', s: 'banque-marchand-de-biens' },
-      { t: 'Le crowdfunding immobilier', s: 'crowdfunding-immobilier' },
-      { t: 'Le portage immobilier', s: 'portage-immobilier' },
-    ],
-  },
-  {
-    titre: 'Monter & calculer une opération',
-    items: [
-      { t: 'Monter une opération, étape par étape', s: 'monter-une-operation-marchand-de-biens' },
-      { t: 'Diviser un terrain', s: 'diviser-un-terrain' },
-      { t: 'Calculer la rentabilité d’une opération', s: 'calcul-rentabilite-marchand-de-biens' },
-      { t: 'Simulateur de rentabilité', s: 'simulateur-rentabilite-marchand-de-biens' },
-    ],
-  },
-];
+// Page Guides = uniquement les articles/contenus HORS menu header (flag guide: true).
+const guides = articles.filter((a) => a.guide);
+const PER_PAGE = 8;
+const shown = guides.slice(0, PER_PAGE);
+const hasMore = guides.length > PER_PAGE;
 ---
 
 <BaseLayout
   title="Guides marchand de biens | Imm'oseille"
-  description="Le centre de ressources Imm'oseille : comprendre le métier de marchand de biens, se lancer, statut et fiscalité, financement et montage d'opération."
+  description="Nos guides et ressources sur le métier de marchand de biens : fiscalité, montage, financement et conseils de terrain."
 >
-  <section class="ghero">
-    <div class="wrap">
-      <p class="eyebrow">Guides</p>
-      <h1>Comprendre le métier de marchand de biens</h1>
-      <p class="ghero-sub">
-        Un centre de ressources pour apprendre les bases, se poser les bonnes
-        questions et avancer sereinement vers votre première opération.
-      </p>
-    </div>
-  </section>
+  <div class="wrap">
+    <nav class="gbc" aria-label="Fil d'Ariane">
+      <ol>
+        <li><a href="/">Accueil</a><span class="sep" aria-hidden="true">›</span></li>
+        <li><span aria-current="page">Guides</span></li>
+      </ol>
+    </nav>
+  </div>
 
-  <section class="section groupes">
+  <header class="ghero">
+    <h1>Guides</h1>
+    <p class="ghero-sub">Nos ressources de terrain sur le métier de marchand de biens.</p>
+  </header>
+
+  <section class="section">
     <div class="wrap">
-      {groupes.map((g) => (
-        <div class="groupe">
-          <h2 class="groupe-title">{g.titre}</h2>
-          <div class="guide-grid">
-            {g.items.map((it) => (
-              <a class="guide-card" href={`/${it.s}/`}>
-                <h3>{it.t}</h3>
-                <span class="guide-more">Lire le guide →</span>
-              </a>
-            ))}
-          </div>
+      <h2 class="gsec-title">Nos guides</h2>
+
+      {guides.length === 0 ? (
+        <p class="gempty">De nouveaux guides arrivent bientôt.</p>
+      ) : (
+        <div class="news-grid">
+          {shown.map((g) => (
+            <a class="news-card" href={`/${g.slug}/`}>
+              <div class="news-thumb">
+                <img src={g.image} alt="" width="320" height="200" loading="lazy" />
+              </div>
+              {g.date && <p class="news-date">Mis à jour le {g.date}</p>}
+              <h3>{g.title}</h3>
+              {g.excerpt && <p class="news-excerpt">{g.excerpt}</p>}
+            </a>
+          ))}
         </div>
-      ))}
-    </div>
-  </section>
+      )}
 
-  <section class="cta-band">
-    <div class="wrap cta-inner">
-      <h2>Une question sur le métier ?</h2>
-      <p>Plutôt que de lire, échangeons directement. 20 minutes, sans engagement.</p>
-      <a href={CALENDLY} class="btn btn--primary">Réserver un appel</a>
+      {hasMore && (
+        <div class="gmore">
+          <button class="btn btn--ghost" type="button">Voir plus</button>
+        </div>
+      )}
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .section { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(3.5rem, 8vw, 6rem); }
-  .ghero { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
-  .ghero h1 { font-size: clamp(2.3rem, 5.4vw, 3.8rem); margin: 1rem 0 1.3rem; max-width: 16ch; }
-  .ghero-sub { color: var(--ink-soft); font-size: clamp(1.02rem, 1.5vw, 1.18rem); max-width: 56ch; }
+  .gbc { padding-top: 1.4rem; }
+  .gbc ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.4rem; align-items: center; font-size: 0.82rem; color: var(--ink-faint); }
+  .gbc a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 2px; }
+  .gbc a:hover { color: var(--gold); }
+  .gbc .sep { margin-left: 0.4rem; color: var(--ink-faint); }
 
-  .groupe { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-  .groupe-title { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--line); }
-  .guide-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-  .guide-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; background: var(--paper); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; min-height: 130px; text-decoration: none; color: var(--ink); transition: border-color 0.2s ease, transform 0.2s ease; }
-  .guide-card:hover { border-color: var(--gold); transform: translateY(-3px); }
-  .guide-card h3 { font-size: 1.05rem; line-height: 1.25; }
-  .guide-more { align-self: flex-start; font-size: 0.82rem; font-weight: 600; color: var(--gold); }
+  .ghero { text-align: center; padding: clamp(2.5rem, 6vw, 4.5rem) 1.2rem clamp(1.5rem, 4vw, 3rem); }
+  .ghero h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); }
+  .ghero-sub { color: var(--ink-soft); font-size: clamp(1.02rem, 1.6vw, 1.2rem); margin-top: 1rem; }
 
-  .cta-band { padding-top: clamp(2rem, 5vw, 3.5rem); padding-bottom: clamp(1rem, 4vw, 2rem); text-align: center; }
-  .cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3.1rem); max-width: 20ch; margin-inline: auto; }
-  .cta-inner p { color: var(--ink-soft); margin: 1rem auto 2rem; font-size: 1.08rem; }
+  .section { padding-bottom: clamp(3.5rem, 8vw, 6rem); }
+  .gsec-title { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.8rem; }
 
-  @media (max-width: 900px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px) { .guide-grid { grid-template-columns: 1fr; } }
+  .news-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.4rem, 2.5vw, 2rem); }
+  .news-card { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); }
+  .news-thumb { aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; background: var(--paper-2); margin-bottom: 0.9rem; }
+  .news-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+  .news-card:hover .news-thumb img { transform: scale(1.04); }
+  .news-date { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; color: var(--gold); margin-bottom: 0.35rem; }
+  .news-card h3 { font-size: 1.12rem; line-height: 1.25; margin-bottom: 0.5rem; }
+  .news-card:hover h3 { color: var(--green-bright); }
+  .news-excerpt { color: var(--ink-faint); font-size: 0.9rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+  .gempty { color: var(--ink-soft); }
+  .gmore { text-align: center; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+
+  @media (max-width: 900px) { .news-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .news-grid { grid-template-columns: 1fr; } }
 </style>
