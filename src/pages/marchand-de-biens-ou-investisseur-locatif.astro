@@ -1,0 +1,115 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quelle est la différence entre un marchand de biens et un investisseur locatif ?",
+    r: "Le marchand de biens achète pour revendre rapidement avec une plus-value : c'est une activité commerciale à court terme. L'investisseur locatif achète pour louer et percevoir des loyers sur le long terme, en constituant un patrimoine.",
+  },
+  {
+    q: "Lequel est le plus rentable ?",
+    r: "Les deux logiques ne se mesurent pas pareil. Le marchand de biens vise une marge élevée mais ponctuelle et risquée sur chaque opération. L'investisseur locatif vise un rendement plus modeste mais régulier, étalé dans le temps. Aucun n'est « meilleur » dans l'absolu : tout dépend de vos objectifs.",
+  },
+  {
+    q: "La fiscalité est-elle la même ?",
+    r: "Non, elle est très différente. Le marchand de biens est imposé comme un commerçant (BIC, TVA), sans abattement pour durée de détention. L'investisseur locatif relève des revenus fonciers ou du régime LMNP, et bénéficie d'abattements sur la plus-value selon la durée de détention.",
+  },
+  {
+    q: "Peut-on être les deux à la fois ?",
+    r: "Oui, beaucoup combinent les deux via des structures distinctes : une société pour l'activité commerciale de marchand de biens, et un patrimoine locatif détenu à part. Cela demande une organisation juridique et fiscale rigoureuse, à cadrer avec un comptable.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Marchand de biens ou investisseur locatif : que choisir ?"
+  description="Marchand de biens ou investisseur locatif : comparatif complet (objectif, horizon, fiscalité, risque, gestion) pour choisir la stratégie adaptée à votre profil."
+  h1="Marchand de biens ou investisseur locatif : quelles différences ?"
+  lead="Ce sont deux façons radicalement opposées de gagner de l'argent dans l'immobilier. L'un revend vite pour dégager une marge, l'autre loue longtemps pour percevoir des revenus. Voici un comparatif clair pour comprendre lequel correspond à votre projet."
+  reading="7 min"
+  image="/img/marchand-de-biens-ou-investisseur-locatif.jpg"
+  imageAlt="Comparatif entre marchand de biens et investisseur locatif"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Marchand de biens ou investisseur locatif' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le <strong>marchand de biens</strong> achète pour <strong>revendre vite</strong> : plus-value à court terme, activité commerciale.</li>
+      <li>L'<strong>investisseur locatif</strong> achète pour <strong>louer longtemps</strong> : revenus locatifs réguliers, patrimoine.</li>
+      <li>Horizon : quelques <strong>mois</strong> d'un côté, des <strong>années</strong> de l'autre.</li>
+      <li>Fiscalité très différente : <strong>BIC/TVA</strong> pour le marchand, <strong>revenus fonciers/LMNP</strong> pour le bailleur.</li>
+      <li>Aucun n'est « meilleur » : tout dépend de vos objectifs et de votre tolérance au risque.</li>
+    </ul>
+  </div>
+
+  <h2>Deux logiques opposées</h2>
+  <p>
+    Le marchand de biens et l'investisseur locatif partent du même terrain, l'immobilier, mais jouent deux parties
+    différentes. Le premier est un <strong>entrepreneur</strong> : il achète un bien, crée de la valeur (rénovation,
+    division, changement d'usage) et le <a href="/achat-revente-immobilier/">revend rapidement</a> pour encaisser une marge.
+    Le second est un <strong>rentier patrimonial</strong> : il conserve le bien et vit des loyers, en misant sur le temps
+    long et la valorisation progressive du marché.
+  </p>
+
+  <h2>Le comparatif en un coup d'œil</h2>
+  <table>
+    <thead>
+      <tr><th></th><th>Marchand de biens</th><th>Investisseur locatif</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Objectif</td><td>Plus-value à la revente</td><td>Revenus locatifs + patrimoine</td></tr>
+      <tr><td>Horizon</td><td>Quelques mois (6 à 18)</td><td>Plusieurs années à décennies</td></tr>
+      <tr><td>Revenu</td><td>Marge ponctuelle, irrégulière</td><td>Loyers réguliers</td></tr>
+      <tr><td>Statut</td><td>Commerçant (société)</td><td>Particulier ou société</td></tr>
+      <tr><td>Fiscalité</td><td>BIC, TVA, pas d'abattement</td><td>Revenus fonciers / LMNP, abattement durée</td></tr>
+      <tr><td>Gestion</td><td>Pas de locataire</td><td>Gestion locative continue</td></tr>
+      <tr><td>Capital</td><td>Récupéré vite, réinvesti</td><td>Immobilisé longtemps</td></tr>
+      <tr><td>Risque</td><td>Élevé, concentré sur l'opération</td><td>Plus modéré, étalé</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Le marchand de biens : la plus-value à court terme</h2>
+  <p>
+    Le marchand de biens vise un <strong>cycle court</strong>. Il mobilise un capital important, réalise une opération, puis
+    récupère ses fonds pour enchaîner la suivante. Son revenu vient de la <a href="/plus-value-marchand-de-biens/">marge de
+    chaque opération</a>, qui peut être élevée mais reste ponctuelle et incertaine. Avantage : pas de gestion locative, un
+    capital vite réinvesti. Contrepartie : un <strong>risque concentré</strong> sur chaque projet et un revenu sans
+    régularité, comme le détaillent les <a href="/avantages-inconvenients-marchand-de-biens/">avantages et inconvénients du
+    métier</a>.
+  </p>
+
+  <h2>L'investisseur locatif : les revenus sur le long terme</h2>
+  <p>
+    L'investisseur locatif joue le <strong>temps long</strong>. Il achète un bien, le loue et perçoit des loyers réguliers
+    qui remboursent le crédit et, à terme, constituent un patrimoine. Son rendement annuel est plus modeste que la marge
+    d'une opération de marchand, mais il est plus <strong>régulier et prévisible</strong>. En contrepartie, son capital est
+    immobilisé des années et il assume la <strong>gestion locative</strong> : recherche de locataires, impayés éventuels,
+    entretien, évolution de la réglementation des baux.
+  </p>
+
+  <h2>Quelle fiscalité pour chacun ?</h2>
+  <p>C'est l'une des différences les plus structurantes :</p>
+  <ul>
+    <li><strong>Marchand de biens :</strong> activité commerciale imposée en bénéfices industriels et commerciaux, soumise à la <a href="/tva-marchand-de-biens/">TVA immobilière</a>. Surtout, il ne bénéficie <strong>d'aucun abattement pour durée de détention</strong> : la marge est imposée comme un bénéfice d'entreprise.</li>
+    <li><strong>Investisseur locatif :</strong> il relève des revenus fonciers (location nue) ou du régime LMNP (location meublée), et lors de la revente, il bénéficie du régime des <strong>plus-values des particuliers avec abattements</strong> selon la durée de détention, jusqu'à l'exonération.</li>
+  </ul>
+  <p>Cette différence de traitement fiscal pèse lourd dans le calcul de rentabilité réel de chaque stratégie.</p>
+
+  <h2>Lequel choisir selon votre profil ?</h2>
+  <p>Il n'y a pas de bonne réponse universelle. Quelques repères :</p>
+  <ul>
+    <li>Vous voulez un <strong>revenu d'activité</strong>, vous aimez le terrain, la négociation et le montage de projets, et vous acceptez le risque : le <a href="/devenir-marchand-de-biens/">marchand de biens</a> vous parlera.</li>
+    <li>Vous cherchez à <strong>construire un patrimoine</strong> et des revenus complémentaires réguliers, sans en faire votre métier : l'investissement locatif est plus adapté.</li>
+    <li>Votre <strong>apport et votre tolérance au risque</strong> tranchent souvent : le marchand de biens exige plus de fonds et encaisse plus de risque par opération.</li>
+  </ul>
+
+  <h2>Peut-on combiner les deux ?</h2>
+  <p>
+    Oui, et c'est même fréquent chez les investisseurs aguerris. On sépare alors les activités : une société dédiée à
+    l'activité commerciale de marchand de biens, et un patrimoine locatif détenu à part. Les marges dégagées par les
+    opérations d'achat-revente peuvent servir à financer l'acquisition de biens de rendement. Ce montage demande une
+    <strong>organisation juridique et fiscale rigoureuse</strong> : à cadrer avec un
+    <a href="/expert-comptable-marchand-de-biens/">expert-comptable spécialisé</a> avant de se lancer.
+  </p>
+</ArticleLayout>

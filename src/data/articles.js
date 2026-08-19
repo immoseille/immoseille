@@ -29,6 +29,15 @@ export const articles = [
     image: '/img/avantages-inconvenients-marchand-de-biens.jpg',
     cat: 'metier',
   },
+  {
+    slug: 'marchand-de-biens-ou-investisseur-locatif',
+    title: 'Marchand de biens ou investisseur locatif ?',
+    image: '/img/marchand-de-biens-ou-investisseur-locatif.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '9 août 2026',
+    excerpt: "Achat-revente à court terme ou revenus locatifs sur le long terme ? Comparatif complet : objectif, fiscalité, risque, gestion et profil.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
