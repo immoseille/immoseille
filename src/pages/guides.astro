@@ -3,33 +3,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const CALENDLY = 'https://app.iclosed.io/e/emiredschool/immoseille';
 
-// Roadmap de contenu SEO. Les guides seront publiés progressivement.
 const groupes = [
   {
     titre: 'Comprendre le métier',
     items: [
-      'Marchand de biens : c’est quoi ?',
-      'Quel statut juridique choisir (SAS, EURL) ?',
-      'Combien gagne un marchand de biens ?',
-      'Marchand de biens ou agent immobilier ?',
+      { t: 'Marchand de biens : c’est quoi ?', s: 'marchand-de-biens-definition' },
+      { t: 'Quel statut juridique choisir ?', s: 'statut-juridique-marchand-de-biens' },
+      { t: 'Combien gagne un marchand de biens ?', s: 'marchand-de-biens-salaire' },
+      { t: 'Avantages et inconvénients du métier', s: 'avantages-inconvenients-marchand-de-biens' },
     ],
   },
   {
     titre: 'Se lancer',
     items: [
-      'Comment devenir marchand de biens ?',
-      'Devenir marchand de biens sans diplôme',
-      'Quel apport pour se lancer ?',
-      'Se lancer en achat-revente immobilier',
+      { t: 'Comment devenir marchand de biens ?', s: 'devenir-marchand-de-biens' },
+      { t: 'Se lancer sans apport', s: 'marchand-de-biens-sans-apport' },
+      { t: 'Se lancer en achat-revente immobilier', s: 'achat-revente-immobilier' },
+      { t: 'L’expert-comptable spécialisé', s: 'expert-comptable-marchand-de-biens' },
     ],
   },
   {
-    titre: 'Aspects pratiques',
+    titre: 'Statut, fiscalité & frais',
     items: [
-      'Comment financer une opération ?',
-      'Exemple d’opération d’achat-revente',
-      'Le montage d’une opération, étape par étape',
-      'La fiscalité du marchand de biens',
+      { t: 'La TVA du marchand de biens', s: 'tva-marchand-de-biens' },
+      { t: 'Les frais de notaire réduits', s: 'frais-de-notaire-marchand-de-biens' },
+      { t: 'L’imposition de la plus-value', s: 'plus-value-marchand-de-biens' },
+    ],
+  },
+  {
+    titre: 'Financer une opération',
+    items: [
+      { t: 'Comment financer une opération ?', s: 'financement-marchand-de-biens' },
+      { t: 'Quelle banque choisir ?', s: 'banque-marchand-de-biens' },
+      { t: 'Le crowdfunding immobilier', s: 'crowdfunding-immobilier' },
+      { t: 'Le portage immobilier', s: 'portage-immobilier' },
+    ],
+  },
+  {
+    titre: 'Monter & calculer une opération',
+    items: [
+      { t: 'Monter une opération, étape par étape', s: 'monter-une-operation-marchand-de-biens' },
+      { t: 'Diviser un terrain', s: 'diviser-un-terrain' },
+      { t: 'Calculer la rentabilité d’une opération', s: 'calcul-rentabilite-marchand-de-biens' },
+      { t: 'Simulateur de rentabilité', s: 'simulateur-rentabilite-marchand-de-biens' },
     ],
   },
 ];
@@ -37,7 +53,7 @@ const groupes = [
 
 <BaseLayout
   title="Guides marchand de biens | Imm'oseille"
-  description="Le centre de ressources Imm'oseille : comprendre le métier de marchand de biens, se lancer, monter une opération, financement et fiscalité."
+  description="Le centre de ressources Imm'oseille : comprendre le métier de marchand de biens, se lancer, statut et fiscalité, financement et montage d'opération."
 >
   <section class="ghero">
     <div class="wrap">
@@ -45,8 +61,7 @@ const groupes = [
       <h1>Comprendre le métier de marchand de biens</h1>
       <p class="ghero-sub">
         Un centre de ressources pour apprendre les bases, se poser les bonnes
-        questions et avancer sereinement vers votre première opération. Les guides
-        arrivent progressivement.
+        questions et avancer sereinement vers votre première opération.
       </p>
     </div>
   </section>
@@ -58,10 +73,10 @@ const groupes = [
           <h2 class="groupe-title">{g.titre}</h2>
           <div class="guide-grid">
             {g.items.map((it) => (
-              <article class="guide-card">
-                <h3>{it}</h3>
-                <span class="guide-tag">Bientôt</span>
-              </article>
+              <a class="guide-card" href={`/${it.s}/`}>
+                <h3>{it.t}</h3>
+                <span class="guide-more">Lire le guide →</span>
+              </a>
             ))}
           </div>
         </div>
@@ -87,10 +102,10 @@ const groupes = [
   .groupe { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
   .groupe-title { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--line); }
   .guide-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-  .guide-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; background: var(--paper); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; min-height: 130px; transition: border-color 0.2s ease; }
-  .guide-card:hover { border-color: var(--gold); }
+  .guide-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; background: var(--paper); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; min-height: 130px; text-decoration: none; color: var(--ink); transition: border-color 0.2s ease, transform 0.2s ease; }
+  .guide-card:hover { border-color: var(--gold); transform: translateY(-3px); }
   .guide-card h3 { font-size: 1.05rem; line-height: 1.25; }
-  .guide-tag { align-self: flex-start; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); border-radius: 100px; padding: 0.18rem 0.6rem; }
+  .guide-more { align-self: flex-start; font-size: 0.82rem; font-weight: 600; color: var(--gold); }
 
   .cta-band { padding-top: clamp(2rem, 5vw, 3.5rem); padding-bottom: clamp(1rem, 4vw, 2rem); text-align: center; }
   .cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3.1rem); max-width: 20ch; margin-inline: auto; }
