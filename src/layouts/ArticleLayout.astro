@@ -104,7 +104,6 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
             </span>
           </div>
           {lead && <p class="art-lead">{lead}</p>}
-          <a href={MODULE1_URL} target="_blank" rel="noopener" class="btn btn--primary art-hero-cta">Accéder au module 1 offert</a>
         </div>
 
         {image && (
@@ -253,6 +252,29 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   })();
 </script>
 
+<script is:inline define:vars={{ MODULE1_URL }}>
+  /* Insère un bloc CTA "module 1 offert" au milieu de l'article (pas au début). */
+  (function () {
+    var body = document.querySelector('.art-body');
+    if (!body) return;
+    var hs = Array.prototype.slice.call(body.querySelectorAll(':scope > h2')).filter(function (h) { return h.id !== 'faq'; });
+    if (hs.length < 3) return;
+    var target = hs[Math.floor(hs.length / 2)];
+    if (!target) return;
+    var box = document.createElement('div');
+    box.className = 'art-midcta';
+    var p = document.createElement('p');
+    p.className = 'art-midcta-txt';
+    p.textContent = 'Le premier module de la formation est offert. Passez de la théorie à la pratique, sans engagement.';
+    var a = document.createElement('a');
+    a.className = 'btn btn--primary';
+    a.href = MODULE1_URL; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = 'Accéder au module 1 offert →';
+    box.appendChild(p); box.appendChild(a);
+    target.parentNode.insertBefore(box, target);
+  })();
+</script>
+
 <style is:global>
   .art .art-container { width: 100%; max-width: 1140px; margin-inline: auto; padding-inline: clamp(1.2rem, 4vw, 2.75rem); }
 
@@ -274,7 +296,11 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .art-byline-meta { display: block; color: var(--ink-faint); font-size: 0.82rem; margin-top: 0.15rem; }
   .art .art-hero2-fig { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
   .art .art-hero2-fig img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
-  .art .art-hero-cta { display: inline-flex; margin-top: 1.4rem; }
+
+  .art .art-midcta { margin: 2.6rem 0; padding: clamp(1.5rem, 3vw, 2rem); background: var(--green); color: var(--paper); border-radius: 12px; text-align: center; }
+  .art .art-body .art-midcta-txt { font-family: var(--font-display); font-size: clamp(1.1rem, 1.8vw, 1.3rem); line-height: 1.35; margin: 0 auto 1.2rem; max-width: 42ch; color: var(--paper); }
+  .art .art-midcta .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+  .art .art-midcta .btn:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); }
 
   .art .art-layout { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; padding-top: clamp(1.4rem, 3vw, 2.2rem); padding-bottom: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); }
   .art .art-body { max-width: 760px; min-width: 0; }
