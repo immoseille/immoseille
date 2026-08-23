@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import { relatedArticles } from '../data/articles.js';
 import { MAILLAGE } from '../data/maillage.js';
+import { RETENIR } from '../data/retenir.js';
 
 const RDV = 'https://app.iclosed.io/e/emiredschool/immoseille';
 
@@ -33,6 +34,7 @@ const canonical = new URL(Astro.url.pathname, site).href;
 
 const curSlug = Astro.url.pathname.replace(/^\/|\/$/g, '');
 const related = relatedArticles(curSlug, 5);
+const retenirItems = RETENIR[curSlug] || [];
 
 const breadcrumbLd = breadcrumb.length ? {
   '@context': 'https://schema.org',
@@ -114,6 +116,15 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
       <div class="art-layout">
         <div class="art-body">
           <slot />
+
+          {retenirItems.length > 0 && (
+            <aside class="retenir" aria-label="À retenir">
+              <p class="retenir-h">À retenir</p>
+              <ul>
+                {retenirItems.map((x) => <li>{x}</li>)}
+              </ul>
+            </aside>
+          )}
 
           {faq.length > 0 && (
             <>
@@ -281,6 +292,11 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .encadre { background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 8px; padding: 1.4rem 1.6rem; margin: 0 0 2rem; }
   .art .encadre-h { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.7rem; }
   .art .encadre ul { margin-bottom: 0; }
+
+  .art .retenir { background: color-mix(in srgb, var(--green) 7%, var(--paper)); border: 1px solid color-mix(in srgb, var(--green) 25%, transparent); border-left: 3px solid var(--green); border-radius: 8px; padding: 1.4rem 1.6rem; margin: 2.6rem 0 2rem; }
+  .art .retenir-h { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.7rem; color: var(--green); }
+  .art .retenir ul { margin: 0 0 0 1.1rem; display: grid; gap: 0.55rem; }
+  .art .retenir li { color: var(--ink); }
 
   .art table { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1.4rem; font-size: 0.98rem; }
   .art th, .art td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); }
