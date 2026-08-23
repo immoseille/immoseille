@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { MODULE1_URL } from '../data/site.js';
 
 // Lien de prise de rendez-vous (iClosed)
 const CALENDLY = 'https://app.iclosed.io/e/emiredschool/immoseille';
@@ -110,7 +111,8 @@ const faqJsonLd = {
           premières opérations et vous professionnaliser, sans promesse en l’air.
         </p>
         <div class="hero-cta">
-          <a href={CALENDLY} class="btn btn--primary">Réserver un appel &rarr;</a>
+          <a href={MODULE1_URL} target="_blank" rel="noopener" class="btn btn--primary">Accéder au module 1 offert &rarr;</a>
+          <a href={CALENDLY} class="btn btn--ghost">Réserver un appel</a>
           <a href="#programme" class="btn btn--ghost">Voir le programme</a>
         </div>
         <p class="hero-trust">
@@ -184,13 +186,22 @@ const faqJsonLd = {
       </div>
       <div class="prog-grid">
         {modules.map((m) => (
-          <article class={`prog-card${m.free ? ' prog-card--free' : ''}`}>
-            <div class="prog-top">
-              <span class="prog-num">{`Module ${Number(m.n)}`}</span>
-              {m.free && <span class="prog-badge">Offert</span>}
-            </div>
-            <h3>{m.t}</h3>
-          </article>
+          m.free ? (
+            <a class="prog-card prog-card--free prog-card--link" href={MODULE1_URL} target="_blank" rel="noopener">
+              <div class="prog-top">
+                <span class="prog-num">{`Module ${Number(m.n)}`}</span>
+                <span class="prog-badge">Offert &rarr;</span>
+              </div>
+              <h3>{m.t}</h3>
+            </a>
+          ) : (
+            <article class="prog-card">
+              <div class="prog-top">
+                <span class="prog-num">{`Module ${Number(m.n)}`}</span>
+              </div>
+              <h3>{m.t}</h3>
+            </article>
+          )
         ))}
       </div>
     </div>
@@ -443,6 +454,8 @@ const faqJsonLd = {
   .prog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px -20px rgba(23,21,15,0.4); }
   .prog-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
   .prog-card--free { border-color: color-mix(in srgb, var(--gold) 60%, var(--line)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 35%, transparent); }
+  .prog-card--link { display: block; text-decoration: none; color: inherit; cursor: pointer; }
+  .prog-card--link:hover { border-color: var(--gold); }
   .prog-num { font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
   .prog-badge { font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: var(--gold); border-radius: 100px; padding: 0.2rem 0.55rem; font-weight: 600; }
   .prog-card h3 { font-size: 1.08rem; margin: 0.5rem 0 0; line-height: 1.25; }

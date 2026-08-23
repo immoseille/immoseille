@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import { relatedArticles } from '../data/articles.js';
 import { MAILLAGE } from '../data/maillage.js';
 import { RETENIR } from '../data/retenir.js';
+import { MODULE1_URL } from '../data/site.js';
 
 const RDV = 'https://app.iclosed.io/e/emiredschool/immoseille';
 
@@ -103,7 +104,7 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
             </span>
           </div>
           {lead && <p class="art-lead">{lead}</p>}
-          <a href={RDV} class="btn btn--primary art-hero-cta">Réserver un appel</a>
+          <a href={MODULE1_URL} target="_blank" rel="noopener" class="btn btn--primary art-hero-cta">Accéder au module 1 offert</a>
         </div>
 
         {image && (
@@ -273,7 +274,7 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
   .art .art-byline-meta { display: block; color: var(--ink-faint); font-size: 0.82rem; margin-top: 0.15rem; }
   .art .art-hero2-fig { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
   .art .art-hero2-fig img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
-  .art .art-hero-cta { display: none; }
+  .art .art-hero-cta { display: inline-flex; margin-top: 1.4rem; }
 
   .art .art-layout { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; padding-top: clamp(1.4rem, 3vw, 2.2rem); padding-bottom: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); }
   .art .art-body { max-width: 760px; min-width: 0; }
@@ -332,7 +333,6 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
 
   @media (max-width: 900px) {
     .art .art-hero2 { grid-template-columns: 1fr; gap: 1.6rem; padding-bottom: 1.5rem; }
-    .art .art-hero-cta { display: inline-flex; margin-top: 1.4rem; }
     .art .art-hero2-fig { order: 2; }
     .art .art-layout { grid-template-columns: 1fr; gap: 2.2rem; }
     .art .art-side-inner { position: static; }
