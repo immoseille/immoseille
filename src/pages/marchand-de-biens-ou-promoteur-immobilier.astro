@@ -1,0 +1,159 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quelle est la différence entre un marchand de biens et un promoteur immobilier ?",
+    r: "Le promoteur immobilier construit : il achète un terrain, obtient un permis et fait sortir de terre des logements neufs qu'il vend, souvent en VEFA (sur plan). Le marchand de biens, lui, achète des biens existants, les valorise (rénovation, division, changement d'usage) et les revend. En résumé : le promoteur crée des surfaces, le marchand de biens revalorise des surfaces existantes.",
+  },
+  {
+    q: "Lequel est le plus accessible pour débuter ?",
+    r: "Le marchand de biens est nettement plus accessible : les opérations sont plus courtes, les capitaux mobilisés plus faibles et aucun diplôme n'est exigé. La promotion immobilière demande des fonds propres bien plus élevés, des compétences techniques poussées (construction, urbanisme) et des délais de plusieurs années par projet.",
+  },
+  {
+    q: "Un marchand de biens peut-il devenir promoteur ?",
+    r: "Oui, c'est une évolution logique. Beaucoup de marchands de biens montent en compétence sur des opérations de plus en plus lourdes (surélévation, changement d'usage, construction d'une extension) avant de basculer vers la promotion pure. Le passage exige davantage de fonds propres, une équipe technique et une bonne maîtrise du risque chantier.",
+  },
+  {
+    q: "La fiscalité est-elle la même pour les deux ?",
+    r: "Les deux relèvent d'une activité commerciale (BIC) et de la TVA immobilière, avec une imposition à l'IS le plus souvent. Mais les régimes de TVA diffèrent selon la nature de l'opération : TVA sur le prix total pour du neuf ou une rénovation lourde, TVA sur la marge pour de l'ancien revendu sans transformation profonde. Un comptable spécialisé cadre le régime applicable dès l'achat.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Marchand de biens ou promoteur immobilier : quelles différences ?"
+  description="Marchand de biens ou promoteur immobilier : comparatif complet (métier, missions, capitaux, risque, fiscalité, délais) pour comprendre qui fait quoi et quelle voie choisir."
+  h1="Marchand de biens ou promoteur immobilier : quelles différences ?"
+  lead="On les confond souvent, pourtant ce sont deux métiers distincts de l'immobilier. Le promoteur construit du neuf, le marchand de biens valorise de l'existant. Voici un comparatif clair : missions, capitaux, risque, fiscalité et délais, pour comprendre qui fait quoi et quelle voie correspond à votre projet."
+  reading="8 min"
+  image="/img/marchand-de-biens-ou-promoteur-immobilier.jpg"
+  imageAlt="Différences entre marchand de biens et promoteur immobilier"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Marchand de biens ou promoteur immobilier' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le <strong>promoteur immobilier</strong> construit du neuf : il crée des surfaces à partir d'un terrain.</li>
+      <li>Le <strong>marchand de biens</strong> achète de l'existant, le valorise et le revend : il revalorise des surfaces.</li>
+      <li>La promotion mobilise beaucoup plus de <strong>capitaux</strong> et s'étale sur <strong>plusieurs années</strong>.</li>
+      <li>Le marchand de biens travaille sur des <strong>cycles courts</strong> (6 à 18 mois) et un ticket d'entrée plus faible.</li>
+      <li>Les deux sont des <strong>commerçants</strong> (BIC, TVA immobilière), mais avec des régimes de TVA différents selon l'opération.</li>
+    </ul>
+  </div>
+
+  <h2>Deux métiers, une même filière</h2>
+  <p>
+    Marchand de biens et promoteur immobilier appartiennent à la même famille : celle des <strong>opérateurs</strong> qui
+    achètent, transforment la valeur d'un actif immobilier et revendent. On les confond d'autant plus facilement qu'ils
+    partagent les mêmes interlocuteurs — banques, notaires, plateformes de <a href="/crowdfunding-immobilier/">crowdfunding
+    immobilier</a> — et les mêmes enjeux de financement. Pourtant, ce qu'ils font au quotidien n'a rien à voir. La ligne de
+    partage tient en une phrase : le promoteur <strong>crée des surfaces</strong>, le marchand de biens
+    <strong>revalorise des surfaces existantes</strong>.
+  </p>
+
+  <h2>Le comparatif en un coup d'œil</h2>
+  <table>
+    <thead>
+      <tr><th></th><th>Marchand de biens</th><th>Promoteur immobilier</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cœur de métier</td><td>Acheter, valoriser, revendre l'existant</td><td>Construire du neuf</td></tr>
+      <tr><td>Objet</td><td>Biens existants (maisons, immeubles, terrains)</td><td>Logements, bureaux, commerces neufs</td></tr>
+      <tr><td>Création de surface</td><td>Non (rénovation, division, changement d'usage)</td><td>Oui (construction à partir de zéro)</td></tr>
+      <tr><td>Horizon</td><td>Court : 6 à 18 mois</td><td>Long : 2 à 5 ans</td></tr>
+      <tr><td>Capitaux mobilisés</td><td>Modérés à élevés</td><td>Très élevés</td></tr>
+      <tr><td>Commercialisation</td><td>Revente classique</td><td>Souvent en VEFA (vente sur plan)</td></tr>
+      <tr><td>Compétences clés</td><td>Sourcing, négociation, travaux</td><td>Montage, urbanisme, construction</td></tr>
+      <tr><td>Statut</td><td>Commerçant (société)</td><td>Commerçant (société)</td></tr>
+      <tr><td>Fiscalité</td><td>BIC, TVA immobilière</td><td>BIC, TVA immobilière</td></tr>
+      <tr><td>Risque principal</td><td>Marché à la revente, dérapage travaux</td><td>Chantier, délais, commercialisation</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Le promoteur immobilier : construire du neuf</h2>
+  <p>
+    Le promoteur immobilier est un <strong>maître d'ouvrage</strong>. Sa mission est de faire sortir de terre des logements,
+    des bureaux ou des commerces neufs, puis de les vendre. Son parcours suit toujours les mêmes grandes étapes : concevoir
+    un projet compatible avec le PLU (plan local d'urbanisme), obtenir un <strong>permis de construire</strong> avec l'aide
+    d'architectes et de bureaux d'études, acquérir le foncier, financer l'opération, piloter le chantier via des entreprises
+    spécialisées, puis commercialiser les biens.
+  </p>
+  <p>
+    La commercialisation se fait le plus souvent en <strong>VEFA</strong> (vente en l'état futur d'achèvement), c'est-à-dire
+    « sur plan » : l'acheteur paie au fil de l'avancement des travaux. Le promoteur intervient donc sur toute la chaîne de
+    la construction, ce qui suppose des <strong>fonds propres importants</strong>, une équipe technique et une tolérance à
+    des <strong>délais longs</strong> — deux à cinq ans entre l'achat du terrain et la livraison.
+  </p>
+
+  <h2>Le marchand de biens : valoriser l'existant</h2>
+  <p>
+    Le <a href="/marchand-de-biens-definition/">marchand de biens</a> travaille sur des biens qui existent déjà. Il achète une
+    maison, un appartement, un immeuble ou un terrain, en crée de la valeur, puis le
+    <a href="/achat-revente-immobilier/">revend avec une marge</a>. Il ne construit pas de zéro : il
+    <strong>revalorise</strong>. Pour cela, il dispose de plusieurs leviers :
+  </p>
+  <ul>
+    <li><strong>La rénovation :</strong> moderniser, améliorer le confort et la performance énergétique d'un bien pour le revendre plus cher.</li>
+    <li><strong>La division :</strong> découper un grand appartement en plusieurs lots, ou <a href="/diviser-un-terrain/">diviser un terrain</a> constructible pour vendre séparément.</li>
+    <li><strong>Le changement d'usage :</strong> transformer des bureaux en logements, un local commercial en habitation.</li>
+  </ul>
+  <p>
+    Résultat : des <strong>opérations plus courtes</strong> (6 à 18 mois), un ticket d'entrée plus accessible et pas de
+    chantier de construction à piloter. C'est la voie la plus réaliste pour
+    <a href="/devenir-marchand-de-biens/">se lancer dans l'immobilier professionnel</a> sans les capitaux d'un promoteur.
+  </p>
+
+  <h2>La vraie différence : créer ou revaloriser des surfaces</h2>
+  <p>
+    Si l'on ne devait retenir qu'un critère pour distinguer les deux métiers, ce serait celui-là. Le
+    <strong>promoteur crée de la surface</strong> : là où il y avait un terrain nu, il y a désormais un immeuble. Le
+    <strong>marchand de biens revalorise une surface qui existe déjà</strong> : il améliore, réorganise ou redécoupe, mais
+    ne fait pas sortir de mètres carrés de terre. Cette nuance commande tout le reste — le niveau de capitaux, la durée des
+    opérations, la nature du risque et les compétences requises.
+  </p>
+
+  <h2>Capitaux, délais et risque : ce qui les oppose vraiment</h2>
+  <p>
+    Sur le papier, les deux cherchent la même chose : dégager une <strong>marge</strong>. Dans les faits, l'échelle n'est
+    pas la même. La promotion immobilière exige des <strong>fonds propres considérables</strong>, immobilise le capital
+    pendant des années et concentre le risque sur le chantier et la commercialisation d'un programme entier. Le marchand de
+    biens engage des sommes plus mesurées, récupère son capital plus vite et l'enchaîne sur l'opération suivante.
+  </p>
+  <p>
+    Côté financement, les deux s'appuient sur les banques et, de plus en plus, sur le
+    <a href="/crowdfunding-immobilier/">financement participatif</a> pour compléter leurs fonds propres et préserver leur
+    marge. La rapidité d'accès aux fonds est un enjeu commun : sur un marché concurrentiel, saisir une opportunité avant les
+    autres fait souvent la différence.
+  </p>
+
+  <h2>Quelle fiscalité pour chacun ?</h2>
+  <p>
+    Les deux métiers relèvent d'une <strong>activité commerciale</strong> : bénéfices imposés en BIC, le plus souvent à
+    l'impôt sur les sociétés, et assujettissement à la <a href="/tva-marchand-de-biens/">TVA immobilière</a>. La différence
+    se joue sur le <strong>régime de TVA applicable</strong>, qui dépend de la nature de l'opération :
+  </p>
+  <ul>
+    <li><strong>TVA sur le prix total (20 %) :</strong> pour du neuf (cas du promoteur) ou une rénovation si lourde qu'elle produit un immeuble « neuf » au sens fiscal.</li>
+    <li><strong>TVA sur la marge :</strong> pour de l'ancien revendu sans transformation profonde, fréquente chez le marchand de biens.</li>
+  </ul>
+  <p>
+    Le régime se détermine <strong>dès l'achat</strong>, pas à la revente. C'est un point technique à sécuriser avec un
+    <a href="/expert-comptable-marchand-de-biens/">expert-comptable spécialisé</a> avant chaque opération, sous peine de
+    voir la rentabilité amputée.
+  </p>
+
+  <h2>Marchand de biens ou promoteur : quelle voie choisir ?</h2>
+  <p>Quelques repères pour vous situer :</p>
+  <ul>
+    <li>Vous démarrez, votre <strong>apport est limité</strong> et vous voulez des opérations lisibles : le <a href="/devenir-marchand-de-biens/">marchand de biens</a> est la porte d'entrée logique.</li>
+    <li>Vous maîtrisez déjà le montage, vous disposez de <strong>fonds propres élevés</strong> et d'une équipe technique, et vous acceptez des délais longs : la promotion immobilière peut être visée.</li>
+    <li>Vous hésitez encore sur le modèle de revenus : comparez d'abord marchand de biens et <a href="/marchand-de-biens-ou-investisseur-locatif/">investisseur locatif</a>, deux logiques opposées de rentabilité.</li>
+  </ul>
+  <p>
+    Dans la pratique, beaucoup commencent marchand de biens, montent en compétence sur des opérations de plus en plus
+    ambitieuses (surélévation, changement d'usage, petite construction), puis basculent vers la promotion. Les deux métiers
+    ne s'excluent pas : ils se suivent souvent sur une même trajectoire.
+  </p>
+</ArticleLayout>

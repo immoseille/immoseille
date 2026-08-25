@@ -33,6 +33,13 @@ export const RETENIR = {
     "Fiscalité : BIC et TVA pour le marchand ; revenus fonciers ou LMNP et abattement pour durée de détention pour le bailleur.",
     "Aucun n'est meilleur dans l'absolu : le choix dépend des objectifs et de la tolérance au risque.",
   ],
+  'marchand-de-biens-ou-promoteur-immobilier': [
+    "Le promoteur immobilier construit du neuf : il crée des surfaces à partir d'un terrain.",
+    "Le marchand de biens valorise de l'existant (rénovation, division, changement d'usage) et le revend.",
+    "La promotion mobilise beaucoup plus de capitaux et s'étale sur 2 à 5 ans ; le marchand de biens travaille sur 6 à 18 mois.",
+    "Les deux sont des commerçants (BIC, TVA immobilière), mais le régime de TVA diffère selon l'opération.",
+    "Le marchand de biens est la voie la plus accessible pour débuter ; la promotion vient souvent ensuite.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

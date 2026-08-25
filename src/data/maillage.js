@@ -42,4 +42,6 @@ export const MAILLAGE = [
   // Le métier (satellites)
   { needle: 'combien gagne un marchand', slug: 'marchand-de-biens-salaire' },
   { needle: 'avantages et inconvénients', slug: 'avantages-inconvenients-marchand-de-biens' },
+  { needle: 'promoteur immobilier', slug: 'marchand-de-biens-ou-promoteur-immobilier' },
+  { needle: 'investisseur locatif', slug: 'marchand-de-biens-ou-investisseur-locatif' },
 ];
