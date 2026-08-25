@@ -217,6 +217,12 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
       var slug = a.getAttribute('href').replace(/^\/|\/$/g, '');
       if (slug) linked[slug] = true;
     });
+    // Nombre de liens de maillage déjà présents (hors CTA / accueil / guides / rdv).
+    var NON_MESH = { '/': 1, '/guides/': 1, '/formation/': 1, '/rendez-vous/': 1, '/rendez-vous': 1 };
+    var existing = 0;
+    body.querySelectorAll('a[href^="/"]').forEach(function (a) {
+      if (!NON_MESH[a.getAttribute('href')]) existing++;
+    });
     var paras = Array.prototype.slice.call(body.querySelectorAll(':scope > p')).slice(1);
     function wrapInParagraph(p, needle, href) {
       var re = new RegExp(esc(needle), 'i');
@@ -240,7 +246,9 @@ const initial = (author.name || 'I').trim().charAt(0).toUpperCase();
       }
       return false;
     }
-    var added = 0, MAX = 3;
+    // Cap : viser 5 liens de maillage MAX au total (naturel), donc on complète
+    // seulement l'écart entre l'existant et 5, sans jamais dépasser 3 ajouts auto.
+    var added = 0, MAX = Math.max(0, Math.min(3, 5 - existing));
     for (var x = 0; x < MAILLAGE.length && added < MAX; x++) {
       var item = MAILLAGE[x];
       if (item.slug === curSlug || linked[item.slug]) continue;
