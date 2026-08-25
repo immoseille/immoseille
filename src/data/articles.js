@@ -47,6 +47,15 @@ export const articles = [
     date: '25 août 2026',
     excerpt: "Construire du neuf ou valoriser de l'existant ? Comparatif complet : missions, capitaux, délais, risque et fiscalité des deux métiers.",
   },
+  {
+    slug: 'meilleure-formation-marchand-de-biens',
+    title: 'Meilleure formation marchand de biens : le top 5',
+    image: '/img/meilleure-formation-marchand-de-biens.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '25 août 2026',
+    excerpt: "Notre comparatif des 5 meilleures formations marchand de biens : critères de choix, avis détaillé, prix et CPF. Imm'oseille en tête.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

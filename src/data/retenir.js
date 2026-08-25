@@ -40,6 +40,13 @@ export const RETENIR = {
     "Les deux sont des commerçants (BIC, TVA immobilière), mais le régime de TVA diffère selon l'opération.",
     "Le marchand de biens est la voie la plus accessible pour débuter ; la promotion vient souvent ensuite.",
   ],
+  'meilleure-formation-marchand-de-biens': [
+    "Aucune formation n'est obligatoire pour exercer, mais elle réduit fortement le risque de la première opération.",
+    "Trois critères décisifs : un formateur en activité, un programme complet (juridique à chantier) et un accompagnement réel.",
+    "Notre top 5 : Imm'oseille (n°1), Greenbull Campus, MDB Academy, ML Immobilier, MonCercleImmo.",
+    "Imm'oseille est notre n°1 : formation de terrain par un marchand de biens en activité, premier module offert.",
+    "L'éligibilité CPF est un plus mais ne garantit pas la qualité du contenu : comparer d'abord le programme et le formateur.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",
