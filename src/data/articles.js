@@ -56,6 +56,15 @@ export const articles = [
     date: '25 août 2026',
     excerpt: "Notre comparatif des 5 meilleures formations marchand de biens : critères de choix, avis détaillé, prix et CPF. Imm'oseille en tête.",
   },
+  {
+    slug: 'calcul-rentabilite-immobiliere',
+    title: 'Calcul de rentabilité immobilière : la méthode',
+    image: '/img/calcul-rentabilite-immobiliere.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '27 août 2026',
+    excerpt: "Rentabilité brute, nette, nette-nette et cash-flow : formules claires, exemple chiffré et bon taux à viser pour calculer la rentabilité d'un bien.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

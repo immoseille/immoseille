@@ -47,6 +47,14 @@ export const RETENIR = {
     "Imm'oseille est notre n°1 : formation de terrain par un marchand de biens en activité, premier module offert.",
     "L'éligibilité CPF est un plus mais ne garantit pas la qualité du contenu : comparer d'abord le programme et le formateur.",
   ],
+  'calcul-rentabilite-immobiliere': [
+    "Rentabilité brute = (loyer annuel ÷ prix d'achat total) × 100 : un premier repère seulement.",
+    "Rentabilité nette = on déduit les charges non récupérables (taxe foncière, copropriété, assurance, gestion).",
+    "Rentabilité nette-nette = charges + impôts déduits : le seul rendement réellement perçu.",
+    "Le prix d'achat total inclut le prix du bien, les frais de notaire et les travaux.",
+    "Repère : viser 5 à 7 % brut ; un taux élevé rime souvent avec un risque plus élevé.",
+    "Rentabilité locative (loyers) ≠ rentabilité marchand de biens (marge d'une opération d'achat-revente).",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

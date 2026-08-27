@@ -38,6 +38,7 @@ export const MAILLAGE = [
   { needle: 'diviser un terrain', slug: 'diviser-un-terrain' },
   { needle: 'calcul de rentabilité', slug: 'calcul-rentabilite-marchand-de-biens' },
   { needle: 'simulateur de rentabilité', slug: 'simulateur-rentabilite-marchand-de-biens' },
+  { needle: 'rentabilité locative', slug: 'calcul-rentabilite-immobiliere' },
 
   // Le métier (satellites)
   { needle: 'combien gagne un marchand', slug: 'marchand-de-biens-salaire' },

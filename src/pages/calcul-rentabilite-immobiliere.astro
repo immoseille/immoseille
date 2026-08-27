@@ -1,0 +1,178 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Comment calculer la rentabilité d'un bien immobilier ?",
+    r: "La formule de base est : (loyer annuel ÷ prix d'achat total) × 100. Cela donne la rentabilité brute. Pour une vision réaliste, on déduit ensuite les charges (rentabilité nette) puis les impôts (rentabilité nette-nette). Le prix d'achat total inclut le prix du bien, les frais de notaire et les éventuels travaux.",
+  },
+  {
+    q: "Quelle est la différence entre rentabilité brute, nette et nette-nette ?",
+    r: "La rentabilité brute ne tient compte que du loyer et du prix d'achat : c'est un premier repère. La rentabilité nette déduit les charges non récupérables (taxe foncière, copropriété, assurance, gestion). La rentabilité nette-nette déduit en plus les impôts sur les revenus locatifs : c'est la seule qui reflète le rendement réellement perçu.",
+  },
+  {
+    q: "Quel est un bon taux de rentabilité locative ?",
+    r: "Il n'y a pas de seuil universel. En pratique, on observe des rendements bruts de 2 à 4 % dans les grandes métropoles tendues et de 6 à 9 % dans des villes moyennes. Viser 5 à 7 % brut est un repère courant, mais un taux élevé va souvent de pair avec un risque plus élevé (vacance, dégradation, revente difficile).",
+  },
+  {
+    q: "Faut-il inclure le crédit dans le calcul de rentabilité ?",
+    r: "Le crédit n'entre pas dans le calcul du rendement locatif lui-même, mais il est central pour le cash-flow : c'est la différence entre les loyers encaissés et l'ensemble des sorties (charges, impôts, mensualité de prêt). Un cash-flow positif signifie que le bien s'autofinance ; négatif, il demande un effort d'épargne mensuel.",
+  },
+  {
+    q: "La rentabilité d'un marchand de biens se calcule-t-elle pareil ?",
+    r: "Non. L'investisseur locatif mesure un rendement annuel (loyers ÷ prix). Le marchand de biens ne loue pas : il mesure la marge d'une opération d'achat-revente (prix de revente − prix de revient). Ce sont deux logiques différentes, à ne pas confondre.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Calcul de rentabilité immobilière : méthode et formules"
+  description="Calcul de rentabilité immobilière : formules de la rentabilité brute, nette et nette-nette, exemple chiffré, impact de la fiscalité et bon taux à viser. Le guide complet."
+  h1="Calcul de rentabilité immobilière : la méthode complète"
+  lead="Avant d'investir, une question tranche tout : le bien sera-t-il rentable ? Rentabilité brute, nette, nette-nette, cash-flow… Voici les formules claires, un exemple chiffré et les repères pour calculer la rentabilité d'un bien immobilier sans se tromper."
+  reading="9 min"
+  image="/img/calcul-rentabilite-immobiliere.jpg"
+  imageAlt="Maison miniature posée sur une calculatrice, symbole du calcul de rentabilité immobilière"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Calcul de rentabilité immobilière' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li><strong>Rentabilité brute</strong> = (loyer annuel ÷ prix d'achat total) × 100 — un premier repère.</li>
+      <li><strong>Rentabilité nette</strong> = on déduit les charges non récupérables (taxe foncière, copropriété, assurance, gestion).</li>
+      <li><strong>Rentabilité nette-nette</strong> = on déduit aussi les impôts : le seul rendement réellement perçu.</li>
+      <li>Le <strong>prix d'achat total</strong> inclut le prix du bien + les frais de notaire + les travaux.</li>
+      <li>Repère courant : viser <strong>5 à 7 % brut</strong> ; un taux élevé rime souvent avec un risque plus élevé.</li>
+    </ul>
+  </div>
+
+  <h2>Les 3 niveaux de rentabilité à connaître</h2>
+  <p>
+    Calculer la rentabilité d'un investissement immobilier ne se résume pas à comparer un loyer à un prix d'achat. Trois
+    indicateurs se complètent, du plus rapide au plus fidèle. Les comprendre, c'est éviter de se fier à un chiffre flatteur
+    mais trompeur.
+  </p>
+  <h3>La rentabilité brute</h3>
+  <p>
+    C'est le calcul le plus simple, celui qui donne un premier aperçu en quelques secondes.
+  </p>
+  <p><strong>Formule :</strong> (loyer annuel ÷ prix d'achat total) × 100</p>
+  <p>
+    Son intérêt : comparer rapidement plusieurs biens. Sa limite : elle ignore totalement les charges et la fiscalité. Un
+    bien affiché à 7 % brut peut retomber à 3 % une fois tout déduit. À manier comme un filtre, pas comme une décision.
+  </p>
+  <h3>La rentabilité nette</h3>
+  <p>
+    Plus réaliste, elle retranche les <strong>charges non récupérables</strong> supportées par le propriétaire.
+  </p>
+  <p><strong>Formule :</strong> ((loyer annuel − charges) ÷ prix d'achat total) × 100</p>
+  <p>Ces charges incluent notamment :</p>
+  <ul>
+    <li>la taxe foncière ;</li>
+    <li>les charges de copropriété non récupérables ;</li>
+    <li>l'assurance propriétaire non occupant (PNO) et l'assurance loyers impayés ;</li>
+    <li>les frais de gestion locative ;</li>
+    <li>les gros travaux et l'entretien à la charge du bailleur.</li>
+  </ul>
+  <h3>La rentabilité nette-nette</h3>
+  <p>
+    C'est la plus fidèle : elle intègre l'<strong>impôt sur les revenus locatifs</strong>. C'est elle qui indique le
+    rendement réellement encaissé, une fois l'État servi.
+  </p>
+  <p><strong>Formule :</strong> ((loyer annuel − charges − impôts) ÷ prix d'achat total) × 100</p>
+  <p>
+    C'est aussi le point de départ du <strong>cash-flow</strong> : en intégrant la mensualité de crédit, on sait si le bien
+    s'autofinance ou s'il exige un effort d'épargne chaque mois.
+  </p>
+
+  <h2>Un exemple chiffré complet</h2>
+  <p>
+    Prenons un appartement acheté <strong>200 000 €</strong> (frais de notaire inclus), loué <strong>700 € par mois</strong>,
+    soit 8 400 € par an. Les charges non récupérables s'élèvent à 1 500 € par an, et l'investisseur paie 1 000 € d'impôts sur
+    ses revenus locatifs.
+  </p>
+  <ul>
+    <li><strong>Rentabilité brute</strong> : (8 400 ÷ 200 000) × 100 = <strong>4,2 %</strong></li>
+    <li><strong>Rentabilité nette</strong> : ((8 400 − 1 500) ÷ 200 000) × 100 = <strong>3,45 %</strong></li>
+    <li><strong>Rentabilité nette-nette</strong> : ((8 400 − 1 500 − 1 000) ÷ 200 000) × 100 = <strong>2,95 %</strong></li>
+  </ul>
+  <p>
+    On passe de 4,2 % affichés à 2,95 % réellement perçus. L'écart n'est pas un détail : c'est lui qui sépare un projet qui
+    tient d'un projet qui coûte.
+  </p>
+
+  <h2>Rentabilité brute, nette, nette-nette : le tableau récapitulatif</h2>
+  <table>
+    <thead>
+      <tr><th>Indicateur</th><th>Ce qu'il déduit</th><th>À quoi il sert</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Brute</td><td>Rien (loyer ÷ prix)</td><td>Comparer vite plusieurs biens</td></tr>
+      <tr><td>Nette</td><td>Les charges non récupérables</td><td>Estimer le rendement réel avant impôt</td></tr>
+      <tr><td>Nette-nette</td><td>Les charges + les impôts</td><td>Connaître le rendement vraiment perçu</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Ne pas oublier le prix d'achat total</h2>
+  <p>
+    L'erreur classique du débutant : calculer la rentabilité sur le seul prix affiché. Or le dénominateur, c'est le <strong>prix de revient complet</strong> : prix du bien + <strong>frais de notaire</strong> (environ 7 à 8 % dans
+    l'ancien) + travaux éventuels + frais d'agence. Négliger ces postes gonfle artificiellement le rendement et fausse toute
+    la décision.
+  </p>
+
+  <h2>L'impact du régime fiscal</h2>
+  <p>
+    Le choix du régime d'imposition pèse directement sur la rentabilité nette-nette. Les principales options :
+  </p>
+  <ul>
+    <li><strong>Micro-foncier</strong> (location nue, revenus fonciers ≤ 15 000 €/an) : abattement forfaitaire de 30 %. Simple, mais rarement optimal si les charges réelles sont élevées.</li>
+    <li><strong>Régime réel</strong> (location nue) : déduction des charges réelles (taxe foncière, intérêts d'emprunt, travaux, gestion). Plus exigeant en comptabilité, souvent gagnant quand les charges sont importantes, avec la possibilité de créer un <strong>déficit foncier</strong> imputable sur le revenu global (jusqu'à 10 700 €/an).</li>
+    <li><strong>Micro-BIC</strong> (location meublée, recettes ≤ 77 700 €/an) : abattement forfaitaire de 50 %.</li>
+    <li><strong>Réel BIC</strong> (meublé) : déduction des charges et surtout <strong>amortissement</strong> du bien, un levier puissant pour réduire l'imposition.</li>
+  </ul>
+  <p>
+    Un même bien peut afficher une rentabilité nette-nette très différente selon le régime choisi. C'est une décision à
+    arbitrer avec un professionnel avant l'achat.
+  </p>
+
+  <h2>Qu'est-ce qu'un bon taux de rentabilité ?</h2>
+  <p>
+    Il n'existe pas de réponse unique : tout dépend de l'emplacement, du type de bien et de votre objectif. Quelques repères
+    de marché :
+  </p>
+  <ul>
+    <li><strong>Grandes métropoles tendues</strong> (Paris, grandes villes) : souvent 2 à 4 % brut, prix élevés et loyers encadrés.</li>
+    <li><strong>Villes moyennes et périphérie</strong> : fréquemment 5 à 9 % brut, prix au m² plus accessibles.</li>
+    <li><strong>Petites communes</strong> : rendements affichés parfois élevés, mais demande locative plus fragile.</li>
+  </ul>
+  <p>
+    Règle d'or : un <strong>taux élevé va souvent de pair avec un risque plus élevé</strong> (vacance locative, impayés,
+    revente difficile). La rentabilité ne se juge jamais seule, mais au regard du risque et de la solidité de la demande.
+  </p>
+
+  <h2>Le cash-flow, l'indicateur qui parle vraiment</h2>
+  <p>
+    Au-delà des pourcentages, ce qui change votre quotidien, c'est le <strong>cash-flow</strong> : ce qu'il reste (ou ce
+    qu'il manque) chaque mois une fois tout payé.
+  </p>
+  <p><strong>Cash-flow mensuel</strong> = loyers − (charges + impôts + mensualité de crédit)</p>
+  <p>
+    Un cash-flow positif signifie que le bien se paie tout seul et dégage un surplus. Négatif, il faut compléter de sa
+    poche : ce n'est pas rédhibitoire (le crédit se rembourse et le patrimoine se constitue), mais cela doit être un choix
+    assumé, pas une surprise.
+  </p>
+
+  <h2>Rentabilité locative ou rentabilité de marchand de biens ?</h2>
+  <p>
+    Attention à ne pas confondre deux logiques. Tout ce qui précède mesure la <strong>rentabilité locative</strong> : un
+    rendement annuel tiré des loyers, sur le long terme. Le <a href="/marchand-de-biens-ou-investisseur-locatif/">marchand de
+    biens ne loue pas</a> : il achète, valorise et revend. Sa rentabilité se mesure autrement, en <a href="/calcul-rentabilite-marchand-de-biens/">marge d'opération</a> (prix de revente − prix de revient), sur un cycle
+    court de quelques mois.
+  </p>
+  <p>
+    Si votre projet relève de l'achat-revente plutôt que de la location, c'est cette seconde méthode qu'il faut appliquer —
+    et notre <a href="/simulateur-rentabilite-marchand-de-biens/">simulateur de rentabilité</a> la calcule en direct. Les
+    deux approches sont complémentaires : beaucoup d'investisseurs combinent revenus locatifs et opérations ponctuelles pour <a href="/devenir-marchand-de-biens/">se professionnaliser</a>.
+  </p>
+</ArticleLayout>
