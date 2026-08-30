@@ -45,4 +45,5 @@ export const MAILLAGE = [
   { needle: 'avantages et inconvénients', slug: 'avantages-inconvenients-marchand-de-biens' },
   { needle: 'promoteur immobilier', slug: 'marchand-de-biens-ou-promoteur-immobilier' },
   { needle: 'investisseur locatif', slug: 'marchand-de-biens-ou-investisseur-locatif' },
+  { needle: 'agent immobilier', slug: 'marchand-de-biens-ou-agent-immobilier' },
 ];

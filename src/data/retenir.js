@@ -55,6 +55,13 @@ export const RETENIR = {
     "Repère : viser 5 à 7 % brut ; un taux élevé rime souvent avec un risque plus élevé.",
     "Rentabilité locative (loyers) ≠ rentabilité marchand de biens (marge d'une opération d'achat-revente).",
   ],
+  'marchand-de-biens-ou-agent-immobilier': [
+    "L'agent immobilier est un intermédiaire : il vend le bien d'autrui et se rémunère à la commission.",
+    "Le marchand de biens est propriétaire : il achète pour son compte, valorise et revend sur sa marge.",
+    "L'agent doit détenir la carte professionnelle « T » (loi Hoguet) ; le marchand de biens n'a besoin d'aucune carte ni diplôme.",
+    "Revenu régulier mais plafonné pour l'agent ; marge élevée mais risquée pour le marchand.",
+    "Fiscalité : commissions imposées pour l'agent, BIC et TVA immobilière pour le marchand de biens.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

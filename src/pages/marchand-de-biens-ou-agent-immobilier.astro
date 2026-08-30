@@ -1,0 +1,124 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quelle est la différence entre un marchand de biens et un agent immobilier ?",
+    r: "L'agent immobilier est un intermédiaire : il met en relation acheteur et vendeur et se rémunère à la commission, sans jamais devenir propriétaire du bien. Le marchand de biens, lui, achète le bien pour son propre compte, le valorise et le revend : il est propriétaire et se rémunère sur la marge, pas sur une commission.",
+  },
+  {
+    q: "Faut-il une carte professionnelle pour être marchand de biens ?",
+    r: "Non. L'agent immobilier doit détenir la carte professionnelle « T » (loi Hoguet) et justifier de conditions d'aptitude, d'assurance et de garantie financière. Le marchand de biens n'a besoin d'aucune carte ni d'aucun diplôme : c'est un commerçant qui achète et revend pour son propre compte.",
+  },
+  {
+    q: "Lequel gagne le plus, le marchand de biens ou l'agent immobilier ?",
+    r: "Les deux logiques de revenu sont différentes. L'agent immobilier perçoit des commissions régulières mais plafonnées par le volume de ventes. Le marchand de biens vise une marge plus élevée par opération, mais ponctuelle et risquée. Aucun n'est structurellement plus rentable : tout dépend du volume, du marché et de la prise de risque.",
+  },
+  {
+    q: "Un agent immobilier peut-il devenir marchand de biens ?",
+    r: "Oui, et c'est une évolution fréquente. L'agent immobilier connaît déjà le marché, le sourcing et la négociation : il lui manque surtout la maîtrise du montage, de la fiscalité (TVA, BIC) et du financement d'opération. Le passage se fait en créant une société commerciale dédiée à l'achat-revente.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Marchand de biens ou agent immobilier : quelles différences ?"
+  description="Marchand de biens ou agent immobilier : comparatif complet (rôle, statut, carte pro, rémunération, risque, fiscalité) pour comprendre qui fait quoi et quelle voie choisir."
+  h1="Marchand de biens ou agent immobilier : quelles différences ?"
+  lead="On les croise dans les mêmes agences, mais leurs métiers n'ont rien à voir. L'agent immobilier vend le bien des autres ; le marchand de biens achète et revend le sien. Voici un comparatif clair : rôle, statut, carte pro, rémunération et risque, pour comprendre qui fait quoi et quelle voie vous correspond."
+  reading="8 min"
+  image="/img/marchand-de-biens-ou-agent-immobilier.jpg"
+  imageAlt="Main tenant des clés de maison devant des logements, marchand de biens ou agent immobilier"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Marchand de biens ou agent immobilier' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>L'<strong>agent immobilier</strong> est un <strong>intermédiaire</strong> : il vend le bien d'autrui et se paie à la commission.</li>
+      <li>Le <strong>marchand de biens</strong> est <strong>propriétaire</strong> : il achète pour son compte, valorise et revend sur sa marge.</li>
+      <li>L'agent doit détenir la <strong>carte professionnelle « T »</strong> (loi Hoguet) ; le marchand de biens, non.</li>
+      <li>Revenu régulier mais plafonné d'un côté ; marge élevée mais risquée de l'autre.</li>
+      <li>Fiscalité différente : commissions pour l'agent, <strong>BIC et TVA immobilière</strong> pour le marchand.</li>
+    </ul>
+  </div>
+
+  <h2>Deux métiers que tout oppose</h2>
+  <p>
+    Marchand de biens et agent immobilier évoluent dans le même univers, échangent avec les mêmes notaires et se croisent
+    dans les mêmes ventes. D'où la confusion. Pourtant, une seule question sépare radicalement les deux métiers : <strong>à qui appartient le bien ?</strong> L'agent immobilier ne possède rien : il vend pour le compte d'un
+    propriétaire. Le <a href="/marchand-de-biens-definition/">marchand de biens</a> achète le bien pour lui-même, en devient
+    propriétaire, puis le revend. Intermédiaire d'un côté, commerçant-propriétaire de l'autre.
+  </p>
+
+  <h2>Le comparatif en un coup d'œil</h2>
+  <table>
+    <thead>
+      <tr><th></th><th>Marchand de biens</th><th>Agent immobilier</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Rôle</td><td>Propriétaire (achète-revend)</td><td>Intermédiaire (met en relation)</td></tr>
+      <tr><td>Propriété du bien</td><td>Oui, pour son compte</td><td>Non, jamais</td></tr>
+      <tr><td>Rémunération</td><td>Marge sur la revente</td><td>Commission sur la vente</td></tr>
+      <tr><td>Carte professionnelle</td><td>Aucune requise</td><td>Carte « T » (loi Hoguet) obligatoire</td></tr>
+      <tr><td>Diplôme</td><td>Aucun exigé</td><td>Conditions d'aptitude requises</td></tr>
+      <tr><td>Statut</td><td>Commerçant (société)</td><td>Agent commercial ou salarié</td></tr>
+      <tr><td>Fiscalité</td><td>BIC, TVA immobilière</td><td>Imposition des commissions</td></tr>
+      <tr><td>Risque</td><td>Élevé (capital engagé)</td><td>Faible (pas de capital immobilisé)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>L'agent immobilier : l'intermédiaire</h2>
+  <p>
+    L'agent immobilier est un <strong>professionnel de la transaction</strong>. Sa mission : trouver un acquéreur (ou un
+    locataire) pour le bien d'un propriétaire, mener la négociation et sécuriser la vente. Il ne prend aucun risque en
+    capital puisqu'il n'achète rien — il se rémunère à la <strong>commission</strong>, généralement un pourcentage du prix
+    de vente.
+  </p>
+  <p>
+    Cette activité est strictement encadrée par la <strong>loi Hoguet</strong> : elle exige la carte professionnelle « T »
+    (transaction), une assurance responsabilité civile professionnelle et, le cas échéant, une garantie financière. C'est un
+    métier de relation, de mandat et de volume : plus l'agent conclut de ventes, plus il gagne.
+  </p>
+
+  <h2>Le marchand de biens : le commerçant-propriétaire</h2>
+  <p>
+    Le marchand de biens, lui, <strong>achète pour son propre compte</strong>. Il repère un bien à potentiel, l'acquiert, le
+    valorise (rénovation, division, changement d'usage) puis le revend avec une marge. Il est le propriétaire du bien
+    pendant toute l'opération, et supporte donc le risque : capital engagé,
+    travaux, aléas du marché à la revente.
+  </p>
+  <p>
+    Contrepartie de ce risque : aucune carte professionnelle ni diplôme n'est exigé pour <a href="/devenir-marchand-de-biens/">se lancer</a>. Le marchand de biens est un <strong>commerçant</strong>, imposé en
+    BIC et soumis à la <a href="/tva-marchand-de-biens/">TVA immobilière</a>. Là où l'agent vit de commissions régulières, le
+    marchand vise une marge plus élevée mais ponctuelle, opération après opération.
+  </p>
+
+  <h2>Carte professionnelle : la grande différence réglementaire</h2>
+  <p>
+    C'est le point qui surprend le plus. Pour vendre le bien d'un tiers, l'agent immobilier doit <strong>obligatoirement</strong> détenir la carte « T » et respecter la loi Hoguet. Pour acheter et revendre ses propres
+    biens, le marchand de biens n'a <strong>besoin d'aucune carte</strong> : il agit pour son compte, comme n'importe quel
+    commerçant achète et revend une marchandise. Cette liberté d'accès est réelle, mais elle ne dispense pas de compétences
+    solides en droit, fiscalité et travaux — sous peine de perdre de l'argent.
+  </p>
+
+  <h2>Rémunération et risque : deux modèles opposés</h2>
+  <p>
+    L'agent immobilier encaisse une <strong>commission à chaque vente</strong> : un revenu régulier, prévisible, mais
+    plafonné par le nombre de mandats qu'il conclut. Le marchand de biens ne touche rien tant qu'il n'a pas revendu ; sa <a href="/plus-value-marchand-de-biens/">marge peut être importante</a>, mais elle est incertaine et concentrée sur
+    chaque opération. En résumé : sécurité et régularité d'un côté, potentiel et risque de l'autre.
+  </p>
+
+  <h2>Quelle voie choisir ?</h2>
+  <p>Quelques repères pour vous situer :</p>
+  <ul>
+    <li>Vous aimez la relation client, la négociation et préférez un <strong>revenu régulier sans immobiliser de capital</strong> : l'agent immobilier vous conviendra.</li>
+    <li>Vous voulez entreprendre, créer de la valeur sur un bien et acceptez le <strong>risque en échange d'une marge</strong> : le marchand de biens est fait pour vous.</li>
+    <li>Vous hésitez encore sur le modèle : comparez aussi le marchand de biens à l'<a href="/marchand-de-biens-ou-investisseur-locatif/">investisseur locatif</a>, une troisième logique de revenu.</li>
+  </ul>
+  <p>
+    Beaucoup d'agents immobiliers franchissent d'ailleurs le pas et deviennent marchands de biens : ils connaissent déjà le
+    marché et la négociation. Il leur reste à maîtriser le montage, la fiscalité et le financement — exactement ce que couvre
+    une bonne formation au métier.
+  </p>
+</ArticleLayout>

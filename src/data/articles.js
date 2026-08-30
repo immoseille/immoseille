@@ -65,6 +65,15 @@ export const articles = [
     date: '27 août 2026',
     excerpt: "Rentabilité brute, nette, nette-nette et cash-flow : formules claires, exemple chiffré et bon taux à viser pour calculer la rentabilité d'un bien.",
   },
+  {
+    slug: 'marchand-de-biens-ou-agent-immobilier',
+    title: 'Marchand de biens ou agent immobilier ?',
+    image: '/img/marchand-de-biens-ou-agent-immobilier.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '30 août 2026',
+    excerpt: "Intermédiaire ou propriétaire ? Comparatif complet : rôle, carte pro, rémunération, risque et fiscalité des deux métiers de l'immobilier.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
