@@ -1,0 +1,138 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Peut-on faire de l'achat-revente immobilier en tant que particulier ?",
+    r: "Oui. Rien n'interdit à un particulier d'acheter un bien pour le revendre avec une plus-value : c'est encadré par le Code civil et ne nécessite aucun statut spécifique. La limite se situe dans la fréquence des opérations et l'intention : au-delà d'un certain rythme, l'administration peut requalifier l'activité en marchand de biens professionnel.",
+  },
+  {
+    q: "À partir de combien d'opérations devient-on marchand de biens ?",
+    r: "Il n'existe pas de seuil chiffré fixé par la loi. L'administration s'appuie sur un faisceau d'indices : le caractère habituel (répétition des opérations), l'intention spéculative dès l'achat et la courte durée de détention. En pratique, enchaîner plusieurs achats-reventes rapprochés (souvent évoqué autour de 3 opérations) fait courir un risque sérieux de requalification.",
+  },
+  {
+    q: "Comment est imposée la revente d'un bien par un particulier ?",
+    r: "Le particulier relève du régime des plus-values immobilières : 19 % d'impôt sur le revenu + 17,2 % de prélèvements sociaux, soit 36,2 % au total, avec des abattements selon la durée de détention (exonération d'IR après 22 ans, de prélèvements sociaux après 30 ans). La résidence principale est totalement exonérée. Une surtaxe s'applique au-delà de 50 000 € de plus-value.",
+  },
+  {
+    q: "Vaut-il mieux rester particulier ou devenir marchand de biens ?",
+    r: "Pour une opération ponctuelle, le statut de particulier est plus simple et fiscalement avantageux (abattements pour durée de détention, exonération de la résidence principale). Dès que l'activité devient régulière et spéculative, le statut de marchand de biens s'impose : il est alors non seulement obligatoire, mais aussi plus adapté (déduction des charges, droits de mutation réduits).",
+  },
+];
+---
+
+<ArticleLayout
+  title="Achat-revente immobilier en tant que particulier : le guide"
+  description="Achat-revente immobilier en tant que particulier : cadre légal, risque de requalification en marchand de biens, fiscalité de la plus-value et quand basculer en professionnel."
+  h1="Achat-revente immobilier en tant que particulier : ce qu'il faut savoir"
+  lead="Acheter un bien, le valoriser et le revendre avec une plus-value : c'est possible en tant que particulier, sans créer de société. Mais une frontière fiscale à ne pas franchir sépare le particulier du marchand de biens. Voici le cadre légal, la fiscalité et le moment où il faut passer professionnel."
+  reading="9 min"
+  image="/img/achat-revente-immobilier-particulier.jpg"
+  imageAlt="Appartement rénové et lumineux prêt pour la revente par un particulier"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Achat-revente immobilier en tant que particulier' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Un particulier <strong>peut</strong> acheter pour revendre : aucun statut requis, cadre du Code civil.</li>
+      <li>La limite : la <strong>répétition</strong> des opérations et l'<strong>intention spéculative</strong> font basculer en marchand de biens.</li>
+      <li>Fiscalité du particulier : plus-value imposée à <strong>36,2 %</strong>, avec abattements pour durée de détention.</li>
+      <li>La <strong>résidence principale</strong> est totalement exonérée de plus-value.</li>
+      <li>Dès que l'activité devient <strong>habituelle</strong>, le statut de marchand de biens devient obligatoire.</li>
+    </ul>
+  </div>
+
+  <h2>Achat-revente en tant que particulier : est-ce possible ?</h2>
+  <p>
+    Oui, sans ambiguïté. Rien n'interdit à un particulier d'acheter un bien pour le revendre plus cher : l'opération relève
+    du Code civil et ne nécessite aucun statut ni aucune carte professionnelle. Le particulier achète, réalise éventuellement
+    des travaux de valorisation, puis revend en dégageant une plus-value. C'est l'une des opérations immobilières les plus
+    rentables, à condition d'acheter au bon prix et de bien maîtriser la fiscalité.
+  </p>
+
+  <h2>Particulier ou marchand de biens : où est la frontière ?</h2>
+  <p>
+    C'est le point décisif. Un particulier réalise des opérations <strong>occasionnelles</strong> ; le <a href="/marchand-de-biens-definition/">marchand de biens</a> agit de manière <strong>habituelle et spéculative</strong>.
+    Pour trancher, l'administration fiscale examine un faisceau d'indices :
+  </p>
+  <ul>
+    <li>la <strong>répétition</strong> des opérations (le caractère habituel) ;</li>
+    <li>l'<strong>intention spéculative</strong> dès l'achat (acheter dans le but de revendre) ;</li>
+    <li>la <strong>courte durée de détention</strong> des biens ;</li>
+    <li>la part de ces revenus dans vos ressources.</li>
+  </ul>
+  <p>
+    Il n'existe pas de seuil légal chiffré, mais enchaîner plusieurs achats-reventes rapprochés (souvent évoqué autour de
+    trois opérations) fait courir un risque réel de <strong>requalification</strong> en activité professionnelle. Passé ce
+    cap, l'immatriculation en marchand de biens n'est plus un choix : elle est obligatoire.
+  </p>
+
+  <h2>La fiscalité de l'achat-revente pour un particulier</h2>
+  <p>
+    Le particulier relève du régime des <strong>plus-values immobilières des particuliers</strong>. La plus-value (prix de
+    vente − prix d'achat majoré des frais et travaux) est imposée à :
+  </p>
+  <ul>
+    <li><strong>19 %</strong> au titre de l'impôt sur le revenu ;</li>
+    <li><strong>17,2 %</strong> au titre des prélèvements sociaux ;</li>
+    <li>soit <strong>36,2 %</strong> au total, plus une surtaxe de 2 à 6 % au-delà de 50 000 € de plus-value.</li>
+  </ul>
+  <p>
+    Bonne nouvelle : des <strong>abattements pour durée de détention</strong> réduisent l'imposition à mesure que vous
+    conservez le bien.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Durée de détention</th><th>Abattement impôt sur le revenu</th><th>Abattement prélèvements sociaux</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Moins de 6 ans</td><td>0 %</td><td>0 %</td></tr>
+      <tr><td>De la 6ᵉ à la 21ᵉ année</td><td>6 % par an</td><td>1,65 % par an</td></tr>
+      <tr><td>22ᵉ année</td><td>4 %</td><td>1,60 %</td></tr>
+      <tr><td>De la 23ᵉ à la 30ᵉ année</td><td>Exonération</td><td>9 % par an</td></tr>
+      <tr><td>Au-delà de 30 ans</td><td>Exonération</td><td>Exonération</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Cas essentiel : la vente de votre <strong>résidence principale</strong> est totalement exonérée d'impôt sur la
+    plus-value, quelle que soit la durée de détention (article 150 U du CGI).
+  </p>
+
+  <h2>Un exemple chiffré</h2>
+  <p>
+    Un particulier achète un bien 150 000 € et le revend 250 000 € après 15 ans. Avec un forfait travaux de 15 % (22 500 €)
+    et un forfait frais d'acquisition de 7,5 % (environ 11 250 €), l'assiette taxable tombe à environ 66 000 €. Après
+    abattements pour 15 ans de détention, l'imposition totale s'établit autour de <strong>14 000 €</strong>. On mesure le
+    poids de la durée de détention : sur une revente rapide, aucun abattement ne s'applique et la taxation atteint 36,2 %.
+  </p>
+
+  <h2>Particulier ou professionnel : le comparatif</h2>
+  <table>
+    <thead>
+      <tr><th></th><th>Particulier</th><th>Marchand de biens</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Statut</td><td>Aucun requis</td><td>Société commerciale obligatoire</td></tr>
+      <tr><td>Fréquence</td><td>Opérations occasionnelles</td><td>Activité habituelle</td></tr>
+      <tr><td>Imposition du gain</td><td>Plus-value des particuliers (36,2 %)</td><td>Bénéfices commerciaux (BIC / IS)</td></tr>
+      <tr><td>Abattement durée</td><td>Oui</td><td>Non</td></tr>
+      <tr><td>TVA</td><td>Non concerné (ancien)</td><td>TVA immobilière</td></tr>
+      <tr><td>Déduction des charges</td><td>Forfaits limités</td><td>Charges et travaux déductibles</td></tr>
+      <tr><td>Droits de mutation à l'achat</td><td>~7 à 8 %</td><td>Réduits (~0,715 %)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Quand faut-il passer marchand de biens ?</h2>
+  <p>
+    Tant que l'opération reste ponctuelle et sans intention spéculative marquée, le statut de particulier est le plus simple
+    et le plus avantageux. Mais dès que vous <strong>enchaînez les opérations</strong> dans un but de profit, la bascule
+    s'impose. Devenir <a href="/devenir-marchand-de-biens/">marchand de biens</a> n'est alors pas qu'une contrainte : la <a href="/statut-juridique-marchand-de-biens/">structure commerciale</a> permet de déduire les charges et les travaux, et
+    de bénéficier de droits de mutation réduits à l'achat.
+  </p>
+  <p>
+    Attention à la <strong>requalification subie</strong> : si l'administration considère a posteriori que votre activité
+    était professionnelle, elle peut réclamer la TVA, l'imposition en BIC et des pénalités. Mieux vaut anticiper le
+    changement de statut que le subir. En cas de doute, un accompagnement fiscal s'impose avant la deuxième opération.
+  </p>
+</ArticleLayout>

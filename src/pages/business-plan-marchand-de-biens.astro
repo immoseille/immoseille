@@ -1,0 +1,136 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "À quoi sert un business plan de marchand de biens ?",
+    r: "Il remplit deux fonctions. En interne, c'est votre feuille de route : il structure votre stratégie, chiffre vos opérations et fixe vos objectifs. En externe, c'est l'outil qui convainc les banques et les investisseurs de financer vos acquisitions, en démontrant la viabilité et la rentabilité de votre projet.",
+  },
+  {
+    q: "Un business plan est-il obligatoire pour un marchand de biens ?",
+    r: "Il n'est pas obligatoire au sens légal, mais il est indispensable en pratique. Aucune banque ne finance une opération d'achat-revente sans un dossier chiffré et crédible. Le business plan est le document qui déclenche le financement, sans lequel la plupart des opérations ne peuvent pas démarrer.",
+  },
+  {
+    q: "Quelle marge présenter dans un business plan de marchand de biens ?",
+    r: "Les professionnels visent généralement une marge brute de 20 à 30 % par opération, ramenée à une marge nette plus modeste après impôts et charges. L'important est de présenter des projections réalistes et prudentes : une banque se méfie d'un prévisionnel trop optimiste. Prévoyez toujours une marge de sécurité pour les imprévus de chantier.",
+  },
+  {
+    q: "Quel statut juridique indiquer dans le business plan ?",
+    r: "La SAS et la SASU sont les formes les plus adaptées à l'activité de marchand de biens : souplesse, responsabilité limitée et fiscalité à l'IS. La micro-entreprise est inadaptée (plafond de chiffre d'affaires, TVA non récupérable) et la SCI est à écarter. Le choix de la structure doit apparaître clairement dans la partie juridique du dossier.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Business plan marchand de biens : le guide et la trame"
+  description="Business plan marchand de biens : à quoi il sert, ses composantes, le prévisionnel financier et une trame complète pour convaincre banques et investisseurs de financer vos opérations."
+  h1="Business plan marchand de biens : la méthode et la trame"
+  lead="Aucune banque ne finance une opération d'achat-revente sans un dossier solide. Le business plan est l'outil qui structure votre stratégie et débloque vos financements. Voici à quoi il sert, ses composantes clés, le prévisionnel financier attendu et une trame prête à suivre."
+  reading="9 min"
+  image="/img/business-plan-marchand-de-biens.jpg"
+  imageAlt="Marchand de biens rédigeant le business plan de son activité d'achat-revente"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Business plan marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le business plan a deux rôles : <strong>structurer votre stratégie</strong> et <strong>convaincre banques et investisseurs</strong>.</li>
+      <li>Son cœur est le <strong>prévisionnel financier</strong> : plan de financement, trésorerie, compte de résultat.</li>
+      <li>Présenter une <strong>marge brute de 20 à 30 %</strong> par opération, avec des projections prudentes.</li>
+      <li>Indiquer une <strong>structure adaptée</strong> (SAS ou SASU), jamais la micro-entreprise ni la SCI.</li>
+      <li>C'est un <strong>document vivant</strong> : il évolue au fil de vos opérations.</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce qu'un business plan de marchand de biens ?</h2>
+  <p>
+    Un business plan de marchand de biens est le document qui définit la <strong>stratégie</strong> de votre activité
+    d'achat-revente et en démontre la <strong>viabilité financière</strong>. Il ne s'agit pas d'un exercice administratif :
+    c'est l'outil qui transforme une intention en projet finançable. Il s'adresse d'abord à vous, pour cadrer votre
+    approche, puis aux <a href="/banque-marchand-de-biens/">banques et investisseurs</a> dont dépend chaque acquisition.
+  </p>
+  <p>
+    Un marchand de biens engage des sommes importantes sur des cycles courts. Sans dossier chiffré et crédible, aucun
+    financeur ne suit. Le business plan est donc le passage obligé entre l'idée et la première opération.
+  </p>
+
+  <h2>À quoi sert-il concrètement ?</h2>
+  <ul>
+    <li><strong>Obtenir un financement :</strong> c'est sa fonction première. Un dossier solide rassure le prêteur sur votre capacité à mener l'opération et à rembourser.</li>
+    <li><strong>Structurer votre stratégie :</strong> zones ciblées, types de biens, méthode de valorisation, objectifs de marge.</li>
+    <li><strong>Anticiper les risques :</strong> identifier les obstacles (dérapage travaux, marché, délais) et prévoir des solutions.</li>
+    <li><strong>Piloter votre activité :</strong> le business plan sert de feuille de route pour suivre les résultats et ajuster le tir.</li>
+  </ul>
+
+  <h2>Les composantes d'un business plan solide</h2>
+  <p>Un dossier complet s'articule autour de sept parties :</p>
+  <table>
+    <thead>
+      <tr><th>Partie</th><th>Ce qu'elle contient</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Résumé exécutif</td><td>Synthèse percutante du projet, du marché et des perspectives financières</td></tr>
+      <tr><td>Étude de marché</td><td>Zones ciblées, prix au m², tension, tendances locales</td></tr>
+      <tr><td>Stratégie</td><td>Vision, types de biens, méthode de création de valeur</td></tr>
+      <tr><td>Modèle économique</td><td>Sources de revenus, marges visées par opération</td></tr>
+      <tr><td>Prévisionnel financier</td><td>Plan de financement, trésorerie, compte de résultat</td></tr>
+      <tr><td>Équipe et structure</td><td>Compétences, forme juridique, partenaires (comptable, avocat)</td></tr>
+      <tr><td>Gestion des risques</td><td>Obstacles identifiés et solutions préventives</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Le <strong>résumé exécutif</strong> mérite un soin particulier : c'est lui qui capte l'attention du banquier dès les
+    premières lignes. Concis mais complet, il donne un aperçu du marché, de la stratégie, des perspectives financières et de
+    l'équipe.
+  </p>
+
+  <h2>Le prévisionnel financier : le cœur du dossier</h2>
+  <p>
+    C'est la partie que les financeurs lisent en premier. Elle doit démontrer, chiffres à l'appui, que vos opérations sont
+    rentables et que votre trésorerie tient la route. Trois tableaux s'articulent :
+  </p>
+  <ul>
+    <li><strong>Le plan de financement :</strong> pour chaque acquisition, ce que vous apportez et ce que vous empruntez.</li>
+    <li><strong>Le plan de trésorerie :</strong> les flux entre les opérations, poste sensible du métier puisque le capital est immobilisé jusqu'à la revente.</li>
+    <li><strong>Le compte de résultat prévisionnel :</strong> la démonstration de votre rentabilité, opération par opération.</li>
+  </ul>
+  <p>
+    Ces projections doivent rester <strong>réalistes et prudentes</strong>. Un prévisionnel trop optimiste décrédibilise le
+    dossier : le banquier connaît le marché. Pour bâtir des chiffres solides, appuyez-vous sur une méthode rigoureuse de <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a> de chaque opération.
+  </p>
+
+  <h2>Quelle marge et quelle rentabilité présenter ?</h2>
+  <p>
+    Le métier repose sur la capacité à dégager une <a href="/plus-value-marchand-de-biens/">plus-value</a> rapide. Dans le
+    business plan, visez une <strong>marge brute de 20 à 30 %</strong> par opération, ramenée à une marge nette plus modeste
+    après impôts et charges. Intégrez systématiquement une <strong>marge de sécurité</strong> pour absorber les imprévus de
+    chantier : c'est ce qui distingue un dossier amateur d'un dossier professionnel.
+  </p>
+
+  <h2>Business plan et structure juridique</h2>
+  <p>
+    La partie juridique rassure les partenaires financiers. Elle précise la forme de société retenue et ses avantages. Pour
+    un marchand de biens, la <a href="/statut-juridique-marchand-de-biens/">SAS ou la SASU</a> s'imposent : souplesse
+    statutaire, responsabilité limitée et imposition à l'IS. La micro-entreprise est à proscrire (plafond de chiffre
+    d'affaires, TVA non récupérable) et la SCI est inadaptée à une activité commerciale. Ce choix doit apparaître clairement
+    dans le dossier, avec la présentation de vos partenaires (expert-comptable, avocat).
+  </p>
+
+  <h2>Une trame prête à suivre</h2>
+  <p>Pour rédiger votre dossier, déroulez cette structure dans l'ordre :</p>
+  <ol>
+    <li>Résumé exécutif (à rédiger en dernier, mais à placer en premier).</li>
+    <li>Présentation du porteur de projet et de la structure.</li>
+    <li>Étude du marché immobilier ciblé.</li>
+    <li>Stratégie et modèle économique.</li>
+    <li>Plan opérationnel : sourcing, acquisition, travaux, revente.</li>
+    <li>Prévisionnel financier (les trois tableaux).</li>
+    <li>Analyse des risques et solutions.</li>
+  </ol>
+  <p>
+    Un business plan n'est jamais figé : c'est un document vivant, qui s'affine à chaque opération. Le construire soi-même
+    est aussi le meilleur moyen de maîtriser son projet avant de <a href="/devenir-marchand-de-biens/">se lancer</a> pour de
+    bon.
+  </p>
+</ArticleLayout>

@@ -30,6 +30,7 @@ export const MAILLAGE = [
   { needle: 'portage immobilier', slug: 'portage-immobilier' },
 
   // Opérations
+  { needle: 'business plan', slug: 'business-plan-marchand-de-biens' },
   { needle: "montage d'opération", slug: 'monter-une-operation-marchand-de-biens' },
   { needle: "montage de l'opération", slug: 'monter-une-operation-marchand-de-biens' },
   { needle: 'achat-revente immobilier', slug: 'achat-revente-immobilier' },

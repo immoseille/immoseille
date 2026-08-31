@@ -62,6 +62,20 @@ export const RETENIR = {
     "Revenu régulier mais plafonné pour l'agent ; marge élevée mais risquée pour le marchand.",
     "Fiscalité : commissions imposées pour l'agent, BIC et TVA immobilière pour le marchand de biens.",
   ],
+  'business-plan-marchand-de-biens': [
+    "Le business plan a deux rôles : structurer la stratégie et convaincre banques et investisseurs de financer les opérations.",
+    "Son cœur est le prévisionnel financier : plan de financement, plan de trésorerie et compte de résultat.",
+    "Présenter une marge brute de 20 à 30 % par opération, avec des projections réalistes et une marge de sécurité.",
+    "Indiquer une structure adaptée (SAS ou SASU), jamais la micro-entreprise ni la SCI.",
+    "C'est un document vivant, qui s'affine à chaque opération.",
+  ],
+  'achat-revente-immobilier-particulier': [
+    "Un particulier peut acheter pour revendre sans statut : cadre du Code civil.",
+    "La répétition des opérations et l'intention spéculative font requalifier l'activité en marchand de biens.",
+    "Fiscalité du particulier : plus-value imposée à 36,2 %, avec abattements pour durée de détention.",
+    "La vente de la résidence principale est totalement exonérée de plus-value.",
+    "Dès que l'activité devient habituelle, le statut de marchand de biens devient obligatoire (et plus avantageux).",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

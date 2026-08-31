@@ -74,6 +74,24 @@ export const articles = [
     date: '30 août 2026',
     excerpt: "Intermédiaire ou propriétaire ? Comparatif complet : rôle, carte pro, rémunération, risque et fiscalité des deux métiers de l'immobilier.",
   },
+  {
+    slug: 'business-plan-marchand-de-biens',
+    title: 'Business plan marchand de biens : la trame',
+    image: '/img/business-plan-marchand-de-biens.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '31 août 2026',
+    excerpt: "À quoi sert le business plan, ses composantes, le prévisionnel financier et une trame complète pour convaincre banques et investisseurs.",
+  },
+  {
+    slug: 'achat-revente-immobilier-particulier',
+    title: 'Achat-revente immobilier en tant que particulier',
+    image: '/img/achat-revente-immobilier-particulier.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '31 août 2026',
+    excerpt: "Cadre légal, risque de requalification en marchand de biens, fiscalité de la plus-value et quand basculer en professionnel.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
