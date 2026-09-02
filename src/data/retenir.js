@@ -76,6 +76,13 @@ export const RETENIR = {
     "La vente de la résidence principale est totalement exonérée de plus-value.",
     "Dès que l'activité devient habituelle, le statut de marchand de biens devient obligatoire (et plus avantageux).",
   ],
+  'assurance-marchand-de-biens': [
+    "La RC Pro n'est pas obligatoire légalement, mais elle est exigée en pratique par les banques et les notaires.",
+    "Elle couvre surtout les vices cachés, dont le marchand de biens répond en tant que vendeur professionnel.",
+    "L'assurance dommage-ouvrage est obligatoire avant tout chantier touchant à la solidité (loi Spinetta, art. L242-1).",
+    "La responsabilité décennale engage le marchand de biens rénovateur pendant 10 ans (art. 1792 du Code civil).",
+    "Compléments utiles : RC dirigeant, assurance PNO pendant la détention, tous risques chantier.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

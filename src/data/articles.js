@@ -92,6 +92,15 @@ export const articles = [
     date: '31 août 2026',
     excerpt: "Cadre légal, risque de requalification en marchand de biens, fiscalité de la plus-value et quand basculer en professionnel.",
   },
+  {
+    slug: 'assurance-marchand-de-biens',
+    title: 'Assurance marchand de biens : les garanties clés',
+    image: '/img/assurance-marchand-de-biens.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '2 septembre 2026',
+    excerpt: "RC Pro, dommage-ouvrage, garantie décennale : quelles assurances sont obligatoires, lesquelles les banques exigent, et quand souscrire.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
