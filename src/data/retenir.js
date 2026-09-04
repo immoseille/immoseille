@@ -83,6 +83,13 @@ export const RETENIR = {
     "La responsabilité décennale engage le marchand de biens rénovateur pendant 10 ans (art. 1792 du Code civil).",
     "Compléments utiles : RC dirigeant, assurance PNO pendant la détention, tous risques chantier.",
   ],
+  'marchand-de-biens-auto-entrepreneur': [
+    "L'auto-entrepreneur est légalement incompatible avec le marchand de biens (article 50-0 du CGI).",
+    "L'achat-revente immobilier est une activité commerciale exclue du régime micro-BIC.",
+    "Même sans l'interdiction, la micro serait inadaptée : plafond de CA, TVA non récupérable, responsabilité illimitée, charges non déductibles.",
+    "La bonne solution : une société commerciale (SAS, SASU, SARL ou EURL).",
+    "La SCI est aussi à écarter (objet civil) : risque de requalification en BIC.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

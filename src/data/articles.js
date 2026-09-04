@@ -101,6 +101,15 @@ export const articles = [
     date: '2 septembre 2026',
     excerpt: "RC Pro, dommage-ouvrage, garantie décennale : quelles assurances sont obligatoires, lesquelles les banques exigent, et quand souscrire.",
   },
+  {
+    slug: 'marchand-de-biens-auto-entrepreneur',
+    title: 'Marchand de biens en auto-entrepreneur ?',
+    image: '/img/marchand-de-biens-auto-entrepreneur.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '4 septembre 2026',
+    excerpt: "Pourquoi l'auto-entrepreneur est légalement impossible pour un marchand de biens (article 50-0 du CGI) et quel statut choisir à la place.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

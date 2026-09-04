@@ -1,0 +1,119 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Peut-on être marchand de biens en auto-entrepreneur ?",
+    r: "Non. La loi est explicite : l'activité d'achat-revente immobilier est exclue du régime de la micro-entreprise par l'article 50-0 du Code général des impôts. Le statut d'auto-entrepreneur est donc juridiquement incompatible avec le métier de marchand de biens, qui doit s'exercer via une société commerciale.",
+  },
+  {
+    q: "Pourquoi l'auto-entrepreneur est-il interdit pour cette activité ?",
+    r: "Parce que le marchand de biens exerce une activité commerciale d'achat-revente qui n'entre pas dans le champ du régime micro. Au-delà de l'interdiction légale, la micro serait de toute façon inadaptée : plafond de chiffre d'affaires vite atteint, TVA non récupérable, responsabilité illimitée et impossibilité de déduire les travaux et les charges.",
+  },
+  {
+    q: "Quel statut choisir à la place ?",
+    r: "Une société commerciale à responsabilité limitée : SAS ou SASU (les plus souples et les plus courantes), ou SARL/EURL. Elles protègent votre patrimoine personnel, permettent de récupérer la TVA et de déduire les charges, et relèvent de l'impôt sur les sociétés. La SCI est également à écarter car son objet est civil, pas commercial.",
+  },
+  {
+    q: "Que risque-t-on à exercer quand même en auto-entrepreneur ?",
+    r: "Une requalification fiscale : l'administration peut requalifier vos opérations en bénéfices industriels et commerciaux (BIC), avec rappel d'impôt, de TVA et pénalités. Vous restez par ailleurs responsable sur votre patrimoine personnel. Le risque financier est disproportionné par rapport au temps gagné à la création.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Marchand de biens en auto-entrepreneur : possible ou non ?"
+  description="Marchand de biens en auto-entrepreneur : pourquoi c'est légalement impossible (article 50-0 du CGI), les raisons qui condamnent la micro et le bon statut à choisir (SAS, SASU)."
+  h1="Marchand de biens en auto-entrepreneur : est-ce possible ?"
+  lead="C'est l'une des premières questions que se pose tout futur marchand de biens : peut-on se lancer en auto-entrepreneur ? La réponse est non, et ce n'est pas qu'une question de plafond. Voici ce que dit la loi, pourquoi la micro est inadaptée et quel statut choisir à la place."
+  reading="7 min"
+  image="/img/marchand-de-biens-auto-entrepreneur.jpg"
+  imageAlt="Statut juridique du marchand de biens : l'auto-entrepreneur est exclu"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Marchand de biens en auto-entrepreneur' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li><strong>Non</strong>, l'auto-entrepreneur est <strong>légalement incompatible</strong> avec le marchand de biens (article 50-0 du CGI).</li>
+      <li>Même sans cette interdiction, la micro serait inadaptée : <strong>plafond de CA</strong>, <strong>TVA non récupérable</strong>, <strong>responsabilité illimitée</strong>.</li>
+      <li>Impossible d'y <strong>déduire les travaux et les charges</strong>, qui font pourtant la marge du métier.</li>
+      <li>La bonne solution : une <strong>société commerciale</strong> (SAS, SASU, SARL ou EURL).</li>
+      <li>La <strong>SCI</strong> est aussi à écarter : son objet est civil, pas commercial.</li>
+    </ul>
+  </div>
+
+  <h2>Peut-on être marchand de biens en auto-entrepreneur ?</h2>
+  <p>
+    Non, et la loi ne laisse aucune ambiguïté. L'activité d'achat-revente de biens immobiliers est <strong>expressément exclue du régime de la micro-entreprise</strong> par l'article 50-0 du Code général des impôts. Le
+    statut d'auto-entrepreneur (qui n'est qu'une variante du régime micro) est donc tout simplement incompatible avec le
+    métier de <a href="/marchand-de-biens-definition/">marchand de biens</a>. Ce n'est pas une zone grise : c'est une
+    interdiction claire.
+  </p>
+
+  <h2>Pourquoi la loi l'exclut</h2>
+  <p>
+    Le marchand de biens exerce une <strong>activité commerciale</strong> : il achète en son nom, de façon habituelle et dans
+    un but spéculatif, pour revendre avec une marge. Ses bénéfices relèvent des BIC (bénéfices industriels et commerciaux,
+    article 35 du CGI). Or le régime micro-BIC est réservé à certaines activités et exclut précisément l'achat-revente
+    d'immeubles. La nature même de l'activité — commerciale, à fort capital, avec TVA immobilière — est incompatible avec la
+    logique simplifiée de la micro-entreprise.
+  </p>
+
+  <h2>Même sans l'interdiction, 4 raisons qui condamnent la micro</h2>
+  <p>À supposer que ce soit permis, le statut resterait un mauvais choix pour ce métier :</p>
+  <table>
+    <thead>
+      <tr><th>Contrainte de la micro</th><th>Conséquence pour le marchand de biens</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Plafond de chiffre d'affaires</td><td>Franchi dès la première opération immobilière</td></tr>
+      <tr><td>TVA non récupérable</td><td>Perte de la TVA sur les travaux et les achats</td></tr>
+      <tr><td>Responsabilité illimitée</td><td>Patrimoine personnel exposé aux dettes</td></tr>
+      <tr><td>Pas de déduction des charges</td><td>Travaux, frais de notaire et intérêts non déductibles</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Ce dernier point est rédhibitoire : la marge du marchand de biens se construit en déduisant les travaux et les frais du
+    prix de revient. Sans cette déduction, le calcul de rentabilité s'effondre.
+  </p>
+
+  <h2>La bonne solution : la société commerciale</h2>
+  <p>
+    Le marchand de biens doit exercer via une <strong>société commerciale à responsabilité limitée</strong>. Quatre formes
+    reviennent le plus souvent :
+  </p>
+  <ul>
+    <li><strong>La SAS</strong> et sa version solo la <strong>SASU</strong> : les plus souples et les plus courantes, avec un régime social d'assimilé salarié pour le dirigeant.</li>
+    <li><strong>La SARL</strong> et sa version solo l'<strong>EURL</strong> : plus encadrées, adaptées aux projets familiaux ou au dirigeant qui préfère le régime des indépendants (TNS).</li>
+  </ul>
+  <p>
+    Toutes protègent votre patrimoine personnel, permettent de récupérer la TVA et de déduire les charges. Pour comparer les
+    options en détail, voyez notre guide sur le <a href="/statut-juridique-marchand-de-biens/">statut juridique du marchand de
+    biens</a>.
+  </p>
+
+  <h2>Et la SCI ?</h2>
+  <p>
+    C'est l'autre fausse bonne idée. La société civile immobilière a un <strong>objet civil</strong>, incompatible avec une
+    activité commerciale d'achat-revente. L'utiliser pour acheter puis revendre expose à une <strong>requalification
+    fiscale</strong> en BIC, avec rappel d'impôt, de TVA et pénalités. La SCI sert à détenir et gérer un patrimoine, pas à le
+    revendre rapidement.
+  </p>
+
+  <h2>La fiscalité une fois en société</h2>
+  <p>
+    En société à l'impôt sur les sociétés, les bénéfices sont imposés à <strong>15 % jusqu'à 42 500 €</strong>, puis à 25 %
+    au-delà. S'ajoute la <a href="/tva-marchand-de-biens/">TVA immobilière</a> (sur la marge ou sur le prix total selon
+    l'opération) et l'imposition de la <a href="/plus-value-marchand-de-biens/">plus-value professionnelle</a>. Une structure
+    commerciale permet d'optimiser légalement cette fiscalité, ce que la micro interdit.
+  </p>
+
+  <h2>Comment se lancer correctement</h2>
+  <p>
+    La marche à suivre est simple : oubliez l'auto-entrepreneur, créez une SAS ou une SASU, immatriculez-vous au registre du
+    commerce, et cadrez votre fiscalité avec un comptable spécialisé avant la première acquisition. C'est le point de départ
+    obligé pour <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> sur des bases solides — et le moyen le
+    plus sûr d'éviter une requalification qui coûterait bien plus cher que le temps gagné au démarrage.
+  </p>
+</ArticleLayout>
