@@ -90,6 +90,13 @@ export const RETENIR = {
     "La bonne solution : une société commerciale (SAS, SASU, SARL ou EURL).",
     "La SCI est aussi à écarter (objet civil) : risque de requalification en BIC.",
   ],
+  'vente-a-la-decoupe': [
+    "La vente à la découpe consiste à diviser un bien (immeuble ou grand appartement) en lots vendus séparément.",
+    "Elle crée de la marge car la somme des lots vaut souvent plus que le bien entier (prix au m² des petites surfaces).",
+    "Cadre légal : surface minimale d'environ 14 m² par lot et droit de préemption des locataires (renforcé au-delà de 5 logements).",
+    "Étapes : géomètre (lots, tantièmes), notaire (règlement + mise en copropriété), DTG, mise à jour fiscale.",
+    "Les coûts (géomètre, notaire, travaux) doivent rester inférieurs à la valeur créée : à valider par un calcul de rentabilité.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

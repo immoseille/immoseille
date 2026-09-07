@@ -110,6 +110,15 @@ export const articles = [
     date: '4 septembre 2026',
     excerpt: "Pourquoi l'auto-entrepreneur est légalement impossible pour un marchand de biens (article 50-0 du CGI) et quel statut choisir à la place.",
   },
+  {
+    slug: 'vente-a-la-decoupe',
+    title: 'Vente à la découpe : diviser pour mieux revendre',
+    image: '/img/vente-a-la-decoupe.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '7 septembre 2026',
+    excerpt: "Diviser un immeuble ou un grand appartement en lots pour revendre séparément : pourquoi c'est rentable, le cadre légal et les étapes.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

@@ -1,0 +1,110 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Qu'est-ce que la vente à la découpe ?",
+    r: "La vente à la découpe, ou vente par lots, consiste à diviser un bien immobilier (grand appartement ou immeuble) en plusieurs lots vendus séparément. Un grand appartement devient plusieurs studios, un immeuble devient une copropriété où chaque logement se vend individuellement. C'est une stratégie de création de valeur très utilisée par les marchands de biens.",
+  },
+  {
+    q: "Pourquoi la vente à la découpe est-elle rentable ?",
+    r: "Parce que la somme des lots vaut souvent plus que le bien entier. Les petites surfaces se vendent à un prix au m² plus élevé et touchent davantage d'acheteurs (notamment les investisseurs locatifs). En divisant, le marchand de biens maximise le prix de sortie global plutôt que de brader un grand bien difficile à vendre.",
+  },
+  {
+    q: "Quelles sont les règles légales à respecter ?",
+    r: "Chaque lot doit respecter une surface minimale (au moins 14 m²). Si des locataires occupent le bien, ils bénéficient d'un droit de préemption — renforcé pour les immeubles de plus de cinq logements — et doivent être notifiés des conditions de vente. Le non-respect de ce droit peut entraîner la nullité de la vente.",
+  },
+  {
+    q: "Quelles démarches pour vendre à la découpe ?",
+    r: "Il faut faire intervenir un géomètre (relevés, délimitation des lots, tantièmes), un notaire (règlement de copropriété et mise en copropriété), réaliser un Diagnostic Technique Global (DTG) et mettre à jour la situation fiscale. Les lots ne peuvent être vendus qu'une fois la copropriété légalement créée.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Vente à la découpe : la stratégie du marchand de biens"
+  description="Vente à la découpe immobilier : définition, pourquoi elle crée de la marge, cadre légal (surface minimale, droit de préemption des locataires) et les étapes de la division en lots."
+  h1="Vente à la découpe : diviser pour mieux revendre"
+  lead="Acheter un immeuble ou un grand appartement, le diviser en lots et revendre chaque logement séparément : la vente à la découpe est l'une des opérations les plus rentables du marchand de biens. Voici comment elle crée de la marge, le cadre légal à respecter et les étapes concrètes."
+  reading="8 min"
+  image="/img/vente-a-la-decoupe.jpg"
+  imageAlt="Immeuble divisé en plusieurs lots pour une vente à la découpe"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Vente à la découpe' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>La vente à la découpe = <strong>diviser un bien en lots</strong> vendus séparément (par lots).</li>
+      <li>Elle crée de la marge car la <strong>somme des lots vaut plus</strong> que le bien entier.</li>
+      <li>Cadre légal : <strong>surface minimale d'environ 14 m²</strong> par lot, <strong>droit de préemption des locataires</strong>.</li>
+      <li>Étapes clés : géomètre, <strong>mise en copropriété</strong> par notaire, DTG, mise à jour fiscale.</li>
+      <li>Points de vigilance : coûts (géomètre, notaire, travaux) à intégrer au calcul de marge.</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce que la vente à la découpe ?</h2>
+  <p>
+    La vente à la découpe, aussi appelée <strong>vente par lots</strong>, consiste à diviser un bien immobilier en plusieurs
+    unités vendues séparément. Un grand appartement est transformé en plusieurs studios ou T1 ; un immeuble entier devient une <strong>copropriété</strong> où chaque logement se commercialise individuellement. C'est une technique de <strong>création de valeur</strong> centrale dans le métier de marchand de biens, cousine bâtie de la division
+    parcellaire d'un terrain.
+  </p>
+
+  <h2>Pourquoi c'est une stratégie rentable</h2>
+  <p>
+    Le principe tient en une phrase : <strong>la somme des parties vaut plus que le tout</strong>. Plusieurs mécanismes
+    jouent en faveur du marchand de biens :
+  </p>
+  <ul>
+    <li><strong>Un prix au m² plus élevé sur les petites surfaces :</strong> un studio se vend proportionnellement plus cher qu'un grand appartement.</li>
+    <li><strong>Une cible d'acheteurs élargie :</strong> les petits lots attirent les investisseurs locatifs, plus nombreux que les acheteurs d'un immeuble entier.</li>
+    <li><strong>Une vente facilitée :</strong> un grand bien peine à trouver preneur ; découpé, il se vend plus vite et sans brader le prix global.</li>
+  </ul>
+  <p>
+    C'est donc un puissant levier de <a href="/plus-value-marchand-de-biens/">plus-value</a>, à condition que les coûts de
+    la découpe restent inférieurs au gain qu'elle génère.
+  </p>
+
+  <h2>Un exemple chiffré</h2>
+  <p>
+    Prenons un immeuble acheté <strong>450 000 €</strong>, avec <strong>150 000 €</strong> de travaux, soit un prix de
+    revient de 600 000 €. Divisé en 4 appartements revendus <strong>200 000 € chacun</strong>, il génère <strong>800 000 €</strong> de prix de vente. La valeur créée par la découpe est ici de 200 000 € bruts, avant frais et
+    fiscalité. Le même immeuble vendu en bloc n'aurait probablement pas atteint ce prix global : c'est tout l'intérêt de
+    l'opération.
+  </p>
+
+  <h2>Le cadre légal à respecter</h2>
+  <p>La vente à la découpe est encadrée, notamment pour protéger les locataires en place :</p>
+  <ul>
+    <li><strong>Surface minimale :</strong> chaque lot doit respecter une surface d'habitation minimale (au moins 14 m²), faute de quoi il ne peut être commercialisé.</li>
+    <li><strong>Droit de préemption des locataires :</strong> si le bien est loué, les locataires doivent être notifiés des conditions de vente et bénéficient d'un droit d'achat prioritaire. Ce droit est renforcé pour les immeubles de plus de cinq logements.</li>
+    <li><strong>Sanction :</strong> le non-respect du droit de préemption peut entraîner la nullité de la vente conclue avec un autre acquéreur.</li>
+  </ul>
+  <p>Ces règles ne sont pas des détails : les ignorer peut faire capoter toute l'opération.</p>
+
+  <h2>Les étapes d'une vente à la découpe</h2>
+  <p>La division suit un enchaînement précis, à intégrer dès le <a href="/monter-une-operation-marchand-de-biens/">montage de l'opération</a> :</p>
+  <ol>
+    <li><strong>Le géomètre</strong> réalise les relevés, délimite les futurs lots et calcule les tantièmes.</li>
+    <li><strong>Le notaire</strong> rédige le règlement de copropriété et acte la mise en copropriété.</li>
+    <li><strong>Le Diagnostic Technique Global (DTG)</strong> est réalisé sur l'immeuble.</li>
+    <li><strong>La situation fiscale</strong> est mise à jour (impôts fonciers, nouveaux lots au cadastre).</li>
+    <li><strong>La commercialisation</strong> des lots : ils peuvent être proposés en amont, mais ne se vendent qu'une fois la copropriété légalement créée.</li>
+  </ol>
+
+  <h2>Les coûts et points de vigilance</h2>
+  <p>
+    La découpe a un prix : honoraires de géomètre, d'architecte le cas échéant, de notaire, et travaux de mise aux normes ou
+    de séparation des lots (compteurs, accès, parties communes). Avant de se lancer, il faut vérifier que la valeur créée
+    dépasse nettement ces coûts. C'est exactement ce que valide un <a href="/calcul-rentabilite-marchand-de-biens/">calcul de
+    rentabilité</a> rigoureux, poste par poste, avant même l'achat.
+  </p>
+
+  <h2>Découpe d'un bâti ou division d'un terrain ?</h2>
+  <p>
+    La vente à la découpe s'applique au <strong>bâti</strong> (appartement ou immeuble transformé en lots de copropriété).
+    Sa cousine, la <a href="/diviser-un-terrain/">division parcellaire</a>, s'applique au <strong>foncier</strong> (un terrain
+    découpé en plusieurs parcelles). Les deux reposent sur la même logique — créer plusieurs biens vendables là où il n'y en
+    avait qu'un — et figurent parmi les opérations préférées des marchands de biens pour leur fort potentiel de marge.
+  </p>
+</ArticleLayout>

@@ -37,6 +37,7 @@ export const MAILLAGE = [
   { needle: 'achat-revente', slug: 'achat-revente-immobilier' },
   { needle: 'division parcellaire', slug: 'diviser-un-terrain' },
   { needle: 'diviser un terrain', slug: 'diviser-un-terrain' },
+  { needle: 'vente à la découpe', slug: 'vente-a-la-decoupe' },
   { needle: 'calcul de rentabilité', slug: 'calcul-rentabilite-marchand-de-biens' },
   { needle: 'simulateur de rentabilité', slug: 'simulateur-rentabilite-marchand-de-biens' },
   { needle: 'rentabilité locative', slug: 'calcul-rentabilite-immobiliere' },
