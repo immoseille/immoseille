@@ -97,6 +97,13 @@ export const RETENIR = {
     "Étapes : géomètre (lots, tantièmes), notaire (règlement + mise en copropriété), DTG, mise à jour fiscale.",
     "Les coûts (géomètre, notaire, travaux) doivent rester inférieurs à la valeur créée : à valider par un calcul de rentabilité.",
   ],
+  'trouver-un-marchand-de-biens': [
+    "Vendre à un marchand de biens = vendre vite, en l'état et sans travaux, souvent sans condition de crédit.",
+    "Où en trouver : notaire, agent immobilier, bouche-à-oreille, annuaires/plateformes, LinkedIn, recherche locale.",
+    "Le prix d'achat est inférieur au marché : c'est la contrepartie de la rapidité et de l'absence d'aléa.",
+    "Vérifier le sérieux : société immatriculée au RCS, assurance RC Pro, références d'opérations.",
+    "Toujours faire estimer son bien au prix du marché avant d'accepter une offre.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

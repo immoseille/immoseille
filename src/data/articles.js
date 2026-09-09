@@ -119,6 +119,15 @@ export const articles = [
     date: '7 septembre 2026',
     excerpt: "Diviser un immeuble ou un grand appartement en lots pour revendre séparément : pourquoi c'est rentable, le cadre légal et les étapes.",
   },
+  {
+    slug: 'trouver-un-marchand-de-biens',
+    title: 'Trouver un marchand de biens',
+    image: '/img/trouver-un-marchand-de-biens.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '9 septembre 2026',
+    excerpt: "Vendre vite à un marchand de biens : où en trouver un, comment reconnaître un professionnel sérieux, à quel prix il achète et les pièges.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

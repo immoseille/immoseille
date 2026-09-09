@@ -1,0 +1,119 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Où trouver un marchand de biens ?",
+    r: "Plusieurs canaux fonctionnent : le bouche-à-oreille, votre notaire ou votre agent immobilier (qui en connaissent), les annuaires et plateformes spécialisées, LinkedIn et les réseaux professionnels, ou une simple recherche locale « marchand de biens + votre ville ». Privilégiez un professionnel actif dans votre secteur géographique.",
+  },
+  {
+    q: "Pourquoi vendre à un marchand de biens ?",
+    r: "Pour la rapidité et la simplicité : le marchand de biens achète en l'état, sans condition suspensive de crédit dans bien des cas, et sans que vous ayez à réaliser de travaux. C'est utile pour vendre vite (succession, mutation, bien dégradé, séparation). La contrepartie est un prix généralement inférieur au marché.",
+  },
+  {
+    q: "À quel prix un marchand de biens achète-t-il ?",
+    r: "En dessous du prix du marché, car il doit dégager une marge après travaux et frais. La décote dépend de l'état du bien, des travaux à prévoir et du marché local. En échange, vous vendez vite, en l'état et sans aléa. Faites toujours estimer votre bien au préalable pour juger la pertinence de l'offre.",
+  },
+  {
+    q: "Comment reconnaître un marchand de biens sérieux ?",
+    r: "Vérifiez qu'il exerce via une société immatriculée au registre du commerce, qu'il dispose d'une assurance responsabilité civile professionnelle, et demandez des références d'opérations réalisées. Un professionnel fiable est transparent sur son offre, ses délais et le financement de l'acquisition.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Trouver un marchand de biens : où chercher et comment choisir"
+  description="Trouver un marchand de biens pour vendre vite : où en chercher un, comment reconnaître un professionnel sérieux, à quel prix il achète et les points de vigilance."
+  h1="Trouver un marchand de biens : le guide"
+  lead="Vendre vite, en l'état et sans travaux : le marchand de biens est une solution pour les propriétaires pressés. Encore faut-il en trouver un, et surtout un professionnel fiable. Voici où chercher, comment reconnaître un marchand de biens sérieux et à quoi vous attendre côté prix."
+  reading="7 min"
+  image="/img/trouver-un-marchand-de-biens.jpg"
+  imageAlt="Vendre son bien à un marchand de biens : poignée de main entre vendeur et acquéreur"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Trouver un marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Vendre à un <a href="/marchand-de-biens-definition/">marchand de biens</a>, c'est vendre <strong>vite et en l'état</strong>, sans travaux.</li>
+      <li>Où le trouver : <strong>notaire, agent immobilier, bouche-à-oreille, annuaires, LinkedIn</strong>, recherche locale.</li>
+      <li>Le prix est <strong>inférieur au marché</strong> : c'est la contrepartie de la rapidité et de l'absence d'aléa.</li>
+      <li>Vérifiez le sérieux : <strong>société immatriculée, assurance RC Pro, références</strong>.</li>
+      <li>Faites toujours <strong>estimer votre bien</strong> avant d'accepter une offre.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi vendre à un marchand de biens ?</h2>
+  <p>
+    Le marchand de biens est un professionnel qui <a href="/achat-revente-immobilier/">achète pour revendre</a> après
+    valorisation. Contrairement à un particulier, il achète <strong>pour son propre compte</strong> et décide vite. Vendre à
+    un marchand de biens présente des avantages concrets :
+  </p>
+  <ul>
+    <li><strong>La rapidité :</strong> une décision d'achat en quelques jours, sans attendre un acquéreur classique.</li>
+    <li><strong>La vente en l'état :</strong> pas de travaux à réaliser, même pour un bien dégradé ou une passoire énergétique.</li>
+    <li><strong>La simplicité :</strong> souvent sans condition suspensive de crédit, l'aléa du financement disparaît.</li>
+    <li><strong>La discrétion :</strong> une transaction directe, utile en cas de succession, de séparation ou de mutation.</li>
+  </ul>
+  <p>La contrepartie est claire : un <strong>prix inférieur au marché</strong>, puisque le professionnel doit dégager une marge.</p>
+
+  <h2>Où trouver un marchand de biens ?</h2>
+  <p>Plusieurs canaux permettent d'en identifier un, de préférence actif dans votre secteur :</p>
+  <ul>
+    <li><strong>Votre notaire :</strong> il connaît les marchands de biens actifs localement et peut vous orienter.</li>
+    <li><strong>Les agences immobilières :</strong> elles travaillent régulièrement avec eux.</li>
+    <li><strong>Le bouche-à-oreille :</strong> entourage, artisans, autres propriétaires ayant déjà vendu.</li>
+    <li><strong>Les annuaires et plateformes spécialisées</strong> dans l'achat rapide de biens.</li>
+    <li><strong>LinkedIn et les réseaux professionnels :</strong> beaucoup de marchands de biens y sont présents.</li>
+    <li><strong>Une recherche locale</strong> du type « marchand de biens + votre ville ».</li>
+  </ul>
+
+  <h2>Comment reconnaître un marchand de biens sérieux ?</h2>
+  <p>
+    Le métier n'étant pas réglementé, la vigilance s'impose. Quelques repères d'un professionnel fiable :
+  </p>
+  <ul>
+    <li><strong>Une société immatriculée</strong> au registre du commerce et des sociétés (RCS).</li>
+    <li><strong>Une assurance responsabilité civile professionnelle</strong> — un point détaillé dans notre guide sur l'<a href="/assurance-marchand-de-biens/">assurance du marchand de biens</a>.</li>
+    <li><strong>Des références</strong> d'opérations déjà menées, que vous pouvez demander.</li>
+    <li><strong>De la transparence</strong> sur l'offre, les délais et le financement de l'acquisition.</li>
+  </ul>
+
+  <h2>À quel prix un marchand de biens achète-t-il ?</h2>
+  <p>
+    Toujours <strong>en dessous du prix du marché</strong>. Le marchand de biens calcule son offre à rebours : prix de
+    revente estimé, moins les travaux, les frais et sa marge. La décote dépend de l'état du bien et des travaux à prévoir.
+    Ce n'est pas une mauvaise affaire en soi : vous échangez une partie du prix contre la <strong>rapidité, la vente en
+    l'état et l'absence d'aléa</strong>. Le bon réflexe : faites estimer votre bien au prix du marché avant de comparer avec
+    l'offre reçue.
+  </p>
+
+  <h2>Vendre à un marchand de biens : avantages et limites</h2>
+  <table>
+    <thead>
+      <tr><th>Avantages</th><th>Limites</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Vente rapide (quelques jours)</td><td>Prix inférieur au marché</td></tr>
+      <tr><td>Achat en l'état, sans travaux</td><td>Cible surtout les biens à potentiel</td></tr>
+      <tr><td>Souvent sans condition de crédit</td><td>Nécessite de vérifier le sérieux du pro</td></tr>
+      <tr><td>Transaction discrète et directe</td><td>Marge de négociation limitée</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Les points de vigilance</h2>
+  <p>
+    Méfiez-vous des offres anormalement basses présentées comme « exceptionnelles », et lisez attentivement les clauses du
+    compromis (délais, conditions, pénalités). Ne confondez pas non plus le marchand de biens avec un <a href="/marchand-de-biens-ou-agent-immobilier/">agent immobilier</a> : le premier achète votre bien, le second cherche
+    un acheteur pour vous. Pour une vente sereine, comparez toujours plusieurs offres et faites-vous accompagner par votre
+    notaire.
+  </p>
+
+  <h2>Et si vous vouliez devenir marchand de biens ?</h2>
+  <p>
+    Beaucoup de propriétaires qui découvrent ce métier en vendant se demandent ensuite comment passer de l'autre côté. Si
+    l'achat-revente vous attire, découvrez comment <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> :
+    c'est un métier accessible, sans diplôme obligatoire, mais qui demande méthode et préparation pour réussir sa première
+    opération.
+  </p>
+</ArticleLayout>
