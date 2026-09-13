@@ -1,0 +1,119 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Peut-on transformer un local commercial en logement ?",
+    r: "Oui, la loi l'autorise, mais l'opération constitue un changement de destination soumis à autorisation d'urbanisme : déclaration préalable si les travaux ne modifient pas la façade ni les structures porteuses, permis de construire dans le cas contraire. Le projet doit être conforme au PLU de la commune, qui peut restreindre ou interdire la transformation sur certaines parcelles.",
+  },
+  {
+    q: "Pourquoi cette opération est-elle rentable pour un marchand de biens ?",
+    r: "Parce qu'un local commercial se vend souvent moins cher au m² qu'un logement, surtout dans les secteurs où l'offre commerciale est excédentaire. En transformant le local en habitation, le marchand de biens crée de la valeur : l'écart de prix entre les deux usages, diminué des travaux et des frais, constitue sa marge.",
+  },
+  {
+    q: "Quelles autorisations faut-il obtenir ?",
+    r: "Une déclaration préalable de travaux suffit si le changement de destination n'affecte ni la façade ni les structures porteuses ; un permis de construire est requis si des modifications structurelles ou de façade sont prévues. Dans une copropriété, l'accord de l'assemblée générale peut être nécessaire si le règlement définit la destination de l'immeuble.",
+  },
+  {
+    q: "Quels sont les pièges à vérifier avant d'acheter ?",
+    r: "Trois points bloquants : le PLU (la destination habitation doit être autorisée sur la parcelle), le linéaire commercial (qui impose parfois de conserver un commerce en rez-de-chaussée sur rue), et les règles de stationnement (l'habitation exige souvent plus de places que le commerce). Ces vérifications se font avant l'achat, jamais après.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Transformer un local commercial en logement : le guide"
+  description="Transformer un local commercial en logement : pourquoi c'est une opération rentable pour le marchand de biens, les autorisations (PLU, DP, permis), les pièges et la fiscalité."
+  h1="Transformer un local commercial en logement"
+  lead="Acheter un local commercial souvent décoté, le transformer en habitation qui vaut plus cher : le changement de destination est l'une des opérations les plus rentables du marchand de biens. Voici pourquoi elle crée de la marge, les autorisations à obtenir et les pièges à vérifier avant d'acheter."
+  reading="8 min"
+  image="/img/transformer-local-commercial-en-logement.jpg"
+  imageAlt="Local commercial en cours de transformation en logement"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Transformer un local commercial en logement' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Transformer un local commercial en logement = un <strong>changement de destination</strong> soumis à autorisation.</li>
+      <li>C'est rentable car le <strong>commercial se vend moins cher au m²</strong> que l'habitation : l'écart crée la marge.</li>
+      <li>Autorisation : <strong>déclaration préalable</strong> (sans modif façade/structure) ou <strong>permis de construire</strong>.</li>
+      <li>À vérifier avant d'acheter : <strong>PLU, linéaire commercial, stationnement, copropriété</strong>.</li>
+      <li>Fiscalité : taxe d'aménagement, déclaration au cadastre, mais <strong>exonération de CET</strong>.</li>
+    </ul>
+  </div>
+
+  <h2>Le changement de destination, qu'est-ce que c'est ?</h2>
+  <p>
+    En urbanisme, chaque construction a une <strong>destination</strong> : habitation, commerce, bureau, entrepôt… Passer
+    d'une catégorie à une autre — ici, de « commerce » à « habitation » — s'appelle un <strong>changement de
+    destination</strong>. Ce n'est pas une simple rénovation : c'est une opération réglementée, encadrée par le Code de
+    l'urbanisme, qui suppose une autorisation et le respect des règles locales. C'est aussi l'un des grands leviers de
+    création de valeur du marchand de biens, au même titre que la <a href="/vente-a-la-decoupe/">vente à la découpe</a>.
+  </p>
+
+  <h2>Pourquoi c'est une opération rentable</h2>
+  <p>
+    Le principe est simple : un <strong>local commercial se vend souvent moins cher au m²</strong> qu'un logement, surtout
+    dans les villes où l'offre commerciale est excédentaire (rez-de-chaussée vacants, boutiques qui peinent à se louer). En
+    le transformant en habitation, on le fait basculer vers un marché plus large et plus cher.
+  </p>
+  <p>
+    La <a href="/plus-value-marchand-de-biens/">valeur créée</a> correspond à l'écart de prix entre les deux usages, moins
+    les travaux et les frais. Autre atout : le prix d'entrée plus bas réduit le capital immobilisé. C'est une opération à
+    intégrer très en amont dans le <a href="/monter-une-operation-marchand-de-biens/">montage de l'opération</a>.
+  </p>
+
+  <h2>Les autorisations d'urbanisme</h2>
+  <p>Le changement de destination est toujours soumis à autorisation. Deux cas :</p>
+  <ul>
+    <li><strong>Déclaration préalable (DP)</strong> : si les travaux ne modifient ni la façade ni les structures porteuses.</li>
+    <li><strong>Permis de construire (PC)</strong> : si le projet touche la façade ou les structures porteuses.</li>
+  </ul>
+  <p>
+    Dans tous les cas, l'autorisation n'est délivrée que si le projet est <strong>conforme au PLU</strong> (plan local
+    d'urbanisme) de la commune. En copropriété, si le règlement définit la destination de l'immeuble, un accord de
+    l'assemblée générale des copropriétaires peut être requis.
+  </p>
+
+  <h2>Les pièges à vérifier avant d'acheter</h2>
+  <p>C'est ici que se jouent les opérations : ces vérifications se font <strong>avant la signature</strong>, pas après.</p>
+  <ul>
+    <li><strong>Le PLU :</strong> la destination habitation doit être autorisée sur la parcelle. Certaines zones l'interdisent.</li>
+    <li><strong>Le linéaire commercial :</strong> le PLU impose parfois de conserver un commerce en rez-de-chaussée sur rue. Les locaux concernés ne peuvent alors pas être transformés.</li>
+    <li><strong>Le stationnement :</strong> l'habitation exige souvent plus de places que le commerce ; l'impossibilité de les créer peut bloquer le projet.</li>
+    <li><strong>La copropriété :</strong> vérifier le règlement et la nécessité d'un vote en assemblée générale.</li>
+    <li><strong>Le bail en cours :</strong> un local loué suppose de résilier le bail commercial (avec, le cas échéant, une indemnité d'éviction).</li>
+  </ul>
+
+  <h2>Les travaux de mise aux normes d'habitation</h2>
+  <p>
+    Un local commercial n'est presque jamais habitable en l'état. Il faut le mettre aux <strong>normes de décence</strong> :
+    alimentation en eau potable, évacuation des eaux usées, sanitaires, chauffage, cuisine équipée d'au moins un appareil de
+    cuisson, isolation et ventilation correctes. Ces travaux, à chiffrer précisément, pèsent lourd dans le <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a> : c'est souvent eux qui font ou défont la
+    marge de l'opération.
+  </p>
+
+  <h2>La fiscalité du changement de destination</h2>
+  <p>Transformer un local en logement a des conséquences fiscales à anticiper :</p>
+  <ul>
+    <li><strong>La taxe d'aménagement</strong> est due au titre des travaux.</li>
+    <li><strong>Les impôts fonciers</strong> sont recalculés selon le nouvel usage.</li>
+    <li><strong>La CET</strong> (contribution économique territoriale) n'est plus due, puisque l'activité commerciale disparaît.</li>
+    <li><strong>La déclaration au cadastre</strong> du changement doit être faite dans les 90 jours suivant sa réalisation.</li>
+  </ul>
+
+  <h2>Les étapes, en synthèse</h2>
+  <ol>
+    <li>Vérifier le PLU, le linéaire commercial et le stationnement <strong>avant d'acheter</strong>.</li>
+    <li>Le cas échéant, résilier le bail commercial et obtenir l'accord de la copropriété.</li>
+    <li>Déposer la déclaration préalable ou le permis de construire.</li>
+    <li>Réaliser les travaux de mise aux normes d'habitation.</li>
+    <li>Déclarer le changement au cadastre, puis revendre le logement valorisé.</li>
+  </ol>
+  <p>
+    Bien menée, cette opération transforme un actif mal-aimé en logement recherché — un classique de
+    l'<a href="/achat-revente-immobilier/">achat-revente</a> à forte valeur ajoutée, à condition d'avoir sécurisé
+    l'urbanisme en amont.
+  </p>
+</ArticleLayout>

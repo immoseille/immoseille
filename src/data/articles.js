@@ -128,6 +128,15 @@ export const articles = [
     date: '9 septembre 2026',
     excerpt: "Vendre vite à un marchand de biens : où en trouver un, comment reconnaître un professionnel sérieux, à quel prix il achète et les pièges.",
   },
+  {
+    slug: 'transformer-local-commercial-en-logement',
+    title: 'Transformer un local commercial en logement',
+    image: '/img/transformer-local-commercial-en-logement.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '13 septembre 2026',
+    excerpt: "Le changement de destination : pourquoi c'est rentable, les autorisations (PLU, déclaration, permis), les pièges à vérifier et la fiscalité.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

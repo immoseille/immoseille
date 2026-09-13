@@ -104,6 +104,13 @@ export const RETENIR = {
     "Vérifier le sérieux : société immatriculée au RCS, assurance RC Pro, références d'opérations.",
     "Toujours faire estimer son bien au prix du marché avant d'accepter une offre.",
   ],
+  'transformer-local-commercial-en-logement': [
+    "Transformer un local commercial en logement est un changement de destination soumis à autorisation d'urbanisme.",
+    "C'est rentable car le commercial se vend souvent moins cher au m² que l'habitation : l'écart crée la marge.",
+    "Déclaration préalable si pas de modif façade/structure ; permis de construire sinon. Conformité au PLU obligatoire.",
+    "Pièges à vérifier avant d'acheter : PLU, linéaire commercial, stationnement, règlement de copropriété, bail en cours.",
+    "Fiscalité : taxe d'aménagement et déclaration au cadastre (90 jours), mais exonération de CET.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",
