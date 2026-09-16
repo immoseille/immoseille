@@ -137,6 +137,15 @@ export const articles = [
     date: '13 septembre 2026',
     excerpt: "Le changement de destination : pourquoi c'est rentable, les autorisations (PLU, déclaration, permis), les pièges à vérifier et la fiscalité.",
   },
+  {
+    slug: 'immobilier-off-market',
+    title: 'Immobilier off-market : trouver des biens hors annonces',
+    image: '/img/immobilier-off-market.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '16 septembre 2026',
+    excerpt: "Le marché caché du marchand de biens : ce qu'est le off-market, pourquoi c'est stratégique et comment sourcer des biens avant tout le monde.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

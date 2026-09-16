@@ -1,0 +1,107 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Qu'est-ce que l'immobilier off-market ?",
+    r: "L'off-market désigne les biens vendus sans annonce publique, en dehors des portails et des vitrines d'agence. Ils s'échangent de gré à gré, via des réseaux de professionnels ou le bouche-à-oreille. On estime qu'ils représentent environ 5 à 10 % des transactions, une part qui grimpe sur les marchés tendus et pour les biens d'exception.",
+  },
+  {
+    q: "Pourquoi le off-market est-il important pour un marchand de biens ?",
+    r: "Parce que la marge se crée à l'achat. Accéder à un bien avant qu'il ne soit diffusé, c'est acheter avec moins de concurrence et davantage de marge de négociation. Le off-market est le terrain de chasse privilégié des marchands de biens : les meilleures opérations se signent souvent avant même d'apparaître en annonce.",
+  },
+  {
+    q: "Comment trouver des biens off-market ?",
+    r: "En construisant un réseau : notaires, agents immobiliers, syndics, artisans, mais aussi la prospection directe (courriers, boîtage), les successions et indivisions, et le bouche-à-oreille. L'accès au off-market n'est pas magique : il se mérite par une présence régulière et une relation de confiance avec les apporteurs d'affaires.",
+  },
+  {
+    q: "Un bien off-market est-il forcément une bonne affaire ?",
+    r: "Non. Un bien hors marché n'est pas automatiquement décoté : certains vendeurs surévaluent leur prix justement parce qu'il n'y a pas de comparaison publique. L'avantage réel du off-market est la moindre concurrence, pas la garantie d'un prix bas. Savoir estimer un bien reste indispensable.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Immobilier off-market : trouver des biens avant tout le monde"
+  description="Immobilier off-market : définition, pourquoi c'est stratégique pour le marchand de biens et comment sourcer des biens hors annonces (réseau, notaires, prospection)."
+  h1="Immobilier off-market : le terrain de chasse du marchand de biens"
+  lead="Les meilleures opérations ne sont presque jamais en annonce. L'off-market — ces biens vendus hors des portails — est le nerf de la guerre du marchand de biens, car la marge se crée à l'achat. Voici ce qu'est vraiment le off-market et comment y accéder."
+  reading="8 min"
+  image="/img/immobilier-off-market.jpg"
+  imageAlt="Recherche de biens immobiliers off-market, hors annonces"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Immobilier off-market' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le <strong>off-market</strong> = des biens vendus <strong>hors annonces</strong>, de gré à gré (≈ 5 à 10 % du marché).</li>
+      <li>Stratégique pour le marchand de biens car <strong>la marge se crée à l'achat</strong>, avec moins de concurrence.</li>
+      <li>On y accède par un <strong>réseau</strong> : notaires, agents, syndics, prospection directe, bouche-à-oreille.</li>
+      <li>Attention : off-market <strong>≠ bonne affaire automatique</strong> — savoir estimer reste indispensable.</li>
+      <li>L'accès se <strong>mérite dans la durée</strong> : présence régulière et relation de confiance.</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce que l'immobilier off-market ?</h2>
+  <p>
+    L'off-market, ou « marché caché », regroupe les biens qui se vendent <strong>sans annonce publique</strong> : ni portail,
+    ni vitrine d'agence, ni réseau social. Ils circulent de gré à gré, entre professionnels ou par le bouche-à-oreille. Ce
+    canal reste minoritaire — de l'ordre de 5 à 10 % des transactions — mais sa part augmente sur les marchés tendus et pour
+    les biens d'exception, où la discrétion prime.
+  </p>
+
+  <h2>Pourquoi c'est stratégique pour le marchand de biens</h2>
+  <p>
+    Une règle résume tout le métier : <strong>la marge se crée à l'achat</strong>, pas à la revente. Or c'est précisément ce
+    que permet l'off-market. Accéder à un bien <strong>avant sa diffusion</strong>, c'est :
+  </p>
+  <ul>
+    <li><strong>Moins de concurrence :</strong> pas d'enchère entre acquéreurs, donc plus de marge de négociation.</li>
+    <li><strong>Plus de temps pour analyser :</strong> on n'achète pas dans la précipitation d'une annonce très demandée.</li>
+    <li><strong>Des opportunités invisibles :</strong> successions, divorces, vendeurs pressés qui veulent de la discrétion.</li>
+  </ul>
+  <p>
+    C'est pour cela que le off-market est le terrain de chasse privilégié du marchand de biens : les meilleures <a href="/achat-revente-immobilier/">opérations d'achat-revente</a> se signent souvent avant d'apparaître en vitrine.
+  </p>
+
+  <h2>Où et comment trouver des biens off-market</h2>
+  <p>Le sourcing off-market repose sur des canaux à cultiver en parallèle :</p>
+  <ul>
+    <li><strong>Les notaires :</strong> premiers informés des successions, divorces et ventes discrètes.</li>
+    <li><strong>Les agents immobiliers :</strong> ils testent souvent un bien en off avant de le publier. Être « dans leurs petits papiers » ouvre des portes.</li>
+    <li><strong>Les syndics et gardiens :</strong> au courant des biens en difficulté ou des copropriétaires vendeurs.</li>
+    <li><strong>La prospection directe :</strong> courriers ciblés, boîtage dans les secteurs visés, contact des propriétaires d'immeubles.</li>
+    <li><strong>Les successions et indivisions :</strong> des vendeurs qui privilégient la rapidité et la simplicité.</li>
+    <li><strong>Le bouche-à-oreille et les artisans :</strong> souvent les premiers à savoir qu'un bien va se libérer.</li>
+  </ul>
+  <p>
+    Ce travail de sourcing est une compétence centrale, à intégrer dès le <a href="/monter-une-operation-marchand-de-biens/">montage
+    de l'opération</a> : sans flux régulier d'opportunités, pas d'activité.
+  </p>
+
+  <h2>La nuance à connaître : off-market ≠ bonne affaire</h2>
+  <p>
+    C'est l'erreur du débutant : croire qu'un bien hors marché est forcément décoté. C'est souvent l'inverse. Sans
+    comparaison publique, certains vendeurs <strong>surévaluent</strong> leur prix, et les acheteurs off-market sont parfois
+    moins enclins à négocier. Le vrai avantage du off-market, c'est la <strong>moindre concurrence</strong>, pas la garantie
+    d'un prix bas. D'où l'importance de savoir estimer un bien et de valider chaque opportunité par un <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a> rigoureux avant de s'engager.
+  </p>
+
+  <h2>Construire un réseau de sourcing dans la durée</h2>
+  <p>
+    L'accès au off-market ne s'achète pas : il se construit. Un apporteur d'affaires (notaire, agent, artisan) recontacte en
+    priorité ceux qu'il connaît, en qui il a confiance et qui closent vite. Cela suppose de la <strong>régularité</strong> :
+    faire des visites, tenir ses engagements, rappeler qu'on cherche, traiter les dossiers avec sérieux. C'est un travail de
+    fond qui, avec le temps, fait la différence entre un marchand de biens qui court après les annonces et un professionnel à
+    qui l'on présente les biens en premier.
+  </p>
+
+  <h2>Off-market et marge : l'essentiel</h2>
+  <p>
+    Acheter en off-market, c'est se donner les moyens d'acheter <strong>au bon prix, sans surenchère</strong>. C'est là que
+    se joue la <a href="/plus-value-marchand-de-biens/">plus-value</a> future de l'opération. La stratégie d'un marchand de
+    biens performant tient souvent en une phrase : sécuriser un flux d'opportunités off-market, puis ne retenir que celles
+    dont la rentabilité est démontrée. C'est un pilier du métier que l'on apprend en se formant pour <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a>.
+  </p>
+</ArticleLayout>

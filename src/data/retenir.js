@@ -111,6 +111,13 @@ export const RETENIR = {
     "Pièges à vérifier avant d'acheter : PLU, linéaire commercial, stationnement, règlement de copropriété, bail en cours.",
     "Fiscalité : taxe d'aménagement et déclaration au cadastre (90 jours), mais exonération de CET.",
   ],
+  'immobilier-off-market': [
+    "L'off-market désigne les biens vendus hors annonces, de gré à gré (environ 5 à 10 % du marché).",
+    "C'est stratégique pour le marchand de biens car la marge se crée à l'achat, avec moins de concurrence.",
+    "Canaux de sourcing : notaires, agents immobiliers, syndics, prospection directe, successions, bouche-à-oreille.",
+    "Off-market ≠ bonne affaire automatique : sans comparaison publique, certains biens sont surévalués.",
+    "L'accès se mérite dans la durée, par une relation de confiance avec les apporteurs d'affaires.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",
