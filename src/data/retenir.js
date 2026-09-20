@@ -118,6 +118,13 @@ export const RETENIR = {
     "Off-market ≠ bonne affaire automatique : sans comparaison publique, certains biens sont surévalués.",
     "L'accès se mérite dans la durée, par une relation de confiance avec les apporteurs d'affaires.",
   ],
+  'sci-marchand-de-biens': [
+    "La SCI a un objet civil (article 1845 du Code civil) : elle ne peut pas exercer l'achat-revente habituel.",
+    "Le marchand de biens exerce une activité commerciale : SCI et marchand de biens sont incompatibles.",
+    "Une SCI peut vendre un bien occasionnellement (gestion de patrimoine) sans devenir marchand de biens.",
+    "Deux critères cumulatifs déclenchent la requalification : le caractère habituel et l'intention spéculative (article 35 du CGI).",
+    "Requalification = IS, TVA immobilière, biens en stock, pénalités et effet rétroactif. La bonne structure : SAS, SASU, SARL ou EURL.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

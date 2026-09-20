@@ -146,6 +146,15 @@ export const articles = [
     date: '16 septembre 2026',
     excerpt: "Le marché caché du marchand de biens : ce qu'est le off-market, pourquoi c'est stratégique et comment sourcer des biens avant tout le monde.",
   },
+  {
+    slug: 'sci-marchand-de-biens',
+    title: 'SCI marchand de biens : compatible ou piège ?',
+    image: '/img/sci-marchand-de-biens.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '20 septembre 2026',
+    excerpt: "Pourquoi la SCI est incompatible avec l'achat-revente, quand elle peut vendre sans risque, les critères de requalification et la bonne structure.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

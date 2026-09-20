@@ -15,6 +15,7 @@ export const MAILLAGE = [
 
   // Statut & finance
   { needle: 'statut juridique', slug: 'statut-juridique-marchand-de-biens' },
+  { needle: 'société civile immobilière', slug: 'sci-marchand-de-biens' },
   { needle: 'TVA sur la marge', slug: 'tva-marchand-de-biens' },
   { needle: 'TVA sur marge', slug: 'tva-marchand-de-biens' },
   { needle: 'frais de notaire', slug: 'frais-de-notaire-marchand-de-biens' },

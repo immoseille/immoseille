@@ -1,0 +1,118 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Peut-on être marchand de biens avec une SCI ?",
+    r: "Non, pas pour une activité habituelle d'achat-revente. La SCI a un objet civil (article 1845 du Code civil), alors que le marchand de biens exerce une activité commerciale. Une SCI qui achète et revend de façon répétée et spéculative s'expose à une requalification fiscale. Pour cette activité, il faut une société commerciale (SAS, SASU, SARL ou EURL).",
+  },
+  {
+    q: "Une SCI peut-elle quand même vendre un bien ?",
+    r: "Oui. Vendre un bien de façon occasionnelle, dans le cadre de la gestion normale de son patrimoine, ne fait pas d'une SCI un marchand de biens. Le risque n'apparaît que lorsque les opérations deviennent habituelles et menées dans un but spéculatif. C'est la répétition et l'intention de revendre dès l'achat qui déclenchent la requalification.",
+  },
+  {
+    q: "Quels sont les risques d'une SCI requalifiée en marchand de biens ?",
+    r: "Les conséquences sont lourdes : passage à l'impôt sur les sociétés, soumission à la TVA immobilière, perte du régime des plus-values (les biens sont traités comme du stock), et paiement de pénalités et d'intérêts de retard. L'administration peut de plus remonter plusieurs années en arrière, ce qui rend le redressement très coûteux.",
+  },
+  {
+    q: "Existe-t-il une SCI adaptée à la construction-vente ?",
+    r: "Oui, la SCCV (société civile de construction-vente) est une SCI à objet spécifique : construire pour vendre. Elle est réservée aux opérations de construction et suppose généralement une structure par opération. Elle ne couvre pas l'achat-revente de biens existants, qui relève du marchand de biens.",
+  },
+];
+---
+
+<ArticleLayout
+  title="SCI marchand de biens : compatible ou piège à éviter ?"
+  description="SCI et marchand de biens : pourquoi c'est incompatible, quand une SCI peut vendre sans risque, les critères de requalification, les conséquences fiscales et les bonnes structures."
+  h1="SCI et marchand de biens : compatible ou piège ?"
+  lead="Utiliser une SCI pour faire de l'achat-revente est l'une des erreurs les plus fréquentes des débutants. La SCI a un objet civil, le marchand de biens une activité commerciale : les deux ne font pas bon ménage. Voici pourquoi, quand une SCI peut malgré tout vendre, et quelle structure choisir à la place."
+  reading="8 min"
+  image="/img/sci-marchand-de-biens.jpg"
+  imageAlt="SCI et marchand de biens : structure juridique et risque de requalification"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'SCI marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>La <strong>SCI a un objet civil</strong> (article 1845 du Code civil) : elle ne peut pas exercer l'achat-revente habituel.</li>
+      <li>Le marchand de biens exerce une <strong>activité commerciale</strong> : les deux sont incompatibles.</li>
+      <li>Une SCI peut vendre un bien <strong>occasionnellement</strong> (gestion de patrimoine) sans devenir marchand de biens.</li>
+      <li>Deux critères déclenchent la requalification : le <strong>caractère habituel</strong> et l'<strong>intention spéculative</strong>.</li>
+      <li>La bonne structure : une <strong>société commerciale</strong> (SAS, SASU, SARL, EURL).</li>
+    </ul>
+  </div>
+
+  <h2>Peut-on être marchand de biens avec une SCI ?</h2>
+  <p>
+    Non, pas pour une activité régulière d'achat-revente. La société civile immobilière a, comme son nom l'indique, un <strong>objet civil</strong> (article 1845 du Code civil) : détenir, gérer, louer et transmettre un patrimoine
+    immobilier. Or l'activité de <a href="/marchand-de-biens-definition/">marchand de biens</a> est <strong>commerciale</strong> par nature : acheter pour revendre avec une marge, de façon habituelle. Ces deux logiques
+    s'opposent, et vouloir les réunir dans une SCI conduit tout droit au redressement.
+  </p>
+
+  <h2>Pourquoi SCI et marchand de biens sont incompatibles</h2>
+  <p>
+    Une SCI est un <strong>outil patrimonial</strong>, pas une entreprise commerciale. Son objet doit rester non commercial.
+    Elle sert à organiser la propriété entre associés, à louer en location nue ou à transmettre en famille. Dès qu'elle se
+    met à acheter et revendre dans un but de profit, elle sort de son cadre légal. L'administration fiscale peut alors la <strong>requalifier</strong> en activité commerciale, avec toutes les conséquences qui s'y attachent.
+  </p>
+
+  <h2>Quand une SCI peut-elle vendre sans risque ?</h2>
+  <p>
+    Il faut lever une confusion fréquente : rien n'interdit à une SCI de vendre un bien. Une cession <strong>occasionnelle</strong>, réalisée dans le cadre de la gestion normale du patrimoine, reste parfaitement civile.
+    Une SCI familiale qui revend un immeuble détenu depuis des années, par exemple, ne devient pas marchand de biens. Le
+    risque n'apparaît que lorsque les opérations deviennent <strong>répétées et spéculatives</strong>.
+  </p>
+
+  <h2>Les deux critères de la requalification</h2>
+  <p>
+    La qualification de marchand de biens repose sur deux critères <strong>cumulatifs</strong> (article 35 du CGI), que le
+    fisc apprécie par un faisceau d'indices :
+  </p>
+  <ul>
+    <li><strong>Le caractère habituel :</strong> la répétition des achats-reventes. Attention, un seul achat suivi d'une revente par lots peut suffire à caractériser l'habitude.</li>
+    <li><strong>L'intention spéculative :</strong> l'intention de revendre appréciée dès l'acquisition. Elle se déduit d'indices concrets : courte durée de détention, bref délai entre achat et revente, inscription des biens en stock, déduction de la TVA, travaux de valorisation.</li>
+  </ul>
+  <p>
+    Ces deux conditions doivent être réunies. Une opération vraiment isolée et ancienne échappe à la qualification ; une
+    série d'achats-reventes rapprochés y tombe presque à coup sûr.
+  </p>
+
+  <h2>Les conséquences d'une requalification</h2>
+  <p>Une SCI requalifiée perd tous les avantages de la société civile et subit un régime commercial rétroactif :</p>
+  <table>
+    <thead>
+      <tr><th>Conséquence</th><th>Effet</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Impôt sur les sociétés</td><td>Les bénéfices sont imposés à l'IS</td></tr>
+      <tr><td>TVA immobilière</td><td>Les ventes y sont soumises (sur marge ou prix total)</td></tr>
+      <tr><td>Perte du régime des plus-values</td><td>Les biens sont traités comme du stock, pas comme des actifs</td></tr>
+      <tr><td>Pénalités et intérêts</td><td>Redressement majoré, sur plusieurs années</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Le coût peut être considérable, d'autant que l'administration peut remonter plusieurs exercices en arrière. C'est
+    exactement le type de piège qu'on cherche à éviter en choisissant la bonne structure dès le départ.
+  </p>
+
+  <h2>L'exception : la SCCV (construction-vente)</h2>
+  <p>
+    Il existe une SCI adaptée à un cas précis : la <strong>SCCV</strong> (société civile de construction-vente). Son objet
+    est de construire un bien pour le vendre. Elle est réservée aux opérations de construction, se monte généralement <strong>une par opération</strong>, et ne couvre pas l'achat-revente de biens existants. Pour ce dernier, qui est le cœur
+    du métier, elle n'est pas la solution.
+  </p>
+
+  <h2>La bonne structure pour un marchand de biens</h2>
+  <p>
+    Le statut de marchand de biens n'est pas une forme juridique, mais un régime fiscal ouvert aux <strong>sociétés commerciales</strong>. Les formes adaptées sont la SAS et sa version solo la SASU, ainsi que la SARL et
+    l'EURL. Elles protègent le patrimoine personnel, permettent de récupérer la <a href="/tva-marchand-de-biens/">TVA</a> et
+    de déduire les charges, et relèvent de l'impôt sur les sociétés. Pour comparer ces options en détail, voyez notre guide
+    du <a href="/statut-juridique-marchand-de-biens/">statut juridique du marchand de biens</a> ; et si vous vous posiez la
+    question de la micro-entreprise, sachez qu'elle est elle aussi <a href="/marchand-de-biens-auto-entrepreneur/">incompatible avec l'activité</a>.
+  </p>
+  <p>
+    En résumé : la SCI sert à détenir et transmettre, pas à revendre vite. Confondre les deux revient à exposer une <a href="/plus-value-marchand-de-biens/">plus-value</a> durement gagnée à un redressement évitable. Le bon réflexe est de
+    cadrer la structure avec un professionnel avant la première acquisition.
+  </p>
+</ArticleLayout>
