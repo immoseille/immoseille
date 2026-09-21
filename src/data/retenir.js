@@ -125,6 +125,13 @@ export const RETENIR = {
     "Deux critères cumulatifs déclenchent la requalification : le caractère habituel et l'intention spéculative (article 35 du CGI).",
     "Requalification = IS, TVA immobilière, biens en stock, pénalités et effet rétroactif. La bonne structure : SAS, SASU, SARL ou EURL.",
   ],
+  'alternative-greenbull-campus': [
+    "Greenbull Campus (Yann Darwin) est une plateforme généraliste : immobilier, business en ligne, marketing.",
+    "On cherche une alternative pour le budget, la spécialisation marchand de biens ou un accompagnement plus ciblé.",
+    "Pour le seul métier de marchand de biens, notre recommandation est Imm'oseille : spécialisée, formateur en activité, module offert.",
+    "Autres alternatives selon le profil : MDB Academy, ML Immobilier, MonCercleImmo.",
+    "Bien choisir : formateur en activité, programme complet, accompagnement réel, prix justifié à périmètre égal.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

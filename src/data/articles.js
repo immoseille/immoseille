@@ -155,6 +155,15 @@ export const articles = [
     date: '20 septembre 2026',
     excerpt: "Pourquoi la SCI est incompatible avec l'achat-revente, quand elle peut vendre sans risque, les critères de requalification et la bonne structure.",
   },
+  {
+    slug: 'alternative-greenbull-campus',
+    title: 'Alternative à Greenbull Campus : le comparatif',
+    image: '/img/alternative-greenbull-campus.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '21 septembre 2026',
+    excerpt: "Pourquoi chercher une alternative à Greenbull Campus, le comparatif des options spécialisées marchand de biens et notre recommandation.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
