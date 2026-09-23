@@ -132,6 +132,13 @@ export const RETENIR = {
     "Autres alternatives selon le profil : MDB Academy, ML Immobilier, MonCercleImmo.",
     "Bien choisir : formateur en activité, programme complet, accompagnement réel, prix justifié à périmètre égal.",
   ],
+  'marchand-de-biens-debutant': [
+    "Débuter est possible sans diplôme ni expérience, mais le métier est exigeant : la préparation est obligatoire.",
+    "Feuille de route : se former, choisir son statut, cadrer son budget, sourcer, sécuriser, financer, revendre.",
+    "Budget : prévoir un apport de 20 à 30 % et une trésorerie de sécurité pour les imprévus.",
+    "Première opération : bien à potentiel, urbanisme vérifié avant l'achat, travaux chiffrés avec marge, marge validée par le calcul de rentabilité.",
+    "Trois erreurs classiques : budget travaux sous-estimé, TVA sur marge mal gérée, croire à un revenu passif.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

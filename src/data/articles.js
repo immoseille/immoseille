@@ -164,6 +164,15 @@ export const articles = [
     date: '21 septembre 2026',
     excerpt: "Pourquoi chercher une alternative à Greenbull Campus, le comparatif des options spécialisées marchand de biens et notre recommandation.",
   },
+  {
+    slug: 'marchand-de-biens-debutant',
+    title: 'Marchand de biens débutant : par où commencer ?',
+    image: '/img/marchand-de-biens-debutant.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '23 septembre 2026',
+    excerpt: "La feuille de route du débutant : étapes pour démarrer, budget à prévoir, checklist de la première opération et erreurs classiques à éviter.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
