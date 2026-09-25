@@ -45,6 +45,7 @@ export const MAILLAGE = [
   { needle: 'calcul de rentabilité', slug: 'calcul-rentabilite-marchand-de-biens' },
   { needle: 'simulateur de rentabilité', slug: 'simulateur-rentabilite-marchand-de-biens' },
   { needle: 'rentabilité locative', slug: 'calcul-rentabilite-immobiliere' },
+  { needle: 'choisir sa formation', slug: 'comment-choisir-formation-marchand-de-biens' },
 
   // Le métier (satellites)
   { needle: 'combien gagne un marchand', slug: 'marchand-de-biens-salaire' },

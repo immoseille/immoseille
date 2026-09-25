@@ -139,6 +139,13 @@ export const RETENIR = {
     "Première opération : bien à potentiel, urbanisme vérifié avant l'achat, travaux chiffrés avec marge, marge validée par le calcul de rentabilité.",
     "Trois erreurs classiques : budget travaux sous-estimé, TVA sur marge mal gérée, croire à un revenu passif.",
   ],
+  'comment-choisir-formation-marchand-de-biens': [
+    "Le critère n°1 : un formateur en activité, avec des opérations concrètes et chiffrées.",
+    "Vérifier l'accompagnement réel : pouvoir faire relire une vraie opportunité après l'achat.",
+    "Une bonne formation apprend à bâtir un compte d'opération complet (achat, notaire, travaux, frais, imprévus, revente).",
+    "Lire les avis avec méthode : distinguer qualité pédagogique, pertinence métier et résultats de terrain.",
+    "Fuir les promesses de gains rapides ou garantis, le « sans apport » automatique et les « deals en quelques jours ».",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

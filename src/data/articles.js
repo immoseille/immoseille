@@ -173,6 +173,15 @@ export const articles = [
     date: '23 septembre 2026',
     excerpt: "La feuille de route du débutant : étapes pour démarrer, budget à prévoir, checklist de la première opération et erreurs classiques à éviter.",
   },
+  {
+    slug: 'comment-choisir-formation-marchand-de-biens',
+    title: 'Comment choisir sa formation marchand de biens',
+    image: '/img/comment-choisir-formation-marchand-de-biens.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '25 septembre 2026',
+    excerpt: "La méthode pour évaluer une formation : grille de critères, questions à poser, checklist avant d'acheter et promesses à fuir.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

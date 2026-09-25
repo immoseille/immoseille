@@ -1,0 +1,123 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quel est le critère le plus important pour choisir une formation marchand de biens ?",
+    r: "L'expérience réelle du formateur. Un marchand de biens en activité, capable de montrer des opérations concrètes avec les vrais chiffres, vaut mieux qu'un formateur uniquement théorique. Juste après vient l'accompagnement : pouvoir faire relire une vraie opportunité change tout.",
+  },
+  {
+    q: "Comment lire les avis sur une formation marchand de biens ?",
+    r: "Avec prudence. Un avis n'est utile que s'il précise ce que l'élève a réellement fait : un exercice, un accompagnement, ou une opération achevée. Un avis enthousiaste d'un élève qui n'a pas encore acheté de bien ne dit rien de la rentabilité de la méthode. Distinguez la qualité pédagogique, la pertinence métier et les résultats de terrain.",
+  },
+  {
+    q: "Faut-il choisir une formation en ligne, en présentiel ou du mentorat ?",
+    r: "Chaque format a sa logique. Le présentiel favorise le réseau mais coûte cher et demande de la disponibilité. L'en ligne offre de la flexibilité à condition d'être discipliné. Le mentorat apporte un suivi personnalisé, utile pour des projets ambitieux. Le plus déterminant reste l'accompagnement réel, quel que soit le format.",
+  },
+  {
+    q: "Quelles promesses doivent alerter avant d'acheter ?",
+    r: "Méfiez-vous des promesses de gains rapides ou garantis, du « sans le moindre apport » présenté comme une évidence, des « deals trouvés en quelques jours » ou du « copiez notre modèle et ça marche ». Le métier demande de l'analyse, un réseau local et une gestion du risque : aucune formation ne peut garantir un résultat.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Comment choisir sa formation marchand de biens : le guide"
+  description="Comment choisir sa formation marchand de biens : la grille de critères, les questions à poser, la checklist avant d'acheter et les promesses à fuir. Le guide de décision."
+  h1="Comment choisir sa formation marchand de biens ?"
+  lead="Le marché des formations marchand de biens est saturé et les avis difficiles à lire. Plutôt qu'un classement, voici une méthode pour évaluer vous-même n'importe quelle formation : les critères qui comptent, les questions à poser, la checklist avant d'acheter et les promesses qui doivent vous alerter."
+  reading="8 min"
+  image="/img/comment-choisir-formation-marchand-de-biens.jpg"
+  imageAlt="Choisir sa formation marchand de biens : grille de critères et questions à poser"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Comment choisir sa formation marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le critère n°1 : un <strong>formateur en activité</strong>, avec des opérations concrètes et chiffrées.</li>
+      <li>Vérifiez l'<strong>accompagnement réel</strong> : pouvoir faire relire une vraie opportunité après l'achat.</li>
+      <li>Une bonne formation couvre le <strong>compte d'opération</strong>, le sourcing, le financement et la fiscalité.</li>
+      <li>Lisez les <strong>avis avec méthode</strong> : distinguez pédagogie, pertinence métier et résultats de terrain.</li>
+      <li>Fuyez les <strong>promesses de gains rapides ou garantis</strong> : le métier demande analyse et gestion du risque.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi le choix est difficile</h2>
+  <p>
+    Le marché de la formation marchand de biens attire des profils très différents : investisseurs locatifs, agents
+    immobiliers, artisans, cadres en reconversion, entrepreneurs. Les attentes ne sont donc pas les mêmes, et les avis en
+    ligne deviennent difficiles à interpréter. Un avis enthousiaste peut venir d'un élève satisfait par la pédagogie sans
+    avoir encore acheté un bien ; un avis critique, de quelqu'un qui espérait une recette automatique. Pour bien choisir, il
+    faut une grille objective plutôt que de se fier aux étoiles.
+  </p>
+
+  <h2>Les critères d'une bonne formation</h2>
+  <p>Une formation sérieuse doit cocher ces cases. Posez à chaque organisme les mêmes questions pour comparer sur une base commune :</p>
+  <table>
+    <thead>
+      <tr><th>Critère</th><th>La question à poser</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Formateur</td><td>Exerce-t-il réellement, avec des opérations récentes et chiffrées ?</td></tr>
+      <tr><td>Compte d'opération</td><td>Apprend-on à bâtir un budget complet (achat, notaire, travaux, frais financiers, imprévus, revente) ?</td></tr>
+      <tr><td>Sourcing</td><td>Montre-t-on comment estimer un prix de revente à partir de comparables réels ?</td></tr>
+      <tr><td>Accompagnement</td><td>Qui répond, à quelle fréquence, pendant combien de temps ?</td></tr>
+      <tr><td>Fiscalité et juridique</td><td>Les limites sont-elles posées et est-on orienté vers les bons professionnels ?</td></tr>
+      <tr><td>Coût total</td><td>Que comprend le prix, et qu'est-ce qui reste à payer ensuite ?</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Le <strong>compte d'opération</strong> est le cœur de la décision : sans lui, on raisonne sur le seul écart
+    achat-revente et on sous-estime les frais. C'est la première cause d'opérations faussement rentables, un point que valide
+    tout <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a> sérieux.
+  </p>
+
+  <h2>La checklist avant d'acheter</h2>
+  <p>Avant de payer, exigez des réponses précises :</p>
+  <ul>
+    <li>La formation montre-t-elle des <strong>cas réels chiffrés</strong>, y compris des dossiers écartés et pourquoi ?</li>
+    <li>Le compte d'opération inclut-il notaire, travaux, frais financiers et imprévus ?</li>
+    <li>Apprend-on à estimer un prix de revente à partir de <strong>comparables</strong> (ventes réelles, DVF) ?</li>
+    <li>Les notions d'urbanisme (PLU, cadastre, servitudes) sont-elles traitées ?</li>
+    <li>L'accompagnement permet-il de faire <strong>relire une vraie opportunité</strong> ?</li>
+    <li>Le formateur distingue-t-il marge brute, marge nette et rendement ?</li>
+    <li>Les limites juridiques et fiscales sont-elles clairement posées ?</li>
+  </ul>
+
+  <h2>Lire les avis avec méthode</h2>
+  <p>
+    Un avis n'est utile que s'il précise <strong>ce que l'élève a réellement fait</strong>, et à quel stade de son parcours.
+    Séparez toujours trois choses : la <strong>qualité pédagogique</strong> (le cours est-il clair ?), la <strong>pertinence
+    métier</strong> (les méthodes tiennent-elles sur le terrain ?) et les <strong>résultats</strong> (l'élève a-t-il mené une
+    opération ?). Une note globale élevée sans ce détail ne dit pas grand-chose.
+  </p>
+
+  <h2>En ligne, présentiel ou mentorat ?</h2>
+  <ul>
+    <li><strong>En ligne :</strong> flexible et souvent plus accessible, mais repose sur votre autodiscipline.</li>
+    <li><strong>Présentiel :</strong> excellent pour le réseau, mais plus cher et exigeant en disponibilité.</li>
+    <li><strong>Mentorat :</strong> suivi personnalisé, adapté aux projets ambitieux, généralement le plus onéreux.</li>
+  </ul>
+  <p>
+    Aucun format n'est supérieur dans l'absolu : ce qui compte, c'est la qualité de l'accompagnement derrière. Le <a href="/immobilier-off-market/">sourcing</a> et le montage, par exemple, s'apprennent mieux avec un retour sur vos vrais
+    dossiers qu'avec des vidéos regardées seul.
+  </p>
+
+  <h2>Les promesses qui doivent vous alerter</h2>
+  <p>Certaines accroches sont des signaux d'alarme. À manier avec la plus grande prudence :</p>
+  <ul>
+    <li><strong>« Devenez marchand de biens sans le moindre apport »</strong> présenté comme une évidence : se lancer avec peu d'apport est possible mais rare et plus risqué, jamais automatique.</li>
+    <li><strong>« Des deals rentables en quelques jours »</strong> : le sourcing sérieux prend du temps et un réseau.</li>
+    <li><strong>« Copiez notre modèle et ça marche »</strong> : chaque marché local et chaque opération sont différents.</li>
+    <li><strong>Toute promesse de gains rapides ou garantis :</strong> aucune formation ne peut garantir un résultat, qui dépend de votre exécution et du marché.</li>
+  </ul>
+
+  <h2>Passer à la décision</h2>
+  <p>
+    Une fois votre grille en main, confrontez les offres. Pour un panorama des acteurs et un point de comparaison, consultez
+    notre <a href="/meilleure-formation-marchand-de-biens/">comparatif des meilleures formations marchand de biens</a>. Et si
+    vous préférez juger sur pièces, le <a href="/formation/">premier module de la formation Imm'oseille est offert</a> : le
+    meilleur moyen de tester la méthode et le formateur avant de vous engager, puis de <a href="/devenir-marchand-de-biens/">vous lancer</a> avec des bases solides.
+  </p>
+</ArticleLayout>
