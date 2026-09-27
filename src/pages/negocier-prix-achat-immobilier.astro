@@ -1,0 +1,117 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quelle marge de négociation espérer sur un achat immobilier ?",
+    r: "Il n'y a pas de règle fixe. Les marges constatées vont généralement de 4 à 15 % du prix affiché, selon l'ancienneté de l'annonce, l'état du bien, l'emplacement et le DPE. Un bien resté longtemps en vente, avec travaux ou mauvais DPE, se négocie davantage. Un bien au bon prix dans un secteur tendu, très peu.",
+  },
+  {
+    q: "À quel moment faut-il négocier le prix ?",
+    r: "La négociation se joue au moment de l'offre d'achat, même si on peut préparer le terrain dès la visite. On formule une offre écrite, en dessous du prix affiché, argumentée par des faits (comparables, état, travaux). Le vendeur peut alors accepter, refuser ou faire une contre-offre.",
+  },
+  {
+    q: "Comment justifier une offre en dessous du prix ?",
+    r: "Par des faits, pas par des impressions : des ventes comparables récentes (données DVF), l'état du bien et le coût des travaux à prévoir, un DPE défavorable, l'ancienneté de l'annonce. Une offre argumentée et de bonne foi a bien plus de chances d'aboutir qu'un prix cassé sans justification.",
+  },
+  {
+    q: "Pourquoi la négociation est-elle décisive pour un marchand de biens ?",
+    r: "Parce que la marge se crée à l'achat, pas à la revente. Chaque euro négocié à l'entrée est un euro de marge sécurisé. Pour un marchand de biens, bien acheter n'est pas un bonus : c'est la condition de rentabilité de l'opération.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Négocier le prix d'achat immobilier : la méthode"
+  description="Négocier le prix d'achat immobilier : quand négocier, comment préparer son offre avec les comparables, les arguments qui font baisser le prix et la marge de négociation à viser."
+  h1="Négocier le prix d'achat immobilier : la méthode"
+  lead="Bien négocier, c'est acheter sous le prix du marché, et pour un marchand de biens c'est là que se crée la marge. Voici quand négocier, comment préparer une offre argumentée, les leviers qui font baisser le prix et la marge de négociation réaliste à viser."
+  reading="8 min"
+  image="/img/negocier-prix-achat-immobilier.jpg"
+  imageAlt="Négociation du prix d'achat d'un bien immobilier autour d'une table"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: "Négocier le prix d'achat immobilier" }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>La négociation se joue au moment de l'<strong>offre d'achat</strong>, préparée dès la visite.</li>
+      <li>L'arme n°1 : les <strong>comparables</strong> (ventes réelles, données DVF) pour prouver le juste prix.</li>
+      <li>Leviers de baisse : <strong>état et travaux</strong>, <strong>DPE défavorable</strong>, ancienneté de l'annonce, vendeur pressé.</li>
+      <li>Marge de négociation constatée : souvent <strong>4 à 15 %</strong> selon le bien et le marché.</li>
+      <li>Pour un marchand de biens, <strong>la marge se crée à l'achat</strong> : bien négocier n'est pas optionnel.</li>
+    </ul>
+  </div>
+
+  <h2>Quand négocier le prix ?</h2>
+  <p>
+    La négociation se concrétise au moment de l'<strong>offre d'achat</strong>, même si on peut préparer le terrain dès la
+    visite. Vous indiquez au vendeur (ou à l'agent) le prix auquel vous souhaitez acheter, en présentant vos arguments. Le
+    vendeur dispose ensuite d'un délai pour accepter, refuser ou faire une contre-offre. Rappel utile : seule une offre au
+    prix affiché a obligation d'être acceptée. Un vendeur peut donc décliner une offre basse, même raisonnable, d'où
+    l'importance de bien l'argumenter.
+  </p>
+
+  <h2>Préparer sa négociation : connaître le marché</h2>
+  <p>
+    On ne négocie pas au feeling. La base, c'est de savoir si le bien est <strong>surévalué</strong> par rapport au marché
+    local. Pour cela :
+  </p>
+  <ul>
+    <li><strong>Comparez des biens similaires :</strong> même quartier, surface, étage, état. Un studio en rez-de-chaussée ne se compare pas à un T3 avec balcon.</li>
+    <li><strong>Appuyez-vous sur les ventes réelles (DVF) :</strong> les prix réellement signés valent mieux que les prix affichés.</li>
+    <li><strong>Regardez l'ancienneté de l'annonce :</strong> un bien en vente depuis des semaines donne du levier ; un bien fraîchement publié, beaucoup moins.</li>
+  </ul>
+  <p>
+    Ce travail d'analyse est le même que celui d'un marchand de biens qui sécurise une opération : il rejoint la logique du <a href="/immobilier-off-market/">sourcing de biens hors marché</a>, où l'on achète avant la concurrence.
+  </p>
+
+  <h2>Cerner le vendeur</h2>
+  <p>
+    Le prix dépend aussi de la <strong>situation du vendeur</strong>. Une vente contrainte (divorce, succession, mutation,
+    sortie d'indivision, prêt relais qui arrive à échéance) crée une pression au temps, donc une marge de négociation plus
+    forte. Sans être indiscret, cherchez à comprendre depuis combien de temps le bien est en vente et pourquoi il est cédé :
+    un vendeur pressé est un vendeur plus souple.
+  </p>
+
+  <h2>Les arguments qui font baisser le prix</h2>
+  <p>Une bonne négociation s'appuie sur des faits, jamais sur des impressions :</p>
+  <ul>
+    <li><strong>L'état et les travaux :</strong> chiffrez précisément les travaux à prévoir, c'est l'argument le plus solide.</li>
+    <li><strong>Le DPE :</strong> un mauvais classement pèse sur le prix. Les biens classés F ou G se négocient sensiblement plus (souvent plusieurs points de pourcentage de plus qu'un bon DPE).</li>
+    <li><strong>Les défauts objectifs :</strong> absence d'ascenseur, vis-à-vis, nuisances, charges élevées.</li>
+    <li><strong>Les comparables :</strong> des biens équivalents vendus moins cher, preuve à l'appui.</li>
+  </ul>
+
+  <h2>Quelle marge de négociation viser ?</h2>
+  <p>
+    Elle n'est pas fixée à l'avance et dépend du marché comme du bien. Les fourchettes constatées :
+  </p>
+  <table>
+    <thead>
+      <tr><th>Situation</th><th>Marge de négociation typique</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Bien au bon prix, secteur tendu</td><td>Faible (0 à 3 %)</td></tr>
+      <tr><td>Marché moyen, annonce récente</td><td>Modérée (3 à 7 %)</td></tr>
+      <tr><td>Travaux, mauvais DPE, annonce ancienne</td><td>Élevée (8 à 15 % et plus)</td></tr>
+    </tbody>
+  </table>
+  <p>Repère : viser un prix cohérent avec le marché, pas le prix le plus bas possible au risque de braquer le vendeur.</p>
+
+  <h2>Structurer une offre qui passe</h2>
+  <p>Une offre a plus de poids quand elle rassure le vendeur :</p>
+  <ul>
+    <li><strong>Une offre écrite et argumentée :</strong> reprenez vos comparables et le chiffrage des travaux.</li>
+    <li><strong>Des garanties financières :</strong> attestation de financement, apport, ou paiement rapide. Un acquéreur solvable pèse plus lourd qu'un prix légèrement supérieur.</li>
+    <li><strong>De la réactivité :</strong> répondre vite et rester ouvert à une contre-offre montre votre sérieux.</li>
+  </ul>
+
+  <h2>Négocier, c'est créer sa marge</h2>
+  <p>
+    Pour un particulier, négocier fait économiser quelques milliers d'euros. Pour un marchand de biens, c'est structurant : <strong>la marge se crée à l'achat</strong>, pas à la revente. Chaque euro négocié à l'entrée est un euro de marge
+    sécurisé, que valide ensuite le <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a> de
+    l'opération. C'est pourquoi la négociation est l'une des compétences centrales de l'<a href="/achat-revente-immobilier/">achat-revente</a> et se travaille dès le <a href="/monter-une-operation-marchand-de-biens/">montage de l'opération</a>. Loin d'un talent
+    inné, cela s'apprend et se prépare, comme le reste du métier quand on veut <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a>.
+  </p>
+</ArticleLayout>

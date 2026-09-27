@@ -32,6 +32,8 @@ export const MAILLAGE = [
 
   // Opérations
   { needle: 'business plan', slug: 'business-plan-marchand-de-biens' },
+  { needle: 'négocier le prix', slug: 'negocier-prix-achat-immobilier' },
+  { needle: 'négociation', slug: 'negocier-prix-achat-immobilier' },
   { needle: "montage d'opération", slug: 'monter-une-operation-marchand-de-biens' },
   { needle: "montage de l'opération", slug: 'monter-une-operation-marchand-de-biens' },
   { needle: 'achat-revente immobilier', slug: 'achat-revente-immobilier' },

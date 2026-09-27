@@ -146,6 +146,13 @@ export const RETENIR = {
     "Lire les avis avec méthode : distinguer qualité pédagogique, pertinence métier et résultats de terrain.",
     "Fuir les promesses de gains rapides ou garantis, le « sans apport » automatique et les « deals en quelques jours ».",
   ],
+  'negocier-prix-achat-immobilier': [
+    "La négociation se joue au moment de l'offre d'achat, préparée dès la visite.",
+    "L'arme n°1 : les comparables (ventes réelles, données DVF) pour prouver le juste prix.",
+    "Leviers de baisse : état et travaux, DPE défavorable, ancienneté de l'annonce, vendeur pressé.",
+    "Marge de négociation constatée : souvent 4 à 15 % selon le bien et le marché.",
+    "Pour un marchand de biens, la marge se crée à l'achat : chaque euro négocié est un euro de marge sécurisé.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

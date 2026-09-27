@@ -182,6 +182,15 @@ export const articles = [
     date: '25 septembre 2026',
     excerpt: "La méthode pour évaluer une formation : grille de critères, questions à poser, checklist avant d'acheter et promesses à fuir.",
   },
+  {
+    slug: 'negocier-prix-achat-immobilier',
+    title: "Négocier le prix d'achat immobilier : la méthode",
+    image: '/img/negocier-prix-achat-immobilier.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '27 septembre 2026',
+    excerpt: "Quand négocier, comment préparer son offre avec les comparables, les arguments qui font baisser le prix et la marge de négociation à viser.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
