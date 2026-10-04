@@ -1,0 +1,108 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quel est le délai de revente d'un marchand de biens ?",
+    r: "En contrepartie des droits de mutation réduits (0,715 %), le marchand de biens prend un engagement de revente et dispose de 5 ans pour revendre le bien (article 1115 du CGI). Ce délai est réduit à 2 ans en cas de vente à la découpe déclenchant un droit de préemption. Un régime alternatif, l'engagement de construire, prévoit un délai de 4 ans renouvelable.",
+  },
+  {
+    q: "À partir de quand court le délai de 5 ans ?",
+    r: "À compter de la date de l'acte d'acquisition, pas de la prise de possession. Piège à connaître : si vous achetez à un autre marchand de biens qui avait lui-même pris l'engagement, votre point de départ reste la date de SON acte, pas du vôtre. Vérifiez toujours l'historique du bien.",
+  },
+  {
+    q: "Que se passe-t-il si le délai de revente est dépassé ?",
+    r: "L'administration réclame les droits de mutation de droit commun (environ 5,80 %), dont vous aviez été dispensé, majorés d'intérêts de retard (0,20 % par mois). La facture peut être lourde : c'est pourquoi le délai doit être intégré dès le montage de l'opération.",
+  },
+  {
+    q: "Peut-on obtenir un délai supplémentaire ?",
+    r: "Une prorogation n'est pas automatique. Dans certaines situations, il est possible de solliciter l'administration, mais mieux vaut ne pas compter dessus : la règle est de sécuriser la revente dans les temps. En cas de difficulté, consultez un avocat fiscaliste ou un comptable spécialisé avant l'échéance.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Délai de revente marchand de biens : la règle des 5 ans"
+  description="Délai de revente marchand de biens : les délais selon l'engagement (5 ans, 2 ans en découpe, 4 ans), le point de départ, les risques en cas de dépassement et comment planifier."
+  h1="Délai de revente du marchand de biens : la règle à connaître"
+  lead="Les droits de notaire réduits du marchand de biens ont une contrepartie : l'obligation de revendre dans un délai précis. Dépasser ce délai coûte cher. Voici les durées selon le régime choisi, à partir de quand elles courent, les pièges et ce que vous risquez en cas de dépassement."
+  reading="7 min"
+  image="/img/delai-de-revente-marchand-de-biens.jpg"
+  imageAlt="Délai de revente du marchand de biens : le compte à rebours de l'engagement"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Délai de revente marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Le délai est la <strong>contrepartie des droits réduits</strong> (0,715 %) via l'engagement de revente (article 1115 du CGI).</li>
+      <li>Durée : <strong>5 ans</strong> pour revendre, réduite à <strong>2 ans en vente à la découpe</strong>.</li>
+      <li>Régime alternatif : l'<strong>engagement de construire</strong>, délai de <strong>4 ans</strong> renouvelable.</li>
+      <li>Le délai court <strong>à compter de l'acte</strong> d'achat, pas de la prise de possession.</li>
+      <li>En cas de dépassement : <strong>rappel des droits</strong> (~5,80 %) majorés d'<strong>intérêts de retard</strong>.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi un délai de revente ?</h2>
+  <p>
+    Le marchand de biens bénéficie de <a href="/frais-de-notaire-marchand-de-biens/">droits de mutation très réduits</a> à
+    l'achat, autour de 0,715 % au lieu de 5,80 % pour un acquéreur classique. Cet avantage n'est pas gratuit : il suppose de
+    prendre un <strong>engagement de revente</strong> au sens de l'article 1115 du Code général des impôts. En clair, l'État
+    accorde un régime de faveur à condition que le bien soit effectivement remis sur le marché dans un délai donné. C'est la
+    logique même du métier : acheter pour revendre, pas pour détenir.
+  </p>
+
+  <h2>Les délais selon l'engagement</h2>
+  <p>Trois situations, trois régimes :</p>
+  <table>
+    <thead>
+      <tr><th>Régime</th><th>Droits à l'achat</th><th>Délai</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Engagement de revente (art. 1115)</td><td>0,715 %</td><td>5 ans (2 ans en vente à la découpe)</td></tr>
+      <tr><td>Engagement de construire (art. 1594-0 G)</td><td>Droit fixe (125 €)</td><td>4 ans, renouvelable</td></tr>
+      <tr><td>Droit commun (aucun engagement)</td><td>~5,80 %</td><td>Aucun</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Le délai de 2 ans concerne la <a href="/vente-a-la-decoupe/">vente à la découpe</a> qui déclenche un droit de préemption.
+    L'engagement de construire, lui, vise les opérations qui aboutissent à un immeuble neuf, plus proches de la promotion.
+  </p>
+
+  <h2>À partir de quand court le délai ?</h2>
+  <p>
+    Point crucial : le délai court <strong>à compter de la date de l'acte d'acquisition</strong>, pas de la signature du
+    compromis ni de la fin des travaux. Et un piège classique guette : si vous achetez à un <strong>autre marchand de
+    biens</strong> qui avait déjà pris l'engagement de revente, votre point de départ reste la date de <strong>son</strong> acte, pas du vôtre. Vous héritez donc d'un compte à rebours déjà entamé. Avant d'acheter, vérifiez toujours l'historique
+    du bien et la date d'origine de l'engagement.
+  </p>
+
+  <h2>Que se passe-t-il si le délai est dépassé ?</h2>
+  <p>
+    Si le bien n'est pas revendu dans les temps, l'administration considère que l'engagement n'a pas été tenu. Conséquence :
+    elle réclame les <strong>droits de mutation de droit commun</strong> (environ 5,80 %), dont vous aviez été dispensé, <strong>majorés d'intérêts de retard</strong> (0,20 % par mois). Sur une opération de plusieurs centaines de milliers
+    d'euros, le rattrapage se chiffre vite en milliers d'euros. C'est l'un des risques fiscaux à provisionner dans le <a href="/monter-une-operation-marchand-de-biens/">montage de l'opération</a>.
+  </p>
+
+  <h2>Peut-on obtenir un délai supplémentaire ?</h2>
+  <p>
+    Une prorogation n'a rien d'automatique. Dans certaines situations (marché bloqué, aléa sérieux), il est parfois possible
+    de solliciter l'administration, mais il serait imprudent de bâtir une opération en comptant dessus. La règle de base
+    reste de <strong>sécuriser la revente dans le délai</strong>. En cas de difficulté qui approche de l'échéance, prenez
+    conseil auprès d'un avocat fiscaliste ou d'un comptable spécialisé avant la date butoir, jamais après.
+  </p>
+
+  <h2>Comment planifier sa revente dans les temps</h2>
+  <p>
+    Le délai se gère dès l'achat, pas à la fin :
+  </p>
+  <ul>
+    <li><strong>Choisir un marché liquide :</strong> un secteur tendu se revend vite ; un secteur détendu allonge les délais et met l'engagement sous tension.</li>
+    <li><strong>Cadrer le calendrier des travaux :</strong> un chantier qui dérape mange le temps disponible pour commercialiser.</li>
+    <li><strong>Anticiper la commercialisation :</strong> fixer le prix de sortie dès le montage et lancer la vente tôt.</li>
+    <li><strong>Vérifier la date d'origine</strong> si vous rachetez à un confrère marchand de biens.</li>
+  </ul>
+  <p>
+    Bien maîtrisé, ce délai n'est pas une contrainte mais un simple paramètre de l'opération, au même titre que la <a href="/tva-marchand-de-biens/">TVA</a>. C'est une des bases à connaître avant de <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a>.
+  </p>
+</ArticleLayout>

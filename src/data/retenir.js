@@ -153,6 +153,13 @@ export const RETENIR = {
     "Marge de négociation constatée : souvent 4 à 15 % selon le bien et le marché.",
     "Pour un marchand de biens, la marge se crée à l'achat : chaque euro négocié est un euro de marge sécurisé.",
   ],
+  'delai-de-revente-marchand-de-biens': [
+    "Le délai de revente est la contrepartie des droits réduits (0,715 %) via l'engagement de revente (article 1115 du CGI).",
+    "Durée : 5 ans pour revendre, réduite à 2 ans en vente à la découpe ; l'engagement de construire prévoit 4 ans renouvelable.",
+    "Le délai court à compter de la date de l'acte d'achat, pas de la prise de possession.",
+    "Piège : en rachetant à un autre marchand de biens, le point de départ reste la date de SON acte.",
+    "En cas de dépassement : rappel des droits de droit commun (~5,80 %) majorés d'intérêts de retard (0,20 %/mois).",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

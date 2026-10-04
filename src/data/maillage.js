@@ -19,6 +19,8 @@ export const MAILLAGE = [
   { needle: 'TVA sur la marge', slug: 'tva-marchand-de-biens' },
   { needle: 'TVA sur marge', slug: 'tva-marchand-de-biens' },
   { needle: 'frais de notaire', slug: 'frais-de-notaire-marchand-de-biens' },
+  { needle: 'engagement de revente', slug: 'delai-de-revente-marchand-de-biens' },
+  { needle: 'délai de revente', slug: 'delai-de-revente-marchand-de-biens' },
   { needle: 'plus-value', slug: 'plus-value-marchand-de-biens' },
   { needle: 'comptable spécialisé', slug: 'expert-comptable-marchand-de-biens' },
   { needle: 'expert-comptable', slug: 'expert-comptable-marchand-de-biens' },

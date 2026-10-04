@@ -191,6 +191,15 @@ export const articles = [
     date: '27 septembre 2026',
     excerpt: "Quand négocier, comment préparer son offre avec les comparables, les arguments qui font baisser le prix et la marge de négociation à viser.",
   },
+  {
+    slug: 'delai-de-revente-marchand-de-biens',
+    title: 'Délai de revente marchand de biens : la règle des 5 ans',
+    image: '/img/delai-de-revente-marchand-de-biens.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '4 octobre 2026',
+    excerpt: "L'engagement de revente : délais selon le régime (5 ans, 2 ans en découpe, 4 ans), point de départ, pièges et risques en cas de dépassement.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
