@@ -1,0 +1,104 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quel est le meilleur livre pour devenir marchand de biens ?",
+    r: "Cela dépend de votre besoin. Pour un parcours pas à pas et actionnable, « Devenir marchand de biens » (Vuibert) est un bon point de départ. Pour une référence exhaustive sur la profession, « Marchand de biens : guide d'une profession discrète » couvre tout le métier en détail. Pour l'angle juridique et méthodologique, le livre de Gérard Picault fait référence.",
+  },
+  {
+    q: "Un livre suffit-il pour se lancer comme marchand de biens ?",
+    r: "Non. Un livre pose les bases théoriques (fiscalité, montage, financement, revente), ce qui est indispensable, mais le métier s'apprend surtout sur le terrain : sourcing réel, négociation, chiffrage de travaux, relation bancaire. Le livre est une excellente première marche, pas un substitut à la pratique et à l'accompagnement.",
+  },
+  {
+    q: "Par quel livre commencer quand on débute ?",
+    r: "Commencez par un ouvrage généraliste et actionnable qui suit le cycle complet d'une opération, de la prospection à la revente. Vous passerez ensuite aux ouvrages plus techniques (fiscalité, juridique) une fois les bases acquises et un premier projet en tête.",
+  },
+  {
+    q: "Les livres sur le marchand de biens sont-ils à jour fiscalement ?",
+    r: "La fiscalité évolue (TVA, droits de mutation, loi de finances). Vérifiez toujours l'année d'édition et recoupez les points fiscaux avec une source officielle ou un comptable spécialisé avant d'agir : un livre reste un support pédagogique, pas un conseil personnalisé.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Livre marchand de biens : notre sélection pour se former"
+  description="Livre marchand de biens : notre sélection des meilleurs ouvrages pour apprendre le métier, pour qui ils sont faits, et pourquoi un livre ne remplace pas la pratique."
+  h1="Livre marchand de biens : quels ouvrages lire ?"
+  lead="Un bon livre est souvent la première marche pour comprendre le métier de marchand de biens. Voici notre sélection des ouvrages de référence, à qui chacun s'adresse, et surtout pourquoi la lecture pose les bases mais ne remplace pas la pratique de terrain."
+  reading="7 min"
+  image="/img/livre-marchand-de-biens.jpg"
+  imageAlt="Livres pour apprendre le métier de marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Livre marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Un livre pose les <strong>bases théoriques</strong> (fiscalité, montage, financement) : une excellente première marche.</li>
+      <li>Pour débuter : <strong>« Devenir marchand de biens » (Vuibert)</strong>, concret et actionnable.</li>
+      <li>Pour une référence complète : <strong>« Marchand de biens : guide d'une profession discrète »</strong>.</li>
+      <li>Pour l'angle juridique : l'ouvrage de <strong>Gérard Picault</strong> (méthodologie pratique et juridique).</li>
+      <li>Un livre <strong>ne remplace pas la pratique</strong> : le métier s'apprend sur le terrain et avec un accompagnement.</li>
+    </ul>
+  </div>
+
+  <h2>Un livre suffit-il pour devenir marchand de biens ?</h2>
+  <p>
+    Soyons clairs d'emblée : non. Un livre est un support pédagogique précieux pour comprendre la logique du métier, la
+    fiscalité, le montage d'une opération ou la revente. C'est une base solide, surtout avant de <a href="/devenir-marchand-de-biens/">se lancer</a>. Mais l'essentiel se joue ensuite sur le terrain : trouver un bien
+    décoté, négocier, chiffrer des travaux, convaincre une banque. Voyez le livre comme la première marche, pas comme la
+    totalité de l'escalier.
+  </p>
+
+  <h2>Notre sélection de livres sur le marchand de biens</h2>
+  <table>
+    <thead>
+      <tr><th>Ouvrage</th><th>Idéal pour</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Devenir marchand de biens</strong> (Vuibert)</td><td>Débuter : un parcours pas à pas, de la prospection à la revente</td></tr>
+      <tr><td><strong>Marchand de biens : guide d'une profession discrète</strong></td><td>Une référence exhaustive sur l'ensemble du métier</td></tr>
+      <tr><td><strong>Marchand de biens : l'achat-revente immobilier</strong> (Gérard Picault)</td><td>Approfondir l'angle juridique et méthodologique</td></tr>
+    </tbody>
+  </table>
+
+  <h3>« Devenir marchand de biens » (Vuibert)</h3>
+  <p>
+    Un guide concret et actionnable qui suit le cycle complet d'une opération : prospection, étude de faisabilité, calculs de
+    rentabilité, offre d'achat, financement, travaux, commercialisation et revente. Il insiste sur les erreurs fréquentes des
+    débutants et donne des exemples d'opérations. C'est un bon premier livre pour qui veut une vue d'ensemble claire avant de
+    passer à l'action.
+  </p>
+
+  <h3>« Marchand de biens : guide d'une profession discrète »</h3>
+  <p>
+    Un ouvrage très complet (plusieurs centaines de pages) qui couvre en profondeur la création de société, le financement,
+    les assurances et garanties, le sourcing, la négociation, le contrôle du risque, l'urbanisme, les travaux et la <a href="/tva-marchand-de-biens/">fiscalité (TVA)</a>. Plutôt une référence à garder sous la main qu'une lecture
+    d'introduction, idéale pour approfondir chaque étape.
+  </p>
+
+  <h3>« Marchand de biens : l'achat-revente immobilier » (Gérard Picault)</h3>
+  <p>
+    Une approche orientée <strong>méthodologie pratique et juridique</strong>. Utile pour sécuriser le cadre légal et
+    contractuel de vos opérations, une dimension souvent sous-estimée par les débutants. À lire une fois les bases acquises,
+    pour muscler la partie droit et montage.
+  </p>
+
+  <h2>Comment choisir son livre</h2>
+  <ul>
+    <li><strong>Vous débutez :</strong> partez sur un ouvrage généraliste et actionnable qui déroule une opération de A à Z.</li>
+    <li><strong>Vous voulez approfondir :</strong> complétez avec une référence exhaustive ou un livre juridique ciblé.</li>
+    <li><strong>Vérifiez l'édition :</strong> la fiscalité évolue, privilégiez une édition récente et recoupez les chiffres clés.</li>
+    <li><strong>Un point à valider seul :</strong> testez vos acquis sur un vrai dossier via un <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a>.</li>
+  </ul>
+
+  <h2>Au-delà du livre : passer à la pratique</h2>
+  <p>
+    La limite du livre, c'est qu'il ne corrige pas vos erreurs sur une opération réelle. Après la lecture, le vrai saut se
+    fait en appliquant la méthode à un bien précis, idéalement avec un retour d'un praticien. C'est la différence entre
+    « savoir » et « faire ». Si vous hésitez entre un livre et un accompagnement, notre guide pour <a href="/comment-choisir-formation-marchand-de-biens/">choisir sa formation</a> vous aide à y voir clair. Et pour tester
+    sans engagement, le <a href="/formation/">premier module de la formation Imm'oseille est offert</a> : de quoi passer de la
+    théorie du livre à un premier pas concret.
+  </p>
+</ArticleLayout>

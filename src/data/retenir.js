@@ -160,6 +160,13 @@ export const RETENIR = {
     "Piège : en rachetant à un autre marchand de biens, le point de départ reste la date de SON acte.",
     "En cas de dépassement : rappel des droits de droit commun (~5,80 %) majorés d'intérêts de retard (0,20 %/mois).",
   ],
+  'livre-marchand-de-biens': [
+    "Un livre pose les bases théoriques (fiscalité, montage, financement) : une bonne première marche, pas un substitut à la pratique.",
+    "Pour débuter : « Devenir marchand de biens » (Vuibert), concret et actionnable de la prospection à la revente.",
+    "Pour une référence complète : « Marchand de biens : guide d'une profession discrète ».",
+    "Pour l'angle juridique : l'ouvrage de Gérard Picault (méthodologie pratique et juridique).",
+    "Vérifier l'année d'édition : la fiscalité évolue, recouper avec une source officielle ou un comptable.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

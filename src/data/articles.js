@@ -200,6 +200,15 @@ export const articles = [
     date: '4 octobre 2026',
     excerpt: "L'engagement de revente : délais selon le régime (5 ans, 2 ans en découpe, 4 ans), point de départ, pièges et risques en cas de dépassement.",
   },
+  {
+    slug: 'livre-marchand-de-biens',
+    title: 'Livre marchand de biens : notre sélection',
+    image: '/img/livre-marchand-de-biens.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '7 octobre 2026',
+    excerpt: "Notre sélection des meilleurs livres pour apprendre le métier de marchand de biens, pour qui ils sont faits et pourquoi un livre ne remplace pas la pratique.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
