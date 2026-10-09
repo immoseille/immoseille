@@ -1,0 +1,95 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Faut-il créer une société pour être marchand de biens ?",
+    r: "En pratique, oui. L'achat-revente immobilier est une activité commerciale : elle doit s'exercer via une société commerciale (SAS, SASU, SARL ou EURL). Cela protège votre patrimoine personnel, permet de récupérer la TVA et de déduire les charges. La micro-entreprise et la SCI sont exclues pour cette activité.",
+  },
+  {
+    q: "Quelles sont les étapes pour créer sa société de marchand de biens ?",
+    r: "Rédiger les statuts avec un objet social d'achat-revente immobilier, déposer le capital social, puis immatriculer la société via le guichet unique de l'INPI (qui délivre le SIRET et l'inscription au RCS). Il faut ensuite souscrire les assurances, ouvrir un compte professionnel et mettre en place la comptabilité.",
+  },
+  {
+    q: "Quel code APE pour un marchand de biens ?",
+    r: "Le code APE habituel est le 68.10Z, « marchands de biens immobiliers », qui correspond à l'achat et la revente de biens immobiliers propres. L'objet social des statuts et le code APE doivent refléter clairement l'activité : un code erroné peut nourrir une rectification fiscale.",
+  },
+  {
+    q: "Quel capital social prévoir ?",
+    r: "Le capital minimum légal est de 1 €, mais ce n'est pas un repère pertinent ici. Pour être crédible auprès des banques, qui jugent l'activité risquée, mieux vaut un capital reflétant vos fonds propres réels. L'apport attendu pour une première opération se situe souvent entre 50 000 et 150 000 €.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Créer une société de marchand de biens : les étapes"
+  description="Créer une société de marchand de biens : les démarches étape par étape, l'objet social et le code APE, le capital, l'immatriculation au guichet unique et les obligations."
+  h1="Créer une société de marchand de biens : le guide des démarches"
+  lead="L'activité de marchand de biens étant commerciale, elle s'exerce via une société. Voici les démarches concrètes pour la créer : statuts et objet social, code APE, capital, immatriculation au guichet unique et obligations à ne pas oublier."
+  reading="8 min"
+  image="/img/creer-societe-marchand-de-biens.jpg"
+  imageAlt="Créer sa société de marchand de biens : démarches et immatriculation"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Créer une société de marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>L'activité est <strong>commerciale</strong> : une société commerciale est nécessaire (SAS, SASU, SARL, EURL).</li>
+      <li>Étapes : <strong>statuts</strong> (objet achat-revente), <strong>capital</strong>, <strong>immatriculation au guichet unique</strong> de l'INPI.</li>
+      <li>Code APE habituel : <strong>68.10Z</strong>, marchands de biens immobiliers.</li>
+      <li>À prévoir : <strong>assurances</strong> (RC Pro, dommage-ouvrage), compte pro, comptabilité par opération.</li>
+      <li>Capital crédible : viser vos <strong>fonds propres réels</strong>, pas le minimum de 1 €.</li>
+    </ul>
+  </div>
+
+  <h2>Faut-il une société pour être marchand de biens ?</h2>
+  <p>
+    Oui, en pratique. Le marchand de biens achète pour revendre de façon habituelle et dans un but de profit : c'est une
+    activité <strong>commerciale</strong> qui doit être logée dans une société commerciale. Exercer en direct ou via une
+    structure inadaptée expose à des risques. La société protège votre patrimoine personnel, permet de récupérer la TVA et de
+    déduire les charges. Première chose à écarter : la micro-entreprise et la <a href="/sci-marchand-de-biens/">SCI</a>, toutes deux incompatibles avec cette activité.
+  </p>
+
+  <h2>Quelle forme de société choisir ?</h2>
+  <p>
+    Quatre formes conviennent : la SAS et sa version solo la SASU, la SARL et l'EURL. La SAS séduit par sa souplesse et
+    facilite l'entrée d'investisseurs ; la SARL offre un cadre plus encadré, adapté aux projets familiaux. Le choix dépend de
+    votre situation (seul ou associé, régime social, fiscalité). Pour comparer en détail, voyez notre guide du <a href="/statut-juridique-marchand-de-biens/">statut juridique du marchand de biens</a>. La suite de cet article suppose
+    ce choix fait et détaille la création proprement dite.
+  </p>
+
+  <h2>Les étapes pour créer votre société</h2>
+  <ol>
+    <li><strong>Rédiger les statuts.</strong> C'est l'acte fondateur. Ils fixent la forme, le capital, la gérance et surtout l'<strong>objet social</strong>, qui doit mentionner explicitement l'achat et la revente de biens immobiliers.</li>
+    <li><strong>Déposer le capital social.</strong> Les apports sont déposés sur un compte dédié ; une attestation de dépôt est délivrée.</li>
+    <li><strong>Immatriculer la société</strong> via le <strong>guichet unique de l'INPI</strong> (qui a remplacé les CFE depuis 2023). Vous obtenez le SIRET et l'inscription au registre du commerce et des sociétés (RCS).</li>
+    <li><strong>Enregistrer les statuts</strong> au service des impôts des entreprises (SIE) dans les cas qui l'exigent, par exemple s'ils sont rédigés par un notaire ou comportent un apport d'immeuble.</li>
+  </ol>
+
+  <h2>L'objet social et le code APE : un point à soigner</h2>
+  <p>
+    C'est le détail qui compte. L'objet social doit décrire sans ambiguïté l'activité d'<strong>achat-revente de biens
+    immobiliers</strong>. Le code APE attribué est généralement le <strong>68.10Z</strong> (marchands de biens immobiliers).
+    Pourquoi y prêter attention ? Parce qu'un objet social imprécis ou un code APE erroné peut nourrir une proposition de
+    rectification de l'administration, au motif que l'intention réelle n'était pas celle déclarée. On soigne donc cette
+    rédaction dès le départ, idéalement avec un professionnel.
+  </p>
+
+  <h2>Les obligations à ne pas oublier</h2>
+  <p>Créer la société n'est qu'une partie du travail. En parallèle, il faut :</p>
+  <ul>
+    <li><strong>Souscrire les assurances :</strong> responsabilité civile professionnelle et, dès qu'il y a des travaux structurels, dommage-ouvrage. Le détail figure dans notre guide sur l'<a href="/assurance-marchand-de-biens/">assurance du marchand de biens</a>.</li>
+    <li><strong>Ouvrir un compte professionnel</strong> dédié à l'activité.</li>
+    <li><strong>Mettre en place une comptabilité</strong> rigoureuse, opération par opération, avec un <a href="/expert-comptable-marchand-de-biens/">expert-comptable spécialisé</a>.</li>
+  </ul>
+
+  <h2>Combien ça coûte et quel capital prévoir ?</h2>
+  <p>
+    Les frais de création d'une société restent modestes (publication d'annonce légale, formalités), de l'ordre de quelques
+    centaines d'euros si vous rédigez vos statuts vous-même, davantage avec un professionnel. Le vrai sujet n'est pas là,
+    mais dans le <strong>capital</strong> : le minimum légal de 1 € n'a aucun intérêt pour un marchand de biens. Les banques
+    jugent l'activité risquée et regardent vos fonds propres. Un capital crédible, cohérent avec votre apport, pèse dans
+    l'accès au financement, comme nous le détaillons pour <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> dans de bonnes conditions.
+  </p>
+</ArticleLayout>

@@ -209,6 +209,15 @@ export const articles = [
     date: '7 octobre 2026',
     excerpt: "Notre sélection des meilleurs livres pour apprendre le métier de marchand de biens, pour qui ils sont faits et pourquoi un livre ne remplace pas la pratique.",
   },
+  {
+    slug: 'creer-societe-marchand-de-biens',
+    title: 'Créer une société de marchand de biens : les étapes',
+    image: '/img/creer-societe-marchand-de-biens.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '9 octobre 2026',
+    excerpt: "Les démarches de création étape par étape : statuts et objet social, code APE, capital, immatriculation au guichet unique et obligations à anticiper.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

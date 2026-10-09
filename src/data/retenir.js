@@ -167,6 +167,13 @@ export const RETENIR = {
     "Pour l'angle juridique : l'ouvrage de Gérard Picault (méthodologie pratique et juridique).",
     "Vérifier l'année d'édition : la fiscalité évolue, recouper avec une source officielle ou un comptable.",
   ],
+  'creer-societe-marchand-de-biens': [
+    "L'activité est commerciale : une société commerciale est nécessaire (SAS, SASU, SARL ou EURL), pas la micro ni la SCI.",
+    "Étapes : rédiger les statuts (objet achat-revente), déposer le capital, immatriculer au guichet unique de l'INPI.",
+    "Code APE habituel : 68.10Z (marchands de biens immobiliers) ; soigner l'objet social pour éviter une rectification.",
+    "Obligations : assurances (RC Pro, dommage-ouvrage), compte professionnel, comptabilité par opération.",
+    "Capital : viser des fonds propres crédibles pour la banque, pas le minimum légal de 1 €.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",
