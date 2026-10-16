@@ -174,6 +174,13 @@ export const RETENIR = {
     "Obligations : assurances (RC Pro, dommage-ouvrage), compte professionnel, comptabilité par opération.",
     "Capital : viser des fonds propres crédibles pour la banque, pas le minimum légal de 1 €.",
   ],
+  'formation-marchand-de-biens-gratuite': [
+    "Le vrai gratuit : vidéos, blogs, guides, podcasts et ebooks offerts, suffisant pour poser les bases.",
+    "Une formation complète et accompagnée reste généralement payante : c'est un service.",
+    "Beaucoup de « vidéos offertes » sont des tunnels vers un programme à plusieurs milliers d'euros.",
+    "Un financement (CPF, France Travail) peut couvrir une formation certifiée, selon l'organisme.",
+    "Le gratuit pose les bases ; l'accompagnement sécurise la première opération.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

@@ -218,6 +218,15 @@ export const articles = [
     date: '9 octobre 2026',
     excerpt: "Les démarches de création étape par étape : statuts et objet social, code APE, capital, immatriculation au guichet unique et obligations à anticiper.",
   },
+  {
+    slug: 'formation-marchand-de-biens-gratuite',
+    title: 'Formation marchand de biens gratuite : le vrai du faux',
+    image: '/img/formation-marchand-de-biens-gratuite.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '16 octobre 2026',
+    excerpt: "Ce qui est réellement gratuit pour se former, les « formations offertes » à décrypter, les financements possibles et par où commencer sans payer.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
