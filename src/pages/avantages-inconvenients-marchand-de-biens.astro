@@ -12,84 +12,136 @@ const faq = [
   },
   {
     q: "Quel est le principal avantage fiscal ?",
-    r: "Les droits de mutation réduits à l'achat, en contrepartie d'un engagement de revendre dans le délai légal. La TVA sur la marge et la déduction des charges font aussi partie des leviers du métier.",
+    r: "Les droits de mutation réduits à 0,715 % à l'achat, en contrepartie d'un engagement de revendre sous 5 ans. La TVA sur la marge et la déduction des charges font aussi partie des leviers du métier.",
   },
   {
     q: "Faut-il un gros apport pour se lancer ?",
     r: "Oui. Les banques financent rarement une première opération et exigent souvent un apport conséquent. Une trésorerie de sécurité est également indispensable pour absorber les imprévus.",
   },
+  {
+    q: "Combien d'apport pour une première opération ?",
+    r: "Comptez souvent 30 à 50 % du coût total de l'opération, travaux compris. Pour un projet à 200 000 € tout compris, cela représente 60 000 à 100 000 €. Les banques spécialisées descendent parfois plus bas, en échange d'un taux plus élevé.",
+  },
+  {
+    q: "Peut-on être marchand de biens en parallèle d'un emploi salarié ?",
+    r: "Oui, et c'est même recommandé pour les premières opérations. Le statut de société le permet. La limite est le temps : un chantier se suit, et les artisans ne travaillent pas le week-end.",
+  },
 ];
 ---
 
 <ArticleLayout
-  title="Marchand de biens : avantages et inconvénients"
-  description="Marchand de biens : les vrais avantages (accessibilité, autonomie, fiscalité) et les inconvénients (risque financier, apport, marché cyclique). Le bilan honnête."
+  title="Marchand de biens : avantages, inconvénients, chiffres"
+  description="Marchand de biens : avantages réels (fiscalité, autonomie, marge) et inconvénients (apport, risque, fiscalité). Avec un exemple chiffré d'opération."
   h1="Les avantages et inconvénients du métier de marchand de biens"
   lead="Le métier de marchand de biens attire par sa liberté et son potentiel de marge. Mais il comporte de vraies contraintes qu'il vaut mieux connaître avant de se lancer. Voici un bilan honnête, sans survendre le métier."
-  reading="8 min"
+  reading="10 min"
   image="/img/avantages-inconvenients-marchand-de-biens.jpg"
   imageAlt="Appartement en cours de rénovation avant revente"
   breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Avantages et inconvénients' }]}
+  updated="17 octobre 2026"
+  datePublished="2026-07-30"
+  dateModified="2026-10-17"
   faq={faq}
 >
   <div class="encadre">
     <p class="encadre-h">En bref</p>
     <ul>
       <li><strong>Avantages :</strong> accessible sans diplôme, autonomie, potentiel de marge, fiscalité favorable.</li>
-      <li><strong>Inconvénients :</strong> risque financier, apport élevé, fiscalité complexe, marché cyclique.</li>
+      <li><strong>Inconvénients :</strong> risque financier, apport élevé, fiscalité complexe, marché cyclique, aucun revenu entre deux opérations.</li>
       <li>Ce n'est pas une rente : c'est un métier d'entrepreneur exigeant, sans revenu fixe.</li>
       <li>La réussite dépend de la préparation, de l'apport disponible et de la maîtrise des travaux.</li>
     </ul>
   </div>
 
   <h2>Les avantages du métier de marchand de biens</h2>
+
   <h3>Un métier accessible</h3>
   <p>
-    Aucun diplôme ni carte professionnelle n'est requis pour exercer. Il suffit de créer sa structure et de se lancer.
-    Cette liberté d'accès est un vrai atout, à condition de compenser par de solides compétences. Pour comprendre le cadre,
-    voyez la <a href="/marchand-de-biens-definition/">définition du marchand de biens</a>.
+    Aucun diplôme ni <strong>carte professionnelle</strong> n'est requis pour exercer. Il suffit de créer sa structure et de
+    se lancer. Cette liberté d'accès est un vrai atout, à condition de compenser par de solides compétences en droit, en
+    fiscalité et en estimation de travaux. Pour comprendre le cadre, voyez la <a href="/marchand-de-biens-definition/">définition du marchand de biens</a>.
   </p>
+  <p>
+    <strong>La contrepartie :</strong> l'accessibilité est trompeuse. Sans ces compétences, la première opération sert
+    souvent de formation, et elle se paie en marge perdue.
+  </p>
+
   <h3>De l'autonomie et de la variété</h3>
   <p>
-    Le marchand de biens est indépendant : il choisit ses projets, organise son temps et pilote ses opérations comme un
-    chef d'orchestre. Le métier est varié, de la prospection à la revente en passant par la rénovation, et met en contact
-    avec de nombreux professionnels de l'immobilier et du bâtiment.
+    Le marchand de biens est <strong>indépendant</strong> : il choisit ses projets, organise son temps et pilote ses
+    opérations comme un chef d'orchestre. Le métier est varié, de la prospection à la revente en passant par la rénovation,
+    et met en contact avec de nombreux professionnels de l'immobilier et du bâtiment.
   </p>
+  <p>
+    <strong>La contrepartie :</strong> cette autonomie n'existe qu'en dehors des chantiers. Pendant les travaux, ce sont les
+    artisans qui imposent le rythme.
+  </p>
+
   <h3>Un potentiel de marge réel</h3>
   <p>
-    Une opération réussie peut dégager une marge intéressante. Les professionnels visent souvent une marge brute de 20 à
-    30 %, ramenée à une marge nette plus modeste après impôts et charges. Le potentiel existe, mais il se mérite opération
-    après opération. Les fourchettes de revenus sont détaillées sur la page <a href="/marchand-de-biens-salaire/">salaire d'un marchand de biens</a>.
+    Une opération bien montée vise une <strong>marge brute de 20 à 30 %</strong> du prix de revente. Après TVA sur marge,
+    impôt sur les sociétés et frais fixes, la <strong>marge nette</strong> tombe plutôt entre 8 et 15 %. En pratique, elle
+    varie fortement d'un chantier à l'autre. Le détail des fourchettes est sur la page <a href="/marchand-de-biens-salaire/">salaire d'un marchand de biens</a>.
   </p>
-  <h3>Une fiscalité favorable</h3>
   <p>
-    Le métier bénéficie de leviers fiscaux : droits de mutation réduits à l'achat en contrepartie d'un engagement de
-    revendre, TVA sur la marge dans de nombreux cas et déduction des charges liées à l'opération.
+    <strong>La contrepartie :</strong> cette marge n'est encaissée qu'à la revente, soit 6 à 18 mois après l'achat. Entre les
+    deux, aucun revenu.
+  </p>
+
+  <h3>Une fiscalité favorable</h3>
+  <p>Trois leviers concrets :</p>
+  <ul>
+    <li><strong>Droits de mutation réduits :</strong> 0,715 % du prix au lieu d'environ 5,8 % pour un particulier, à condition de revendre sous 5 ans (article 1115 du CGI). Sur un bien à 250 000 €, c'est environ 1 800 € de droits au lieu de 14 500 €. Détails sur la page <a href="/frais-de-notaire-marchand-de-biens/">frais de notaire du marchand de biens</a>.</li>
+    <li><strong>TVA sur la marge :</strong> quand le bien a plus de 5 ans et que le vendeur n'était pas assujetti, la TVA ne porte que sur la marge, pas sur le prix total. Voir <a href="/tva-marchand-de-biens/">fiscalité et TVA</a>.</li>
+    <li><strong>Charges déductibles :</strong> travaux, honoraires, intérêts d'emprunt et assurances viennent en déduction du résultat imposable.</li>
+  </ul>
+  <p>
+    <strong>La contrepartie :</strong> si le bien n'est pas revendu dans les 5 ans, les droits « économisés » sont dus en
+    intégralité, avec intérêts de retard. Un détail que beaucoup découvrent trop tard.
   </p>
 
   <h2>Les inconvénients et les risques</h2>
+
   <h3>Un risque financier élevé</h3>
   <p>
-    C'est la contrepartie du métier. Il faut engager un apport important, financer les travaux et couvrir les frais, sans
-    certitude de revendre au prix espéré. Une trésorerie de sécurité est indispensable pour absorber les imprévus, fréquents
-    sur un chantier. Les <a href="/financement-marchand-de-biens/">solutions de financement</a> sont un enjeu clé.
+    C'est la contrepartie du métier. Il faut engager un <strong>apport important</strong>, financer les travaux et couvrir
+    les frais, sans certitude de revendre au prix espéré. Une trésorerie de sécurité est indispensable pour absorber les
+    imprévus, fréquents sur un chantier. Les <a href="/financement-marchand-de-biens/">solutions de financement</a> sont un
+    enjeu clé.
   </p>
+
   <h3>Une fiscalité lourde et complexe</h3>
   <p>
     TVA, imposition des bénéfices, charges sociales : la fiscalité est technique et une erreur peut coûter cher. Mal
-    anticiper la TVA sur marge peut transformer une opération rentable sur le papier en perte réelle. S'entourer d'un
-    comptable spécialisé n'est pas une option.
+    anticiper la <strong>TVA sur marge</strong> peut transformer une opération rentable sur le papier en perte réelle.
+    S'entourer d'un comptable spécialisé n'est pas une option.
   </p>
+
   <h3>Une coordination difficile</h3>
   <p>
-    Le marchand de biens dépend de nombreux acteurs : artisans, notaires, diagnostiqueurs, agents. Un seul maillon qui
-    prend du retard et c'est tout le planning et le budget qui dérapent. Le métier est chronophage et peut être stressant.
+    Le marchand de biens dépend de nombreux acteurs : artisans, notaires, diagnostiqueurs, agents. Un seul maillon qui prend
+    du retard et c'est tout le planning et le budget qui dérapent. Le métier est chronophage et peut être stressant.
   </p>
+
   <h3>Un marché cyclique</h3>
   <p>
-    L'activité suit le cycle immobilier. En phase de hausse, les reventes sont rapides et margées ; en période de
-    ralentissement, les délais s'allongent et la rentabilité se réduit. Le marché s'est d'ailleurs contracté récemment,
-    ce qui allonge les délais de revente.
+    L'activité suit le <strong>cycle immobilier</strong>. En phase de hausse, les reventes sont rapides et margées. En
+    période de ralentissement, les délais s'allongent et la rentabilité se réduit. Le marché s'est d'ailleurs contracté
+    récemment, ce qui allonge les délais de revente.
+  </p>
+
+  <h3>La première opération se finance mal</h3>
+  <p>
+    Les banques veulent de l'historique. Sans opération déjà réalisée, le refus est la norme et l'apport demandé grimpe
+    souvent à 30, voire 50 % du coût total (achat + travaux + frais). Les solutions existent
+    (<a href="/banque-marchand-de-biens/">banques spécialisées</a>, <a href="/crowdfunding-immobilier/">crowdfunding</a>, <a href="/portage-immobilier/">portage</a>), mais elles coûtent plus cher.
+  </p>
+
+  <h3>Zéro revenu pendant l'opération</h3>
+  <p>
+    Un marchand de biens n'a pas de salaire mensuel. Il vit sur sa trésorerie ou sur la marge de l'opération précédente. Une
+    revente qui glisse de 4 mois, c'est 4 mois sans rentrée. C'est la raison pour laquelle beaucoup gardent une activité en
+    parallèle pour les 2 ou 3 premières opérations.
   </p>
 
   <h2>Avantages et inconvénients : le tableau récapitulatif</h2>
@@ -101,23 +153,62 @@ const faq = [
       <tr><td>Accessible sans diplôme ni carte pro</td><td>Accessibilité trompeuse sans compétences solides</td></tr>
       <tr><td>Autonomie et variété des missions</td><td>Coordination de nombreux acteurs, métier chronophage</td></tr>
       <tr><td>Potentiel de marge réel (20 à 30 % brut)</td><td>Risque financier élevé, apport important requis</td></tr>
-      <tr><td>Fiscalité favorable (droits réduits, TVA sur marge)</td><td>Fiscalité technique où une erreur coûte cher</td></tr>
+      <tr><td>Fiscalité favorable (droits à 0,715 %, TVA sur marge)</td><td>Fiscalité technique où une erreur coûte cher</td></tr>
       <tr><td>Capital récupéré à la revente et réinvesti</td><td>Marché cyclique : délais et rentabilité variables</td></tr>
+      <tr><td>Compatible avec une activité salariée au départ</td><td>Aucun revenu entre l'achat et la revente</td></tr>
     </tbody>
   </table>
 
-  <h2>Un exemple chiffré</h2>
+  <h2>Un exemple chiffré représentatif</h2>
   <p>
-    Prenons un bien acheté <strong>200 000 €</strong>. Après rénovation, frais de notaire, TVA et charges, une opération
-    correctement menée peut dégager une marge nette d'environ <strong>10 %</strong>, soit près de <strong>20 000 €</strong>.
-    Un marchand de biens confirmé enchaîne 3 à 4 opérations de ce type par an. Mais si le chantier dérape ou si le marché
-    se retourne, cette marge peut fondre, voire devenir négative. Tout se joue sur la préparation.
+    Voici un <strong>exemple représentatif</strong> d'une opération type (chiffres arrondis, à valider avec votre comptable) :
+  </p>
+  <table>
+    <thead>
+      <tr><th>Poste</th><th>Montant</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Prix d'achat</td><td>200 000 €</td></tr>
+      <tr><td>Droits de mutation (0,715 %)</td><td>1 430 €</td></tr>
+      <tr><td>Travaux</td><td>45 000 €</td></tr>
+      <tr><td>Frais annexes (diagnostics, assurances, intérêts, agence)</td><td>18 000 €</td></tr>
+      <tr><td><strong>Coût de revient</strong></td><td><strong>264 430 €</strong></td></tr>
+      <tr><td>Prix de revente</td><td>330 000 €</td></tr>
+      <tr><td><strong>Marge brute</strong></td><td><strong>65 570 € (≈ 20 %)</strong></td></tr>
+      <tr><td>TVA sur marge (20 %)</td><td>≈ 21 700 €</td></tr>
+      <tr><td>Impôt sur les sociétés</td><td>≈ 6 700 €</td></tr>
+      <tr><td><strong>Marge nette</strong></td><td><strong>≈ 37 150 € (≈ 11 %)</strong></td></tr>
+      <tr><td>Durée de l'opération</td><td>12 mois</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Ce qui peut faire basculer une opération : un imprévu de chantier, un mauvais DPE ou un délai de revente qui s'allonge.
+    Sur cette marge brute, un dépassement de travaux de 15 000 € ramènerait la marge nette autour de 25 000 €. Tout se joue
+    sur la préparation. Pour tester vos propres chiffres, utilisez le <a href="/simulateur-rentabilite-marchand-de-biens/">simulateur de rentabilité</a>.
+  </p>
+
+  <h2>Marchand de biens, agent immobilier ou investisseur locatif ?</h2>
+  <table>
+    <thead>
+      <tr><th></th><th>Marchand de biens</th><th>Agent immobilier</th><th>Investisseur locatif</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Propriétaire du bien</td><td>Oui</td><td>Non</td><td>Oui</td></tr>
+      <tr><td>Revenu</td><td>Marge à la revente</td><td>Commission</td><td>Loyers</td></tr>
+      <tr><td>Horizon</td><td>6 à 18 mois</td><td>Immédiat</td><td>10 ans et plus</td></tr>
+      <tr><td>Carte pro requise</td><td>Non</td><td>Oui</td><td>Non</td></tr>
+      <tr><td>Risque principal</td><td>Capital engagé</td><td>Pas de vente = pas de revenu</td><td>Vacance, impayés</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Le marchand de biens est un <strong>commerçant</strong> qui achète pour revendre. L'agent est un intermédiaire.
+    L'investisseur locatif conserve. Les deux comparaisons détaillées : <a href="/marchand-de-biens-ou-investisseur-locatif/">marchand de biens ou investisseur locatif</a> et <a href="/marchand-de-biens-ou-promoteur-immobilier/">marchand de biens ou promoteur immobilier</a>.
   </p>
 
   <h2>Ce métier est-il fait pour vous ?</h2>
   <p>
-    Le marchand de biens n'est ni une rente ni une recette miracle. C'est un métier d'entrepreneur qui
-    convient à celles et ceux qui aiment l'immobilier de terrain, tolèrent le risque, savent s'entourer et disposent d'un
-    apport. Si vous vous reconnaissez, l'étape suivante est de comprendre comment <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> concrètement.
+    Le marchand de biens n'est ni une rente ni une recette miracle. C'est un métier d'entrepreneur qui convient à celles et
+    ceux qui aiment l'immobilier de terrain, tolèrent le risque, savent s'entourer et disposent d'un apport. Si vous vous
+    reconnaissez, l'étape suivante est de comprendre comment <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> concrètement.
   </p>
 </ArticleLayout>
