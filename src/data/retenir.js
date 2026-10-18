@@ -181,6 +181,13 @@ export const RETENIR = {
     "Un financement (CPF, France Travail) peut couvrir une formation certifiée, selon l'organisme.",
     "Le gratuit pose les bases ; l'accompagnement sécurise la première opération.",
   ],
+  'logiciel-marchand-de-biens': [
+    "Il n'y a pas « un » meilleur logiciel : on choisit selon la tâche à améliorer (sourcing, données, chiffrage, pilotage).",
+    "Sourcing : Mon Petit MDB, Telescop, Kel Foncier, Castorus. Cadastre/DVF/PLU : ParcellesExplorer, Immonator.",
+    "Chiffrage : Flipping, Aprilyos, et un simulateur de rentabilité. Pilotage : MaBrik, Phenixity, Aprilyos.",
+    "Outils gratuits essentiels : DVF, cadastre, Géoportail de l'urbanisme, Géorisques.",
+    "Un logiciel fiabilise la décision mais ne remplace ni la visite, ni la négociation, ni le suivi de chantier.",
+  ],
   'statut-juridique-marchand-de-biens': [
     "La micro-entreprise est interdite pour l'achat-revente immobilier (article 50-0 du CGI).",
     "La SCI est inadaptée : objet civil, risque de requalification.",

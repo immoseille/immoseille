@@ -1,0 +1,124 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Quel est le meilleur logiciel pour marchand de biens ?",
+    r: "Il n'y a pas d'outil unique « meilleur » : tout dépend de la tâche à améliorer. Pour sourcer, on regarde vers Mon Petit MDB, Telescop ou Kel Foncier ; pour croiser cadastre, DVF et PLU, vers ParcellesExplorer ou les données publiques gratuites ; pour chiffrer une opération, vers Flipping, Aprilyos ou un simulateur ; pour piloter l'opération, vers MaBrik ou Phenixity. Partez de votre besoin, pas du nom de l'outil.",
+  },
+  {
+    q: "Faut-il un logiciel spécialisé ou un simple tableur ?",
+    r: "Un tableur suffit pour débuter et comprendre le calcul d'une opération. Mais il montre vite ses limites : erreurs de formule, données éparpillées, pas de centralisation. Dès que le volume augmente, un logiciel spécialisé fait gagner du temps et réduit le risque d'erreur sur la marge.",
+  },
+  {
+    q: "Existe-t-il des outils gratuits pour le marchand de biens ?",
+    r: "Oui, et ils sont essentiels : la base DVF (ventes réelles), le cadastre, le Géoportail de l'urbanisme (PLU) et Géorisques sont gratuits et officiels. Côté chiffrage, notre simulateur de rentabilité permet de tester une opération sans rien payer.",
+  },
+  {
+    q: "Un logiciel remplace-t-il le travail de terrain ?",
+    r: "Non. Un outil accélère la recherche, le croisement de données et le chiffrage, mais il ne visite pas le bien, ne négocie pas et ne suit pas le chantier à votre place. Il fiabilise la décision, il ne la prend pas.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Logiciel marchand de biens : les meilleurs outils par usage"
+  description="Logiciel marchand de biens : le comparatif des meilleurs outils par usage (sourcing, DVF et cadastre, chiffrage, suivi d'opération), et les outils gratuits à connaître."
+  h1="Les meilleurs logiciels et outils du marchand de biens"
+  lead="Sourcer, croiser cadastre et DVF, chiffrer une opération, piloter un chantier : à chaque tâche son outil. Voici un panorama des meilleurs logiciels du marchand de biens, classés par usage, plus les ressources gratuites incontournables. L'objectif : partir de votre besoin, pas d'un nom à la mode."
+  reading="8 min"
+  image="/img/logiciel-marchand-de-biens.jpg"
+  imageAlt="Logiciels et outils du marchand de biens : données, cartographie et chiffrage"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Logiciel marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Il n'y a pas « un » meilleur logiciel : on choisit selon la <strong>tâche à améliorer</strong>.</li>
+      <li><strong>Sourcing</strong> : Mon Petit MDB, Telescop, Kel Foncier, Castorus.</li>
+      <li><strong>Cadastre, DVF, PLU</strong> : ParcellesExplorer, Immonator, et les données publiques gratuites.</li>
+      <li><strong>Chiffrage et rentabilité</strong> : Flipping, Aprilyos, et notre simulateur gratuit.</li>
+      <li><strong>Suivi d'opération</strong> : MaBrik, Phenixity, Aprilyos. Un tableur dépanne, mais atteint vite ses limites.</li>
+    </ul>
+  </div>
+
+  <p>
+    <em>Ce panorama repose sur le positionnement annoncé par les éditeurs. Ce n'est pas un test complet : avant de vous
+    abonner, demandez une démonstration et vérifiez la couverture des données sur votre secteur.</em>
+  </p>
+
+  <h2>Faut-il un logiciel ou un simple tableur ?</h2>
+  <p>
+    Au départ, un tableur suffit pour comprendre la logique d'une opération et poser un <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité</a>. Mais il atteint vite ses limites : une
+    formule mal paramétrée fausse la marge, les données sont éparpillées, rien n'est centralisé. Un logiciel spécialisé fait
+    gagner du temps et réduit le risque d'erreur dès que le volume d'opérations augmente. La règle : commencez simple,
+    outillez-vous quand le besoin est réel.
+  </p>
+
+  <h2>Les outils par usage</h2>
+  <table>
+    <thead>
+      <tr><th>Usage</th><th>Outils à examiner</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Sourcer des biens et prospecter</td><td>Mon Petit MDB, Telescop, Kel Foncier, Castorus</td></tr>
+      <tr><td>Croiser cadastre, DVF et urbanisme</td><td>ParcellesExplorer, CadastreExplorer, Immonator</td></tr>
+      <tr><td>Analyser une division (parcelle, immeuble)</td><td>Immonator</td></tr>
+      <tr><td>Estimer un prix de revente</td><td>PriceHubble, Fonciris, données DVF</td></tr>
+      <tr><td>Chiffrer la rentabilité d'une opération</td><td>Flipping, Aprilyos, notre simulateur</td></tr>
+      <tr><td>Piloter l'opération et le chantier</td><td>MaBrik, Phenixity, Aprilyos</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Pour sourcer et prospecter</h3>
+  <p>
+    Des agrégateurs d'annonces et d'enchères (Mon Petit MDB), des outils de cartographie et de prospection avec données
+    propriétaires (Telescop, Kel Foncier), ou l'historique des annonces (Castorus) aident à repérer les biens avant les
+    autres. C'est le prolongement logiciel du <a href="/immobilier-off-market/">sourcing off-market</a> : gagner du temps sur
+    la recherche pour se concentrer sur l'analyse.
+  </p>
+
+  <h3>Pour croiser les données publiques</h3>
+  <p>
+    Retrouver une parcelle, lire le PLU, consulter les ventes comparables : ParcellesExplorer et CadastreExplorer réunissent
+    cadastre, DVF, DPE et urbanisme. Immonator va plus loin en recoupant une annonce avec la parcelle, le bâti, l'urbanisme et
+    l'historique des ventes, et en simulant des divisions. Utile en amont d'une opération de division de terrain ou de découpe d'immeuble.
+  </p>
+
+  <h3>Pour chiffrer et piloter</h3>
+  <p>
+    Côté chiffrage, Flipping et Aprilyos ventilent les coûts par lot et simulent la marge (travaux, frais, TVA). Côté
+    pilotage, MaBrik et Phenixity suivent l'opération de bout en bout : dossier bancaire, travaux, trésorerie,
+    commercialisation. Ces outils SaaS se situent souvent entre 50 et 150 € par mois, à rapprocher du coût d'une seule erreur
+    de marge évitée. À intégrer dans votre <a href="/monter-une-operation-marchand-de-biens/">montage d'opération</a>.
+  </p>
+
+  <h2>Les outils gratuits à connaître</h2>
+  <p>Avant tout abonnement, quatre ressources officielles et gratuites couvrent déjà beaucoup :</p>
+  <ul>
+    <li><strong>DVF</strong> (demandes de valeurs foncières) : les prix réellement signés, la meilleure base pour estimer.</li>
+    <li><strong>Le cadastre</strong> : parcelles, surfaces, limites.</li>
+    <li><strong>Le Géoportail de l'urbanisme</strong> : consulter le PLU et le zonage.</li>
+    <li><strong>Géorisques</strong> : risques naturels et technologiques d'une adresse.</li>
+  </ul>
+  <p>
+    Et pour le chiffrage, notre <a href="/simulateur-rentabilite-marchand-de-biens/">simulateur de rentabilité</a> permet de
+    tester une opération gratuitement, sans inscription.
+  </p>
+
+  <h2>Comment choisir selon votre profil</h2>
+  <ul>
+    <li><strong>Vous débutez :</strong> commencez par les données gratuites et un simulateur. Inutile d'empiler les abonnements avant la première opération.</li>
+    <li><strong>Vous montez en volume :</strong> un outil de sourcing et un outil de pilotage deviennent vite rentables en temps gagné.</li>
+    <li><strong>Vous faites de la division :</strong> privilégiez un outil qui croise cadastre, urbanisme et simulation de lots.</li>
+  </ul>
+
+  <h2>Un logiciel remplace-t-il le terrain ?</h2>
+  <p>
+    Non, et c'est important de le garder en tête. Un outil fiabilise la recherche, le croisement de données et le chiffrage,
+    mais il ne visite pas le bien, ne négocie pas le prix et ne suit pas le chantier à votre place. Il aide à décider, il ne
+    décide pas. C'est pourquoi la maîtrise du métier reste la priorité quand on veut <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> : l'outil amplifie une compétence, il ne la remplace
+    pas.
+  </p>
+</ArticleLayout>

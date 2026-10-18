@@ -227,6 +227,15 @@ export const articles = [
     date: '16 octobre 2026',
     excerpt: "Ce qui est réellement gratuit pour se former, les « formations offertes » à décrypter, les financements possibles et par où commencer sans payer.",
   },
+  {
+    slug: 'logiciel-marchand-de-biens',
+    title: 'Logiciel marchand de biens : les meilleurs outils',
+    image: '/img/logiciel-marchand-de-biens.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '18 octobre 2026',
+    excerpt: "Le comparatif des meilleurs outils par usage : sourcing, cadastre et DVF, chiffrage, suivi d'opération, plus les outils gratuits à connaître.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

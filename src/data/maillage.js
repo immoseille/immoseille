@@ -47,6 +47,8 @@ export const MAILLAGE = [
   { needle: 'changement de destination', slug: 'transformer-local-commercial-en-logement' },
   { needle: 'off-market', slug: 'immobilier-off-market' },
   { needle: 'off market', slug: 'immobilier-off-market' },
+  { needle: 'logiciel marchand de biens', slug: 'logiciel-marchand-de-biens' },
+  { needle: 'outils du marchand de biens', slug: 'logiciel-marchand-de-biens' },
   { needle: 'calcul de rentabilité', slug: 'calcul-rentabilite-marchand-de-biens' },
   { needle: 'simulateur de rentabilité', slug: 'simulateur-rentabilite-marchand-de-biens' },
   { needle: 'rentabilité locative', slug: 'calcul-rentabilite-immobiliere' },
