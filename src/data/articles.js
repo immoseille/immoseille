@@ -236,6 +236,24 @@ export const articles = [
     date: '18 octobre 2026',
     excerpt: "Le comparatif des meilleurs outils par usage : sourcing, cadastre et DVF, chiffrage, suivi d'opération, plus les outils gratuits à connaître.",
   },
+  {
+    slug: 'passoire-thermique-marchand-de-biens',
+    title: 'Passoire thermique et marchand de biens : le guide',
+    image: '/img/passoire-thermique-marchand-de-biens.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '20 octobre 2026',
+    excerpt: "Pourquoi les biens classés F ou G sont une opportunité : décote à l'achat, cadre DPE et loi Climat, rénovation qui crée de la valeur et pièges à éviter.",
+  },
+  {
+    slug: 'surelevation-immeuble',
+    title: "Surélévation d'immeuble : créer de la surface à revendre",
+    image: '/img/surelevation-immeuble.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '20 octobre 2026',
+    excerpt: "Ajouter un étage pour créer de la surface neuve et la revendre : principe, rentabilité, autorisations (PLU, permis, copropriété) et faisabilité technique.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

@@ -1,0 +1,104 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Qu'est-ce que la surélévation d'un immeuble ?",
+    r: "C'est l'ajout d'un ou plusieurs niveaux sur un bâtiment existant, afin de créer de la surface habitable neuve. Pour le marchand de biens, c'est un levier de création de valeur : la surface créée se revend au prix du marché, souvent pour un coût de construction inférieur.",
+  },
+  {
+    q: "Quelles autorisations pour une surélévation ?",
+    r: "Une surélévation crée de la surface de plancher : elle relève d'une déclaration préalable pour les petits volumes, et d'un permis de construire dès qu'elle modifie la façade, touche à la structure ou dépasse les seuils. Le projet doit être conforme au PLU, notamment aux règles de hauteur et de gabarit.",
+  },
+  {
+    q: "Peut-on surélever un immeuble en copropriété ?",
+    r: "Oui, mais la surélévation porte sur des parties communes (la toiture et le volume au-dessus). Elle suppose une autorisation de l'assemblée générale. La loi ALUR a assoupli les règles de majorité et permet à la copropriété de céder le droit de surélever, ce qui a facilité ce type d'opération.",
+  },
+  {
+    q: "Quel est le principal risque d'une surélévation ?",
+    r: "La faisabilité technique. Les fondations et la structure existante doivent pouvoir supporter la charge ajoutée, ce qui nécessite une étude de structure et parfois des renforcements coûteux. À cela s'ajoutent les contraintes du PLU, l'accord de la copropriété et les aléas de chantier.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Surélévation d'immeuble : créer de la surface à revendre"
+  description="Surélévation d'immeuble : principe, pourquoi c'est rentable pour le marchand de biens, les autorisations (PLU, permis, copropriété), la faisabilité technique et les risques."
+  h1="La surélévation d'immeuble : principe, règles et rentabilité"
+  lead="Ajouter un étage à un immeuble pour créer de la surface neuve et la revendre : la surélévation est l'une des opérations les plus rentables, mais aussi les plus techniques, du marchand de biens. Voici son principe, le cadre réglementaire et les points qui font ou défont le projet."
+  reading="8 min"
+  image="/img/surelevation-immeuble.jpg"
+  imageAlt="Surélévation d'un immeuble : ajout d'un niveau pour créer de la surface"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: "Surélévation d'immeuble" }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>La <strong>surélévation</strong> ajoute un ou plusieurs niveaux sur un bâtiment pour créer de la <strong>surface neuve</strong>.</li>
+      <li>Fort levier de valeur : la surface créée se revend au prix du marché, pour un coût de construction souvent inférieur.</li>
+      <li>Autorisations : <strong>déclaration préalable</strong> ou <strong>permis de construire</strong>, conformité au <strong>PLU</strong> (hauteur, gabarit).</li>
+      <li>En copropriété : <strong>accord de l'assemblée générale</strong> (la loi ALUR a assoupli les règles).</li>
+      <li>Le risque n°1 : la <strong>faisabilité technique</strong> (la structure doit supporter la charge).</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce que la surélévation d'immeuble ?</h2>
+  <p>
+    Surélever un immeuble, c'est lui ajouter un ou plusieurs <strong>niveaux supplémentaires</strong> sur sa toiture
+    existante, pour créer de la <strong>surface habitable neuve</strong>. Au lieu d'acheter un terrain pour construire, on
+    exploite le volume disponible au-dessus d'un bâtiment déjà là. C'est un levier de création de valeur proche, dans
+    l'esprit, de la <a href="/vente-a-la-decoupe/">vente à la découpe</a> ou de la <a href="/transformer-local-commercial-en-logement/">transformation d'un local en logement</a> : créer du vendable là où
+    il n'y en avait pas.
+  </p>
+
+  <h2>Pourquoi c'est une opération rentable</h2>
+  <p>
+    La logique est imparable quand elle est possible : la <strong>surface créée se vend au prix du marché</strong>, alors que
+    son coût de construction est souvent inférieur à ce prix, surtout en zone tendue où le mètre carré est cher. On ne paie
+    pas de foncier supplémentaire, puisqu'on bâtit sur l'existant. La marge correspond à l'écart entre la valeur des
+    nouveaux lots et le coût des travaux, des études et des frais.
+  </p>
+
+  <h2>Les autorisations d'urbanisme</h2>
+  <p>Comme toute création de surface, la surélévation est encadrée :</p>
+  <ul>
+    <li><strong>Déclaration préalable</strong> pour les petits volumes sans modification lourde.</li>
+    <li><strong>Permis de construire</strong> dès que le projet modifie la façade, touche à la structure ou dépasse les seuils de surface.</li>
+    <li><strong>Conformité au PLU</strong> : c'est le point déterminant. Les règles de <strong>hauteur</strong> et de gabarit décident si la surélévation est possible, et de combien de niveaux.</li>
+  </ul>
+  <p>Ces vérifications se font <strong>avant l'achat</strong> : un PLU qui plafonne la hauteur peut condamner le projet.</p>
+
+  <h2>Le cas de la copropriété</h2>
+  <p>
+    Dans un immeuble en copropriété, la toiture et le volume au-dessus sont des <strong>parties communes</strong>. Surélever
+    suppose donc une <strong>autorisation de l'assemblée générale</strong>. Bonne nouvelle : la loi ALUR a assoupli les règles
+    de majorité et permis à la copropriété de <strong>céder le droit de surélever</strong>. Un marchand de biens peut ainsi,
+    dans certains cas, acheter ce droit à une copropriété pour réaliser l'opération. Cela reste une négociation à part
+    entière, à sécuriser juridiquement.
+  </p>
+
+  <h2>La faisabilité technique : le point clé</h2>
+  <p>
+    C'est là que la plupart des projets se jouent. Ajouter un niveau, c'est ajouter une <strong>charge</strong> : les
+    fondations, les murs porteurs et la structure existante doivent pouvoir la supporter. Une <strong>étude de structure</strong> par un bureau d'études ou un ingénieur est indispensable, et des renforcements peuvent être nécessaires, parfois coûteux.
+    Le choix du mode constructif (ossature bois légère, par exemple) influence directement la faisabilité et le budget.
+  </p>
+
+  <h2>Les risques et les coûts</h2>
+  <ul>
+    <li><strong>Le PLU :</strong> hauteur plafonnée, gabarit, stationnement imposé peuvent bloquer ou réduire le projet.</li>
+    <li><strong>La structure :</strong> des renforcements imprévus pèsent lourd sur le budget.</li>
+    <li><strong>La copropriété :</strong> sans accord de l'assemblée, pas d'opération.</li>
+    <li><strong>Les assurances :</strong> travaux structurels, donc dommage-ouvrage et responsabilité décennale à prévoir.</li>
+    <li><strong>Le chantier :</strong> intervenir au-dessus d'un bâtiment parfois occupé complique la logistique.</li>
+  </ul>
+
+  <h2>Un levier à intégrer dans la stratégie</h2>
+  <p>
+    La surélévation complète la palette du marchand de biens aux côtés de la découpe et de la <a href="/diviser-un-terrain/">division</a>. C'est une opération à fort potentiel mais exigeante, qui se chiffre
+    précisément et se sécurise étape par étape dès le <a href="/monter-une-operation-marchand-de-biens/">montage de l'opération</a>. Comme toujours dans ce métier, la valeur se
+    crée dans la conception et l'anticipation, bien avant le chantier. C'est l'un des savoir-faire que l'on développe en
+    apprenant à <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a>.
+  </p>
+</ArticleLayout>

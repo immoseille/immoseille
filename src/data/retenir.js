@@ -278,4 +278,18 @@ export const RETENIR = {
     "Marge nette = marge brute − impôt sur le bénéfice.",
     "Repère courant : viser une marge brute de 15 à 25 %.",
   ],
+  'passoire-thermique-marchand-de-biens': [
+    "Une passoire thermique est un logement classé F ou G au DPE.",
+    "Opportunité pour le marchand de biens : décote à l'achat et nombreux bailleurs qui vendent à cause des interdictions de location.",
+    "Interdictions de location : G depuis 2025, F en 2028, E en 2034. À la vente, il n'y a pas d'interdiction.",
+    "Un audit énergétique est obligatoire pour vendre un logement classé F ou G (et E depuis 2025).",
+    "La valeur vient du saut de DPE après rénovation, pas des aides : un marchand de biens n'est en général pas éligible à MaPrimeRénov'.",
+  ],
+  'surelevation-immeuble': [
+    "La surélévation ajoute un ou plusieurs niveaux sur un bâtiment pour créer de la surface habitable neuve.",
+    "Elle est rentable car la surface créée se revend au prix du marché sans foncier supplémentaire, surtout en zone tendue.",
+    "Autorisations : déclaration préalable ou permis de construire, et conformité au PLU (hauteur, gabarit).",
+    "En copropriété, la toiture est une partie commune : accord de l'assemblée générale requis ; la loi ALUR a assoupli les règles et permet de céder le droit de surélever.",
+    "Le risque n°1 est la faisabilité technique : la structure doit supporter la charge, d'où une étude de structure indispensable.",
+  ],
 };
