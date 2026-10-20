@@ -280,7 +280,7 @@ export const RETENIR = {
   ],
   'passoire-thermique-marchand-de-biens': [
     "Une passoire thermique est un logement classé F ou G au DPE.",
-    "Opportunité pour le marchand de biens : décote à l'achat et nombreux bailleurs qui vendent à cause des interdictions de location.",
+    "Opportunité pour le marchand de biens : décote à l'achat (en moyenne 15 à 25 % pour un G, 10 à 18 % pour un F) et nombreux bailleurs qui vendent à cause des interdictions de location.",
     "Interdictions de location : G depuis 2025, F en 2028, E en 2034. À la vente, il n'y a pas d'interdiction.",
     "Un audit énergétique est obligatoire pour vendre un logement classé F ou G (et E depuis 2025).",
     "La valeur vient du saut de DPE après rénovation, pas des aides : un marchand de biens n'est en général pas éligible à MaPrimeRénov'.",
