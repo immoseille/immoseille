@@ -1,0 +1,132 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Un marchand de biens peut-il exclure la garantie des vices cachés ?",
+    r: "Non. En tant que vendeur professionnel, le marchand de biens est tenu de plein droit des vices cachés. Il ne peut se prévaloir ni de sa bonne foi, ni d'une clause de non-garantie dans l'acte de vente : cette clause, valable entre particuliers, lui est inopposable.",
+  },
+  {
+    q: "Quel est le délai pour agir contre un vice caché ?",
+    r: "L'acheteur dispose de 2 ans à compter de la découverte du vice pour agir. S'ajoute un délai butoir de 20 ans à compter de la vente. Passé ces délais, l'action n'est plus recevable.",
+  },
+  {
+    q: "Que risque un marchand de biens en cas de vice caché ?",
+    r: "L'acheteur peut demander l'annulation de la vente avec remboursement du prix (action rédhibitoire) ou une réduction de prix couvrant les réparations (action estimatoire). Comme le vendeur professionnel est présumé connaître les vices, s'ajoutent des dommages-intérêts. La facture totale peut dépasser le prix de vente du bien.",
+  },
+  {
+    q: "Vice caché ou garantie décennale : quelle différence ?",
+    r: "La garantie des vices cachés vise un défaut antérieur à la vente, caché, qui rend le bien impropre à son usage : le marchand de biens en répond comme vendeur. La garantie décennale couvre les dommages graves issus des travaux de construction ou de rénovation, pendant dix ans après la réception : le marchand de biens en répond comme constructeur quand il a fait réaliser les travaux. Les deux peuvent se cumuler.",
+  },
+  {
+    q: "Comment un marchand de biens se protège-t-il des vices cachés ?",
+    r: "En expertisant le bien avant l'achat, en confiant les travaux à des entreprises assurées, en réalisant un diagnostic complet avant la revente et en souscrivant les bonnes assurances (responsabilité civile professionnelle, décennale, dommage-ouvrage). La transparence dans l'acte reste la meilleure protection.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Vice caché et marchand de biens : le vendeur qui ne peut s'exonérer"
+  description="Vice caché et marchand de biens : pourquoi le vendeur professionnel est responsable de plein droit, ne peut exclure la garantie, les recours de l'acheteur, les délais et comment se protéger."
+  h1="Vice caché et marchand de biens : responsabilité et protections"
+  lead="Contrairement à un particulier, le marchand de biens ne peut pas se décharger des vices cachés : vendeur professionnel, il en répond de plein droit, sans pouvoir invoquer sa bonne foi ni une clause d'exclusion. Voici ce que dit la loi, ce que risque le marchand de biens, et comment sécuriser ses opérations à l'achat comme à la revente."
+  reading="9 min"
+  image="/img/vice-cache-marchand-de-biens.jpg"
+  imageAlt="Inspection d'un bien immobilier à la recherche de vices cachés"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Vice caché marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Un <strong>vice caché</strong> est un défaut grave, non visible, antérieur à la vente, qui rend le bien impropre à son usage ou en diminue fortement la valeur.</li>
+      <li>Le marchand de biens est un <strong>vendeur professionnel</strong> : il en est <strong>responsable de plein droit</strong>.</li>
+      <li>Il ne peut <strong>ni invoquer sa bonne foi, ni insérer une clause d'exclusion</strong> de garantie.</li>
+      <li>Recours de l'acheteur : <strong>annulation</strong> de la vente ou <strong>réduction de prix</strong>, plus des <strong>dommages-intérêts</strong>.</li>
+      <li>Délai pour agir : <strong>2 ans</strong> après la découverte du vice (délai butoir de 20 ans après la vente).</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce qu'un vice caché ?</h2>
+  <p>
+    La garantie des vices cachés est définie par le Code civil (articles 1641 à 1649). Selon l'article 1641, le vendeur
+    répond des <strong>défauts cachés de la chose vendue qui la rendent impropre à l'usage auquel on la destine</strong>, ou qui
+    en diminuent tellement cet usage que l'acheteur ne l'aurait pas acquise, ou à un moindre prix, s'il les avait connus.
+  </p>
+  <p>Pour qu'un défaut soit un vice caché, trois conditions doivent être réunies :</p>
+  <ul>
+    <li><strong>Un défaut grave :</strong> il rend le bien impropre à son usage ou en diminue fortement la valeur (infiltrations, charpente dégradée, fondations instables, installation électrique dangereuse).</li>
+    <li><strong>Un défaut caché :</strong> il n'était pas visible lors des visites. L'article 1642 précise que le vendeur ne répond pas des vices apparents dont l'acheteur a pu se convaincre lui-même.</li>
+    <li><strong>Un défaut antérieur :</strong> il existait au moment de la vente, même s'il ne s'est révélé qu'ensuite.</li>
+  </ul>
+
+  <h2>Pourquoi le marchand de biens est plus exposé</h2>
+  <p>
+    C'est le point central, et il change tout. Entre particuliers, le vendeur peut insérer dans l'acte une <strong>clause de
+    non-garantie des vices cachés</strong> et se protéger, tant qu'il est de bonne foi. Le <strong>marchand de biens, lui, ne
+    le peut pas</strong>. Considéré comme un <strong>vendeur professionnel</strong>, il est <strong>présumé connaître les vices</strong> du bien qu'il revend. Résultat : il en est <strong>responsable de plein droit</strong> et ne peut se libérer ni par
+    l'ignorance, ni par une clause d'exclusion. Cette clause, qu'il ferait pourtant figurer à l'acte, lui serait inopposable.
+  </p>
+  <p>
+    Cette responsabilité renforcée est la contrepartie du statut : le marchand de biens tire profit de la revente, il en
+    assume donc pleinement la garantie. C'est une donnée à intégrer dès le montage, au même titre que la fiscalité ou le
+    financement d'une opération d'<a href="/achat-revente-immobilier/">achat-revente</a>.
+  </p>
+
+  <h2>Les recours de l'acheteur</h2>
+  <p>Si un vice caché apparaît après la vente, l'acheteur a le choix entre deux actions :</p>
+  <ul>
+    <li><strong>L'action rédhibitoire :</strong> il rend le bien et obtient le remboursement du prix, assorti des frais (notaire, agence).</li>
+    <li><strong>L'action estimatoire :</strong> il garde le bien et obtient une réduction de prix correspondant au coût des réparations.</li>
+  </ul>
+  <p>
+    Dans les deux cas, parce que le vendeur professionnel est présumé de mauvaise foi, s'ajoutent des <strong>dommages-intérêts</strong> couvrant les autres préjudices : travaux annexes, impossibilité d'occuper le bien, préjudices immatériels. En pratique, la
+    note peut <strong>dépasser le prix de vente initial</strong>. Côté délai, l'acheteur doit agir dans les <strong>2 ans à
+    compter de la découverte</strong> du vice, dans la limite d'un délai butoir de 20 ans après la vente.
+  </p>
+
+  <h2>Vice caché et garanties de construction : à ne pas confondre</h2>
+  <p>
+    Quand le marchand de biens rénove avant de revendre, il peut cumuler deux responsabilités distinctes. En plus de la
+    garantie des vices cachés (comme vendeur), il répond des <strong>garanties légales de construction</strong> (comme
+    constructeur ou maître d'ouvrage) dès lors que des travaux sont réalisés :
+  </p>
+  <ul>
+    <li><strong>La garantie de parfait achèvement</strong> (article 1792-6) : 1 an après la réception, pour tous les désordres signalés.</li>
+    <li><strong>La garantie biennale</strong> de bon fonctionnement (article 1792-3) : 2 ans, pour les équipements dissociables du bâti.</li>
+    <li><strong>La garantie décennale</strong> (article 1792) : 10 ans, pour les dommages graves affectant la solidité de l'ouvrage ou le rendant impropre à sa destination.</li>
+  </ul>
+  <p>
+    La différence est nette : le vice caché vise un défaut <strong>antérieur</strong> et dissimulé ; la décennale vise un
+    désordre <strong>issu des travaux</strong>. Les deux régimes peuvent jouer en même temps sur une même opération, d'où la
+    nécessité d'être correctement couvert.
+  </p>
+
+  <h2>Côté achat : le piège du vice caché hérité</h2>
+  <p>
+    Le marchand de biens est aussi acheteur, le plus souvent auprès d'un particulier qui, lui, <strong>peut</strong> exclure
+    la garantie. Autrement dit, un vice qu'il n'a pas détecté à l'achat ne pourra pas toujours se retourner contre son
+    vendeur, mais il devra malgré tout en répondre lors de la revente. Le vice non vu à l'entrée devient donc son problème à
+    la sortie. D'où l'importance d'une <strong>expertise technique avant d'acheter</strong> : faire intervenir un architecte
+    ou un expert bâtiment coûte peu au regard d'un sinistre qui peut effacer toute la marge d'une opération.
+  </p>
+
+  <h2>Comment se protéger</h2>
+  <p>La responsabilité est lourde, mais elle se maîtrise par la méthode :</p>
+  <ul>
+    <li><strong>Expertiser avant d'acheter :</strong> un diagnostic structurel par un professionnel du bâtiment révèle les désordres invisibles avant de s'engager.</li>
+    <li><strong>Confier les travaux à des entreprises assurées :</strong> en cas de désordre décennal, l'assurance de l'entreprise prend le relais.</li>
+    <li><strong>Diagnostiquer avant de revendre :</strong> un rapport complet sur l'état du bien documente la transparence et limite les surprises.</li>
+    <li><strong>Souscrire les bonnes assurances :</strong> responsabilité civile professionnelle, décennale et dommage-ouvrage sont au cœur des <a href="/assurance-marchand-de-biens/">assurances du marchand de biens</a>.</li>
+    <li><strong>Jouer la transparence :</strong> mentionner clairement l'état réel du bien dans l'acte protège mieux qu'une clause inopérante.</li>
+  </ul>
+
+  <h2>Un risque à cadrer, pas à subir</h2>
+  <p>
+    La garantie des vices cachés n'est pas une fatalité : c'est un paramètre du métier, qui se gère comme le chiffrage ou le
+    calendrier. En l'anticipant dès le <a href="/monter-une-operation-marchand-de-biens/">montage de l'opération</a>, le
+    marchand de biens transforme une menace en simple ligne de risque maîtrisée. C'est exactement ce type de réflexe que l'on
+    acquiert en apprenant à <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> : connaître la règle pour
+    opérer sereinement, plutôt que la découvrir au premier litige.
+  </p>
+</ArticleLayout>

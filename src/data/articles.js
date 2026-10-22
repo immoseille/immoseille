@@ -254,6 +254,15 @@ export const articles = [
     date: '20 octobre 2026',
     excerpt: "Ajouter un étage pour créer de la surface neuve et la revendre : principe, rentabilité, autorisations (PLU, permis, copropriété) et faisabilité technique.",
   },
+  {
+    slug: 'vice-cache-marchand-de-biens',
+    title: 'Vice caché et marchand de biens : responsabilité et protections',
+    image: '/img/vice-cache-marchand-de-biens.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '22 octobre 2026',
+    excerpt: "Pourquoi le marchand de biens, vendeur professionnel, est responsable de plein droit des vices cachés sans pouvoir s'exonérer : recours, délais et protections.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

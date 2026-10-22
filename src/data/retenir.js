@@ -292,4 +292,11 @@ export const RETENIR = {
     "En copropriété, la toiture est une partie commune : accord de l'assemblée générale requis ; la loi ALUR a assoupli les règles et permet de céder le droit de surélever.",
     "Le risque n°1 est la faisabilité technique : la structure doit supporter la charge, d'où une étude de structure indispensable.",
   ],
+  'vice-cache-marchand-de-biens': [
+    "Un vice caché est un défaut grave, non visible, antérieur à la vente, qui rend le bien impropre à son usage (articles 1641 et suivants du Code civil).",
+    "Le marchand de biens, vendeur professionnel, est responsable de plein droit des vices cachés : il ne peut invoquer ni sa bonne foi, ni une clause d'exclusion.",
+    "Recours de l'acheteur : annulation de la vente (action rédhibitoire) ou réduction de prix (action estimatoire), plus des dommages-intérêts.",
+    "Délai pour agir : 2 ans à compter de la découverte du vice, avec un délai butoir de 20 ans après la vente.",
+    "Protections : expertise avant achat, travaux par des entreprises assurées, diagnostic avant revente et assurances (RC Pro, décennale, dommage-ouvrage).",
+  ],
 };
