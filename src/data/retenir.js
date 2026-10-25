@@ -306,4 +306,11 @@ export const RETENIR = {
     "La taxe d'aménagement est étendue, à compter du 1er janvier 2026, aux transformations de locaux non résidentiels en logements : une ligne de coût à intégrer.",
     "Effet de marché : fin du Pinel et nouveau statut du bailleur privé, qui valorisent les biens rénovés et performants énergétiquement.",
   ],
+  'marche-immobilier-2026-marchand-de-biens': [
+    "En 2026, le marché immobilier se normalise : entre 900 000 et 950 000 ventes annuelles selon les sources, loin du point bas de fin 2024 (environ 845 000).",
+    "Les prix de l'ancien sont globalement stables sur un an, autour de 3 000 euros le mètre carré en moyenne nationale, avec de fortes disparités entre villes.",
+    "Les taux de crédit se sont stabilisés autour de 3,4 % sur 20 ans et 3,5 % sur 25 ans, avec un scénario de stabilité durable pour 2026.",
+    "Le marché est à deux vitesses selon le DPE : les biens bien classés se valorisent, les passoires thermiques continuent de se déprécier.",
+    "Pour le marchand de biens, l'opportunité principale est l'ancien énergivore acheté décoté puis rénové ; la marge se crée à l'achat et au chiffrage, pas par la hausse du marché.",
+  ],
 };

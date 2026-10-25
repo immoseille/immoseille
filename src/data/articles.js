@@ -272,6 +272,15 @@ export const articles = [
     date: '25 octobre 2026',
     excerpt: "Ce que la loi de finances 2026 change et ne change pas pour le marchand de biens : régime maintenu, hausse de CSG sur les dividendes, taxe d'aménagement et effets de marché.",
   },
+  {
+    slug: 'marche-immobilier-2026-marchand-de-biens',
+    title: 'Marché immobilier 2026 : tendances et opportunités',
+    image: '/img/marche-immobilier-2026-marchand-de-biens.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '25 octobre 2026',
+    excerpt: "Volumes, prix, taux de crédit et marché à deux vitesses selon le DPE : la conjoncture immobilière 2026 décryptée et les opportunités concrètes pour le marchand de biens.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
