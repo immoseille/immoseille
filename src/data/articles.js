@@ -263,6 +263,15 @@ export const articles = [
     date: '22 octobre 2026',
     excerpt: "Pourquoi le marchand de biens, vendeur professionnel, est responsable de plein droit des vices cachés sans pouvoir s'exonérer : recours, délais et protections.",
   },
+  {
+    slug: 'loi-de-finances-2026-marchand-de-biens',
+    title: 'Loi de finances 2026 : ce qui change pour le marchand de biens',
+    image: '/img/loi-de-finances-2026-marchand-de-biens.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '25 octobre 2026',
+    excerpt: "Ce que la loi de finances 2026 change et ne change pas pour le marchand de biens : régime maintenu, hausse de CSG sur les dividendes, taxe d'aménagement et effets de marché.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {

@@ -299,4 +299,11 @@ export const RETENIR = {
     "Délai pour agir : 2 ans à compter de la découverte du vice, avec un délai butoir de 20 ans après la vente.",
     "Protections : expertise avant achat, travaux par des entreprises assurées, diagnostic avant revente et assurances (RC Pro, décennale, dommage-ouvrage).",
   ],
+  'loi-de-finances-2026-marchand-de-biens': [
+    "La loi de finances 2026 (loi du 19 février 2026) laisse le régime du marchand de biens inchangé : droits de mutation réduits (environ 0,715 %), TVA sur la marge et imposition aux BIC sont maintenus.",
+    "La réforme des plus-values immobilières (suppression des abattements, taux réduit) a été abandonnée : le régime des particuliers est maintenu, prélèvements sociaux à 17,2 %.",
+    "La CSG sur les revenus du capital augmente de 1,4 point (prélèvements sociaux à 18,6 % sur les dividendes) : un marchand de biens en société à l'IS qui se verse des dividendes est concerné.",
+    "La taxe d'aménagement est étendue, à compter du 1er janvier 2026, aux transformations de locaux non résidentiels en logements : une ligne de coût à intégrer.",
+    "Effet de marché : fin du Pinel et nouveau statut du bailleur privé, qui valorisent les biens rénovés et performants énergétiquement.",
+  ],
 };

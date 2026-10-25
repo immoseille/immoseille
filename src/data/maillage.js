@@ -55,6 +55,7 @@ export const MAILLAGE = [
   { needle: 'garantie des vices cachés', slug: 'vice-cache-marchand-de-biens' },
   { needle: 'vice caché', slug: 'vice-cache-marchand-de-biens' },
   { needle: 'vices cachés', slug: 'vice-cache-marchand-de-biens' },
+  { needle: 'loi de finances 2026', slug: 'loi-de-finances-2026-marchand-de-biens' },
   { needle: 'calcul de rentabilité', slug: 'calcul-rentabilite-marchand-de-biens' },
   { needle: 'simulateur de rentabilité', slug: 'simulateur-rentabilite-marchand-de-biens' },
   { needle: 'rentabilité locative', slug: 'calcul-rentabilite-immobiliere' },
