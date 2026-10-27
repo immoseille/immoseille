@@ -1,0 +1,107 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Peut-on acheter aux enchères immobilières sans avocat ?",
+    r: "Pas pour les ventes judiciaires. Aux enchères du tribunal, il est obligatoire de mandater un avocat inscrit au barreau du tribunal concerné : c'est lui qui porte les enchères pour votre compte. Les ventes notariales et domaniales ont leurs propres règles, souvent plus accessibles.",
+  },
+  {
+    q: "Peut-on mettre une condition suspensive de prêt aux enchères ?",
+    r: "Non. L'adjudication est ferme et définitive, sans condition suspensive d'obtention de crédit. Le financement doit donc être sécurisé avant la vente. Autre point de vigilance : pendant 10 jours après l'adjudication, un tiers peut surenchérir d'au moins 10 % et relancer la vente.",
+  },
+  {
+    q: "Y a-t-il une garantie des vices cachés aux enchères ?",
+    r: "Non. La vente aux enchères judiciaires se fait sans garantie, y compris sans garantie des vices cachés. C'est pourquoi il est indispensable de consulter le cahier des conditions de vente déposé au greffe et de visiter le bien avant d'enchérir.",
+  },
+  {
+    q: "Quels frais prévoir pour une enchère immobilière ?",
+    r: "En plus du prix d'adjudication : les frais préalables taxés, les émoluments et honoraires d'avocat (selon un barème), les droits de mutation et les frais de publication. Concrètement, deux chèques de banque sont exigés avant l'audience : l'un de 10 % de la mise à prix (minimum 3 000 €) remis au séquestre, l'autre couvrant les frais, à l'ordre de la CARPA.",
+  },
+  {
+    q: "Les enchères sont-elles un bon canal pour un marchand de biens ?",
+    r: "Oui pour un marchand de biens aguerri et bien financé. La décote à l'achat est réelle, mais les contraintes sont fortes : paiement rapide sans condition de prêt, absence de garantie, biens souvent occupés à faire libérer. À réserver aux opérations soigneusement préparées et chiffrées.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Enchères immobilières et marchand de biens : le guide"
+  description="Enchères immobilières pour le marchand de biens : les 3 types de ventes, la procédure judiciaire (avocat, chèques, cahier des conditions), les pièges (sans garantie, bien occupé, surenchère) et quand ce canal est pertinent."
+  h1="Enchères immobilières : le guide du marchand de biens"
+  lead="Acheter un bien décoté aux enchères est une piste séduisante pour un marchand de biens. Mais c'est aussi l'un des canaux les plus techniques : avocat obligatoire, paiement sans condition de prêt, vente sans garantie, biens occupés. Voici les types d'enchères, la procédure, les pièges et les cas où ce canal fait vraiment sens."
+  reading="9 min"
+  image="/img/encheres-immobilieres-marchand-de-biens.jpg"
+  imageAlt="Enchères immobilières au tribunal pour un marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Enchères immobilières marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Les enchères permettent d'acheter un bien <strong>décoté</strong> : un canal de sourcing intéressant pour le marchand de biens.</li>
+      <li>Trois familles : <strong>judiciaires</strong> (tribunal), <strong>notariales</strong> et <strong>domaniales</strong> (biens de l'État).</li>
+      <li>Aux enchères judiciaires, un <strong>avocat est obligatoire</strong> pour porter les enchères.</li>
+      <li>Pièges majeurs : <strong>pas de condition suspensive de prêt</strong>, vente <strong>sans garantie</strong>, biens souvent <strong>occupés</strong>, <strong>surenchère</strong> possible sous 10 jours.</li>
+      <li>À réserver à un marchand de biens <strong>aguerri et bien financé</strong>.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi les enchères intéressent le marchand de biens</h2>
+  <p>
+    L'attrait est simple : la <strong>mise à prix est souvent inférieure au marché</strong>, parfois nettement. Pour un
+    marchand de biens, c'est un gisement de biens à sourcer en dehors des circuits classiques, au même titre que l'<a href="/immobilier-off-market/">immobilier off-market</a>. Mais là où une annonce se négocie, une enchère se gagne
+    à l'audience, avec des règles strictes et des contraintes qui éliminent les acheteurs non préparés. C'est justement cette
+    barrière à l'entrée qui crée l'opportunité.
+  </p>
+
+  <h2>Les trois types d'enchères immobilières</h2>
+  <ul>
+    <li><strong>Les enchères judiciaires :</strong> organisées au tribunal judiciaire, elles portent sur des biens saisis ou vendus dans le cadre d'une licitation (sortie d'indivision). Ce sont les plus fréquentes et les plus encadrées.</li>
+    <li><strong>Les enchères notariales :</strong> organisées par les notaires (ventes volontaires ou successions), avec une procédure généralement plus souple que la voie judiciaire.</li>
+    <li><strong>Les enchères domaniales :</strong> la vente des biens de l'État et des collectivités, accessibles en ligne.</li>
+  </ul>
+  <p>La suite détaille la voie judiciaire, la plus technique et la plus riche en pièges.</p>
+
+  <h2>La procédure aux enchères judiciaires</h2>
+  <p>Acheter aux enchères du tribunal suit un circuit précis :</p>
+  <ul>
+    <li><strong>Mandater un avocat :</strong> seul un avocat inscrit au barreau du tribunal peut porter les enchères pour votre compte. C'est un passage obligé.</li>
+    <li><strong>Consulter le cahier des conditions de vente :</strong> déposé au greffe, ce document décrit le bien, les charges, les servitudes, l'occupation et les modalités. C'est la pièce maîtresse à étudier avant tout.</li>
+    <li><strong>Préparer les chèques de banque :</strong> avant l'audience, deux chèques certifiés sont exigés. L'un de 10 % de la mise à prix (minimum 3 000 €), remis au séquestre comme acompte ; l'autre couvrant les frais, à l'ordre de la CARPA.</li>
+    <li><strong>L'adjudication :</strong> le plus offrant l'emporte. Il n'y a pas de notaire : c'est le jugement d'adjudication qui vaut titre de propriété (sauf recours à un prêt hypothécaire).</li>
+  </ul>
+
+  <h2>Les pièges à connaître absolument</h2>
+  <p>C'est ici que les enchères se distinguent d'un achat classique, et que les mauvaises surprises coûtent cher :</p>
+  <ul>
+    <li><strong>Aucune condition suspensive de prêt :</strong> l'achat est ferme, il n'est pas conditionné à l'obtention d'un crédit. Votre <a href="/financement-marchand-de-biens/">financement</a> doit être bouclé avant d'enchérir, sous peine de tout perdre.</li>
+    <li><strong>Vente sans garantie :</strong> pas de garantie des <a href="/vice-cache-marchand-de-biens/">vices cachés</a>. Ce que vous achetez, vous le prenez en l'état. D'où l'importance de la visite et du cahier des conditions.</li>
+    <li><strong>Biens souvent occupés :</strong> de nombreux biens saisis sont habités. L'adjudicataire doit alors engager une procédure d'expulsion, longue et coûteuse, à intégrer au calcul.</li>
+    <li><strong>La surenchère des 10 jours :</strong> après l'adjudication, un tiers peut surenchérir d'au moins 10 % dans les 10 jours. Tant que ce délai court, vous n'êtes pas certain de conserver le bien.</li>
+    <li><strong>Les arriérés de copropriété :</strong> l'adjudicataire peut être tenu de certaines dettes de charges de l'ancien propriétaire. À vérifier dans le cahier des conditions.</li>
+    <li><strong>Le paiement du prix :</strong> il doit intervenir dans un délai strict, faute de quoi une réitération d'enchères (la folle enchère) peut être engagée, à vos frais.</li>
+  </ul>
+
+  <h2>Quand ce canal fait sens pour un marchand de biens</h2>
+  <p>
+    Les enchères ne sont pas un canal de débutant. Elles supposent une trésorerie disponible ou un financement verrouillé, une
+    lecture fine du cahier des conditions, et la capacité d'absorber un bien occupé ou une procédure. Mais pour un marchand de
+    biens expérimenté, elles offrent ce que le marché classique donne rarement : une <strong>décote franche à l'achat</strong>,
+    moteur de la marge d'une opération d'<a href="/achat-revente-immobilier/">achat-revente</a>. La règle d'or : ne jamais
+    enchérir au-delà d'un prix plafond calculé à froid, intégrant travaux, frais, expulsion éventuelle et marge cible.
+  </p>
+  <p>
+    Bien utilisées, les enchères deviennent une source d'opérations à part entière. Mal préparées, elles tournent au piège.
+    Toute la différence tient à la méthode, celle que l'on acquiert en apprenant à <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a>.
+  </p>
+
+  <div class="encadre">
+    <p class="encadre-h">Bon à savoir</p>
+    <p>
+      La procédure des ventes judiciaires est technique et varie selon les tribunaux. Avant d'enchérir, faites-vous accompagner
+      par l'avocat chargé de la vente et étudiez le cahier des conditions de vente : c'est lui qui fait foi sur les charges,
+      l'occupation et les frais réels de l'opération.
+    </p>
+  </div>
+</ArticleLayout>

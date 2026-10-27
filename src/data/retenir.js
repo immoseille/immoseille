@@ -313,4 +313,11 @@ export const RETENIR = {
     "Le marché est à deux vitesses selon le DPE : les biens bien classés se valorisent, les passoires thermiques continuent de se déprécier.",
     "Pour le marchand de biens, l'opportunité principale est l'ancien énergivore acheté décoté puis rénové ; la marge se crée à l'achat et au chiffrage, pas par la hausse du marché.",
   ],
+  'encheres-immobilieres-marchand-de-biens': [
+    "Les enchères permettent d'acheter un bien décoté : un canal de sourcing pour le marchand de biens, mais technique.",
+    "Trois familles d'enchères : judiciaires (tribunal), notariales et domaniales (biens de l'État).",
+    "Aux enchères judiciaires, un avocat inscrit au barreau du tribunal est obligatoire pour porter les enchères.",
+    "Pièges majeurs : aucune condition suspensive de prêt, vente sans garantie des vices cachés, biens souvent occupés (expulsion), surenchère possible dans les 10 jours.",
+    "Avant l'audience, deux chèques de banque sont exigés : 10 % de la mise à prix (minimum 3 000 €) au séquestre, et les frais à l'ordre de la CARPA.",
+  ],
 };

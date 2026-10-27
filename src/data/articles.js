@@ -281,6 +281,15 @@ export const articles = [
     date: '25 octobre 2026',
     excerpt: "Volumes, prix, taux de crédit et marché à deux vitesses selon le DPE : la conjoncture immobilière 2026 décryptée et les opportunités concrètes pour le marchand de biens.",
   },
+  {
+    slug: 'encheres-immobilieres-marchand-de-biens',
+    title: 'Enchères immobilières : le guide du marchand de biens',
+    image: '/img/encheres-immobilieres-marchand-de-biens.jpg',
+    cat: 'operations',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '27 octobre 2026',
+    excerpt: "Acheter décoté aux enchères : les 3 types de ventes, la procédure judiciaire (avocat, chèques, cahier des conditions) et les pièges (sans garantie, bien occupé, surenchère).",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
