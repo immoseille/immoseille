@@ -1,0 +1,110 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Qu'est-ce qu'un OBO immobilier ?",
+    r: "L'OBO (Owner Buy Out), ou vente à soi-même, consiste à vendre un bien immobilier que l'on possède à une société que l'on contrôle (SAS ou SCI à l'IS), le plus souvent financée par un emprunt bancaire. Le propriétaire récupère des liquidités et détient désormais des parts de société au lieu du bien en direct, tout en gardant le contrôle.",
+  },
+  {
+    q: "Quels sont les avantages de l'OBO immobilier ?",
+    r: "Trois principaux : dégager des liquidités sans vendre à un tiers, optimiser la fiscalité en faisant passer les revenus de l'impôt sur le revenu à l'impôt sur les sociétés (avec amortissement et intérêts déductibles), et faciliter la transmission en donnant des parts d'une société faiblement valorisée car endettée. S'y ajoute l'effet de levier du crédit pour réinvestir.",
+  },
+  {
+    q: "L'OBO permet-il de réduire l'IFI ?",
+    r: "Non. Les prêts contractés par une société pour acquérir un bien détenu par son dirigeant ne sont pas déductibles de la base de l'IFI (article 973-II-1° du CGI). L'OBO agit sur l'imposition des revenus et la transmission, pas sur l'impôt sur la fortune immobilière.",
+  },
+  {
+    q: "Quel est le principal risque d'un OBO immobilier ?",
+    r: "L'abus de droit. L'opération doit avoir une substance économique réelle et le prix de vente doit correspondre à la valeur de marché, sous peine de requalification fiscale. C'est une opération complexe qui exige un accompagnement par un notaire et un conseil patrimonial.",
+  },
+];
+---
+
+<ArticleLayout
+  title="OBO immobilier (vente à soi-même) : le guide"
+  description="OBO immobilier (Owner Buy Out, vente à soi-même) : définition, avantages (liquidités, fiscalité IR vers IS, transmission), étapes du montage, risque d'abus de droit et lien avec le marchand de biens."
+  h1="OBO immobilier : la vente à soi-même expliquée"
+  lead="L'OBO immobilier, ou vente à soi-même, est une technique patrimoniale qui consiste à vendre son bien à sa propre société pour dégager des liquidités, alléger la fiscalité et préparer la transmission. Voici son principe, ses étapes, ses limites, et ce qu'un marchand de biens doit en savoir."
+  reading="8 min"
+  image="/img/obo-immobilier.jpg"
+  imageAlt="OBO immobilier : vente d'un bien à sa propre société"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'OBO immobilier' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>L'<strong>OBO</strong> (Owner Buy Out) ou <strong>vente à soi-même</strong> : vendre son bien à une société que l'on contrôle.</li>
+      <li>L'acquisition est financée par un <strong>emprunt bancaire</strong> : le propriétaire récupère des liquidités.</li>
+      <li>Avantages : <strong>liquidités</strong>, bascule de l'<strong>IR vers l'IS</strong> (amortissement, intérêts déductibles), <strong>transmission</strong> facilitée.</li>
+      <li>L'OBO ne réduit <strong>pas l'IFI</strong> (article 973-II-1° du CGI).</li>
+      <li>Risque principal : l'<strong>abus de droit</strong>. Prix de marché et substance économique obligatoires.</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce que l'OBO immobilier ?</h2>
+  <p>
+    OBO signifie <strong>Owner Buy Out</strong>, littéralement « rachat par le propriétaire ». On parle aussi de <strong>vente
+    à soi-même</strong>. Le principe : un propriétaire vend un bien immobilier qu'il détient à une <strong>société qu'il
+    contrôle</strong> (une SAS ou une SCI ayant opté pour l'impôt sur les sociétés), cette société finançant l'achat par un
+    emprunt bancaire. À l'arrivée, le propriétaire a encaissé le prix de vente en liquidités et détient des <strong>parts de
+    société</strong> au lieu du bien en direct, tout en gardant la main.
+  </p>
+
+  <h2>Pourquoi réaliser un OBO ?</h2>
+  <ul>
+    <li><strong>Dégager des liquidités :</strong> on récupère la valeur de son bien sans le vendre à un tiers, et on peut réinvestir ce capital ailleurs.</li>
+    <li><strong>Optimiser la fiscalité :</strong> détenus en direct, les loyers sont taxés à l'impôt sur le revenu (jusqu'à 45 %) plus 17,2 % de prélèvements sociaux. Logés dans une société à l'IS, ils peuvent être fortement réduits grâce à l'<strong>amortissement</strong> du bien et à la déduction des <strong>intérêts d'emprunt</strong>.</li>
+    <li><strong>Préparer la transmission :</strong> juste après le montage, la société est fortement endettée, donc faiblement valorisée. C'est le moment idéal pour donner des parts (en pleine ou en nue-propriété) à ses enfants avec une fiscalité réduite.</li>
+    <li><strong>Jouer l'effet de levier :</strong> le crédit bancaire permet de réinvestir les liquidités dégagées et de faire grandir le patrimoine.</li>
+  </ul>
+  <p>
+    Attention toutefois : l'OBO <strong>ne réduit pas l'IFI</strong>. L'emprunt contracté par la société pour racheter le bien
+    du dirigeant n'est pas déductible de la base taxable (article 973-II-1° du CGI).
+  </p>
+
+  <h2>Les étapes du montage</h2>
+  <ul>
+    <li><strong>Étape 0 :</strong> créer la société à l'IS (SAS ou SCI à l'IS), avec le cas échéant les héritiers au capital.</li>
+    <li><strong>Étape 1 :</strong> vendre le bien à la société, à un prix conforme à la <strong>valeur de marché</strong> (évaluation par un professionnel indépendant).</li>
+    <li><strong>Étape 2 :</strong> la société finance l'acquisition par un emprunt bancaire, parfois complété d'un crédit-vendeur en compte courant.</li>
+    <li><strong>Étape 3 :</strong> le vendeur encaisse le prix et réinvestit les liquidités.</li>
+    <li><strong>Étape 4 (optionnelle) :</strong> transmettre les parts de la société aux héritiers pendant qu'elle est faiblement valorisée.</li>
+  </ul>
+
+  <h2>OBO et marchand de biens : quel rapport ?</h2>
+  <p>
+    Soyons clairs : l'OBO est d'abord une technique <strong>patrimoniale</strong>, pensée pour un propriétaire qui détient un
+    patrimoine locatif de longue date, pas une opération d'achat-revente. Ce n'est donc pas une opération de marchand de biens
+    au sens strict. Mais le sujet est utile à connaître pour deux raisons. D'une part, le marchand de biens qui s'est constitué
+    un patrimoine personnel peut y recourir pour le restructurer. D'autre part, l'OBO mobilise les mêmes briques que le métier :
+    société à l'IS, <a href="/financement-marchand-de-biens/">emprunt bancaire</a> et effet de levier, et il se combine souvent
+    avec une <a href="/holding-marchand-de-biens/">holding</a> pour la détention des titres. Le comprendre, c'est élargir sa
+    boîte à outils patrimoniale.
+  </p>
+
+  <h2>Les risques et les limites</h2>
+  <ul>
+    <li><strong>L'abus de droit :</strong> c'est le risque numéro un. L'opération doit avoir une substance économique réelle, au-delà du seul avantage fiscal, sous peine de requalification.</li>
+    <li><strong>Le prix de vente :</strong> il doit refléter la valeur réelle du marché. Un prix gonflé ou minoré ouvre la porte au redressement.</li>
+    <li><strong>La complexité :</strong> montage juridique, fiscal et bancaire à articuler finement ; les modalités varient selon chaque situation.</li>
+    <li><strong>Le choix de la structure :</strong> SAS ou <a href="/sci-marchand-de-biens/">SCI</a> à l'IS, le véhicule se choisit selon l'objectif (détention locative, transmission), à ne pas confondre avec la société commerciale d'achat-revente.</li>
+  </ul>
+
+  <div class="encadre">
+    <p class="encadre-h">Bon à savoir</p>
+    <p>
+      L'OBO immobilier est une opération complexe et sensible sur le plan fiscal. Les chiffres et montages dépendent fortement
+      de chaque situation. Un accompagnement par un notaire et un conseil en gestion de patrimoine n'est pas optionnel : il
+      sécurise l'opération et écarte le risque d'abus de droit.
+    </p>
+  </div>
+
+  <h2>En résumé</h2>
+  <p>
+    L'OBO transforme un bien détenu en liquidités et en parts de société, avec à la clé une fiscalité des revenus allégée et une
+    transmission facilitée, mais sans effet sur l'IFI et sous réserve d'un montage solide. Ce n'est pas une opération de
+    marchand de biens, mais une technique voisine qui enrichit la culture patrimoniale utile quand on veut <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a> et piloter, un jour, son propre patrimoine.
+  </p>
+</ArticleLayout>

@@ -1,0 +1,108 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Qu'est-ce qu'une holding de marchand de biens ?",
+    r: "C'est une société mère (le plus souvent une SAS ou une SARL) qui détient les parts d'une ou plusieurs sociétés opérationnelles de marchand de biens. La holding ne réalise pas elle-même les opérations d'achat-revente : elle détient les titres des filiales qui les réalisent, ce qui permet de structurer, financer et faire remonter la trésorerie du groupe.",
+  },
+  {
+    q: "Quel est l'intérêt fiscal d'une holding pour un marchand de biens ?",
+    r: "Le principal levier est le régime mère-fille (articles 145 et 216 du CGI) : les dividendes remontés par une filiale vers la holding sont exonérés d'impôt sur les sociétés à hauteur de 95 % (seule une quote-part de 5 % reste imposable), sous condition de détenir au moins 5 % du capital pendant deux ans. Cela permet de faire remonter la marge d'une opération avec un frottement fiscal minimal pour la réinvestir dans la suivante.",
+  },
+  {
+    q: "Peut-on utiliser une SCI comme filiale de marchand de biens ?",
+    r: "Non pour l'achat-revente. La SCI a un objet civil, incompatible avec l'activité commerciale du marchand de biens : l'utiliser pour acheter-revendre expose à une requalification fiscale. Les filiales qui réalisent les opérations doivent être des sociétés commerciales à l'IS (SAS, SARL). Une SCI peut en revanche loger un patrimoine locatif détenu à part.",
+  },
+  {
+    q: "À partir de quand une holding devient-elle pertinente ?",
+    r: "Quand le volume le justifie. Pour une première opération ou une activité ponctuelle, une seule société suffit. La holding prend son sens dès que l'on enchaîne les opérations, que l'on veut isoler les risques par entité et réinvestir la trésorerie d'une opération à l'autre. En dessous, ses coûts et sa complexité administrative ne sont pas rentables.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Holding et marchand de biens : structurer pour réinvestir"
+  description="Holding de marchand de biens : définition, régime mère-fille (95 %), intégration fiscale, réinvestissement de la marge, transmission et à partir de quand ce montage devient pertinent."
+  h1="Holding et marchand de biens : pourquoi et comment"
+  lead="À mesure que les opérations s'enchaînent, structurer son activité en holding devient un levier puissant pour le marchand de biens : faire remonter la marge avec un frottement fiscal minimal, la réinvestir, isoler les risques et préparer la transmission. Voici le principe, les avantages fiscaux et le moment où ce montage fait vraiment sens."
+  reading="9 min"
+  image="/img/holding-marchand-de-biens.jpg"
+  imageAlt="Holding de marchand de biens : société mère et filiales"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Holding marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>Une <strong>holding</strong> est une société mère qui détient les parts des sociétés opérationnelles de marchand de biens.</li>
+      <li>Levier clé : le <strong>régime mère-fille</strong> exonère d'IS <strong>95 %</strong> des dividendes remontés des filiales.</li>
+      <li>Elle permet de <strong>réinvestir la marge</strong> d'une opération à l'autre sans passer par l'imposition personnelle.</li>
+      <li>Les filiales d'achat-revente doivent être <strong>commerciales à l'IS</strong> (SAS, SARL), jamais des SCI.</li>
+      <li>Pertinente <strong>au-delà d'un certain volume</strong> : coûts et complexité à ne pas sous-estimer.</li>
+    </ul>
+  </div>
+
+  <h2>Qu'est-ce qu'une holding de marchand de biens ?</h2>
+  <p>
+    Une holding est une <strong>société mère</strong> qui détient tout ou partie du capital d'autres sociétés, appelées
+    filiales. Elle ne possède pas les immeubles en direct et ne réalise pas les opérations : elle détient les <strong>titres</strong> des sociétés qui, elles, achètent et revendent. Pour un marchand de biens, le schéma type est une holding (SAS ou SARL)
+    qui chapeaute une ou plusieurs sociétés commerciales d'achat-revente, chacune à l'impôt sur les sociétés.
+  </p>
+  <p>
+    On distingue la holding <strong>passive</strong>, qui se limite à détenir les titres et percevoir des dividendes, et la
+    holding <strong>animatrice</strong>, qui participe activement à la stratégie du groupe et rend des services à ses filiales,
+    ce qui ouvre l'accès à des avantages fiscaux supplémentaires, notamment pour la transmission.
+  </p>
+
+  <h2>Pourquoi structurer son activité en holding</h2>
+  <p>Les atouts se cumulent à mesure que l'activité grossit :</p>
+  <ul>
+    <li><strong>Le régime mère-fille :</strong> sous conditions (détention d'au moins 5 % du capital pendant deux ans, holding et filiale à l'IS), les dividendes remontés des filiales sont exonérés d'IS à hauteur de 95 %. Seule une quote-part de 5 % reste imposable. C'est le cœur du montage : faire remonter la marge d'une opération pour la réinvestir ailleurs, avec un frottement fiscal minime.</li>
+    <li><strong>L'intégration fiscale :</strong> si la holding détient au moins 95 % du capital, le groupe déclare un résultat consolidé. Les déficits d'une société viennent compenser les bénéfices d'une autre, réduisant l'IS global.</li>
+    <li><strong>La mutualisation de la trésorerie :</strong> via une convention de trésorerie, les excédents d'une filiale financent les besoins d'une autre, sans emprunt externe systématique.</li>
+    <li><strong>Le financement :</strong> la holding négocie avec les banques pour le compte du groupe, avec un pouvoir de négociation accru.</li>
+    <li><strong>La transmission :</strong> céder ou donner des parts de holding est plus simple que de céder des immeubles, et peut bénéficier d'abattements via un pacte Dutreil.</li>
+  </ul>
+
+  <h2>Holding, société commerciale et SCI : ne pas confondre</h2>
+  <p>
+    C'est un point de vigilance majeur. L'activité de marchand de biens est <strong>commerciale</strong> : les filiales qui
+    achètent pour revendre doivent être des sociétés commerciales à l'IS (SAS, SARL), et surtout <strong>pas des SCI</strong>.
+    Utiliser une <a href="/sci-marchand-de-biens/">SCI pour l'achat-revente</a> expose à une requalification fiscale. La SCI
+    garde son utilité pour détenir un patrimoine locatif, mais ce patrimoine se loge dans une branche distincte, à côté de la
+    branche opérationnelle. La holding peut chapeauter les deux, chacune dans son couloir.
+  </p>
+
+  <h2>À partir de quand créer une holding ?</h2>
+  <p>
+    La holding n'a de sens qu'avec du volume. Pour une première opération ou une activité ponctuelle, une seule <a href="/creer-societe-marchand-de-biens/">société de marchand de biens</a> suffit largement. Le montage en groupe devient
+    pertinent quand on enchaîne les opérations, qu'on veut <strong>isoler les risques</strong> par entité et <strong>recycler
+    la trésorerie</strong> d'une opération à la suivante. En dessous de ce seuil, les coûts (comptabilité multipliée, formalités,
+    conventions) et la complexité ne sont pas rentables.
+  </p>
+
+  <h2>Les limites à garder en tête</h2>
+  <ul>
+    <li><strong>Des coûts démultipliés :</strong> chaque société a sa comptabilité, ses déclarations, ses obligations.</li>
+    <li><strong>De la complexité :</strong> conventions de trésorerie, flux intragroupe et montages fiscaux doivent être carrés.</li>
+    <li><strong>Un accompagnement indispensable :</strong> le montage se cale avec un <a href="/expert-comptable-marchand-de-biens/">expert-comptable spécialisé</a> et, souvent, un avocat fiscaliste.</li>
+  </ul>
+
+  <div class="encadre">
+    <p class="encadre-h">Bon à savoir</p>
+    <p>
+      La fiscalité de groupe est technique et évolutive. Les régimes évoqués (mère-fille, intégration fiscale, pacte Dutreil)
+      obéissent à des conditions précises. Avant de structurer, faites valider le schéma par un professionnel : un montage mal
+      calibré coûte plus cher qu'il ne rapporte.
+    </p>
+  </div>
+
+  <h2>En résumé</h2>
+  <p>
+    La holding n'est pas un gadget d'optimisation, c'est un outil de croissance pour le marchand de biens qui monte en volume :
+    elle fait circuler la marge d'opération en opération, isole les risques et prépare l'avenir. Mal dimensionnée, elle pèse ;
+    bien utilisée, elle accélère. Comme toujours dans ce métier, c'est la maîtrise du cadre qui fait la différence, celle que
+    l'on construit en apprenant à <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a>.
+  </p>
+</ArticleLayout>

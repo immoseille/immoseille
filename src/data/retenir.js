@@ -320,4 +320,25 @@ export const RETENIR = {
     "Pièges majeurs : aucune condition suspensive de prêt, vente sans garantie des vices cachés, biens souvent occupés (expulsion), surenchère possible dans les 10 jours.",
     "Avant l'audience, deux chèques de banque sont exigés : 10 % de la mise à prix (minimum 3 000 €) au séquestre, et les frais à l'ordre de la CARPA.",
   ],
+  'holding-marchand-de-biens': [
+    "Une holding de marchand de biens est une société mère (SAS ou SARL) qui détient les parts des sociétés opérationnelles d'achat-revente.",
+    "Le régime mère-fille (articles 145 et 216 du CGI) exonère d'IS 95 % des dividendes remontés des filiales, sous condition de détenir au moins 5 % pendant deux ans.",
+    "Ce montage permet de faire remonter la marge d'une opération pour la réinvestir dans la suivante, avec un frottement fiscal minimal.",
+    "Les filiales d'achat-revente doivent être des sociétés commerciales à l'IS (SAS, SARL), jamais des SCI (objet civil, risque de requalification).",
+    "La holding n'est rentable qu'au-delà d'un certain volume : coûts et complexité administrative à ne pas sous-estimer.",
+  ],
+  'statuts-sas-marchand-de-biens': [
+    "L'objet social est la clause décisive des statuts d'une SAS de marchand de biens : il doit viser explicitement l'achat de biens en vue de leur revente (activité commerciale, article 35 du CGI).",
+    "Un objet social trop civil ou trop vague expose à une requalification fiscale et fragilise le régime du marchand de biens.",
+    "Mentions obligatoires : forme, dénomination, objet, siège, durée, capital, règles de direction et de cession des actions.",
+    "Un modèle générique de SAS ne suffit pas : il faut l'adapter au métier (IS, TVA, immeubles en stock non amortissables).",
+    "La SAS est souvent préférée pour sa souplesse et le statut d'assimilé salarié du président ; la SARL convient à un cadre familial.",
+  ],
+  'obo-immobilier': [
+    "L'OBO (Owner Buy Out) ou vente à soi-même consiste à vendre son bien à une société que l'on contrôle (SAS ou SCI à l'IS), financée par emprunt bancaire.",
+    "Avantages : dégager des liquidités, faire passer les revenus de l'impôt sur le revenu à l'impôt sur les sociétés (amortissement et intérêts déductibles), faciliter la transmission.",
+    "L'OBO ne réduit pas l'IFI : l'emprunt pour racheter le bien du dirigeant n'est pas déductible (article 973-II-1° du CGI).",
+    "Le risque principal est l'abus de droit : l'opération doit avoir une substance économique réelle et le prix doit être à la valeur de marché.",
+    "Ce n'est pas une opération de marchand de biens au sens strict, mais une technique patrimoniale voisine, à sécuriser avec un notaire et un conseil en gestion de patrimoine.",
+  ],
 };

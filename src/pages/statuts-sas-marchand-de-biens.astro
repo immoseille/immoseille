@@ -1,0 +1,116 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const faq = [
+  {
+    q: "Que doit contenir l'objet social d'une SAS de marchand de biens ?",
+    r: "Il doit viser explicitement l'activité commerciale d'achat de biens immobiliers en vue de leur revente, ainsi que les opérations associées (division, rénovation, lotissement, marchand de biens au sens de l'article 35 du CGI). Un objet trop civil ou trop vague fragilise le régime : c'est la clause la plus importante des statuts, à ne pas recopier d'un modèle générique.",
+  },
+  {
+    q: "Peut-on utiliser un modèle de statuts tout fait ?",
+    r: "Un modèle aide à comprendre la structure, mais il est risqué de le reprendre tel quel. L'objet social, le régime fiscal, les clauses de direction et d'agrément doivent être adaptés à l'activité de marchand de biens. Un modèle généraliste de SAS ne tient pas compte des spécificités du métier (TVA, engagement de revendre, stock d'immeubles).",
+  },
+  {
+    q: "Quelles mentions obligatoires dans les statuts d'une SAS ?",
+    r: "La forme (SAS), la dénomination sociale, l'objet social, le siège, la durée, le montant du capital et la répartition des actions, les règles de direction (président) et de prise de décision, ainsi que les modalités de cession des actions. Pour un marchand de biens, l'objet social et le choix de l'IS sont les points les plus sensibles.",
+  },
+  {
+    q: "SAS ou SARL pour un marchand de biens ?",
+    r: "La SAS est souvent préférée pour sa souplesse statutaire et le statut d'assimilé salarié du président. La SARL (et sa version unipersonnelle l'EURL) convient davantage à un cadre familial ou à qui veut le régime des indépendants. Dans les deux cas, la responsabilité est limitée aux apports et l'activité relève de l'IS.",
+  },
+];
+---
+
+<ArticleLayout
+  title="Statuts d'une SAS de marchand de biens : le guide"
+  description="Rédiger les statuts d'une SAS de marchand de biens : l'objet social (le point critique), les mentions obligatoires, les clauses à soigner, et pourquoi un modèle générique ne suffit pas."
+  h1="Rédiger les statuts d'une SAS de marchand de biens"
+  lead="Les statuts ne sont pas une formalité à recopier : pour un marchand de biens, une clause mal rédigée, à commencer par l'objet social, peut fragiliser tout le régime fiscal. Voici ce qui compte vraiment dans les statuts d'une SAS d'achat-revente, les mentions obligatoires et les pièges à éviter."
+  reading="8 min"
+  image="/img/statuts-sas-marchand-de-biens.jpg"
+  imageAlt="Rédaction des statuts d'une SAS de marchand de biens"
+  breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: 'Statuts SAS marchand de biens' }]}
+  faq={faq}
+>
+  <div class="encadre">
+    <p class="encadre-h">En bref</p>
+    <ul>
+      <li>La clause décisive, c'est l'<strong>objet social</strong> : il doit viser clairement l'achat-revente commercial.</li>
+      <li>Un objet trop <strong>civil ou vague</strong> expose à une requalification et fragilise le régime du marchand de biens.</li>
+      <li>Mentions obligatoires : forme, dénomination, objet, siège, durée, <strong>capital</strong>, direction, cession d'actions.</li>
+      <li>Un <strong>modèle générique</strong> de SAS ne suffit pas : il faut l'adapter au métier (IS, TVA, stock d'immeubles).</li>
+      <li>La <strong>SAS</strong> est souvent préférée pour sa souplesse ; la SARL pour un cadre familial.</li>
+    </ul>
+  </div>
+
+  <h2>Pourquoi les statuts sont décisifs pour un marchand de biens</h2>
+  <p>
+    Beaucoup voient les statuts comme une formalité expédiée avec un modèle trouvé en ligne. C'est une erreur coûteuse. Les
+    statuts fixent l'objet de la société, son régime et ses règles de fonctionnement. Pour un marchand de biens, dont toute
+    l'économie repose sur un <a href="/statut-juridique-marchand-de-biens/">statut commercial à l'IS</a> et des droits de
+    mutation réduits, une rédaction approximative peut remettre en cause le cadre fiscal tout entier.
+  </p>
+
+  <h2>L'objet social : le point critique</h2>
+  <p>
+    C'est la clause la plus importante. L'objet social doit mentionner <strong>explicitement l'activité d'achat de biens
+    immobiliers en vue de leur revente</strong>, c'est-à-dire l'activité de marchand de biens au sens de l'article 35 du Code
+    général des impôts. On y ajoute utilement les opérations connexes : division, rénovation, lotissement, marchand de biens et
+    opérations de promotion le cas échéant.
+  </p>
+  <p>
+    Le piège classique est d'adopter un objet trop <strong>civil</strong> (gestion de patrimoine) ou trop vague. Un objet civil
+    rapproche dangereusement la société d'une <a href="/sci-marchand-de-biens/">SCI</a>, inadaptée à l'achat-revente, et
+    l'administration peut requalifier l'activité. L'objet doit assumer sa nature <strong>commerciale</strong>, sans ambiguïté.
+  </p>
+
+  <h2>Les mentions obligatoires</h2>
+  <p>Au-delà de l'objet, les statuts d'une SAS doivent contenir :</p>
+  <ul>
+    <li>La <strong>forme</strong> (société par actions simplifiée) et la <strong>dénomination sociale</strong>.</li>
+    <li>Le <strong>siège social</strong> et la <strong>durée</strong> de la société (99 ans au maximum).</li>
+    <li>Le montant du <strong>capital social</strong> et la répartition des actions entre associés.</li>
+    <li>Les règles de <strong>direction</strong> (nomination et pouvoirs du président) et de <strong>prise de décision</strong> collective.</li>
+    <li>Les modalités de <strong>cession des actions</strong> (agrément, préemption).</li>
+  </ul>
+
+  <h2>Les clauses à soigner particulièrement</h2>
+  <ul>
+    <li><strong>Le régime fiscal :</strong> la SAS relève de l'IS. Vérifiez que rien dans les statuts ne crée d'ambiguïté sur ce point, central pour le marchand de biens.</li>
+    <li><strong>La direction :</strong> pouvoirs du président, éventuels directeurs généraux, seuils d'engagement nécessitant l'accord des associés.</li>
+    <li><strong>La cession d'actions :</strong> clause d'agrément et de préemption pour garder la maîtrise de l'actionnariat, utile dès qu'on s'associe.</li>
+    <li><strong>L'entrée d'une holding :</strong> si vous visez une structuration en groupe, anticipez l'articulation avec une future <a href="/holding-marchand-de-biens/">holding</a>.</li>
+  </ul>
+
+  <h2>Modèle de statuts : bonne ou mauvaise idée ?</h2>
+  <p>
+    Un modèle est utile pour comprendre l'architecture d'un document statutaire. Mais le recopier tel quel est risqué : un
+    modèle générique de SAS ignore les spécificités du marchand de biens (objet commercial précis, option IS, TVA, immeubles
+    en stock non amortissables, engagement de revendre). La bonne méthode : partir d'une trame, puis l'adapter avec un
+    professionnel. Les statuts se rédigent une fois, mais ils engagent toute la vie de la société.
+  </p>
+
+  <h2>Les erreurs à éviter</h2>
+  <ul>
+    <li><strong>Un objet social recopié</strong> d'un autre secteur, qui ne vise pas l'achat-revente.</li>
+    <li><strong>Un objet trop civil</strong> qui brouille la nature commerciale de l'activité.</li>
+    <li><strong>Des clauses de cession absentes</strong>, qui laissent entrer n'importe qui au capital.</li>
+    <li><strong>Un capital symbolique</strong> sans cohérence avec les besoins réels des opérations et la crédibilité bancaire.</li>
+  </ul>
+
+  <div class="encadre">
+    <p class="encadre-h">Bon à savoir</p>
+    <p>
+      Les statuts ont une portée juridique et fiscale forte. Avant de les déposer, faites-les relire par un expert-comptable ou
+      un avocat spécialisé en marchand de biens : la relecture de l'objet social et du régime fiscal coûte peu au regard d'une
+      requalification.
+    </p>
+  </div>
+
+  <h2>En résumé</h2>
+  <p>
+    Les statuts d'une SAS de marchand de biens se jouent sur l'objet social : commercial, explicite, assumé. Le reste (capital,
+    direction, cession) se soigne clause par clause, et un modèle ne remplace pas une adaptation au métier. C'est la première
+    brique d'une société solide, à poser dès qu'on décide de <a href="/creer-societe-marchand-de-biens/">créer sa société</a> pour <a href="/devenir-marchand-de-biens/">devenir marchand de biens</a>.
+  </p>
+</ArticleLayout>

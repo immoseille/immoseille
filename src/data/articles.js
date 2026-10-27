@@ -290,6 +290,33 @@ export const articles = [
     date: '27 octobre 2026',
     excerpt: "Acheter décoté aux enchères : les 3 types de ventes, la procédure judiciaire (avocat, chèques, cahier des conditions) et les pièges (sans garantie, bien occupé, surenchère).",
   },
+  {
+    slug: 'holding-marchand-de-biens',
+    title: 'Holding et marchand de biens : structurer pour réinvestir',
+    image: '/img/holding-marchand-de-biens.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '27 octobre 2026',
+    excerpt: "Pourquoi et quand structurer son activité en holding : régime mère-fille (95 %), intégration fiscale, réinvestissement de la marge, financement et transmission.",
+  },
+  {
+    slug: 'statuts-sas-marchand-de-biens',
+    title: "Statuts d'une SAS de marchand de biens : le guide",
+    image: '/img/statuts-sas-marchand-de-biens.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '27 octobre 2026',
+    excerpt: "Rédiger les statuts d'une SAS d'achat-revente : l'objet social (le point critique), les mentions obligatoires, les clauses à soigner et pourquoi un modèle générique ne suffit pas.",
+  },
+  {
+    slug: 'obo-immobilier',
+    title: 'OBO immobilier (vente à soi-même) : le guide',
+    image: '/img/obo-immobilier.jpg',
+    cat: 'statut',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '27 octobre 2026',
+    excerpt: "La vente à soi-même expliquée : principe, avantages (liquidités, fiscalité IR vers IS, transmission), étapes du montage, risque d'abus de droit et lien avec le marchand de biens.",
+  },
 
   // --- Bloc "Statut & finance" ---
   {
