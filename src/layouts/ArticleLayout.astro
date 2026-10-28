@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { relatedArticles } from '../data/articles.js';
+import { RELATED_EXCLUDE, RELATED_REPLACE } from '../data/related-overrides.js';
 import { MAILLAGE } from '../data/maillage.js';
 import { RETENIR } from '../data/retenir.js';
 import { MODULE1_URL } from '../data/site.js';
@@ -34,7 +35,20 @@ const site = Astro.site ?? new URL('https://immoseille.fr');
 const canonical = new URL(Astro.url.pathname, site).href;
 
 const curSlug = Astro.url.pathname.replace(/^\/|\/$/g, '');
-const related = relatedArticles(curSlug, 5);
+// Bloc "À lire aussi" + overrides de maillage (brief 28/10/2026) :
+// remplacement de cartes en place, puis exclusion des cartes hors silo (sans backfill).
+let related = relatedArticles(curSlug, 5);
+const relReplace = RELATED_REPLACE[curSlug] || [];
+if (relReplace.length) {
+  related = related.map((r) => {
+    const m = relReplace.find((x) => x.from === r.slug);
+    return m ? { slug: m.to, title: m.title, image: m.image } : r;
+  });
+}
+const relExclude = RELATED_EXCLUDE[curSlug] || [];
+if (relExclude.length) {
+  related = related.filter((r) => !relExclude.includes(r.slug));
+}
 const retenirItems = RETENIR[curSlug] || [];
 
 const breadcrumbLd = breadcrumb.length ? {
