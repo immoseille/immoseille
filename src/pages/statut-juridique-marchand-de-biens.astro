@@ -7,12 +7,20 @@ const faq = [
     r: "Non. L'article 50-0 du Code général des impôts exclut l'achat-revente immobilier du régime micro. Les plafonds, l'impossibilité de récupérer la TVA et la responsabilité illimitée rendent ce statut inadapté.",
   },
   {
+    q: "Peut-on exercer en entreprise individuelle ?",
+    r: "Oui, c'est juridiquement possible, et depuis 2022 le patrimoine personnel de l'entrepreneur individuel est en principe séparé de son patrimoine professionnel. Mais l'EI ne permet pas de s'associer, ne crée pas de personne morale distincte et inspire moins confiance aux banques : la plupart des marchands de biens préfèrent une société (SAS, SASU, SARL ou EURL).",
+  },
+  {
     q: "Peut-on exercer via une SCI ?",
     r: "Non pour l'achat-revente. La SCI a un objet civil, pas commercial : l'utiliser pour une activité de marchand expose à une requalification fiscale. Pour construire puis vendre, une SCCV (société civile de construction-vente) est en revanche envisageable, mais elle se crée par opération.",
   },
   {
     q: "SAS ou SARL pour un marchand de biens ?",
     r: "La SAS (ou SASU en solo) est souvent préférée pour sa souplesse de gestion et le régime assimilé salarié du dirigeant. La SARL (ou EURL) place le gérant majoritaire au régime des travailleurs non salariés, avec moins de cotisations mais moins de couverture. Le choix se fait avec un comptable.",
+  },
+  {
+    q: "Marchand de biens : faut-il opter pour l'IR ou l'IS ?",
+    r: "L'IS est souvent privilégié par les marchands de biens actifs : la société est imposée à 15 % jusqu'à 42 500 € de bénéfice puis 25 %, ce qui facilite le réinvestissement d'une opération à la suivante. L'IR peut convenir au démarrage ou pour un projet ponctuel. L'arbitrage se fait avec un comptable, selon votre rémunération et vos objectifs.",
   },
   {
     q: "Faut-il un capital minimum ?",
@@ -23,10 +31,10 @@ const faq = [
 
 <ArticleLayout
   title="Statut juridique du marchand de biens : SAS, SARL, SASU"
-  description="Quel statut juridique choisir pour un marchand de biens ? Pourquoi la micro et la SCI sont à éviter, et comment arbitrer entre SAS, SASU, SARL et EURL."
+  description="Quel statut juridique pour un marchand de biens ? Entreprise individuelle ou société, pourquoi la micro et la SCI sont à éviter, comment arbitrer entre SAS, SASU, SARL et EURL, et quel régime fiscal (IR ou IS) et social choisir."
   h1="Quel statut juridique pour un marchand de biens ?"
   lead="Le marchand de biens exerce une activité commerciale : le choix de sa structure conditionne sa fiscalité, sa protection et sa crédibilité bancaire. Voici pourquoi la micro-entreprise et la SCI sont à écarter, et comment choisir entre SAS, SASU, SARL et EURL."
-  reading="7 min"
+  reading="9 min"
   image="/img/statut-juridique-marchand-de-biens.jpg"
   imageAlt="Signature d'un contrat, choix du statut juridique du marchand de biens"
   breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Statut juridique' }]}
@@ -39,15 +47,49 @@ const faq = [
       <li>La <strong>micro-entreprise est interdite</strong> pour cette activité (article 50-0 du CGI).</li>
       <li>La <strong>SCI est un piège</strong> : objet civil, risque de requalification.</li>
       <li>Les statuts adaptés : <strong>SAS, SASU, SARL, EURL</strong>, tous à responsabilité limitée.</li>
+      <li>Le vrai arbitrage se joue sur le <strong>régime fiscal</strong> (IR ou IS) et le <strong>régime social</strong> du dirigeant (TNS ou assimilé salarié).</li>
       <li>En société à l'impôt sur les sociétés : 15 % jusqu'à 42 500 € de bénéfice, 25 % au-delà.</li>
     </ul>
   </div>
+
+  <h2>Marchand de biens, une activité commerciale par nature</h2>
+  <p>
+    Le marchand de biens achète des biens immobiliers (immeubles, appartements, terrains, fonds de commerce, parts de
+    sociétés immobilières) pour les revendre avec un profit, de façon <strong>habituelle</strong>. Deux critères
+    caractérisent cette activité aux yeux de l'administration : le caractère répété des opérations et l'<strong>intention
+    spéculative</strong>, qui doit exister dès l'achat. Celui qui achète pour louer durablement n'est pas un marchand de
+    biens ; celui qui achète pour rénover, diviser puis revendre l'est.
+  </p>
+  <p>
+    Cette activité est <strong>commerciale</strong> par nature : elle relève du Code de commerce et ses bénéfices sont
+    imposés dans la catégorie des bénéfices industriels et commerciaux (BIC), au titre de l'article 35 du Code général des
+    impôts. C'est ce qui distingue le marchand de biens de l'agent immobilier, simple intermédiaire entre vendeur et
+    acheteur : le marchand, lui, devient propriétaire des biens qu'il revend et engage son propre capital. Aucun diplôme ni
+    carte professionnelle n'est d'ailleurs exigé pour exercer, contrairement à l'agent immobilier. Conséquence directe :
+    l'<strong>objet social</strong> de votre structure doit mentionner cette activité commerciale d'achat-revente
+    d'immeubles.
+  </p>
 
   <h2>Pourquoi le choix du statut est décisif</h2>
   <p>
     Le marchand de biens n'exerce jamais en nom propre comme un particulier : son activité d'achat-revente est commerciale et répétée. Le statut détermine trois choses à la fois : votre <strong>fiscalité</strong> (imposition des
     bénéfices et TVA), la <strong>protection de votre patrimoine personnel</strong> et votre <strong>crédibilité</strong> face
     aux banques. Un mauvais choix de départ coûte cher à corriger. Ce sujet fait partie des fondamentaux à maîtriser avant de se lancer comme marchand de biens, et c'est précisément ce que couvre notre <a href="/formation/">formation marchand de biens Imm'oseille</a>.
+  </p>
+
+  <h2>Entreprise individuelle ou société ?</h2>
+  <p>
+    Rien n'oblige, en théorie, à créer une société : on peut exercer en <strong>entreprise individuelle</strong> (EI).
+    Depuis la réforme de 2022, le patrimoine personnel de l'entrepreneur individuel est en principe séparé de son
+    patrimoine professionnel, ce qui limite l'exposition. Mais l'EI reste peu adaptée à ce métier : impossible de
+    s'associer, pas de personne morale distincte, et une crédibilité moindre face aux banques et aux notaires, alors même
+    que le financement est le nerf de la guerre.
+  </p>
+  <p>
+    Dans la grande majorité des cas, le marchand de biens exerce donc en <strong>société</strong>. Celle-ci crée une
+    personne morale distincte, limite la responsabilité aux apports, facilite l'entrée d'associés ou d'investisseurs et
+    rassure les partenaires financiers. Reste à choisir la bonne forme, après avoir écarté deux fausses bonnes idées : la
+    micro-entreprise et la SCI.
   </p>
 
   <h2>La micro-entreprise est-elle possible ?</h2>
@@ -70,31 +112,70 @@ const faq = [
   <h2>Les statuts recommandés : SAS, SASU, SARL, EURL</h2>
   <p>
     Toutes ces formes offrent une <strong>responsabilité limitée aux apports</strong>, ce qui protège votre patrimoine
-    personnel. Le vrai arbitrage porte sur le régime social du dirigeant et la souplesse de gestion.
+    personnel. Le vrai arbitrage porte sur le régime fiscal, le régime social du dirigeant et la souplesse de gestion. Le
+    tableau ci-dessous résume les grandes différences, entreprise individuelle comprise à titre de comparaison.
   </p>
   <table>
     <thead>
-      <tr><th>Statut</th><th>Régime social du dirigeant</th><th>Points forts</th></tr>
+      <tr><th>Forme</th><th>Associés</th><th>Responsabilité</th><th>Imposition par défaut</th><th>Régime social du dirigeant</th></tr>
     </thead>
     <tbody>
-      <tr><td>SAS / SASU</td><td>Assimilé salarié</td><td>Grande souplesse, bonne protection sociale, crédibilité</td></tr>
-      <tr><td>SARL / EURL</td><td>Travailleur non salarié (gérant majoritaire)</td><td>Cotisations plus faibles, cadre encadré par la loi</td></tr>
+      <tr><td><strong>EI</strong></td><td>1 (l'exploitant)</td><td>Patrimoine perso protégé depuis 2022, sans personne morale</td><td>IR (BIC), option IS</td><td>TNS</td></tr>
+      <tr><td><strong>EURL</strong></td><td>1</td><td>Limitée aux apports</td><td>IR, option IS</td><td>TNS</td></tr>
+      <tr><td><strong>SARL</strong></td><td>2 à 100</td><td>Limitée aux apports</td><td>IS, option IR</td><td>TNS (gérant majoritaire) ou assimilé salarié (minoritaire)</td></tr>
+      <tr><td><strong>SASU</strong></td><td>1</td><td>Limitée aux apports</td><td>IS, option IR</td><td>Assimilé salarié</td></tr>
+      <tr><td><strong>SAS</strong></td><td>2 et plus</td><td>Limitée aux apports</td><td>IS, option IR</td><td>Assimilé salarié</td></tr>
     </tbody>
   </table>
+  <p class="note">Repères indicatifs : le régime réellement applicable dépend de votre situation et doit être validé avec un comptable.</p>
+
+  <h3>SAS et SASU : souplesse et régime assimilé salarié</h3>
   <p>
-    La SAS et sa version unipersonnelle SASU sont souvent privilégiées pour leur liberté statutaire. La SARL et l'EURL
-    conviennent bien à un projet familial ou à qui cherche à limiter ses cotisations. Il n'y a pas de réponse universelle :
-    tout dépend de votre situation, de votre rémunération cible et de vos associés éventuels.
+    La SAS, et sa version unipersonnelle la SASU, offrent une grande liberté dans la rédaction des statuts et
+    l'organisation du pouvoir. Le dirigeant relève du régime des <strong>assimilés salariés</strong> : la couverture sociale
+    est meilleure, mais les cotisations sont plus élevées. C'est souvent le choix privilégié pour un projet ambitieux,
+    destiné à accueillir des associés ou des investisseurs au capital.
+  </p>
+
+  <h3>SARL et EURL : un cadre plus encadré</h3>
+  <p>
+    La SARL, et l'EURL en solo, suivent un fonctionnement largement défini par la loi : moins souple, mais plus balisé, ce
+    qui rassure pour un projet familial. Le gérant majoritaire de SARL, comme le gérant associé unique d'EURL, relève du
+    régime des <strong>travailleurs non salariés</strong> (TNS), avec des cotisations plus légères mais une protection
+    sociale plus limitée.
+  </p>
+
+  <h3>Le régime social du dirigeant : TNS ou assimilé salarié</h3>
+  <p>
+    C'est souvent l'arbitrage décisif. Le travailleur non salarié (TNS) cotise moins, au prix d'une couverture plus faible,
+    notamment en retraite et en prévoyance. L'assimilé salarié cotise davantage mais bénéficie d'une meilleure protection.
+    Le bon choix dépend de votre rémunération cible, de votre situation personnelle et de la part que vous comptez vous
+    verser en salaire plutôt qu'en dividendes.
   </p>
 
   <h2>Quelle fiscalité selon le statut ?</h2>
   <p>
-    Les bénéfices du marchand de biens sont des <strong>bénéfices industriels et commerciaux</strong> (article 35 du CGI). En
-    société à l'impôt sur les sociétés, le taux est de <strong>15 % jusqu'à 42 500 € de bénéfice</strong> puis de <strong>25 %</strong> au-delà. Si vous vous versez des dividendes, ils supportent le prélèvement forfaitaire unique de
-    30 %. À cela s'ajoutent deux spécificités majeures du métier : d'abord la <a href="/tva-marchand-de-biens/">TVA du marchand de
+    Les bénéfices du marchand de biens sont des <strong>bénéfices industriels et commerciaux</strong> (article 35 du CGI),
+    mais deux régimes d'imposition coexistent. À l'<strong>impôt sur le revenu</strong> (IR), les bénéfices sont imposés
+    directement entre les mains de l'exploitant ou des associés, selon le barème progressif : simple au démarrage, mais vite
+    lourd quand la marge grimpe. À l'<strong>impôt sur les sociétés</strong> (IS), la société est imposée séparément, au taux
+    de <strong>15 % jusqu'à 42 500 € de bénéfice</strong> puis de <strong>25 %</strong> au-delà, et vous n'êtes imposé
+    personnellement que sur ce que vous vous versez. Les dividendes supportent alors le prélèvement forfaitaire unique de
+    30 %. L'IS, qui permet de réinvestir le bénéfice dans l'opération suivante en n'étant taxé qu'à 15 ou 25 %, est souvent
+    privilégié par les marchands de biens actifs. À cela s'ajoutent deux spécificités majeures du métier : d'abord la <a href="/tva-marchand-de-biens/">TVA du marchand de
     biens</a>. Vient ensuite l'<a href="/plus-value-marchand-de-biens/">imposition de la plus-value du marchand de biens</a>, sans abattement pour durée
     de détention.
   </p>
+
+  <h2>Comment choisir selon votre projet</h2>
+  <p>Il n'existe pas de statut universellement meilleur : le bon choix dépend de votre projet. Quelques repères :</p>
+  <ul>
+    <li><strong>Seul ou à plusieurs.</strong> Seul, la SASU ou l'EURL s'imposent ; à plusieurs, la SAS ou la SARL.</li>
+    <li><strong>Rémunération et protection.</strong> Pour une bonne couverture sociale, la SAS ou la SASU (assimilé salarié) ; pour minimiser les cotisations, l'EURL ou la SARL (TNS).</li>
+    <li><strong>Volume d'opérations.</strong> Une activité régulière et appelée à grossir plaide pour une structure à l'IS, qui facilite le réinvestissement.</li>
+    <li><strong>Entrée d'investisseurs.</strong> La SAS, dont les statuts se modèlent librement, est la plus adaptée pour faire entrer des partenaires au capital.</li>
+  </ul>
+  <p class="note">Dans tous les cas, faites arbitrer ce choix avec un comptable spécialisé en immobilier avant de constituer la société.</p>
 
   <h2>Comment créer sa structure ?</h2>
   <p>

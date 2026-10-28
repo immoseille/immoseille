@@ -11,6 +11,14 @@ const faq = [
     r: "Oui, de préférence. Un cabinet généraliste maîtrise rarement les subtilités de la TVA sur marge, de l'engagement de revente ou de la comptabilité de stock immobilier. Un spécialiste sécurise ces points et évite les redressements.",
   },
   {
+    q: "Quelle est la différence entre la TVA sur marge et la TVA sur le prix total ?",
+    r: "La TVA sur marge (article 268 du CGI) ne porte que sur la différence entre le prix de vente et le prix d'achat. Elle suppose deux conditions réunies : un achat qui n'a pas ouvert droit à déduction de TVA et un bien revendu sans modification de son identité juridique. Si une condition manque, la TVA s'applique au prix de vente total, ce qui peut absorber toute la marge.",
+  },
+  {
+    q: "Quelle structure juridique un marchand de biens doit-il choisir ?",
+    r: "Cela dépend du volume d'opérations : souvent une SAS pour débuter, une SCI à l'impôt sur les sociétés pour du portage long, ou une holding coiffant des SAS pour une activité soutenue. Attention : une SCI civile qui fait de l'achat-revente habituel bascule automatiquement à l'impôt sur les sociétés. L'expert-comptable aide à trancher selon la stratégie.",
+  },
+  {
     q: "Combien coûte un expert-comptable pour un marchand de biens ?",
     r: "Cela dépend du volume d'opérations et de la structure. Comptez souvent de l'ordre de 150 à plusieurs centaines d'euros HT par mois pour le suivi courant, plus des honoraires ponctuels sur les missions de conseil et de structuration. Demandez toujours un devis détaillé.",
   },
@@ -23,10 +31,10 @@ const faq = [
 
 <ArticleLayout
   title="Expert-comptable marchand de biens : rôle et choix"
-  description="Pourquoi un marchand de biens a besoin d'un expert-comptable spécialisé : TVA sur marge, engagement de revente, comptabilité par opération, structuration et coût."
+  description="Le rôle de l'expert-comptable spécialisé du marchand de biens : missions, TVA sur marge, engagement de revente, comptabilité par opération, structure et honoraires."
   h1="L'expert-comptable du marchand de biens : rôle et choix"
   lead="La comptabilité et la fiscalité du marchand de biens comptent parmi les plus techniques du droit français. Un expert-comptable spécialisé n'est pas un luxe : c'est ce qui sécurise vos marges et vous évite les redressements. Voici son rôle, ce qu'il sécurise et comment le choisir."
-  reading="7 min"
+  reading="10 min"
   image="/img/expert-comptable-marchand-de-biens.jpg"
   imageAlt="Expert-comptable travaillant sur la comptabilité d'un marchand de biens"
   breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Expert-comptable' }]}
@@ -39,6 +47,7 @@ const faq = [
       <li>L'expert-comptable sécurise la <strong>TVA sur marge</strong>, l'<strong>engagement de revente</strong> et la structure.</li>
       <li>Sa vraie valeur est dans le <strong>conseil</strong>, pas seulement la saisie comptable.</li>
       <li>La comptabilité doit être <strong>analytique par opération</strong>, jamais globale.</li>
+      <li>Les biens sont comptabilisés en <strong>stock</strong>, pas en immobilisations.</li>
       <li>À consulter <strong>avant chaque achat</strong>, pas après la signature.</li>
     </ul>
   </div>
@@ -47,25 +56,60 @@ const faq = [
   <p>
     Le marchand de biens cumule des règles fiscales parmi les plus pointues : imposition en bénéfices industriels et
     commerciaux (article 35 du CGI), <a href="/tva-marchand-de-biens/">TVA du marchand de biens</a> sur la marge (article 268), engagement de
-    revente (article 1115), risque de requalification, et bascule automatique d'une SCI civile à l'impôt sur les sociétés
+    revente (article 1115), risque de requalification (en lotisseur ou en loueur meublé, par exemple), et bascule automatique d'une SCI civile à l'impôt sur les sociétés
     en cas d'opérations habituelles (article 206-2). Une seule erreur d'analyse peut absorber toute la marge d'une
     opération. C'est pourquoi s'entourer d'un <strong>expert-comptable spécialisé en immobilier</strong> est un réflexe clé, que l'on acquiert dès la <a href="/formation/">formation marchand de biens Imm'oseille</a>.
   </p>
 
-  <h2>Que fait l'expert-comptable pour un marchand de biens ?</h2>
-  <p>Sa mission va bien au-delà de la tenue des comptes. Elle couvre notamment :</p>
-  <ul>
-    <li><strong>La comptabilité analytique par opération :</strong> chaque bien est suivi séparément (prix d'achat, frais d'acte, travaux, intérêts, frais de portage, prix de vente, marge brute), avec un compte de stock dédié.</li>
-    <li><strong>La qualification de la TVA</strong> avant chaque acquisition : marge ou prix total selon les conditions.</li>
-    <li><strong>Le suivi de l'engagement de revente</strong> et de son calendrier pour conserver les droits réduits.</li>
-    <li><strong>La structuration juridique et fiscale</strong> adaptée au volume d'opérations.</li>
-    <li><strong>Les obligations déclaratives :</strong> déclarations de TVA, liasse fiscale, comptes annuels.</li>
-    <li><strong>L'accompagnement en cas de contrôle fiscal</strong> et la constitution des justificatifs.</li>
-  </ul>
-  <p>Comme le résument les cabinets spécialisés, la saisie ne représente qu'une petite part de la valeur : l'essentiel est dans le conseil et l'anticipation.</p>
+  <h2>Les missions de l'expert-comptable pour un marchand de biens</h2>
+  <p>Sa mission va bien au-delà de la tenue des comptes. Elle se structure autour de quatre volets.</p>
 
-  <h2>Les points de vigilance qu'il sécurise</h2>
-  <p>Quatre références du Code général des impôts structurent l'activité, et c'est là que le spécialiste fait la différence :</p>
+  <h3>Tenue comptable et obligations déclaratives</h3>
+  <p>
+    Tenue des comptes, déclarations de TVA, liasse fiscale, comptes annuels : le marchand de biens relève d'obligations
+    comptables complètes, puisqu'il est considéré comme un commerçant imposé en BIC. Particularité déterminante : les biens
+    destinés à la revente sont inscrits en <strong>stock</strong>, et non en immobilisations, ce qui conditionne toute la
+    présentation des comptes et exclut tout amortissement.
+  </p>
+
+  <h3>Comptabilité analytique par opération</h3>
+  <p>
+    C'est le cœur du métier. Chaque bien est suivi séparément dans un <strong>compte de stock dédié</strong> : prix d'achat,
+    frais d'acte, travaux ventilés par poste, intérêts d'emprunt, frais de portage (taxe foncière, assurance, charges de
+    copropriété) et prix de vente. Cette ventilation permet de calculer la marge brute opération par opération, de
+    déterminer correctement la TVA et de défendre chaque dossier en cas de contrôle. Une comptabilité globale, sans
+    distinction par opération, ne le permet pas.
+  </p>
+
+  <h3>Conseil fiscal, structuration et gestion sociale</h3>
+  <p>
+    Qualification de la TVA avant chaque acquisition, choix et suivi de la structure juridique, optimisation du calendrier
+    de revente, mais aussi gestion sociale (rémunération du dirigeant, charges) et, pour les opérations financées par des
+    tiers, reportings périodiques destinés aux apporteurs de fonds. Le cabinet spécialisé assure également une veille sur
+    une réglementation fiscale mouvante.
+  </p>
+
+  <h3>Accompagnement en cas de contrôle fiscal</h3>
+  <p>
+    Le secteur est exposé aux contrôles. L'expert-comptable constitue en amont les justificatifs (actes, attestation du
+    vendeur, fiche par opération) et assiste le marchand de biens pendant la procédure. Une qualification fiscale documentée
+    dès l'achat reste la meilleure protection.
+  </p>
+  <h3>Due diligence et pilotage de la marge</h3>
+  <p>
+    Sur les acquisitions significatives, l'expert-comptable peut mener une due diligence (analyse des comptes, des risques
+    fiscaux et juridiques du bien ou de la société cible) et mettre le marchand de biens en relation avec des notaires ou
+    des fiscalistes rompus à ces montages. Tout au long de l'opération, il produit des tableaux de bord de marge
+    prévisionnelle par projet et suit la valeur du stock immobilier, des éléments qui servent autant au pilotage qu'à la
+    présentation d'un dossier de financement.
+  </p>
+  <p class="note">
+    La saisie comptable ne représente, selon les cabinets spécialisés, qu'environ 30 % de la valeur apportée : l'essentiel
+    se joue dans le conseil et l'anticipation.
+  </p>
+
+  <h2>Les quatre références fiscales qu'il sécurise</h2>
+  <p>Quatre articles du Code général des impôts structurent l'activité, et c'est là que le spécialiste fait la différence :</p>
   <table>
     <thead>
       <tr><th>Point</th><th>Enjeu</th></tr>
@@ -81,6 +125,71 @@ const faq = [
     Ces points renvoient directement à votre <a href="/statut-juridique-marchand-de-biens/">statut juridique</a>, à vos frais de notaire et à l'imposition de la <a href="/plus-value-marchand-de-biens/">plus-value du marchand de biens</a>.
   </p>
 
+  <h2>TVA sur marge ou TVA sur le prix total : l'enjeu n°1</h2>
+  <p>
+    C'est l'erreur la plus coûteuse du métier. La TVA sur marge (article 268 du CGI) ne s'applique que si deux conditions
+    sont réunies en même temps : l'achat initial n'a pas ouvert droit à déduction de TVA (bien acquis auprès d'un
+    particulier, par exemple) et le bien revendu conserve son <strong>identité juridique</strong> (pas de division en lots
+    ni de transformation substantielle). Si l'une de ces conditions fait défaut, la TVA porte sur le prix de vente total,
+    ce qui peut absorber toute la marge. Cette analyse doit être faite avant la promesse d'achat, jamais après la signature.
+    Dans les cabinets spécialisés, chaque opération fait l'objet d'une fiche pré-acquisition qui formalise le régime de TVA
+    retenu et conserve les justificatifs (acte de vente initial, attestation du vendeur), de quoi défendre la qualification
+    en cas de contrôle.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Critère</th>
+        <th>TVA sur marge</th>
+        <th>TVA sur le prix total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Base taxée</strong></td>
+        <td>La seule marge (vente moins achat)</td>
+        <td>La totalité du prix de vente</td>
+      </tr>
+      <tr>
+        <td><strong>Conditions (art. 268)</strong></td>
+        <td>Achat sans TVA déductible et identité juridique conservée</td>
+        <td>Dès qu'une des deux conditions fait défaut</td>
+      </tr>
+      <tr>
+        <td><strong>Exemple (achat 480 k€, revente 720 k€)</strong></td>
+        <td>TVA assise sur 240 k€ de marge</td>
+        <td>TVA assise sur les 720 k€ de prix de vente</td>
+      </tr>
+      <tr>
+        <td><strong>Quand c'est tranché</strong></td>
+        <td>Avant la promesse d'achat</td>
+        <td>Souvent lors d'un contrôle (redressement)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">Ordres de grandeur indicatifs, simplifiés pour l'exemple : le régime exact dépend de chaque opération.</p>
+
+  <h2>L'engagement de revente : un levier de rentabilité à sécuriser</h2>
+  <p>
+    L'article 1115 du CGI permet au marchand de biens de bénéficier de droits d'enregistrement réduits, de l'ordre de <strong>0,71 %</strong> au lieu du taux normal d'environ <strong>5,80 %</strong>, à condition de s'engager à revendre le
+    bien dans un délai de cinq ans (deux ans en cas de revente par lots). Sur une acquisition à 500 000 €, l'économie
+    atteint de l'ordre de 25 000 €. Deux points de vigilance : la clause d'engagement doit figurer dans l'acte d'achat
+    lui-même (pas en annexe), et le calendrier doit être suivi opération par opération. Si l'engagement n'est pas tenu, les
+    droits sont rappelés, assortis d'intérêts de retard et de majorations. Un bon cabinet met en place un suivi calendaire
+    opération par opération, avec une alerte plusieurs mois avant l'échéance, pour anticiper la décision (revente dans les
+    temps ou, à défaut, renonciation assumée au régime).
+  </p>
+
+  <h2>Quelle structure juridique selon le volume d'opérations ?</h2>
+  <p>
+    Le choix de la structure dépend surtout du rythme d'activité. Pour un marchand qui démarre, avec une à trois opérations
+    par an, une <strong>SAS</strong> est souvent retenue. Pour une stratégie de portage long, une <strong>SCI à l'impôt sur
+    les sociétés</strong> peut convenir. Un marchand actif, au-delà d'une dizaine d'opérations par an, s'oriente
+    fréquemment vers une <strong>holding</strong> coiffant des SAS opérationnelles. Point d'attention majeur : une SCI
+    civile qui réalise des opérations habituelles d'achat-revente bascule automatiquement à l'impôt sur les sociétés
+    (article 206-2 du CGI). L'expert-comptable anticipe ce basculement et aligne la structure sur la stratégie.
+  </p>
+
   <h2>Généraliste ou spécialisé en immobilier ?</h2>
   <p>
     Un expert-comptable généraliste peut tenir vos comptes, mais il maîtrise rarement la comptabilité de stock immobilier,
@@ -89,12 +198,52 @@ const faq = [
     documente les régimes fiscaux retenus et sait défendre votre dossier en cas de contrôle. Sur ce métier, la
     spécialisation n'est pas une option de confort.
   </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Sujet</th>
+        <th>Comptable généraliste</th>
+        <th>Cabinet spécialisé immobilier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TVA sur marge</td>
+        <td>Maîtrise variable</td>
+        <td>Qualifiée opération par opération, documentée</td>
+      </tr>
+      <tr>
+        <td>Comptabilité de stock</td>
+        <td>Rarement pratiquée</td>
+        <td>Compte de stock et marge par opération</td>
+      </tr>
+      <tr>
+        <td>Engagement de revente (art. 1115)</td>
+        <td>Souvent négligé</td>
+        <td>Suivi calendaire dédié</td>
+      </tr>
+      <tr>
+        <td>Contrôle fiscal</td>
+        <td>Défense limitée</td>
+        <td>Dossier justificatif préparé en amont</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    En pratique, le surcoût d'un cabinet spécialisé reste modeste face à un seul redressement de TVA ou à la perte des
+    droits réduits sur une opération. C'est un arbitrage que la plupart des marchands de biens tranchent vite une fois
+    qu'ils ont chiffré le risque encouru.
+  </p>
 
   <h2>Combien coûte un expert-comptable ?</h2>
   <p>
     Le coût dépend du volume d'opérations, de la structure et de l'étendue de la mission. Pour le suivi courant, les
     honoraires se situent souvent de l'ordre de <strong>150 à plusieurs centaines d'euros HT par mois</strong>, auxquels
-    s'ajoutent des honoraires ponctuels pour les missions de conseil et de structuration. Ce coût doit figurer dans votre <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité marchand de biens</a>, poste par poste : bien employé, il se
+    s'ajoutent des honoraires ponctuels pour les missions de conseil et de structuration. Beaucoup de cabinets proposent un
+    forfait calibré sur le nombre d'opérations annuelles, au-delà duquel la facturation passe sur devis. Les honoraires
+    varient selon le volume d'opérations, le nombre de sociétés à suivre, le régime de TVA appliqué et l'outil comptable
+    retenu (certains cabinets travaillent sur des logiciels collaboratifs dédiés). Ce coût doit
+    figurer dans votre <a href="/calcul-rentabilite-marchand-de-biens/">calcul de rentabilité marchand de biens</a>, poste par poste : bien employé, il se
     rentabilise largement en évitant une seule erreur fiscale. Demandez toujours un <strong>devis détaillé</strong> et
     comparez plusieurs cabinets.
   </p>
@@ -105,6 +254,7 @@ const faq = [
     <li>Assurez-vous qu'il pratique la <strong>comptabilité analytique par opération</strong>, pas une compta globale.</li>
     <li>Évaluez sa <strong>réactivité</strong> : dans ce métier, les décisions se prennent vite, avant chaque signature.</li>
     <li>Clarifiez le <strong>périmètre et les honoraires</strong> par écrit avant de vous engager.</li>
+    <li>Demandez quel <strong>outil comptable</strong> il utilise et comment il suit les engagements de revente.</li>
   </ul>
   <p>
     L'expert-comptable fait partie de l'équipe qui vous accompagne pour monter une opération sereine, aux côtés du notaire et des

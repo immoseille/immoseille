@@ -4,29 +4,37 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 const faq = [
   {
     q: "Qu'est-ce que la division parcellaire ?",
-    r: "C'est le découpage d'une unité foncière en plusieurs lots, notamment pour créer des terrains à bâtir. Depuis la loi Alur de 2014, aucune surface minimale n'est exigée pour les lots détachés.",
+    r: "C'est le découpage d'une unité foncière en plusieurs lots distincts, chacun doté de sa propre référence cadastrale, notamment pour créer des terrains à bâtir. Depuis la loi Alur de 2014, aucune surface minimale nationale n'est imposée aux lots détachés, même si le PLU local peut en fixer une.",
+  },
+  {
+    q: "Quelle différence entre une division simple et un lotissement ?",
+    r: "La division simple détache un ou deux lots sans voirie ni équipement commun : une déclaration préalable suffit. Le lotissement crée au moins deux lots à bâtir avec des équipements communs (voirie, réseaux), ou plus de deux lots sur dix ans : il relève du permis d'aménager, une procédure plus lourde.",
   },
   {
     q: "Faut-il un permis d'aménager ou une déclaration préalable ?",
-    r: "Un permis d'aménager est requis quand la division crée des espaces ou équipements communs à plusieurs lots. Dans les autres cas (détachement de lots sans équipement commun), une déclaration préalable suffit.",
+    r: "Un permis d'aménager est requis quand la division crée des espaces ou équipements communs à plusieurs lots. Dans les autres cas (détachement de lots sans équipement commun), une déclaration préalable suffit. Au-delà de 2 500 m² à aménager, l'intervention d'un architecte devient obligatoire.",
   },
   {
     q: "Comment savoir si un terrain est divisible ?",
-    r: "En consultant le PLU de la commune et en demandant un certificat d'urbanisme opérationnel en mairie. Il indique les possibilités de construction et de division sur la parcelle. Un géomètre-expert confirme la faisabilité.",
+    r: "En vérifiant d'abord qu'il se situe en zone constructible (U ou AU au PLU), puis en consultant le règlement du PLU et en demandant un certificat d'urbanisme opérationnel en mairie. Il indique les possibilités de construction et de division sur la parcelle. Un géomètre-expert confirme ensuite la faisabilité technique.",
   },
   {
     q: "Pourquoi faire appel à un géomètre-expert ?",
-    r: "Pour réaliser le bornage, c'est-à-dire fixer officiellement les limites des lots. C'est une étape indispensable pour sécuriser juridiquement la division et la vente des terrains.",
+    r: "Pour réaliser le bornage, c'est-à-dire fixer officiellement et de façon contradictoire les limites des lots, et établir le document modificatif du parcellaire cadastral (DMPC). C'est une étape indispensable pour sécuriser juridiquement la division et la vente des terrains.",
+  },
+  {
+    q: "Combien coûte la division d'un terrain ?",
+    r: "Le poste principal est le géomètre-expert : comptez environ 1 500 à 3 000 € pour un pack bornage et DMPC sur une division simple. Le dépôt de la déclaration préalable en mairie est gratuit. S'y ajoutent, le cas échéant, les frais de viabilisation et de notaire. Ordres de grandeur indicatifs, variables selon le terrain et la commune.",
   },
 ];
 ---
 
 <ArticleLayout
   title="Diviser un terrain : division parcellaire et démarches"
-  description="Comment diviser un terrain : la division parcellaire, vérifier la faisabilité (PLU, certificat d'urbanisme), permis d'aménager ou déclaration préalable, géomètre."
+  description="Diviser un terrain : division parcellaire, PLU et zone constructible, déclaration préalable ou permis d'aménager, géomètre-expert, coûts, délais et fiscalité."
   h1="Comment diviser un terrain ?"
-  lead="Diviser un terrain pour en revendre une partie ou créer des lots à bâtir est un levier classique de création de valeur. Mais l'opération est encadrée par l'urbanisme. Voici comment vérifier la faisabilité et quelles démarches accomplir."
-  reading="6 min"
+  lead="Diviser un terrain pour en revendre une partie ou créer des lots à bâtir est un levier classique de création de valeur. Mais l'opération est encadrée par l'urbanisme. Voici comment vérifier la faisabilité, quelles démarches accomplir, à quels coûts et délais s'attendre, et quelle fiscalité anticiper."
+  reading="9 min"
   image="/img/diviser-un-terrain.jpg"
   imageAlt="Division parcellaire d'un terrain constructible"
   breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Diviser un terrain' }]}
@@ -35,55 +43,164 @@ const faq = [
   <div class="encadre">
     <p class="encadre-h">En bref</p>
     <ul>
-      <li>La <strong>division parcellaire</strong> découpe un terrain en plusieurs lots.</li>
-      <li>Depuis la <strong>loi Alur (2014)</strong>, aucune surface minimale n'est imposée aux lots.</li>
-      <li>Vérifiez d'abord la faisabilité : <strong>PLU</strong> + <strong>certificat d'urbanisme</strong>.</li>
-      <li>Selon le cas : <strong>permis d'aménager</strong> ou <strong>déclaration préalable</strong>.</li>
-      <li>Le <strong>géomètre-expert</strong> réalise le bornage, étape incontournable.</li>
+      <li>La <strong>division parcellaire</strong> découpe un terrain en plusieurs lots, chacun avec sa propre référence cadastrale.</li>
+      <li>Depuis la <strong>loi Alur (2014)</strong>, aucune surface minimale nationale n'est imposée, mais le <strong>PLU</strong> local peut en fixer une.</li>
+      <li>Premier réflexe : vérifier que le terrain est en <strong>zone constructible</strong> (U ou AU) et consulter le PLU.</li>
+      <li>Selon le projet : <strong>déclaration préalable</strong> (division simple) ou <strong>permis d'aménager</strong> (lotissement avec équipements communs).</li>
+      <li>Le <strong>géomètre-expert</strong> réalise le bornage : comptez <strong>1 500 à 3 000 €</strong> pour une division simple.</li>
+      <li>La revente d'un lot détaché a une <strong>fiscalité propre</strong>, à anticiper avant de s'engager.</li>
     </ul>
   </div>
 
   <h2>Qu'est-ce que la division parcellaire ?</h2>
   <p>
     La division parcellaire consiste à découper une unité foncière pour créer un ou plusieurs <strong>terrains à
-    bâtir</strong> ou lots distincts. Depuis la <strong>loi Alur de 2014</strong>, aucune superficie minimale n'est exigée
+    bâtir</strong> ou lots distincts, chacun doté de sa propre référence cadastrale. Vous partez d'un seul terrain et vous
+    en ressortez avec deux lots (ou plus), juridiquement indépendants, que vous pouvez vendre, conserver ou faire
+    construire séparément. Depuis la <strong>loi Alur de 2014</strong>, aucune superficie minimale nationale n'est exigée
     pour les lots détachés, ce qui a facilité la densification. Pour le marchand de biens, c'est un puissant levier :
-    acheter un grand terrain ou un bien avec du foncier, le diviser et revendre les lots peut créer une marge importante
+    acheter un grand terrain ou un bien doté de foncier, le diviser et revendre les lots peut créer une marge importante
     sans construire. C'est une variante de l'<a href="/achat-revente-immobilier/">achat-revente immobilier</a>.
+  </p>
+
+  <h3>Division simple ou lotissement ?</h3>
+  <p>
+    La frontière entre deux régimes change tout pour vos démarches. La <strong>division simple</strong> porte sur un ou
+    deux lots, sans création de voirie ni d'équipements communs : c'est le cas le plus fréquent, par exemple détacher le
+    fond d'un jardin pour y bâtir. Le <strong>lotissement</strong>, lui, désigne la création d'au moins deux lots à bâtir
+    avec des équipements communs (voirie, réseaux), ou de plus de deux lots sur une période de dix ans. Il relève d'une
+    procédure plus lourde, détaillée plus bas.
   </p>
 
   <h2>Vérifier si le terrain est divisible</h2>
   <p>
-    Avant tout, il faut s'assurer que la division est possible. Deux réflexes :
+    Avant tout, il faut s'assurer que la division est possible. La première condition, non négociable, est la <strong>constructibilité</strong> : la parcelle détachée doit se situer en zone urbaine (U) ou à urbaniser (AU) au PLU.
+    Un terrain classé en zone agricole (A) ou naturelle (N) verra la création d'un lot à bâtir refusée. Deux réflexes pour
+    vérifier :
   </p>
   <ul>
-    <li>Consulter le <strong>Plan Local d'Urbanisme (PLU)</strong> de la commune, et tenir compte d'éventuelles contraintes (zone protégée, avis de l'Architecte des Bâtiments de France, plan de prévention des risques).</li>
+    <li>Consulter le <strong>Plan Local d'Urbanisme (PLU)</strong> de la commune, en prêtant attention à une éventuelle <strong>surface minimale par lot</strong> (certaines communes en imposent une, malgré la loi Alur), aux règles d'implantation et à d'autres contraintes (zone protégée, avis de l'Architecte des Bâtiments de France à proximité d'un monument historique, plan de prévention des risques).</li>
     <li>Demander un <strong>certificat d'urbanisme opérationnel</strong> en mairie (formulaire cerfa 13410*06). Il indique les possibilités de construction et de division, et fige le droit applicable pendant 18 mois.</li>
   </ul>
   <p>
     La configuration compte aussi : un terrain en pente, en angle, ou un lot arrière qui doit conserver un accès à la rue
-    (directement ou par servitude de passage) peut compliquer le découpage. Autant de subtilités d'urbanisme qui s'apprennent : la <a href="/formation/">formation marchand de biens Imm'oseille</a> consacre un volet à l'analyse du PLU et au montage de ce type d'opération.
+    (directement ou par servitude de passage, pour des raisons de sécurité incendie) peut compliquer le découpage. Il faut
+    également anticiper la <strong>viabilisation</strong> : un futur lot non raccordable aux réseaux (eau, électricité,
+    assainissement) ou enclavé bloque le projet. Autant de subtilités d'urbanisme qui s'apprennent : la <a href="/formation/">formation marchand de biens Imm'oseille</a> consacre un volet à l'analyse du PLU et au montage de ce type d'opération.
   </p>
 
-  <h2>Permis d'aménager ou déclaration préalable ?</h2>
-  <p>Le régime d'autorisation dépend de la nature du projet :</p>
-  <ul>
-    <li><strong>Permis d'aménager :</strong> requis lorsque la division crée des <strong>espaces ou voies communs</strong> à plusieurs lots. Au-delà de 2 500 m² à aménager, le recours à un architecte est obligatoire.</li>
-    <li><strong>Déclaration préalable :</strong> suffit pour le détachement d'un ou plusieurs lots <strong>sans équipement commun</strong>.</li>
-  </ul>
-  <p>Certaines divisions ne sont pas soumises à déclaration, notamment pour des terrains non constructibles.</p>
-
-  <h2>Le rôle du géomètre-expert</h2>
+  <h2>Les démarches, étape par étape</h2>
   <p>
-    Le <strong>géomètre-expert</strong> est incontournable : il réalise le <strong>bornage</strong>, c'est-à-dire la
-    fixation officielle et contradictoire des limites des lots. Ce document sécurise juridiquement la division et la vente
-    des terrains. C'est un coût à prendre en compte dès qu'il faut <a href="/calcul-rentabilite-marchand-de-biens/">calculer la rentabilité d'une opération de marchand de biens</a>.
+    Une fois la faisabilité confirmée, la division suit un enchaînement assez balisé : sécuriser l'information d'urbanisme,
+    faire borner le terrain, puis déposer la bonne autorisation.
   </p>
+
+  <h3>1. Le certificat d'urbanisme opérationnel</h3>
+  <p>
+    Avant d'engager des frais, demandez un <strong>certificat d'urbanisme opérationnel</strong> au service urbanisme de la
+    mairie. Ce n'est pas une autorisation, mais un document d'information qui confirme si le lot envisagé est constructible
+    et si l'opération est réalisable. On y joint un plan de situation, un plan de cadastre et un document visualisant le
+    découpage projeté. Le délai d'obtention est d'environ <strong>deux mois</strong>, et le certificat est valable au moins
+    18 mois, prorogeable un an. Il n'est pas obligatoire, mais fortement recommandé avant une division.
+  </p>
+
+  <h3>2. Le géomètre-expert et le bornage</h3>
+  <p>
+    Le <strong>géomètre-expert</strong> est incontournable : lui seul peut réaliser le <strong>bornage</strong>, c'est-à-dire
+    la fixation officielle et contradictoire des limites des lots, et établir le <strong>document modificatif du parcellaire
+    cadastral (DMPC)</strong>. Au-delà de l'obligation, c'est une sécurité : un bornage net évite les litiges de voisinage
+    qui empoisonnent une vente. C'est un coût à intégrer dès qu'il faut <a href="/calcul-rentabilite-marchand-de-biens/">calculer la rentabilité d'une opération de marchand de biens</a>.
+  </p>
+
+  <h3>3. Déclaration préalable ou permis d'aménager</h3>
+  <p>
+    Le régime d'autorisation dépend de la nature du projet. Pour une division simple, une <strong>déclaration
+    préalable</strong> suffit ; dès qu'il y a équipements communs ou plusieurs lots à bâtir, c'est un <strong>permis
+    d'aménager</strong> qu'il faut déposer.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Critère</th>
+        <th>Déclaration préalable</th>
+        <th>Permis d'aménager</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Quand ?</strong></td>
+        <td>Division simple, 1 à 2 lots sans équipement commun</td>
+        <td>Création d'espaces ou voies communs, lotissement</td>
+      </tr>
+      <tr>
+        <td><strong>Formulaire</strong></td>
+        <td>Cerfa n°13702</td>
+        <td>Cerfa dédié au permis d'aménager</td>
+      </tr>
+      <tr>
+        <td><strong>Délai d'instruction</strong></td>
+        <td>Environ 1 mois</td>
+        <td>Plus long (plusieurs mois)</td>
+      </tr>
+      <tr>
+        <td><strong>Architecte</strong></td>
+        <td>Non requis</td>
+        <td>Obligatoire au-delà de 2 500 m² à aménager</td>
+      </tr>
+      <tr>
+        <td><strong>Pièces</strong></td>
+        <td>Plan de situation, plan des lieux, plan coté</td>
+        <td>Dossier complet (notice, plans, coupes, règlement, etc.)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">La mairie vérifie la conformité au PLU et peut exercer un droit de préemption, à purger avant la vente du lot. Après des travaux d'aménagement, une déclaration d'achèvement (DAACT) et l'affichage d'un panneau visible depuis la voie publique sont requis.</p>
+
+  <h2>Coûts et délais d'une division</h2>
+  <p>
+    Bonne nouvelle : la partie administrative pèse peu. Le dépôt d'une déclaration préalable en mairie est <strong>gratuit</strong> et sans taxe. Le poste de dépense principal reste le géomètre-expert.
+  </p>
+  <ul>
+    <li><strong>Géomètre-expert :</strong> environ 1 500 à 3 000 € pour un pack bornage et DMPC sur une division simple.</li>
+    <li><strong>Déclaration préalable :</strong> gratuite ; le permis d'aménager suppose en revanche un dossier plus coûteux à constituer (architecte, pièces techniques).</li>
+    <li><strong>Viabilisation :</strong> raccordement du futur lot aux réseaux, à chiffrer au cas par cas.</li>
+  </ul>
+  <p>
+    Côté délais, il faut cumuler l'instruction du certificat d'urbanisme (environ deux mois), le bornage, puis l'instruction
+    de l'autorisation (un mois pour une déclaration préalable, davantage pour un permis d'aménager). Au total, plusieurs
+    mois s'écoulent avant de pouvoir vendre : un paramètre à intégrer dans tout plan de trésorerie.
+  </p>
+  <p class="note">Ordres de grandeur indicatifs, qui varient selon le terrain, la commune et le prestataire.</p>
+
+  <h2>La fiscalité de la revente</h2>
+  <p>
+    La fiscalité dépend de qui vend. Pour un <strong>particulier</strong> qui détache et revend un terrain à bâtir, c'est le
+    régime de la <strong>plus-value immobilière des particuliers</strong> qui s'applique : 19 % d'impôt sur le revenu et
+    17,2 % de prélèvements sociaux, soit 36,2 % sur la plus-value, avec des abattements pour durée de détention (exonération
+    d'impôt sur le revenu à 22 ans, de prélèvements sociaux à 30 ans). Attention à une idée reçue : l'exonération de la
+    résidence principale ne couvre pas un terrain à bâtir vendu séparément de la maison.
+  </p>
+  <p>
+    Pour un <strong>marchand de biens</strong>, le cadre est différent : l'activité est imposée au titre des bénéfices (BIC
+    ou impôt sur les sociétés selon la structure) et relève le plus souvent de la TVA sur la marge. Les règles varient selon
+    le montage retenu : mieux vaut faire chiffrer votre cas précis par un notaire ou un expert-comptable avant de vous
+    engager.
+  </p>
+
+  <h2>Les pièges à éviter</h2>
+  <ul>
+    <li><strong>Négliger le zonage :</strong> un terrain en zone A ou N n'est pas constructible, la création d'un lot à bâtir y sera refusée.</li>
+    <li><strong>Oublier la surface minimale du PLU :</strong> la loi Alur a supprimé l'exigence nationale, mais certaines communes la maintiennent dans leur règlement.</li>
+    <li><strong>Un lot enclavé :</strong> sans accès à la voirie (directement ou par servitude) ni raccordement possible aux réseaux, le projet est bloqué.</li>
+    <li><strong>Ignorer le droit de préemption :</strong> la commune peut préempter le lot ; il faut purger ce droit avant la vente.</li>
+    <li><strong>Sous-estimer les délais :</strong> entre certificat, bornage et autorisation, comptez plusieurs mois.</li>
+  </ul>
 
   <h2>Un levier pour le marchand de biens</h2>
   <p>
-    Bien menée, la division est l'une des opérations les plus rentables du métier, car la valeur créée dépasse souvent le
-    coût des démarches. Mais elle exige de <strong>maîtriser l'urbanisme</strong> et d'anticiper les délais (le certificat
-    d'urbanisme comme les autorisations prennent plusieurs mois). C'est typiquement le genre d'opération qui se prépare très tôt : mieux vaut savoir <a href="/monter-une-operation-marchand-de-biens/">monter une opération marchand de biens étape par étape</a> et s'entourer des bons partenaires.
+    Bien menée, la division est l'une des opérations les plus rentables du métier : la valeur créée dépasse souvent largement
+    le coût des démarches, puisqu'un terrain détaché et viabilisé en zone recherchée se vend cher. Mais elle exige de <strong>maîtriser l'urbanisme</strong> et d'anticiper les délais, car le certificat d'urbanisme comme les autorisations
+    prennent plusieurs mois. C'est typiquement le genre d'opération qui se prépare très tôt : mieux vaut savoir <a href="/monter-une-operation-marchand-de-biens/">monter une opération marchand de biens étape par étape</a> et s'entourer des bons partenaires (géomètre-expert, notaire, service urbanisme).
   </p>
 </ArticleLayout>
