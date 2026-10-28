@@ -4,29 +4,33 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 const faq = [
   {
     q: "Quelle banque finance les marchands de biens ?",
-    r: "Autant les banques généralistes (souvent réticentes) que des établissements spécialisés dans l'immobilier professionnel. En pratique, on compare plusieurs interlocuteurs, et un courtier spécialisé peut faciliter l'accès aux banques habituées à ce type d'opération.",
+    r: "Autant les banques généralistes (souvent réticentes) que des établissements spécialisés dans l'immobilier professionnel, type BTP Banque ou banques régionales habituées au secteur. En pratique, on compare plusieurs interlocuteurs, et un courtier spécialisé peut faciliter l'accès aux banques rodées à ce type d'opération.",
+  },
+  {
+    q: "Quel est le meilleur type de crédit pour un marchand de biens ?",
+    r: "Le crédit in-fine est le plus adapté à l'achat-revente : on ne rembourse que les intérêts pendant l'opération, et le capital est remboursé en une fois à la revente. Il couvre en général 70 à 80 % du prix du bien, sur 2 à 5 ans. Pour une activité récurrente en société, le crédit professionnel amortissable est une autre option.",
+  },
+  {
+    q: "Quel apport faut-il pour financer une opération ?",
+    r: "Les banques exigent le plus souvent un apport de 20 à 30 % en fonds propres, et jusqu'à 50 % pour un profil débutant ou une opération jugée risquée. De bonnes garanties (hypothèque de premier rang, caution) permettent parfois de réduire cette quote-part.",
   },
   {
     q: "Pourquoi les banques hésitent à financer un marchand de biens ?",
-    r: "Parce que l'activité cumule plusieurs risques : travaux, délais de revente, marché fluctuant. La banque cherche donc à se prémunir via l'apport, les garanties et l'analyse fine du projet.",
-  },
-  {
-    q: "Quels critères la banque analyse-t-elle ?",
-    r: "Principalement l'expérience du marchand, la localisation du bien et son prix d'achat au mètre carré, en plus de l'apport et des garanties proposées.",
+    r: "Parce que l'activité cumule plusieurs risques : travaux, délais de revente, marché fluctuant, démarches d'urbanisme. La banque cherche donc à se prémunir via l'apport, les garanties et l'analyse fine du projet. Certaines imposent même un montant minimum de financement, ce qui exclut les petites opérations.",
   },
   {
     q: "Un débutant peut-il obtenir un financement bancaire ?",
-    r: "C'est plus difficile, mais possible avec un apport renforcé, un dossier exemplaire et de bonnes garanties. À défaut, les financements alternatifs prennent le relais.",
+    r: "C'est plus difficile, mais possible avec un apport renforcé (souvent 40 à 50 %), un dossier exemplaire et de bonnes garanties. À défaut, les financements alternatifs prennent le relais.",
   },
 ];
 ---
 
 <ArticleLayout
   title="Quelle banque pour un marchand de biens ?"
-  description="Quelle banque finance un marchand de biens ? Pourquoi les banques sont réticentes, les critères analysés, comment convaincre et que faire en cas de refus."
+  description="Quelle banque finance un marchand de biens ? Les types de crédit (in-fine, professionnel, trésorerie hypothécaire), l'apport exigé, les garanties, les critères analysés et que faire en cas de refus."
   h1="Quelle banque finance un marchand de biens ?"
-  lead="Obtenir un crédit bancaire est l'une des difficultés récurrentes du métier. L'activité est jugée risquée, et les banques posent des conditions strictes. Voici comment elles raisonnent, ce qu'elles analysent et comment mettre toutes les chances de votre côté."
-  reading="6 min"
+  lead="Obtenir un crédit bancaire est l'une des difficultés récurrentes du métier. L'activité est jugée risquée, et les banques posent des conditions strictes. Voici les types de financement adaptés, ce que la banque analyse, les garanties qui la rassurent et comment mettre toutes les chances de votre côté."
+  reading="9 min"
   image="/img/banque-marchand-de-biens.jpg"
   imageAlt="Façade d'une banque finançant les opérations de marchand de biens"
   breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devenir marchand de biens', href: '/devenir-marchand-de-biens/' }, { label: 'Banques spécialisées' }]}
@@ -36,6 +40,7 @@ const faq = [
     <p class="encadre-h">En bref</p>
     <ul>
       <li>Les banques jugent l'activité <strong>risquée</strong> et se montrent exigeantes.</li>
+      <li>Le <strong>crédit in-fine</strong> est le financement le plus adapté à l'achat-revente.</li>
       <li>Trois critères clés : <strong>expérience</strong>, <strong>localisation</strong> et <strong>prix au mètre carré</strong>.</li>
       <li>Apport attendu : <strong>20 à 30 %</strong>, jusqu'à 50 % pour un débutant.</li>
       <li>Des établissements <strong>spécialisés</strong> et un courtier facilitent l'accès au crédit.</li>
@@ -46,41 +51,146 @@ const faq = [
   <h2>Pourquoi les banques sont réticentes</h2>
   <p>
     Le marchand de biens est un profil <strong>hybride</strong> aux yeux des banques : ni particulier, ni entreprise
-    classique. Son activité cumule plusieurs aléas, travaux qui dérapent, délais de revente, retournement du marché.
-    Certaines banques refusent tout simplement ce type de dossier, d'autres imposent un montant minimum de financement,
-    ce qui pénalise les petites opérations. La banque cherche avant tout à se protéger contre ces risques, ce qui complique l'accès au crédit pour <a href="/financement-marchand-de-biens/">financer une opération de marchand de biens</a>.
+    classique. Son activité cumule plusieurs aléas, travaux qui dérapent, délais de revente, retournement du marché,
+    démarches d'urbanisme qui traînent. Certaines banques refusent tout simplement ce type de dossier, d'autres imposent
+    un montant minimum de financement, ce qui pénalise les petites opérations. La banque cherche avant tout à se protéger
+    contre ces risques, ce qui complique l'accès au crédit pour <a href="/financement-marchand-de-biens/">financer une opération de marchand de biens</a>.
+  </p>
+  <p>
+    Autre particularité : le marchand de biens doit souvent agir vite pour saisir une opportunité. Il a besoin d'un
+    financement rapide, court, et dont le remboursement colle au cycle de l'opération, acheter, valoriser, revendre. Ce
+    besoin spécifique explique que tous les crédits ne se valent pas pour ce métier.
+  </p>
+
+  <h2>Les types de financement adaptés au marchand de biens</h2>
+  <p>
+    Un marchand de biens peut emprunter en son nom personnel ou, le plus souvent, au nom de sa société. Quatre formes de
+    crédit reviennent régulièrement, chacune avec sa logique propre :
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type de crédit</th>
+        <th>Montant</th>
+        <th>Durée</th>
+        <th>Apport</th>
+        <th>Idéal pour</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Crédit in-fine</strong></td>
+        <td>70 à 80 % du bien</td>
+        <td>2 à 5 ans</td>
+        <td>20 à 40 %</td>
+        <td>L'opération d'achat-revente type</td>
+      </tr>
+      <tr>
+        <td><strong>Crédit pro amortissable</strong></td>
+        <td>Selon le projet</td>
+        <td>2 à 7 ans</td>
+        <td>20 à 30 %</td>
+        <td>Une activité récurrente en société</td>
+      </tr>
+      <tr>
+        <td><strong>Prêt personnel / conso</strong></td>
+        <td>Jusqu'à 75 000 €</td>
+        <td>1 à 7 ans</td>
+        <td>0 à 10 %</td>
+        <td>Une petite opération ou des travaux seuls</td>
+      </tr>
+      <tr>
+        <td><strong>Prêt de trésorerie hypothécaire</strong></td>
+        <td>Selon le bien garanti</td>
+        <td>5 à 20 ans</td>
+        <td>Variable</td>
+        <td>Dégager des liquidités d'un bien détenu</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">Ordres de grandeur indicatifs, qui varient selon la banque, le projet et le profil de l'emprunteur.</p>
+
+  <h3>Le crédit in-fine, le réflexe du marchand de biens</h3>
+  <p>
+    C'est la formule la plus cohérente avec le métier. Pendant toute la durée du prêt, vous ne remboursez que les <strong>intérêts</strong> ; le capital, lui, est remboursé en une seule fois, à la revente du bien. L'avantage est
+    double : les mensualités restent légères pendant les travaux et la commercialisation, et le remboursement tombe
+    pile au moment où l'opération génère enfin de la trésorerie. Il est presque toujours assorti d'une garantie réelle
+    (hypothèque), et son montant dépend d'une expertise du bien en l'état et après travaux.
+  </p>
+
+  <h3>Le crédit professionnel amortissable</h3>
+  <p>
+    Lorsque l'activité est logée dans une société et s'inscrit dans la durée, la banque peut proposer un crédit
+    professionnel amortissable classique, remboursé par échéances régulières. Il s'accompagne souvent d'une caution
+    solidaire du dirigeant ou d'un nantissement du fonds de commerce.
+  </p>
+
+  <h3>Le prêt personnel et le prêt de trésorerie hypothécaire</h3>
+  <p>
+    Pour une petite opération ou de simples travaux, un prêt personnel ou un crédit à la consommation (jusqu'à environ
+    75 000 €) peut suffire, sans garantie lourde mais à un taux plus élevé. Le prêt de trésorerie hypothécaire, lui,
+    permet de débloquer des liquidités en hypothéquant un bien que vous détenez déjà, pour financer l'apport d'une
+    nouvelle opération.
   </p>
 
   <h2>Les critères analysés par le banquier</h2>
   <p>Au-delà de l'apport, trois critères pèsent particulièrement :</p>
   <ul>
-    <li><strong>L'expérience.</strong> Un track record d'opérations réussies fait la différence. Un débutant devra compenser par un dossier solide et des garanties.</li>
-    <li><strong>La localisation.</strong> Un emplacement recherché et liquide rassure ; une zone jugée difficile pénalise la demande.</li>
-    <li><strong>Le prix au mètre carré.</strong> Acheter sous le prix du marché est un signal fort de marge potentielle et de sécurité.</li>
+    <li><strong>L'expérience.</strong> Un track record d'opérations réussies fait la différence. Un débutant devra compenser par un dossier solide et des garanties, et s'attendre à un apport renforcé.</li>
+    <li><strong>La localisation.</strong> Un emplacement recherché et liquide rassure ; une zone jugée difficile pénalise la demande. La performance énergétique du bien entre aussi de plus en plus dans l'équation.</li>
+    <li><strong>Le prix au mètre carré.</strong> Acheter sous le prix du marché est un signal fort de marge potentielle et de sécurité pour la banque.</li>
   </ul>
   <p>
-    Ces éléments déterminent la part de fonds propres exigée. De bonnes garanties (hypothèque de premier rang, caution)
-    permettent souvent de la réduire.
+    Ces éléments déterminent la quote-part de fonds propres exigée. Plus le projet est perçu comme risqué, plus l'apport
+    grimpe, parfois jusqu'à 50 %. À l'inverse, de bonnes garanties la font baisser.
+  </p>
+
+  <h2>Les garanties qui rassurent la banque</h2>
+  <p>
+    Les garanties sont le second levier, après l'apport, pour réduire le risque perçu et donc les exigences de la banque.
+    Les plus courantes sont :
+  </p>
+  <ul>
+    <li><strong>L'hypothèque de premier rang</strong> sur le bien financé, ou l'inscription de privilège de prêteur de deniers.</li>
+    <li><strong>La caution solidaire</strong> du dirigeant, qui engage son patrimoine personnel.</li>
+    <li><strong>Le nantissement</strong> d'un contrat d'assurance-vie ou du fonds de commerce.</li>
+  </ul>
+  <p>
+    Pour les opérations financées sur mesure, la banque s'appuie fréquemment sur une <strong>expertise indépendante</strong> qui valorise le bien dans son état actuel et après travaux. C'est cette valeur, et non le seul prix d'achat, qui
+    détermine le montant qu'elle acceptera de prêter.
   </p>
 
   <h2>Banques généralistes ou établissements spécialisés ?</h2>
   <p>
-    Les banques de réseau restent la première porte, mais elles sont inégalement à l'aise avec le métier. Des <strong>établissements spécialisés</strong> dans l'immobilier professionnel proposent des offres dédiées aux marchands
-    de biens, mieux calibrées pour ces opérations. Passer par un <strong>courtier</strong> habitué à ce profil fait souvent
-    gagner du temps et ouvre les bonnes portes.
+    Les banques de réseau restent la première porte, mais elles sont inégalement à l'aise avec le métier. Des <strong>établissements spécialisés</strong> dans l'immobilier professionnel, comme BTP Banque ou certaines banques
+    régionales, proposent des offres dédiées (crédit d'acquisition, crédit court terme, cautions d'indemnité
+    d'immobilisation ou dation) mieux calibrées pour ces opérations. Passer par un <strong>courtier</strong> habitué à ce
+    profil fait souvent gagner du temps et ouvre les bonnes portes.
   </p>
 
-  <h2>Comment convaincre votre banque</h2>
+  <h2>Monter un dossier que la banque ne peut pas refuser</h2>
   <p>
     La règle est simple : présentez un dossier que le banquier n'a pas envie de refuser. Business plan chiffré, budget de
-    travaux appuyé sur des devis, calendrier réaliste, marge prévisionnelle prudente et garanties claires. Plus votre
-    projet est documenté et plus votre <a href="/statut-juridique-marchand-de-biens/">statut juridique marchand de biens (SAS, SASU, SCI)</a> est adapté, plus la confiance
-    s'installe.
+    travaux appuyé sur des devis, calendrier réaliste, marge prévisionnelle prudente et garanties claires. Préparez aussi
+    les deux volets que la banque examine en priorité : un dossier financier complet (bilans, comptes de la société,
+    plan de financement) et un business plan propre à l'opération. Plus votre projet est documenté et plus votre <a href="/statut-juridique-marchand-de-biens/">statut juridique marchand de biens (SAS, SASU, SCI)</a> est adapté,
+    plus la confiance s'installe.
   </p>
 
   <h2>Que faire en cas de refus ?</h2>
   <p>
-    Un refus bancaire n'arrête pas une opération. Les solutions alternatives existent : le <a href="/crowdfunding-immobilier/">crowdfunding immobilier</a> pour compléter l'apport, le <a href="/portage-immobilier/">portage immobilier</a> pour une opération courte, ou l'association avec un partenaire.
-    Elles coûtent plus cher mais débloquent des projets qui, sinon, ne se feraient pas.
+    Un refus bancaire n'arrête pas une opération. Plusieurs leviers permettent de compléter l'apport ou de remplacer tout
+    ou partie du crédit bancaire. Ils coûtent plus cher, mais débloquent des projets qui, sinon, ne se feraient pas.
+  </p>
+  <p>
+    Le <a href="/crowdfunding-immobilier/">crowdfunding immobilier</a> est le plus rapide : il permet de lever des fonds
+    en quelques jours pour compléter l'apport exigé par la banque et saisir une opportunité, au prix de frais et d'un taux
+    supérieurs au crédit classique.
+  </p>
+  <p>
+    Le <a href="/portage-immobilier/">portage immobilier</a> convient plutôt à une opération courte, en confiant
+    temporairement le portage du bien à un tiers. Reste enfin l'association avec un partenaire qui apporte les fonds
+    propres manquants, en échange d'un partage de la marge.
   </p>
 </ArticleLayout>
