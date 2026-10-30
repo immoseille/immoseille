@@ -3,6 +3,13 @@
 // Rendu server-side par ArticleLayout, sous forme de liste à puces.
 
 export const RETENIR = {
+  'marchand-de-biens-sans-diplome': [
+    "Aucun diplôme ni carte professionnelle n'est exigé pour devenir marchand de biens : c'est une activité commerciale, pas une profession réglementée.",
+    "La carte professionnelle (loi Hoguet) ne concerne que l'agent immobilier, qui vend le bien d'autrui, pas le marchand de biens.",
+    "La vraie barrière n'est pas le diplôme mais la compétence : chiffrage, droit, fiscalité, travaux et financement.",
+    "Se former n'est pas une obligation légale, mais c'est déterminant pour sécuriser la première opération.",
+    "Il faut surtout un statut adapté (SAS, SASU), un apport de 20 à 30 % du projet et un réseau de professionnels.",
+  ],
   'devenir-marchand-de-biens': [
     "Aucun diplôme n'est obligatoire, mais des compétences en droit, fiscalité et négociation sont indispensables.",
     "Prévoir un apport de 50 000 à 150 000 € pour une première opération.",

@@ -30,6 +30,15 @@ export const articles = [
     cat: 'metier',
   },
   {
+    slug: 'marchand-de-biens-sans-diplome',
+    title: 'Marchand de biens sans diplôme : est-ce possible ?',
+    image: '/img/marchand-de-biens-sans-diplome.jpg',
+    cat: 'metier',
+    guide: true, // hors menu header -> apparaît dans /guides/
+    date: '30 octobre 2026',
+    excerpt: "Aucun diplôme ni carte professionnelle n'est exigé pour devenir marchand de biens. Ce qu'il faut vraiment : compétences, statut, capital, et pourquoi se former reste déterminant.",
+  },
+  {
     slug: 'marchand-de-biens-ou-investisseur-locatif',
     title: 'Marchand de biens ou investisseur locatif ?',
     image: '/img/marchand-de-biens-ou-investisseur-locatif.jpg',
